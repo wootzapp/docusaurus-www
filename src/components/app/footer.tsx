@@ -1,10 +1,12 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 export function Footer() {
   return (
     <div className="bg-brand-black-200 py-14 text-brand-white-700 font-matter">
       <div className="container flex flex-col md:flex-row justify-between gap-8 flex-wrap">
         <div className="flex flex-col gap-4">
           <img
-            src="/img/logo-footer.png"
+            {useBaseUrl('img/logo-footer.png')}
             alt="WootzApp Logo"
             className="h-14 w-52 max-md:h-10 max-md:w-44"
           />
@@ -23,7 +25,7 @@ export function Footer() {
             href="mailto:founders@wootzapp.com"
             className="flex gap-2 text-brand-orange-200 hover:underline ~text-xs/base items-center"
           >
-            <img src="/img/sms.png" alt="Email Icon" className="w-6 h-6" />
+            <img {useBaseUrl('img/sms.png')} alt="Email Icon" className="w-6 h-6" />
             founders@wootzapp.com
           </a>
         </div>
