@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="relative">
       <div className="absolute -top-40">
-        <img src="img/home-shade.png" alt="#" />
+        <img src="/img/home-shade.png" alt="#" />
       </div>
 
       <div className="container">
