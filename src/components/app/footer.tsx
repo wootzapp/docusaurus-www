@@ -23,7 +23,7 @@ export function Footer() {
             href="mailto:founders@wootzapp.com"
             className="flex gap-2 text-brand-orange-200 hover:underline ~text-xs/base items-center"
           >
-            <img src="img/sms.png" alt="Email Icon" className="w-6 h-6" />
+            <img src="/img/sms.png" alt="Email Icon" className="w-6 h-6" />
             founders@wootzapp.com
           </a>
         </div>
