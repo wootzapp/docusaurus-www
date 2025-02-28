@@ -1,10 +1,11 @@
 import { PlayStoreButton } from "../ui/play-store-button";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Hero() {
   return (
     <div className="relative">
       <div className="absolute -top-40">
-        <img src="/img/home-shade.png" alt="#" />
+        <img src={useBaseUrl('img/home-shade.png')} alt="#" />
       </div>
 
       <div className="container">
