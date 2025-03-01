@@ -31,6 +31,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+		  remarkPlugins: [],
+          rehypePlugins: [],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
           // Remove or change this URL to customize the "edit this page" link.
          // editUrl: 
             //"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
@@ -66,6 +70,11 @@ const config: Config = {
             from: ["/privacy"],
           },
         ],
+		createRedirects: function (existingPath) {
+			// Log for debugging
+			console.log("Checking path:", existingPath);
+			return undefined; // Return undefined for now to not create additional redirects
+		  },
       },
     ],
   ],

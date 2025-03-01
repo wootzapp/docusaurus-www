@@ -2,6 +2,9 @@
 @tailwind base;
 @tailwind components;
 
+/* /src/css/custom.css */
+@import './custom-markdown.css';
+
 /* Dark mode overrides */
 :root {
 	--ifm-color-primary: #7ec124;
