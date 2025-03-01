@@ -1,6 +1,17 @@
 import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+// Helper component that always calls useBaseUrl at the top level
+function BaseUrlLink({href, children, ...props}: {href: string; children: React.ReactNode; [key: string]: any}) {
+  // If the link is internal (starts with "/"), resolve it with useBaseUrl
+  const resolvedHref = href.startsWith("/") ? useBaseUrl(href) : href;
+  return (
+    <a href={resolvedHref} {...props}>
+      {children}
+    </a>
+  );
+}
+
 // JSON object containing footer links
 const footerLinks = {
   necessary: [
@@ -43,8 +54,7 @@ export function Footer() {
         <div className="flex flex-col gap-4 max-w-sm">
           <h3 className="font-medium ~text-base/2xl">Contact</h3>
           <p className="~text-xs/base font-normal tracking-wide">
-            For technical documentation, partnership inquiries, or investor
-            information please reach out
+            For technical documentation, partnership inquiries, or investor information please reach out
           </p>
           <a
             href="mailto:founders@wootzapp.com"
@@ -63,13 +73,13 @@ export function Footer() {
           <h3 className="font-medium ~text-base/2xl">Necessary Links</h3>
           <div className="flex flex-col gap-2">
             {footerLinks.necessary.map((link, index) => (
-              <a
+              <BaseUrlLink
                 key={index}
                 href={link.href}
                 className="hover:text-brand-orange-200 ~text-xs/base font-normal tracking-wide"
               >
                 {link.label}
-              </a>
+              </BaseUrlLink>
             ))}
           </div>
         </div>
