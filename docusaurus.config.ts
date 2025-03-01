@@ -32,7 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           // Remove or change this URL to customize the "edit this page" link.
-          editUrl: null,
+         // editUrl: 
             //"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
@@ -42,7 +42,7 @@ const config: Config = {
             xslt: true,
           },
           // Remove or change this URL to customize the "edit this page" link.
-          editUrl: null,
+          // editUrl: 
            // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           onInlineTags: "warn",
           onInlineAuthors: "warn",
