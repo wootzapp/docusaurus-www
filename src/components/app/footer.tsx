@@ -5,16 +5,16 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 const footerLinks = {
   necessary: [
     {
-      label: "Technical Docs",
-      href: "/docs/intro",
+      label: "Privacy",
+      href: "/privacy",
     },
     {
-      label: "API & SDK Info",
-      href: "#",
+      label: "Twitter",
+      href: "https://x.com/WootzApp/status/1794753728047915314",
     },
     {
-      label: "Press & Partnerships",
-      href: "#",
+      label: "Github",
+      href: "https://github.com/wootzapp/wootz-browser",
     },
   ],
 };

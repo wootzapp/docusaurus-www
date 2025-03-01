@@ -73,13 +73,21 @@ export default function NavbarContent(): ReactNode {
 				// TODO stop hardcoding items?
 				// Ask the user to add the respective navbar items => more flexible
 				<>
-					<NavbarItems items={rightItems} />
-					<div className='hidden md:inline-block relative group mr-4'>
-						<div className='bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]'></div>
-						<button className='relative px-4 py-0.5 md:px-6 md:py-2 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full'>
-							Get Started
-						</button>
-					</div>
+<NavbarItems items={rightItems} />
+<div className="hidden md:inline-block relative group mr-4">
+  <div className="bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]"></div>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.wootzapp.web"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full"
+  >
+    <button className="relative px-4 py-0.5 md:px-6 md:py-2 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full">
+      Get Started
+    </button>
+  </a>
+</div>
+
 					{/* <NavbarColorModeToggle className={styles.colorModeToggle} /> */}
 					{!searchBarItem && (
 						<NavbarSearch>
