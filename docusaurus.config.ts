@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Wootzapp",
   tagline: "Wootzapp – The Crypto Browser that Pays You",
-  favicon: "/img/fav.png",
+  favicon: "/img/favicon.ico",
 
 
 	// Set the production url of your site here
