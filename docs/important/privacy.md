@@ -1,10 +1,17 @@
+---
+id: privacy
+title: Privacy Policy
+description: Privacy Policy for Wootzapp Inc.
+---
+
 # Privacy Policy for Wootzapp Inc.
 
 ## 1. Introduction
 
-Welcome to Wootzapp Inc. (“Wootzapp”, “we”, “us”, or “our”). Your privacy is critically important to us. This Privacy Policy explains how we collect, use, store, and share your personal information through our web browser and related services (collectively, the “Services”). By using our Services, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use our Services or opt in to any data sharing features.
+Welcome to Wootzapp Inc. ("Wootzapp", "we", "us", or "our"). Your privacy is critically important to us. This Privacy Policy explains how we collect, use, store, and share your personal information through our web browser and related services (collectively, the "Services"). By using our Services, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use our Services or opt in to any data sharing features.
 
-For any questions or concerns about this Privacy Policy, please contact us at:  
+For any questions or concerns about this Privacy Policy, please contact us at:
+
 **Email:** webmaster@wootzapp.com  
 **Address:** Delaware, USA
 
@@ -27,8 +34,8 @@ We use crash reporting services to automatically collect diagnostic information 
 ### d. Cookies and Similar Technologies
 We and our partners use cookies and similar tracking technologies to remember your preferences, authenticate you, and gather usage statistics. You can manage these settings via your browser, though disabling some cookies may limit certain functionalities.
 
-### e. Children’s Privacy (COPPA)
-Wootzapp is **not intended for children under the age of 13**. We do not knowingly collect personal data from children under 13 in compliance with the Children’s Online Privacy Protection Act (COPPA). If we discover that personal data from a child under 13 has been inadvertently collected, we will delete it promptly. Our Services are not directed at, nor should they be used by, anyone under 13.
+### e. Children's Privacy (COPPA)
+Wootzapp is **not intended for children under the age of 13**. We do not knowingly collect personal data from children under 13 in compliance with the Children's Online Privacy Protection Act (COPPA). If we discover that personal data from a child under 13 has been inadvertently collected, we will delete it promptly. Our Services are not directed at, nor should they be used by, anyone under 13.
 
 ## 3. How We Use Your Information
 
@@ -49,7 +56,7 @@ We share your information only under specific circumstances and with appropriate
 We share data with trusted third-party providers (such as cloud services, analytics, payment processors, and crash reporting tools) who process data on our behalf under strict contractual terms.
 
 ### b. With Third-Party Partners (for AI & Data Solutions)
-With your explicit consent, we may share your data—often in an aggregated or de-identified form—with partner companies in the AI and data analytics space. Such transfers may involve compensation and will be conducted in compliance with applicable data protection laws. Once your data is shared, it is subject to the partner’s own privacy policies.
+With your explicit consent, we may share your data—often in an aggregated or de-identified form—with partner companies in the AI and data analytics space. Such transfers may involve compensation and will be conducted in compliance with applicable data protection laws. Once your data is shared, it is subject to the partner's own privacy policies.
 
 ### c. Legal and Regulatory Disclosures
 We may disclose your personal data if required to do so:
@@ -72,7 +79,7 @@ You have rights regarding your personal data. These may include:
 - **Access & Portability:** Request a copy of the personal data we hold about you.
 - **Correction:** Request updates to incorrect or incomplete data.
 - **Deletion:** Request deletion of your data (note: data already shared with third parties may not be retroactively deleted).
-- **Opt-Out:** Choose not to participate in our data sharing program or marketing communications. For California residents, you have a right under CCPA to opt out of the “sale” or “sharing” of your data.
+- **Opt-Out:** Choose not to participate in our data sharing program or marketing communications. For California residents, you have a right under CCPA to opt out of the "sale" or "sharing" of your data.
 - **Withdrawal of Consent:** You may withdraw your consent for data processing at any time (except where processing is required by law).
 
 To exercise these rights, please adjust your settings in the Services or contact us at webmaster@wootzapp.com. We may require additional verification before processing your request.
@@ -99,7 +106,7 @@ We also comply with requests from law enforcement and regulatory authorities whe
 
 ## 8. Changes to This Privacy Policy
 
-We may update this Privacy Policy from time to time. When we do, we will revise the “Last Updated” date at the top of this document and notify you via our Services or email if the changes are significant. Your continued use of our Services constitutes your acceptance of the updated Policy.
+We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this document and notify you via our Services or email if the changes are significant. Your continued use of our Services constitutes your acceptance of the updated Policy.
 
 ## 9. Contact Us
 
