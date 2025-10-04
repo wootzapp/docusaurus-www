@@ -10,11 +10,11 @@ export function PlayStoreButton({ bg_color }: { bg_color?: string }) {
 		>
 			<div
 				className={twMerge(
-					"bg-slate-900 border border-slate-900 relative top-[2px] rounded-md w-auto inline-block text-center group",
+					"bg-brand-border border border-brand-border relative top-[2px] rounded-md w-auto inline-block text-center group",
 					bg_color
 				)}
 			>
-				<div className="relative text-center w-auto bg-white text-slate-950 rounded-md text-sm md:text-base font-medium border border-slate-900 px-4 py-2 md:px-6 md:py-3 -translate-y-1 hover:-translate-y-1.5 active:-translate-y-0.5 mx-[-1px] flex items-center gap-3 md:gap-5 transition-all duration-150 cursor-pointer">
+				<div className="relative text-center w-auto bg-brand-accent-100 text-brand-base rounded-md text-sm md:text-base font-medium border border-brand-border px-4 py-2 md:px-6 md:py-3 -translate-y-1 hover:-translate-y-1.5 active:-translate-y-0.5 mx-[-1px] flex items-center gap-3 md:gap-5 transition-all duration-150 cursor-pointer">
 					<span className="font-matter">Download on Play Store</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

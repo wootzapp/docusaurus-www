@@ -14,30 +14,26 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          home_bg: "#FEF7F3",
-          green: {
-            100: "#7EC124",
-            200: "#202B11",
+          base: "#1f130d",
+          surface: "#26150f",
+          overlay: "#3a2014",
+          border: "#4c2a18",
+          accent: {
+            100: "#d9772a",
+            200: "#f29849",
+            300: "#f7b36f",
           },
-          black: {
-            100: "#201A17",
-            200: "#4D4846",
+          neutral: {
+            100: "#f6ede3",
+            200: "#f1dfd0",
+            300: "#e4c6ad",
+            400: "#c4a489",
+            500: "#8d715a",
           },
-
-          white: {
-            100: "#FFFFFF",
-            200: "#FEFAF8",
-            300: "#FFFFFF",
-            400: "#D2D1D1",
-            500: "#EEEFE9",
-            600: "#FEF6F2",
-            700: "#E9E8E8",
-          },
-
-          orange: {
-            100: "#D2820D",
-            200: "#F54E00",
-            300: "#FCAF3E",
+          text: {
+            primary: "#f9f2e9",
+            secondary: "#e6d8cc",
+            muted: "#cbb7a6",
           },
         },
       },

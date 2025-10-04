@@ -44,3 +44,32 @@
 	max-width: 1400px;
 	padding-inline: 1rem;
 }
+
+.terminal-code {
+	position: relative;
+	border-radius: 1rem;
+	background-color: #0b0d10;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-code::before {
+	content: "";
+	position: absolute;
+	top: 0.9rem;
+	left: 1.5rem;
+	width: 0.65rem;
+	height: 0.65rem;
+	border-radius: 9999px;
+	background-color: #ff5f57;
+	box-shadow: 1rem 0 0 #febc2e, 2rem 0 0 #28c840;
+}
+
+.terminal-code pre,
+.terminal-code code {
+	background-color: transparent !important;
+	color: #f7f4ef !important;
+}
+
+.terminal-code pre {
+	padding-top: 2.4rem !important;
+}

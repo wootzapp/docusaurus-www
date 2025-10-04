@@ -33,8 +33,8 @@ export const Header = () => {
     <div
       className={`sticky top-0 z-[1000] backdrop-blur transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/95 border-b border-white/10"
-          : "bg-slate-950/60 border-b border-white/5"
+          ? "bg-brand-base/95 border-b border-brand-border/80"
+          : "bg-brand-base/80 border-b border-brand-border/40"
       }`}
     >
       <div className="flex justify-between container-custom items-center py-5">
@@ -56,7 +56,7 @@ export const Header = () => {
         <div className="hidden md:flex gap-10">
           {headerData.map((data) => (
             <a
-              className="font-matter text-base font-normal text-white/70 transition hover:text-white hover:no-underline xl:text-lg"
+              className="font-matter text-base font-normal text-brand-text-muted transition hover:text-brand-text-primary hover:no-underline xl:text-lg"
               key={data}
               href="#"
             >
@@ -67,14 +67,14 @@ export const Header = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:inline-block">
-          <button className="rounded-lg border border-white/20 bg-white px-5 py-2 text-sm font-matter font-medium text-slate-900 transition hover:-translate-y-0.5 hover:shadow-md">
+          <button className="rounded-lg border border-brand-border/60 bg-brand-accent-100 px-5 py-2 text-sm font-matter font-medium text-brand-base transition hover:-translate-y-0.5 hover:shadow-md">
             Get Started
           </button>
         </div>
 
         {/* Mobile Menu Toggle Button */}
         <button
-          className="md:hidden p-2 text-white focus:outline-none"
+          className="md:hidden p-2 text-brand-text-primary focus:outline-none"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -88,13 +88,13 @@ export const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-[72px] left-0 right-0 z-50 h-screen bg-slate-950/95 backdrop-blur">
+        <div className="md:hidden fixed top-[72px] left-0 right-0 z-50 h-screen bg-brand-base/95 backdrop-blur">
           <div className="container-custom py-6 flex flex-col">
             {/* Navigation Links */}
             <div className="flex flex-col mb-8">
               {headerData.map((data, index) => (
                 <a
-                  className="flex items-center justify-between border-b border-white/10 py-4 text-lg font-matter font-medium text-white"
+                  className="flex items-center justify-between border-b border-brand-border/60 py-4 text-lg font-matter font-medium text-brand-text-primary"
                   key={data}
                   href="#"
                 >
@@ -120,7 +120,7 @@ export const Header = () => {
 
             {/* Mobile CTA Button */}
             <div className="mt-4">
-              <button className="w-full rounded-lg border border-white/20 bg-white py-4 text-base font-matter font-medium text-slate-900">
+              <button className="w-full rounded-lg border border-brand-border/60 bg-brand-accent-100 py-4 text-base font-matter font-medium text-brand-base">
                 Get Started
               </button>
             </div>
