@@ -67,9 +67,9 @@ export const Header = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:inline-block">
-          <button className="rounded-lg border border-brand-border/60 bg-brand-accent-100 px-5 py-2 text-sm font-matter font-medium text-brand-base transition hover:-translate-y-0.5 hover:shadow-md">
+          <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="rounded-lg border border-brand-border/60 bg-brand-accent-100 px-5 py-2 text-sm font-matter font-medium text-brand-base transition hover:-translate-y-0.5 hover:shadow-md hover:text-brand-surface hover:no-underline">
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -120,9 +120,9 @@ export const Header = () => {
 
             {/* Mobile CTA Button */}
             <div className="mt-4">
-              <button className="w-full rounded-lg border border-brand-border/60 bg-brand-accent-100 py-4 text-base font-matter font-medium text-brand-base">
+              <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="w-full block text-center rounded-lg border border-brand-border/60 bg-brand-accent-100 py-4 text-base font-matter font-medium text-brand-base hover:text-brand-surface hover:no-underline">
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </div>

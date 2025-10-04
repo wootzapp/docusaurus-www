@@ -27,7 +27,7 @@ export default function Hero() {
 						Teach design to codegen
 					</span>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>
-						High-quality RL environments for HTML/CSS — produced at human scale
+						High-quality RL environments for codegen — produced at human scale
 					</h1>
 					<p className='font-matter text-base text-brand-text-secondary sm:text-lg lg:max-w-2xl'>
 						Most codegen models can emit markup. Very few can design. We build the reinforcement-learning environments that teach structure, rhythm, tokens, responsiveness, and accessibility—so your models learn design sense, not just syntax.

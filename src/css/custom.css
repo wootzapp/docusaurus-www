@@ -7,7 +7,7 @@
 
 /* Dark mode overrides */
 :root {
-	--ifm-color-primary: #7ec124;
+	--ifm-color-primary: #d9772a;
 }
 @font-face {
 	font-family: "Matter";
@@ -70,4 +70,8 @@
 	font-family: "Fira Code", "Source Code Pro", monospace;
 	margin: 0;
 	white-space: pre-wrap;
+}
+
+.navbar__title {
+	color: var(--ifm-color-primary);
 }

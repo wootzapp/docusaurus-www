@@ -75,14 +75,14 @@ export default function NavbarContent(): ReactNode {
 				<>
 <NavbarItems items={rightItems} />
 <div className="hidden md:inline-block relative group mr-4">
-  <div className="bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]"></div>
+  <div className="bg-brand-border rounded-md absolute inset-0 translate-y-[2px]"></div>
   <a
-    href="https://play.google.com/store/apps/details?id=com.wootzapp.web"
+    href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-full"
+    className="w-full hover:no-underline"
   >
-    <button className="relative px-4 py-0.5 md:px-6 md:py-2 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full">
+    <button className="relative px-4 py-0.5 md:px-6 md:py-2 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-accent-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-brand-accent-200 w-full">
       Get Started
     </button>
   </a>

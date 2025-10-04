@@ -21,7 +21,7 @@ export function Experience() {
 							</li>
 						</ul>
 						<div>
-							<a className='mt-4 inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-4 py-2 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg' href='https://docs.primeintellect.ai/tutorials-environments/environments?utm_source=chatgpt.com'>Explore docs</a>
+							<a className='mt-4 inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-4 py-2 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:text-brand-surface hover:no-underline' href='https://docs.primeintellect.ai/tutorials-environments/environments?utm_source=chatgpt.com'>Explore docs</a>
 						</div>
 					</div>
 
@@ -38,8 +38,8 @@ export function Experience() {
 							<li className='flex items-start gap-3'><span className='mt-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-accent-200' />Pilot on your design system (tokens, components, layout rules)</li>
 						</ul>
 						<div className='flex flex-col gap-3 sm:flex-row'>
-							<a className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg' href='mailto:founders@wootzapp.com'>Contact us</a>
-							<a className='inline-flex items-center justify-center rounded-lg border border-brand-border px-6 py-3 text-sm font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary' href='https://cal.com'>Schedule a walkthrough</a>
+							<a className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:text-brand-surface hover:no-underline' href='mailto:founders@wootzapp.com'>Contact us</a>
+							<a className='inline-flex items-center justify-center rounded-lg border border-brand-border px-6 py-3 text-sm font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary' href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'>Schedule a walkthrough</a>
 						</div>
 					</div>
 				</div>

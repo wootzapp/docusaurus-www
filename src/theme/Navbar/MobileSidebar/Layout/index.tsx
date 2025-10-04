@@ -17,14 +17,14 @@ export default function NavbarMobileSidebarLayout({header, primaryMenu, secondar
   {primaryMenu}
 
   <div className='relative group mt-3'>
-    <div className='bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]'></div>
+    <div className='bg-brand-border rounded-md absolute inset-0 translate-y-[2px]'></div>
     <a
-      href="https://play.google.com/store/apps/details?id=com.wootzapp.web"
+      href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-full"
+      className="w-full hover:no-underline"
     >
-      <button className='relative py-2 text-brand-black-100 text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full'>
+      <button className='relative py-2 text-brand-black-100 text-base font-matter font-medium bg-brand-accent-100 rounded-md transition-transform duration-150 -translate-y-1 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-brand-accent-200 w-full'>
         Get Started
       </button>
     </a>
