@@ -1,20 +1,25 @@
 import React from "react";
 
-export const partner = [
+const learningOutcomes = [
 	{
-		label: "For developers",
-		head: "Ship extensions with enterprise guardrails",
-		para: "Build against an API surface that handles authentication, sandboxing, and reward logic out of the box so you can focus on workflow innovation.",
+		head: "Responsive layout",
+		para: "Grid and flex orchestration, breakpoint strategy, spacing discipline, and content reflow expectations.",
 	},
 	{
-		label: "For partners",
-		head: "Deploy AI labeling programs in record time",
-		para: "Tap into a mobile-first contributor base with pre-configured quality controls and monitoring, backed by OEM distribution.",
+		head: "Typography & tokens",
+		para: "Scale, contrast, semantic roles, and consistent variable usage tied to design systems.",
 	},
 	{
-		label: "For operations",
-		head: "Scale with predictable economics",
-		para: "Drive cost-per-label down to cents with automated routing, consensus, and payouts that keep global teams aligned.",
+		head: "Visual hierarchy",
+		para: "Clear hero-to-module relationships, metadata handling, and narrative structure in markup.",
+	},
+	{
+		head: "Accessibility by default",
+		para: "Landmarks, focus management, motion preferences, alt text, and keyboard-safe interactions.",
+	},
+	{
+		head: "Componentization",
+		para: "Card schemas, semantic reuse, state separation, and constraints that avoid inline sprawl.",
 	},
 ];
 
@@ -31,16 +36,13 @@ export function Benefits() {
 					</h2>
 				</div>
 
-				<div className='grid gap-6 md:grid-cols-3'>
-					{partner.map((item) => (
-						<div key={item.head} className='flex h-full flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-white/90 p-6 text-left shadow-sm shadow-brand-base/5'>
-							<span className='text-xs font-semibold uppercase tracking-[0.2em] text-brand-neutral-500'>
-								{item.label}
-							</span>
-							<h3 className='font-matter text-xl font-semibold text-brand-base'>
+				<div className='grid gap-6 md:grid-cols-2 xl:grid-cols-3'>
+					{learningOutcomes.map((item) => (
+						<div key={item.head} className='flex h-full flex-col gap-3 rounded-2xl border border-brand-neutral-300 bg-white/95 p-6 text-left shadow-sm shadow-brand-base/5'>
+							<h3 className='font-matter text-lg font-semibold text-brand-base'>
 								{item.head}
 							</h3>
-							<p className='text-sm text-brand-base sm:text-base'>
+							<p className='text-sm text-brand-base/80 sm:text-base'>
 								{item.para}
 							</p>
 						</div>

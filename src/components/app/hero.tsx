@@ -1,21 +1,17 @@
 import React from "react";
-import {PlayStoreButton} from "../ui/play-store-button";
 
-const metrics = [
+const highlights = [
 	{
-		label: "Global device reach",
-		value: "15M+",
-		description: "Target install base across OEM partners",
+		head: "Design-literate environments",
+		copy: "Reward suites teach hierarchy, rhythm, accessibility, and component discipline—far beyond raw HTML tags.",
 	},
 	{
-		label: "Workflow latency",
-		value: "<200ms",
-		description: "Average trigger-to-task launch time",
+		head: "Dual delivery formats",
+		copy: "Choose Dockerized RL APIs for agents or Verifiers-compatible packages for enterprise eval and training stacks.",
 	},
 	{
-		label: "Settlement speed",
-		value: "5 minutes",
-		description: "Stablecoin rewards reconciliation",
+		head: "Human-scale coverage",
+		copy: "We mobilize vetted designers and engineers globally to build and validate environments in hours, not weeks.",
 	},
 ];
 
@@ -28,39 +24,35 @@ export default function Hero() {
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-24 lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
 					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
-						Enterprise Browser Platform
+						Teach design to codegen
 					</span>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>
-						Secure browsing that turns distributed teams into a compliant AI workforce
+						High-quality RL environments for HTML/CSS — produced at human scale
 					</h1>
 					<p className='font-matter text-base text-brand-text-secondary sm:text-lg lg:max-w-2xl'>
-						WootzApp gives enterprises a managed, Chromium-based browser with embedded automation—complete with zero-trust isolation, programmable task routing, and instant global payouts.
+						Most codegen models can emit markup. Very few can design. We build the reinforcement-learning environments that teach structure, rhythm, tokens, responsiveness, and accessibility—so your models learn design sense, not just syntax.
 					</p>
-					<ul className='grid gap-3 text-sm text-brand-text-secondary sm:grid-cols-2 sm:text-base'>
-						<li className='rounded-md border border-brand-border bg-brand-surface px-4 py-3'>
-							<span className='font-semibold text-brand-text-primary'>Governed access</span>
-							<p className='mt-1 text-sm text-brand-text-muted'>Apply policy, identity, and observability controls without disrupting user experience.</p>
-						</li>
-						<li className='rounded-md border border-brand-border bg-brand-surface px-4 py-3'>
-							<span className='font-semibold text-brand-text-primary'>Integrated workflows</span>
-							<p className='mt-1 text-sm text-brand-text-muted'>Launch AI data tasks natively inside browsing sessions with automated validation.</p>
-						</li>
-						<li className='rounded-md border border-brand-border bg-brand-surface px-4 py-3 sm:col-span-2 lg:col-span-1'>
-							<span className='font-semibold text-brand-text-primary'>Financial operations</span>
-							<p className='mt-1 text-sm text-brand-text-muted'>Trigger compliant payouts and audit logs in real time across global contributor networks.</p>
-						</li>
-					</ul>
-					<div className='mt-4'>
-						<PlayStoreButton />
+					<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
+						<a
+							href='#delivery-formats'
+							className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg'
+						>
+							See sample environment
+						</a>
+						<a
+							href='#get-started'
+							className='inline-flex items-center justify-center rounded-lg border border-brand-border px-6 py-3 text-sm font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary'
+						>
+							Book a technical walkthrough
+						</a>
 					</div>
 				</div>
 
 				<div className='grid gap-4 sm:grid-cols-3'>
-					{metrics.map((metric) => (
-						<div key={metric.label} className='rounded-xl border border-brand-border bg-brand-surface p-6'>
-							<p className='text-xs uppercase tracking-[0.2em] text-brand-text-muted'>{metric.label}</p>
-							<p className='mt-3 font-matter text-3xl font-semibold text-brand-text-primary'>{metric.value}</p>
-							<p className='mt-2 text-sm text-brand-text-muted'>{metric.description}</p>
+					{highlights.map((item) => (
+						<div key={item.head} className='rounded-xl border border-brand-border bg-brand-surface/80 p-6'>
+							<p className='text-sm font-semibold text-brand-text-primary'>{item.head}</p>
+							<p className='mt-2 text-sm text-brand-text-muted'>{item.copy}</p>
 						</div>
 					))}
 				</div>

@@ -1,58 +1,36 @@
-import React from "react";
 
-const insights = [
-	{
-		title: "Explosive market growth",
-		detail: "$27B projected AI labeling spend",
-		description: "Enterprises are investing aggressively in high-quality data, yet the tooling required to deliver at scale remains fragmented and manual.",
-	},
-	{
-		title: "Mobile-first advantage",
-		detail: "95% mobile-only contributors",
-		description: "WootzApp activates mobile devices as compliant workstations, reaching talent pools traditional desktop platforms miss.",
-	},
-	{
-		title: "Instant payouts & lower costs",
-		detail: "Minutes to settle rewards",
-		description: "Stablecoin rails remove lag and fees, aligning incentives while keeping finance teams in control.",
-	},
-	{
-		title: "Strategic distribution",
-		detail: "OEM partners pre-install",
-		description: "Zero-CAC expansion through device manufacturers delivers immediate scale and predictable supply.",
-	},
-];
+import React from "react";
 
 export function Intersection() {
 	return (
-		<section className='bg-white py-24 text-brand-base'>
+		<section className='bg-white py-24 text-brand-base' id='example-environment'>
 			<div className='container-custom flex flex-col gap-12'>
-				<div className='mx-auto max-w-3xl text-center flex flex-col gap-4'>
-					<span className='mx-auto inline-flex items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
-						Market alignment
-					</span>
-					<h2 className='font-matter text-3xl font-semibold leading-tight text-brand-base sm:text-4xl'>
-						Where AI data, decentralization, and enterprise rigor converge
-					</h2>
-					<p className='text-sm text-brand-base sm:text-base'>
-						We purpose-built WootzApp to match macro trends shaping AI delivery—pairing compliant infrastructure with global reach.
-					</p>
-				</div>
+				<div className='grid gap-8 lg:grid-cols-2'>
+					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100 p-8 shadow-sm shadow-brand-base/5'>
+						<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
+							Example environment (news homepage)
+						</span>
+						<p className='text-sm text-brand-base sm:text-base'>
+							Human spec encodes grid (`2fr 1fr`), gap tolerances, hero ratios, section order, token requirements, and policy boundaries. The reward suite evaluates structure, semantics, responsiveness, a11y, and policy compliance (e.g., no external CSS).
+						</p>
+						<ul className='flex flex-col gap-2 text-sm text-brand-base'>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Delivered as Dockerized RL API or Verifiers-compatible package.</li>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Reward breakdown highlights structural, token, and accessibility deltas.</li>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Auditable spec, DSL, and policy versions included with each release.</li>
+						</ul>
+					</div>
 
-				<div className='grid gap-6 md:grid-cols-2 xl:grid-cols-4'>
-					{insights.map((item) => (
-						<div key={item.title} className='flex h-full flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100 p-6 shadow-sm shadow-brand-base/5'>
-							<span className='text-xs font-semibold uppercase tracking-[0.2em] text-brand-neutral-500'>
-								{item.detail}
-							</span>
-							<h3 className='font-matter text-xl font-semibold text-brand-base'>
-								{item.title}
-							</h3>
-							<p className='text-sm text-brand-base sm:text-base'>
-								{item.description}
-							</p>
-						</div>
-					))}
+					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100 p-8 shadow-sm shadow-brand-base/5'>
+						<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
+							Outcomes we optimize
+						</span>
+						<ul className='flex flex-col gap-2 text-sm text-brand-base'>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Lower cost per environment versus in-house scripting or one-off crowd efforts.</li>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Higher reward fidelity through human-grounded, test-driven scorers.</li>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Faster iteration: new tasks become new environments in hours, not weeks.</li>
+							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Compliance and auditability with versioned specs, tests, and policy snapshots.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>

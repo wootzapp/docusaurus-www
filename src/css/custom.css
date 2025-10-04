@@ -45,17 +45,17 @@
 	padding-inline: 1rem;
 }
 
-.terminal-code {
+.cli-window {
 	position: relative;
-	border-radius: 1rem;
-	background-color: #0b0d10;
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: linear-gradient(135deg, #ffffff, #f5f6f9);
+	border-radius: 1.5rem;
+	overflow: hidden;
 }
 
-.terminal-code::before {
+.cli-window::before {
 	content: "";
 	position: absolute;
-	top: 0.9rem;
+	top: 1.2rem;
 	left: 1.5rem;
 	width: 0.65rem;
 	height: 0.65rem;
@@ -64,12 +64,10 @@
 	box-shadow: 1rem 0 0 #febc2e, 2rem 0 0 #28c840;
 }
 
-.terminal-code pre,
-.terminal-code code {
-	background-color: transparent !important;
-	color: #f7f4ef !important;
-}
-
-.terminal-code pre {
-	padding-top: 2.4rem !important;
+.cli-window pre {
+	background: transparent !important;
+	color: #1f130d !important;
+	font-family: "Fira Code", "Source Code Pro", monospace;
+	margin: 0;
+	white-space: pre-wrap;
 }

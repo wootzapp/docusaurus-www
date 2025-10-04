@@ -1,20 +1,35 @@
 import React from "react";
 
-const pillars = [
+const steps = [
 	{
-		title: "Governance by design",
-		description: "Granular policies, SAML/SCIM provisioning, and full audit trails live inside the browser so compliance teams stay ahead of every session.",
-		bullets: ["Role-based policy templates", "Session recording & export", "Data residency controls"],
+		step: "01",
+		title: "Human design capture",
+		description: "Contributors use our purpose-built mobile browser to inspect live pages, record hierarchy, grids, spacing, tokens, breakpoints, and accessibility expectations.",
+		bullets: [
+			"Outputs a structured spec describing layout + components",
+			"Generates a checks DSL for automated validation",
+			"Tracks provenance, reviewer consensus, and policy version",
+		],
 	},
 	{
-		title: "Workflow intelligence",
-		description: "Declarative playbooks connect your data sources, AI labeling steps, and quality gates without bouncing contributors between tools.",
-		bullets: ["Dynamic task routing", "Automated consensus validation", "Observability dashboards"],
+		step: "02",
+		title: "Automated packaging",
+		description: "We synthesize each spec into executable tests, scorers, and environment scaffolding so agents can interact safely.",
+		bullets: [
+			"Produces reward functions aligned with the human rubric",
+			"Supports Dockerized /reset + /step services",
+			"Optionally emits a Verifiers-compatible dataset + rubric + protocol",
+		],
 	},
 	{
-		title: "Delivery operations",
-		description: "Native payout rails, dispute handling, and financial reconciliation mean every completed task is ready for the general ledger.",
-		bullets: ["Stablecoin and fiat settlement", "Automated compliance checks", "Finance system webhooks"],
+		step: "03",
+		title: "Scale & governance",
+		description: "Qualification, consensus, auditing, and rollout are handled end-to-end, giving you consistent, compliant environments across thousands of tasks.",
+		bullets: [
+			"Role-based contributor gating and skill progression",
+			"Versioned policy + reward history for audit",
+			"Centralized SLA monitoring and issue remediation",
+		],
 	},
 ];
 
@@ -35,8 +50,9 @@ export function SectionImg() {
 				</div>
 
 				<div className='grid gap-6 lg:grid-cols-3'>
-					{pillars.map((pillar) => (
+					{steps.map((pillar) => (
 						<article key={pillar.title} className='flex h-full flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100 p-6 shadow-sm shadow-brand-base/5'>
+							<span className='text-xs font-semibold uppercase tracking-[0.3em] text-brand-neutral-500'>{pillar.step}</span>
 							<h3 className='font-matter text-xl font-semibold text-brand-base'>
 								{pillar.title}
 							</h3>

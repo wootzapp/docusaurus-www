@@ -54,13 +54,13 @@ export const Header = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-10">
-          {headerData.map((data) => (
+          {headerData.map((item) => (
             <a
               className="font-matter text-base font-normal text-brand-text-muted transition hover:text-brand-text-primary hover:no-underline xl:text-lg"
-              key={data}
-              href="#"
+              key={item.label}
+              href={item.href}
             >
-              {data}
+              {item.label}
             </a>
           ))}
         </div>
@@ -92,13 +92,13 @@ export const Header = () => {
           <div className="container-custom py-6 flex flex-col">
             {/* Navigation Links */}
             <div className="flex flex-col mb-8">
-              {headerData.map((data, index) => (
+              {headerData.map((item) => (
                 <a
                   className="flex items-center justify-between border-b border-brand-border/60 py-4 text-lg font-matter font-medium text-brand-text-primary"
-                  key={data}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                 >
-                  <span>{data}</span>
+                  <span>{item.label}</span>
                   <svg
                     width="8"
                     height="12"

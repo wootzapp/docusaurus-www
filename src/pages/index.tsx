@@ -5,11 +5,13 @@ import {Experience} from "../components/app/experience";
 import {Footer} from "../components/app/footer";
 import {Header} from "../components/app/header";
 import Hero from "../components/app/hero";
+import BrowserPlatform from "../components/app/browser-platform";
 import {Intersection} from "../components/app/intersection";
 import {PartnerShip} from "../components/app/partnership";
 import {Performance} from "../components/app/performance";
 import {SectionImg} from "../components/app/section-img";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import WootzBrowser from "../components/app/wootz-browser";
 
 export default function Home() {
 	const {siteConfig} = useDocusaurusContext();
@@ -17,7 +19,9 @@ export default function Home() {
 		<Layout title={`${siteConfig.title}`} description={`${siteConfig.tagline}`}>
 			<div className='-mt-[64px] flex flex-col'>
 				<Hero />
+				<WootzBrowser />
 				<Browsing />
+				<BrowserPlatform />
 				<Performance />
 				<SectionImg />
 				<PartnerShip />
