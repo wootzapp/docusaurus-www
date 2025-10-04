@@ -1,6 +1,7 @@
 import Layout from "@theme/Layout";
 import {Benefits} from "../components/app/benefits";
 import {Browsing} from "../components/app/browsing";
+import {BeyondDesign} from "../components/app/beyond-design";
 import {Experience} from "../components/app/experience";
 import {Footer} from "../components/app/footer";
 import {Header} from "../components/app/header";
@@ -23,6 +24,7 @@ export default function Home() {
 				<Browsing />
 				<BrowserPlatform />
 				<Performance />
+				<BeyondDesign />
 				<SectionImg />
 				<PartnerShip />
 				<Benefits />
