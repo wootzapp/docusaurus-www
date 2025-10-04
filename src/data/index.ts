@@ -1,40 +1,37 @@
-export const headerData = ["Docs", "Community", "About", "About"];
+export const headerData = ["Platform", "Solutions", "Resources", "Contact"];
 
 export const browserData = [
 	{
-		img: "/img/naturally.png",
-		heading: "Surf Naturally",
-		para: "Use WootzApp as your default mobile browser.",
+		label: "Operational Control",
+		head: "Provision managed browsers in minutes",
+		para: "Roll out a hardened browsing layer with centralized identity, policy controls, and fleet-wide visibility—without asking teams to relearn their workflows.",
 	},
-
 	{
-		img: "/img/check.png",
-		heading: "Complete In-Browser Tasks",
-		para: "Seamlessly integrated AI data tasks—such as image labeling, audio transcription, or output validation—appear during your regular browsing.",
+		label: "Integrated Workflows",
+		head: "Embed AI data tasks directly in user journeys",
+		para: "Trigger labeling, validation, and review flows natively inside the browser so contributors stay productive while data quality and compliance stay automated.",
 	},
-
 	{
-		img: "/img/dollar_icon.png",
-		heading: "Get Paid Instantly",
-		para: "Earn crypto rewards on every task, with stable coin payouts delivered in real time.",
+		label: "Financial Automation",
+		head: "Settle global incentives instantly",
+		para: "Route stablecoin payouts, bonuses, and audit trails through built-in payments that clear in minutes and reconcile back to your finance stack.",
 	},
 ];
 
 export const performanceData = [
 	{
-		img: "/img/data-provenance.png",
-		head: "Decentralized Data Provenance",
-		para: "Native, user-controlled data sharing.",
-	},
-
-	{
-		img: "/img/task.png",
-		head: "In-Browser Task Orchestration",
-		para: "Real‑time integration of decentralized AI data workflows.",
+		tag: "Security",
+		head: "Zero-trust session isolation",
+		para: "Every task executes inside containerized profiles with device attestation and policy enforcement, keeping sensitive datasets segregated by default.",
 	},
 	{
-		img: "/img/mobile.png",
-		head: "Mobile‑Optimized Performance",
-		para: "Ultra‑responsive design for billions of mobile users, ensuring minimal overhead. Our engineering is driven by rigorous standards—ensuring every line of code is efficient, secure, and scalable.",
+		tag: "Automation",
+		head: "In-browser orchestration",
+		para: "A programmable rules engine coordinates task routing, consensus validation, and reward triggers so global operations run in real time without manual oversight.",
+	},
+	{
+		tag: "Scale",
+		head: "Mobile-optimized performance",
+		para: "Low-latency rendering and offline-aware sync let distributed teams contribute from any device while your infrastructure stays observant and compliant.",
 	},
 ];

@@ -61,7 +61,6 @@ baseUrl: "/",
     ],
   ],
 
-  // Add the client redirects plugin to handle short URL redirects.
   plugins: [
     [
       "@docusaurus/plugin-client-redirects",
@@ -72,11 +71,6 @@ baseUrl: "/",
             from: ["/privacy"],
           },
         ],
-		createRedirects: function (existingPath) {
-			// Log for debugging
-			console.log("Checking path:", existingPath);
-			return undefined; // Return undefined for now to not create additional redirects
-		  },
       },
     ],
   ],

@@ -1,43 +1,52 @@
-import React from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import React from "react";
 
 export const partner = [
 	{
-		img: "img/benefit-1.png",
-		head: "For Developers",
-		para: "Access our open-source codebase on GitHub. Utilize detailed technical documentation and our SDK to build extensions that tap into a global, mobile-first audience.",
+		label: "For developers",
+		head: "Ship extensions with enterprise guardrails",
+		para: "Build against an API surface that handles authentication, sandboxing, and reward logic out of the box so you can focus on workflow innovation.",
 	},
 	{
-		img: "img/benefit-2.png",
-		head: "For Partners",
-		para: "Leverage our OEM partnerships that pre-install WootzApp on millions of devices—delivering zero user acquisition cost and instant global reach. Our platform is already live with five pilot AI partners deploying data workflows.",
+		label: "For partners",
+		head: "Deploy AI labeling programs in record time",
+		para: "Tap into a mobile-first contributor base with pre-configured quality controls and monitoring, backed by OEM distribution.",
 	},
 	{
-		img: "img/benefit-3.png",
-		head: "Distribution & Scale",
-		para: "With an average of 5.2 hours of daily browser use and plans to reach 15M+ devices, our system offers unprecedented scale and cost efficiencies (as low as $0.10–$0.30 per label).",
+		label: "For operations",
+		head: "Scale with predictable economics",
+		para: "Drive cost-per-label down to cents with automated routing, consensus, and payouts that keep global teams aligned.",
 	},
 ];
 
 export function Benefits() {
 	return (
-		<div className='pt-16 container-custom text-brand-white-600 pb-24'>
-			<h2 className='text-brand-black-100 font-matter ~text-2xl/4xl font-bold text-center max-w-4xl mx-auto leading-normal'>
-				Developer & Partner
-				<span className='text-brand-orange-200'> Benefits</span>
-			</h2>
+		<section className='bg-slate-50 py-24 text-slate-900'>
+			<div className='container-custom flex flex-col gap-12'>
+				<div className='mx-auto max-w-3xl text-center flex flex-col gap-4'>
+					<span className='mx-auto inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-1 text-xs uppercase tracking-[0.2em] text-slate-500'>
+						Tailored value
+					</span>
+					<h2 className='font-matter text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl'>
+						Designed for builders, decision makers, and operators alike
+					</h2>
+				</div>
 
-			<div className='grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-7 mt-5 md:mt-16 justify-center w-full'>
-				{partner.map((e, index) => {
-					return (
-						<div key={index} className='text-center flex flex-col gap-3 md:gap-4 items-center'>
-							<img src={useBaseUrl(e.img)} alt={`Benefit icon for ${e.head}`} className='max-w-3xl' />
-							<h4 className='text-brand-black-100 font-matter ~text-xl/3xl font-bold leading-normal tracking-wide'>{e.head}</h4>
-							<p className='text-brand-black-200 font-matter font-light ~text-sm/lg'>{e.para}</p>
+				<div className='grid gap-6 md:grid-cols-3'>
+					{partner.map((item) => (
+						<div key={item.head} className='flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm'>
+							<span className='text-xs font-semibold uppercase tracking-[0.2em] text-slate-500'>
+								{item.label}
+							</span>
+							<h3 className='font-matter text-xl font-semibold text-slate-900'>
+								{item.head}
+							</h3>
+							<p className='text-sm text-slate-600 sm:text-base'>
+								{item.para}
+							</p>
 						</div>
-					);
-				})}
+					))}
+				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

@@ -15,26 +15,15 @@ export default function Home() {
 	const {siteConfig} = useDocusaurusContext();
 	return (
 		<Layout title={`${siteConfig.title}`} description={`${siteConfig.tagline}`}>
-			<div className='min-h-screen bg-brand-[#FEFAF8] -mt-[64px]'>
-				<div className='bg-brand-home_bg'>
-					<Hero />
-				</div>
+			<div className='-mt-[64px] flex flex-col'>
+				<Hero />
 				<Browsing />
 				<Performance />
 				<SectionImg />
-				<div className='bg-brand-home_bg'>
-					<PartnerShip />
-				</div>
-				<div className='bg-[#FEEDE5]'>
-					<Benefits />
-				</div>
-				<div
-					// linear gradient to bottom
-					className='bg-gradient-to-b from-[#FEEDE5] to-[#FEFAF8]'
-				>
-					<Intersection />
-					<Experience />
-				</div>
+				<PartnerShip />
+				<Benefits />
+				<Intersection />
+				<Experience />
 			</div>
 		</Layout>
 	);

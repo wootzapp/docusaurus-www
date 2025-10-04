@@ -31,8 +31,10 @@ export const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 z-[1000] transition-all duration-300 ${
-        isScrolled ? "bg-brand-home_bg shadow-md" : "bg-transparent"
+      className={`sticky top-0 z-[1000] backdrop-blur transition-all duration-300 ${
+        isScrolled
+          ? "bg-slate-950/95 border-b border-white/10"
+          : "bg-slate-950/60 border-b border-white/5"
       }`}
     >
       <div className="flex justify-between container-custom items-center py-5">
@@ -54,7 +56,7 @@ export const Header = () => {
         <div className="hidden md:flex gap-10">
           {headerData.map((data) => (
             <a
-              className="font-matter font-normal text-brand-black-200 hover:text-inherit hover:no-underline text-base xl:text-xl"
+              className="font-matter text-base font-normal text-white/70 transition hover:text-white hover:no-underline xl:text-lg"
               key={data}
               href="#"
             >
@@ -64,36 +66,35 @@ export const Header = () => {
         </div>
 
         {/* Desktop CTA Button */}
-        <div className="hidden md:inline-block relative group">
-          <div className="bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]"></div>
-          <button className="relative px-4 py-2 md:px-7 md:py-3 text-brand-black-100 text-sm lg:text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full">
+        <div className="hidden md:inline-block">
+          <button className="rounded-lg border border-white/20 bg-white px-5 py-2 text-sm font-matter font-medium text-slate-900 transition hover:-translate-y-0.5 hover:shadow-md">
             Get Started
           </button>
         </div>
 
         {/* Mobile Menu Toggle Button */}
         <button
-          className="md:hidden p-2 focus:outline-none"
+          className="md:hidden p-2 text-white focus:outline-none"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
-            <AiOutlineClose size={24} className="text-brand-black-200" />
+            <AiOutlineClose size={24} />
           ) : (
-            <MdMenu size={24} className="text-brand-black-200" />
+            <MdMenu size={24} />
           )}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-[72px] left-0 right-0 bg-brand-home_bg z-50 shadow-xl h-screen">
+        <div className="md:hidden fixed top-[72px] left-0 right-0 z-50 h-screen bg-slate-950/95 backdrop-blur">
           <div className="container-custom py-6 flex flex-col">
             {/* Navigation Links */}
             <div className="flex flex-col mb-8">
               {headerData.map((data, index) => (
                 <a
-                  className="font-matter font-medium text-brand-black-200 py-4 border-b border-gray-200 text-lg flex justify-between items-center"
+                  className="flex items-center justify-between border-b border-white/10 py-4 text-lg font-matter font-medium text-white"
                   key={data}
                   href="#"
                 >
@@ -107,7 +108,7 @@ export const Header = () => {
                   >
                     <path
                       d="M1.5 11L6.5 6L1.5 1"
-                      stroke="#333"
+                      stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -118,9 +119,8 @@ export const Header = () => {
             </div>
 
             {/* Mobile CTA Button */}
-            <div className="relative group mt-4">
-              <div className="bg-[#66912D] rounded-md absolute inset-0 translate-y-[2px]"></div>
-              <button className="relative py-4 text-brand-black-100 text-base font-matter font-medium bg-brand-green-100 rounded-md transition-transform duration-150 -translate-y-1 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-[#66912D] w-full">
+            <div className="mt-4">
+              <button className="w-full rounded-lg border border-white/20 bg-white py-4 text-base font-matter font-medium text-slate-900">
                 Get Started
               </button>
             </div>
