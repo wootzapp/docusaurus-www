@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Wootzapp",
-  tagline: "Wootzapp – The Crypto Browser that Pays You",
+  tagline: "We convert expert human judgment into reinforcement-learning",
   favicon: "/img/favicon.ico",
 
 
@@ -80,18 +80,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      name: 'description',
-      content: 'Wootzapp – The Crypto Browser that Pays You',
+      content: 'We convert expert human judgment into reinforcement-learning',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'Wootzapp – The Crypto Browser that Pays You',
+      content: 'We convert expert human judgment into reinforcement-learning',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'Wootzapp – The Crypto Browser that Pays You',
+      content: 'We convert expert human judgment into reinforcement-learning',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
