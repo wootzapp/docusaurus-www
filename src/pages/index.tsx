@@ -1,5 +1,4 @@
 import Layout from "@theme/Layout";
-import {Benefits} from "../components/app/benefits";
 import {Browsing} from "../components/app/browsing";
 import {BeyondDesign} from "../components/app/beyond-design";
 import {Experience} from "../components/app/experience";
@@ -9,7 +8,6 @@ import Hero from "../components/app/hero";
 import BrowserPlatform from "../components/app/browser-platform";
 import {Intersection} from "../components/app/intersection";
 import {PartnerShip} from "../components/app/partnership";
-import {Performance} from "../components/app/performance";
 import {SectionImg} from "../components/app/section-img";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import WootzBrowser from "../components/app/wootz-browser";
@@ -23,11 +21,9 @@ export default function Home() {
 				<WootzBrowser />
 				<Browsing />
 				<BrowserPlatform />
-				<Performance />
 				<BeyondDesign />
 				<SectionImg />
 				<PartnerShip />
-				<Benefits />
 				<Intersection />
 				<Experience />
 			</div>
