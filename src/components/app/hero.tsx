@@ -1,19 +1,45 @@
 import React from "react";
 
-const highlights = [
-	{
-		head: "Design-literate environments",
-		copy: "Reward suites teach hierarchy, rhythm, accessibility, and component discipline—far beyond raw HTML tags.",
-	},
-	{
-		head: "Dual delivery formats",
-		copy: "Choose Dockerized RL APIs for agents or Verifiers-compatible packages for enterprise eval and training stacks.",
-	},
-	{
-		head: "Human-scale coverage",
-		copy: "We mobilize vetted designers and engineers globally to build and validate environments in hours, not weeks.",
-	},
+const realtimeNarrative = [
+	"Traditional RL data takes months. By arrival, it's obsolete.",
+	"We rebuilt the browser that collapses all of that & turns human feedback into live RL environments.",
+	"Because we own the browser, every label and correction updates the environment in real time.",
+	"The feedback loop closes instantly: annotations become specs, specs become reward logic, and rewards become trainable environments.",
 ];
+
+const realtimeSignals = ["Live human feedback", "Ownership of the browser", "Reward logic automation"];
+
+type ArrowIconProps = {
+	className?: string;
+};
+
+const ArrowIcon = ({ className = "" }: ArrowIconProps) => (
+	<svg
+		aria-hidden
+		viewBox='0 0 24 24'
+		fill='none'
+		className={`h-6 w-6 sm:h-8 sm:w-8 ${className}`.trim()}
+	>
+		<path
+			d='M12 3v14M5 10l7 7 7-7'
+			stroke='currentColor'
+			strokeWidth={1.5}
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
+	</svg>
+);
+
+const EndIcon = ({ className = "" }: ArrowIconProps) => (
+	<svg
+		aria-hidden
+		viewBox='0 0 24 24'
+		fill='none'
+		className={`h-6 w-6 sm:h-8 sm:w-8 ${className}`.trim()}
+	>
+		<circle cx={12} cy={12} r={5} stroke='currentColor' strokeWidth={1.5} fill='currentColor' />
+	</svg>
+);
 
 export default function Hero() {
 	return (
@@ -48,13 +74,53 @@ export default function Hero() {
 					</div>
 				</div>
 
-				<div className='grid gap-4 sm:grid-cols-3'>
-					{highlights.map((item) => (
-						<div key={item.head} className='rounded-xl border border-brand-border bg-brand-surface/80 p-6'>
-							<p className='text-sm font-semibold text-brand-text-primary'>{item.head}</p>
-							<p className='mt-2 text-sm text-brand-text-muted'>{item.copy}</p>
+				<div className='rounded-3xl border border-brand-border/60 bg-brand-surface/85 p-6 shadow-[0_32px_120px_-60px_rgba(12,10,9,0.8)] ring-1 ring-brand-overlay/30 sm:p-10'>
+					<div className='grid gap-8 lg:grid-cols-2 lg:items-start'>
+						<div className='relative flex flex-col gap-6 rounded-2xl border border-brand-border/40 bg-gradient-to-br from-brand-base/55 via-brand-overlay/45 to-brand-surface/95 p-6 sm:p-8'>
+							<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-border/60 bg-brand-base/30 px-4 py-1 text-xs uppercase tracking-[0.18em] text-brand-text-secondary'>
+								Why Model Labs Choose Us
+							</span>
+							<h2 className='font-matter text-2xl font-semibold leading-snug text-brand-text-primary sm:text-3xl'>
+								Real-Time Environment Generation
+							</h2>
+							<p className='text-sm text-brand-text-muted/80 sm:text-base'>
+								Human feedback flows straight into rewardable environments.
+							</p>
+							<div className='flex flex-wrap gap-2'>
+								{realtimeSignals.map((signal) => (
+									<span
+										key={signal}
+										className='inline-flex items-center gap-2 rounded-full border border-brand-border/30 bg-brand-surface/70 px-3 py-1 text-xs font-matter text-brand-text-secondary shadow-sm shadow-brand-base/10'
+									>
+										<span className='size-1.5 rounded-full bg-brand-accent-100' />
+										{signal}
+									</span>
+								))}
+							</div>
 						</div>
-					))}
+
+						<div className='relative overflow-hidden rounded-2xl bg-brand-base/15 p-6 sm:p-8'>
+							<div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_70%)]' />
+							<div className='absolute left-5 top-10 bottom-10 hidden w-px bg-brand-accent-100/25 lg:block' />
+							<div className='relative flex flex-col gap-6'>
+								{realtimeNarrative.map((entry, index) => (
+									<React.Fragment key={entry}>
+										<div className='relative flex items-start gap-4'>
+											<span className='relative z-10 mt-1 flex size-8 items-center justify-center rounded-full bg-brand-accent-100/20 text-brand-accent-100 ring-1 ring-brand-accent-100/40'>
+												{index < realtimeNarrative.length - 1 ? <ArrowIcon className='text-brand-accent-100' /> : <EndIcon className='text-brand-accent-100' />}
+											</span>
+											<p className='font-matter text-[0.95rem] leading-relaxed text-brand-text-muted sm:text-base lg:text-lg'>
+												{entry}
+											</p>
+										</div>
+										{index < realtimeNarrative.length - 1 && (
+											<ArrowIcon className='mx-6 text-brand-accent-100/70 lg:hidden' />
+										)}
+									</React.Fragment>
+								))}
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
