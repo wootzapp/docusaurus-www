@@ -1,13 +1,15 @@
 import React from "react";
 
 const realtimeNarrative = [
-	"Traditional RL data takes months. By arrival, it's obsolete.",
-	"We rebuilt the browser that collapses all of that & turns human feedback into live RL environments.",
+	"Building computer-use or browser-use RL environments is brutally time-consuming.",
+	"The challenge isn't infrastructure — it's the human cost of creating and curating realistic workflows, edge cases, and verifiable task logic.",
+	"Existing tools weren't made for this kind of authoring.",
+	"We rebuilt the browser from the ground up to solve this: Wootzapp turns human feedback into live RL environments.",
 	"Because we own the browser, every label and correction updates the environment in real time.",
 	"The feedback loop closes instantly: annotations become specs, specs become reward logic, and rewards become trainable environments.",
 ];
 
-const realtimeSignals = ["Live human feedback", "Ownership of the browser", "Reward logic automation"];
+const realtimeSignals = ["Human-guided authoring", "Visual workflow IDE", "Production-safe clones"];
 
 type ArrowIconProps = {
 	className?: string;
@@ -50,26 +52,26 @@ export default function Hero() {
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-24 lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
 					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
-						Teach design to codegen
+						Human-Curated Browser-Use RL Environments
 					</span>
 					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>
-						High-quality RL environments for codegen — produced at human scale
+						The Browser for Browser-Use RL Environments
 					</h1>
 					<p className='font-matter text-base text-brand-text-secondary sm:text-lg lg:max-w-2xl'>
-						Most codegen models can emit markup. Very few can design. We build the reinforcement-learning environments that teach structure, rhythm, tokens, responsiveness, and accessibility—so your models learn design sense, not just syntax.
+						Purpose-built to let humans teach agents how to use software — by building computer-use RL environments from real workflows.
 					</p>
 					<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
-							href='#delivery-formats'
+							href='#get-started'
 							className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg'
 						>
-							See sample environment
+							Request Early Access
 						</a>
 						<a
-							href='#get-started'
+							href='#example-environment'
 							className='inline-flex items-center justify-center rounded-lg border border-brand-border px-6 py-3 text-sm font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary'
 						>
-							Book a technical walkthrough
+							See Demo
 						</a>
 					</div>
 				</div>
@@ -81,10 +83,10 @@ export default function Hero() {
 								Why Model Labs Choose Us
 							</span>
 							<h2 className='font-matter text-2xl font-semibold leading-snug text-brand-text-primary sm:text-3xl'>
-								Real-Time Environment Generation
+								RL Isn't Held Back by Infra — It's Held Back by People Time
 							</h2>
 							<p className='text-sm text-brand-text-muted/80 sm:text-base'>
-								Human feedback flows straight into rewardable environments.
+								We give humans the tools to build environments 10x faster.
 							</p>
 							<div className='flex flex-wrap gap-2'>
 								{realtimeSignals.map((signal) => (
