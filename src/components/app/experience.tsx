@@ -16,7 +16,7 @@ export function Experience() {
 					</div>
 
 					<div className='flex flex-col gap-4 sm:flex-row sm:justify-center'>
-						<a className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-8 py-4 text-base font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:text-brand-surface hover:no-underline' href='mailto:founders@wootzapp.com'>Request Early Access</a>
+						<a className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-8 py-4 text-base font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:text-brand-surface hover:no-underline' href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'>Request Early Access</a>
 						<a className='inline-flex items-center justify-center rounded-lg border border-brand-border px-8 py-4 text-base font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary hover:no-underline' href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'>Talk to Us</a>
 					</div>
 

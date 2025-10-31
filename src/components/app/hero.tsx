@@ -62,7 +62,7 @@ export default function Hero() {
 					</p>
 					<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
-							href='#get-started'
+							href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'
 							className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg'
 						>
 							Request Early Access
