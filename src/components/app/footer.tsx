@@ -31,28 +31,28 @@ const footerLinks = {
 export function Footer() {
 	const currentYear = new Date().getFullYear();
 	return (
-		<footer className='bg-brand-base py-16 text-brand-text-primary'>
+		<footer className='bg-brand-base py-[72px] lg:py-32 text-brand-text-primary'>
 			<div className='container-custom flex flex-col gap-12 md:flex-row md:justify-between'>
 				<div className='flex flex-col gap-4'>
-					<span className='text-2xl font-semibold tracking-wide'>WootzApp</span>
-					<p className='max-w-xs text-sm text-brand-text-muted'>
+					<span className='text-subsection font-bold tracking-wide'>WootzApp</span>
+					<p className='max-w-xs text-body-sm text-brand-text-muted'>
 						{`© ${currentYear} WootzApp Inc. All rights reserved.`}
 					</p>
 				</div>
 
 				<div className='flex flex-col gap-4 max-w-sm'>
-					<h3 className='text-sm font-semibold uppercase tracking-[0.2em] text-brand-text-muted'>Contact</h3>
-					<p className='text-sm text-brand-text-muted'>
+					<h3 className='text-body-sm font-bold uppercase tracking-[0.2em] text-brand-text-muted'>Contact</h3>
+					<p className='text-body-sm text-brand-text-muted'>
 						For technical documentation, partnership inquiries, or investor information please reach out.
 					</p>
-					<a href='mailto:founders@wootzapp.com' className='text-sm font-medium text-brand-accent-200 hover:underline'>
+					<a href='mailto:founders@wootzapp.com' className='text-body-sm font-semibold text-brand-accent-200 hover:underline'>
 						founders@wootzapp.com
 					</a>
 				</div>
 
 				<div className='flex flex-col gap-4'>
-					<h3 className='text-sm font-semibold uppercase tracking-[0.2em] text-brand-text-muted'>Necessary links</h3>
-					<div className='flex flex-col gap-2 text-sm text-brand-text-secondary'>
+					<h3 className='text-body-sm font-bold uppercase tracking-[0.2em] text-brand-text-muted'>Necessary links</h3>
+					<div className='flex flex-col gap-2 text-body-sm text-brand-text-secondary'>
 						{footerLinks.necessary.map((link, index) => (
 							<BaseUrlLink key={index} href={link.href} className='hover:text-brand-text-primary'>
 								{link.label}

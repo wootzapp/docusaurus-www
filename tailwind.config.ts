@@ -10,8 +10,21 @@ module.exports = {
   },
   theme: {
     screens,
-    fontSize,
     extend: {
+      fontSize: {
+        // Stripe-style typography
+        'hero-sm': ['48px', { lineHeight: '1.04', letterSpacing: '-0.04em' }],
+        'hero-md': ['72px', { lineHeight: '1.04', letterSpacing: '-0.04em' }],
+        'hero-lg': ['94px', { lineHeight: '1.04', letterSpacing: '-0.04em' }],
+        'section': ['34px', { lineHeight: '1.29', letterSpacing: '-0.004em' }],
+        'section-lg': ['38px', { lineHeight: '1.29', letterSpacing: '-0.004em' }],
+        'subsection': ['24px', { lineHeight: '1.33' }],
+        'subsection-lg': ['26px', { lineHeight: '1.33' }],
+        'body': ['18px', { lineHeight: '1.56', letterSpacing: '0.01em' }],
+        'body-sm': ['16px', { lineHeight: '1.56', letterSpacing: '0.01em' }],
+        'nav': ['15px', { lineHeight: '1.4' }],
+        'btn': ['15px', { lineHeight: '1.4' }],
+      },
       colors: {
         brand: {
           base: "#1f130d",

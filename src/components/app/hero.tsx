@@ -49,27 +49,27 @@ export default function Hero() {
 			<div className='absolute inset-y-0 right-[-40%] size-[120%] rounded-full bg-gradient-to-br from-brand-surface via-brand-overlay to-brand-base blur-3xl opacity-70 pointer-events-none' />
 			<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
 
-			<div className='container-custom relative z-10 flex flex-col gap-16 py-24 lg:py-32'>
+			<div className='container-custom relative z-10 flex flex-col gap-16 py-[72px] lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
 					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
 						Human-Curated Browser-Use RL Environments
 					</span>
-					<h1 className='font-matter text-4xl leading-tight sm:text-5xl lg:text-6xl'>
+					<h1 className='font-matter font-bold text-hero-sm sm:text-hero-md lg:text-hero-lg'>
 						The Browser for Browser-Use RL Environments
 					</h1>
-					<p className='font-matter text-base text-brand-text-secondary sm:text-lg lg:max-w-2xl'>
+					<p className='font-matter text-body text-brand-text-secondary lg:max-w-2xl'>
 						Purpose-built to let humans teach agents how to use software — by building computer-use RL environments from real workflows.
 					</p>
 					<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
 							href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'
-							className='inline-flex items-center justify-center rounded-lg border border-brand-border bg-brand-accent-100 px-6 py-3 text-sm font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg'
+							className='inline-flex items-center justify-center rounded-full border border-brand-border bg-brand-accent-100 px-4 py-2 text-btn font-matter font-semibold text-brand-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg'
 						>
 							Request Early Access
 						</a>
 						<a
 							href='#example-environment'
-							className='inline-flex items-center justify-center rounded-lg border border-brand-border px-6 py-3 text-sm font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary'
+							className='inline-flex items-center justify-center rounded-full border border-brand-border px-4 py-2 text-btn font-matter font-semibold text-brand-text-secondary transition hover:text-brand-text-primary'
 						>
 							See Demo
 						</a>
@@ -82,10 +82,10 @@ export default function Hero() {
 							<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-border/60 bg-brand-base/30 px-4 py-1 text-xs uppercase tracking-[0.18em] text-brand-text-secondary'>
 								Why Model Labs Choose Us
 							</span>
-							<h2 className='font-matter text-2xl font-semibold leading-snug text-brand-text-primary sm:text-3xl'>
+							<h2 className='font-matter text-subsection font-bold text-brand-text-primary sm:text-subsection-lg'>
 								RL Isn't Held Back by Infra — It's Held Back by People Time
 							</h2>
-							<p className='text-sm text-brand-text-muted/80 sm:text-base'>
+							<p className='text-body-sm text-brand-text-muted/80 sm:text-body'>
 								We give humans the tools to build environments 10x faster.
 							</p>
 							<div className='flex flex-wrap gap-2'>
@@ -111,7 +111,7 @@ export default function Hero() {
 											<span className='relative z-10 mt-1 flex size-8 items-center justify-center rounded-full bg-brand-accent-100/20 text-brand-accent-100 ring-1 ring-brand-accent-100/40'>
 												{index < realtimeNarrative.length - 1 ? <ArrowIcon className='text-brand-accent-100' /> : <EndIcon className='text-brand-accent-100' />}
 											</span>
-											<p className='font-matter text-[0.95rem] leading-relaxed text-brand-text-muted sm:text-base lg:text-lg'>
+											<p className='font-matter text-body-sm text-brand-text-muted sm:text-body'>
 												{entry}
 											</p>
 										</div>

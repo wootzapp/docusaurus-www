@@ -56,7 +56,7 @@ export const Header = () => {
         <div className="hidden md:flex gap-10">
           {headerData.map((item) => (
             <a
-              className="font-matter text-base font-normal text-brand-text-muted transition hover:text-brand-text-primary hover:no-underline xl:text-lg"
+              className="font-matter text-nav font-bold text-brand-text-muted transition hover:text-brand-text-primary hover:no-underline"
               key={item.label}
               href={item.href}
             >
@@ -67,7 +67,7 @@ export const Header = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:inline-block">
-          <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="rounded-lg border border-brand-border/60 bg-brand-accent-100 px-5 py-2 text-sm font-matter font-medium text-brand-base transition hover:-translate-y-0.5 hover:shadow-md hover:text-brand-surface hover:no-underline">
+          <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="rounded-full border border-brand-border/60 bg-brand-accent-100 px-4 py-2 text-btn font-matter font-semibold text-brand-base transition hover:-translate-y-0.5 hover:shadow-md hover:text-brand-surface hover:no-underline">
             Get Started
           </a>
         </div>
@@ -94,7 +94,7 @@ export const Header = () => {
             <div className="flex flex-col mb-8">
               {headerData.map((item) => (
                 <a
-                  className="flex items-center justify-between border-b border-brand-border/60 py-4 text-lg font-matter font-medium text-brand-text-primary"
+                  className="flex items-center justify-between border-b border-brand-border/60 py-4 text-body font-matter font-bold text-brand-text-primary"
                   key={item.label}
                   href={item.href}
                 >
@@ -120,7 +120,7 @@ export const Header = () => {
 
             {/* Mobile CTA Button */}
             <div className="mt-4">
-              <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="w-full block text-center rounded-lg border border-brand-border/60 bg-brand-accent-100 py-4 text-base font-matter font-medium text-brand-base hover:text-brand-surface hover:no-underline">
+              <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="w-full block text-center rounded-full border border-brand-border/60 bg-brand-accent-100 py-3 text-btn font-matter font-semibold text-brand-base hover:text-brand-surface hover:no-underline">
                 Get Started
               </a>
             </div>
