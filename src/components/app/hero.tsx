@@ -6,7 +6,12 @@ export default function Hero() {
 	return (
 		<div className='sci-grid relative isolate overflow-hidden bg-brand-base text-brand-text-primary'>
 			<div className='absolute inset-0 sci-scanlines pointer-events-none' />
-			<div className='absolute inset-0 hero-stripes pointer-events-none' />
+			<div className='hero-aurora pointer-events-none' />
+			<div className='hero-aurora hero-aurora--two pointer-events-none' />
+			<div className='hero-aurora hero-aurora--three pointer-events-none' />
+			<div className='hero-beam pointer-events-none' />
+			<div className='hero-beam hero-beam--low pointer-events-none' />
+			<div className='hero-beam hero-beam--fast pointer-events-none' />
 			<div className='absolute -top-32 right-[-10%] size-[360px] rounded-full sci-orb sci-float pointer-events-none' />
 			<div className='absolute bottom-[-30%] left-[-15%] size-[420px] rounded-full sci-orb opacity-60 pointer-events-none' />
 			<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
@@ -14,13 +19,13 @@ export default function Hero() {
 
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-[72px] lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
-					<span className='sci-chip reveal inline-flex w-fit items-center rounded-full border-dashed px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-brand-accent-200 shadow-sm backdrop-blur-sm font-mono'>
+					<span className='reveal inline-flex w-fit items-center rounded-full border border-brand-base/20 bg-brand-neutral-100/80 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-brand-base shadow-sm backdrop-blur-sm font-mono'>
 						The RL Environment Company
 					</span>
-					<h1 className='reveal reveal-delay-1 font-matter font-bold text-hero-sm sm:text-hero-md lg:text-hero-lg'>
+					<h1 className='reveal reveal-delay-1 font-matter font-bold text-hero-sm text-brand-base sm:text-hero-md lg:text-hero-lg'>
 						We Rewrote the Browser<br />To Build Your Gym.
 					</h1>
-					<p className='reveal reveal-delay-2 font-matter text-body text-brand-text-secondary lg:max-w-2xl'>
+					<p className='reveal reveal-delay-2 font-matter text-body text-brand-base/80 lg:max-w-2xl'>
 						We bring the environment and the rollout system. Our custom browser renderer and v8 async infrastructure deliver the rewards and throughput you need to train agents for real work.
 					</p>
 					<div className='reveal reveal-delay-3 flex flex-col gap-3 sm:flex-row sm:items-center'>
@@ -32,7 +37,7 @@ export default function Hero() {
 						</a>
 						<a
 							href='#example-environment'
-							className='inline-flex items-center justify-center rounded-md border border-brand-border px-4 py-2 text-btn font-mono font-semibold tracking-[0.16em] text-brand-text-secondary transition hover:text-brand-text-primary hover:border-brand-accent-200/60'
+							className='inline-flex items-center justify-center rounded-md border border-brand-border px-4 py-2 text-btn font-mono font-semibold tracking-[0.16em] text-brand-base transition hover:text-brand-base hover:border-brand-accent-200/60'
 						>
 							See Demo
 						</a>
