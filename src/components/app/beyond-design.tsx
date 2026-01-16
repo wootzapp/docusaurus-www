@@ -23,10 +23,11 @@ const rewardAreas = [
 
 export function BeyondDesign() {
 	return (
-		<section className='bg-brand-base py-[72px] lg:py-32 text-brand-text-primary'>
-			<div className='container-custom grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
+		<section className='sci-grid relative overflow-hidden bg-brand-base py-[72px] text-brand-text-primary lg:py-32'>
+			<div className='absolute inset-0 sci-scanlines sci-scanlines--strong pointer-events-none' />
+			<div className='container-custom relative z-10 grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
 				<div className='flex flex-col gap-6'>
-					<span className='inline-flex w-fit items-center rounded-full border border-brand-accent-100/50 bg-brand-accent-100/10 px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-accent-100 shadow-sm backdrop-blur-sm'>
+					<span className='sci-chip inline-flex w-fit items-center rounded-full border-dashed border-brand-accent-200/60 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-accent-100 shadow-[0_0_30px_-20px_rgba(242,139,50,0.9)] backdrop-blur-sm font-mono'>
 						ChromiumRL Signals
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
@@ -35,7 +36,7 @@ export function BeyondDesign() {
 					<p className='text-body-sm text-brand-text-secondary sm:text-body'>
 						Because we own the renderer, we can grade layout stability, paint events, and network purity—signals impossible to get from Selenium or Playwright.
 					</p>
-					<div className='flex flex-col gap-3 rounded-2xl border border-brand-border bg-brand-surface/60 p-6 sm:p-8'>
+					<div className='sci-panel glow-box flex flex-col gap-3 rounded-2xl p-6 sm:p-8'>
 						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Proof of Superiority</h3>
 						<p className='text-body-sm text-brand-text-secondary sm:text-body'>
 							Our rewards show higher monotonicity and better near-miss separation than standard pass/fail tests. We don't just tell you if you failed—we tell you by how much.
@@ -48,8 +49,8 @@ export function BeyondDesign() {
 
 				<div className='flex flex-col gap-5'>
 					{rewardAreas.map((area) => (
-						<article key={area.title} className='flex flex-col gap-2 rounded-2xl border border-brand-border bg-brand-surface/70 p-6 shadow-lg shadow-brand-base/20'>
-							<h4 className='font-matter text-subsection font-bold text-brand-text-primary'>{area.title}</h4>
+						<article key={area.title} className='sci-chip flex flex-col gap-2 rounded-2xl p-6 shadow-lg shadow-brand-base/30'>
+							<h4 className='font-mono text-subsection font-semibold text-brand-text-primary'>{area.title}</h4>
 							<p className='text-body-sm text-brand-text-secondary sm:text-body'>{area.description}</p>
 						</article>
 					))}

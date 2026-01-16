@@ -7,7 +7,12 @@
 
 /* Dark mode overrides */
 :root {
-	--ifm-color-primary: #d9772a;
+	--ifm-color-primary: #f28b32;
+	--sci-grid-color: rgba(242, 139, 50, 0.16);
+	--sci-glow-color: rgba(242, 139, 50, 0.28);
+	--ifm-navbar-link-color: #ead6c6;
+	--ifm-navbar-link-hover-color: #fff4e6;
+	--ifm-navbar-link-active-color: #ffb15f;
 }
 @font-face {
 	font-family: "Matter";
@@ -43,6 +48,281 @@
 	width: 100%;
 	max-width: 1400px;
 	padding-inline: 1rem;
+}
+
+.navbar__link {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	letter-spacing: 0.06em;
+}
+
+.sci-grid {
+	position: relative;
+	isolation: isolate;
+}
+
+.sci-grid::before {
+	content: "";
+	position: absolute;
+	inset: -20% 0 0 -10%;
+	background-image:
+		linear-gradient(rgba(242, 139, 50, 0.18) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(242, 139, 50, 0.12) 1px, transparent 1px);
+	background-size: 56px 56px;
+	opacity: 0.22;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.sci-grid::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image:
+		radial-gradient(circle at 15% 20%, rgba(242, 139, 50, 0.18), transparent 55%),
+		radial-gradient(circle at 85% 20%, rgba(255, 177, 95, 0.16), transparent 50%),
+		linear-gradient(180deg, rgba(8, 5, 4, 0.2), transparent 40%);
+	opacity: 0.7;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.sci-scanlines {
+	background-image: repeating-linear-gradient(
+		180deg,
+		rgba(255, 177, 95, 0.08),
+		rgba(255, 177, 95, 0.08) 1px,
+		transparent 1px,
+		transparent 4px
+	);
+	mix-blend-mode: soft-light;
+	opacity: 0.35;
+}
+
+.sci-scanlines--soft {
+	opacity: 0.2;
+}
+
+.sci-scanlines--strong {
+	opacity: 0.48;
+}
+
+.sci-panel {
+	position: relative;
+	background: linear-gradient(180deg, rgba(16, 9, 7, 0.98), rgba(20, 12, 9, 0.9));
+	border: 1px solid rgba(61, 35, 22, 0.85);
+	box-shadow: 0 28px 90px -60px rgba(10, 6, 4, 0.95), inset 0 1px 0 rgba(242, 139, 50, 0.12);
+}
+
+.sci-panel::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	box-shadow: inset 0 0 0 1px rgba(242, 139, 50, 0.16);
+	pointer-events: none;
+}
+
+.sci-orb {
+	background: radial-gradient(circle, rgba(255, 208, 161, 0.4), rgba(242, 139, 50, 0.2), transparent 70%);
+	filter: blur(14px);
+	opacity: 0.6;
+}
+
+.glow-box {
+	position: relative;
+	isolation: isolate;
+	box-shadow:
+		0 0 0 1px rgba(242, 139, 50, 0.16),
+		0 18px 40px -28px rgba(242, 139, 50, 0.45),
+		0 0 60px -42px rgba(255, 177, 95, 0.55);
+}
+
+.glow-box::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 20% 20%, rgba(255, 177, 95, 0.18), transparent 55%);
+	opacity: 0.6;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.glow-box > * {
+	position: relative;
+	z-index: 1;
+}
+
+.hero-stripes {
+	background-image: repeating-linear-gradient(
+		125deg,
+		rgba(242, 139, 50, 0.24) 0px,
+		rgba(242, 139, 50, 0.24) 12px,
+		rgba(255, 177, 95, 0.22) 12px,
+		rgba(255, 177, 95, 0.22) 24px,
+		rgba(255, 208, 161, 0.2) 24px,
+		rgba(255, 208, 161, 0.2) 36px,
+		rgba(201, 176, 158, 0.18) 36px,
+		rgba(201, 176, 158, 0.18) 48px
+	);
+	background-size: 220% 220%;
+	opacity: 0.28;
+	mix-blend-mode: screen;
+	animation: stripes-drift 32s linear infinite;
+	z-index: 0;
+}
+
+.sci-chip {
+	position: relative;
+	background: rgba(18, 10, 7, 0.8);
+	border: 1px solid rgba(61, 35, 22, 0.75);
+	box-shadow: inset 0 0 0 1px rgba(242, 139, 50, 0.12);
+}
+
+.terminal-window {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	border-radius: 22px;
+	background: linear-gradient(180deg, rgba(30, 18, 13, 0.98), rgba(12, 7, 5, 0.98));
+	border: 1px solid rgba(242, 139, 50, 0.24);
+	box-shadow:
+		0 0 0 1px rgba(255, 177, 95, 0.12),
+		0 30px 80px -60px rgba(8, 5, 4, 0.95),
+		0 12px 40px -30px rgba(255, 177, 95, 0.35),
+		inset 0 1px 0 rgba(242, 139, 50, 0.18);
+	font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	letter-spacing: 0.02em;
+	color: #ead6c6;
+}
+
+.terminal-window::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: repeating-linear-gradient(
+		180deg,
+		rgba(255, 177, 95, 0.06),
+		rgba(255, 177, 95, 0.06) 1px,
+		transparent 1px,
+		transparent 3px
+	);
+	opacity: 0.5;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.terminal-window::after {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: 18px;
+	width: 56px;
+	height: 10px;
+	background:
+		radial-gradient(circle at 6px 5px, #f28b32 0 4px, transparent 5px),
+		radial-gradient(circle at 24px 5px, #ffb15f 0 4px, transparent 5px),
+		radial-gradient(circle at 42px 5px, #ffd0a1 0 4px, transparent 5px);
+	opacity: 0.9;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.terminal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.85rem 1.5rem 0.85rem 4.8rem;
+	border-bottom: 1px solid rgba(61, 35, 22, 0.9);
+	background: rgba(12, 7, 5, 0.85);
+	position: relative;
+	z-index: 1;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+	color: #ffb15f;
+}
+
+.terminal-title {
+	padding-left: 0.4rem;
+}
+
+.terminal-body {
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes stripes-drift {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 420px -420px;
+	}
+}
+
+.terminal-divider {
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(242, 139, 50, 0.5), transparent);
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.terminal-prompt {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	color: #ffb15f;
+}
+
+.reveal {
+	animation: reveal-up 0.8s ease both;
+}
+
+.reveal-delay-1 {
+	animation-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+	animation-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+	animation-delay: 0.45s;
+}
+
+.sci-float {
+	animation: sci-float 12s ease-in-out infinite;
+}
+
+@keyframes reveal-up {
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes sci-float {
+	0%,
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, -12px, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.sci-float {
+		animation: none;
+	}
+
+	.hero-stripes {
+		animation: none;
+	}
 }
 
 .cli-window {

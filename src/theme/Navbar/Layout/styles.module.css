@@ -11,18 +11,21 @@
 .navbarCustom {
 	transition: all 0.3s ease;
 	z-index: 1000;
+	backdrop-filter: blur(14px);
 }
 
 /* Transparent state (default/top of page) */
 .navbarTransparent {
-	background-color: transparent !important;
+	background-color: rgba(20, 12, 9, 0.32) !important;
+	border-bottom: 1px solid rgba(242, 139, 50, 0.12);
 	box-shadow: none;
 }
 
 /* Scrolled state (after scrolling down) */
 .navbarScrolled {
-	background-color: #fef7f3 !important;
-	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	background-color: rgba(20, 12, 9, 0.9) !important;
+	border-bottom: 1px solid rgba(242, 139, 50, 0.22);
+	box-shadow: 0 14px 40px -24px rgba(0, 0, 0, 0.8);
 }
 
 /* Override the default navbar styles */
