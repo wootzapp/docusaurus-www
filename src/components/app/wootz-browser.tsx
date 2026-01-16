@@ -56,50 +56,40 @@ export default function WootzBrowser() {
 							{/* terminal */}
 							<div className='space-y-4 bg-black p-4'>
 								<p className='mb-3 font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-green-400'>
-									developer@enterprise:~$ # Explore the world's only open-source enterprise browser
+									researcher@lab:~$ # The interface to your RL environment
 								</p>
 
 								<div className='space-y-4'>
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-cyan-400'>
 											<span className='text-green-400'>$ </span>
-											git clone{' '}
-											<a
-												className='text-cyan-400 underline-offset-4 hover:underline'
-												href='https://github.com/wootzapp/wootz-browser.git'
-												rel='noreferrer'
-												target='_blank'
-											>
-												https://github.com/wootzapp/wootz-browser.git
-											</a>
+											swe-rl rollout --workers 4 --backend gemini
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>Cloning into 'wootz-browser'...</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ World's only open-source enterprise browser</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Zero vendor lock-in, full transparency</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Userspace reboot (10s) ........... OK</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Async batching ................... ACTIVE</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ CDP reward stream ................ CONNECTED</p>
 										</div>
 									</div>
 
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-cyan-400'>
-											<span className='text-green-400'>$ </span>cat README.md | grep -i security
+											<span className='text-green-400'>$ </span>swe-rl evaluate --suite swe-bench-verified
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>🔒 Enterprise-grade DLP built-in</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>🛡️ Zero-trust architecture ready</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>🔍 Every line of code auditable</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>Running evaluation on 50 tasks...</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>[Env 0] Success: 0.82 (Reward: 0.94)</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>[Env 1] Success: 0.79 (Reward: 0.88)</p>
 										</div>
 									</div>
 
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-cyan-400'>
-											<span className='text-green-400'>$ </span>run build --production
+											<span className='text-green-400'>$ </span>cat metrics.json | grep -i utilization
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>Building enterprise browser...</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Hardened Chromium base</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Mobile-first security policies</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>✓ Ready for production deployment</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>"concurrency_utilization": 0.92</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-gray-300'>"gpu_saturation": 0.88</p>
 										</div>
 									</div>
 								</div>
@@ -139,36 +129,36 @@ export default function WootzBrowser() {
 									<div className='flex items-center space-x-4 text-xs text-gray-400'>
 										<div className='flex items-center space-x-1'>
 											<span className='inline-block size-2 rounded-full bg-orange-500' />
-											<span>Familiar Chromium-based source</span>
+											<span>v8 Rollout Spec</span>
 										</div>
 										<div className='flex items-center space-x-1'>
 											<span>⭐</span>
-											<span className='text-gray-300'>Public</span>
+											<span className='text-gray-300'>Production Ready</span>
 										</div>
-										<span>Updated now</span>
+										<span>Verified</span>
 									</div>
 								</div>
 
 								<p className='text-xs leading-relaxed text-gray-300 sm:text-sm'>
-									The world's only open-source enterprise browser. Built on hardened Chromium with enterprise security, mobile-first design, and zero vendor lock-in.
+									The only browser built for RL. We expose internal renderer signals to generate rewards that standard browsers can't, all while running 10x faster rollouts.
 								</p>
 
 								<div className='grid gap-3 sm:grid-cols-2'>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-cyan-400'>🔓 Open Source</p>
-										<p className='text-xs text-gray-400'>Audit every line</p>
+										<p className='font-mono text-xs text-cyan-400'>⚡ 10s Reset</p>
+										<p className='text-xs text-gray-400'>Userspace reboot</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-cyan-400'>🏢 Enterprise</p>
-										<p className='text-xs text-gray-400'>Production ready</p>
+										<p className='font-mono text-xs text-cyan-400'>🔄 Async Infra</p>
+										<p className='text-xs text-gray-400'>No step barriers</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-cyan-400'>📱 Mobile First</p>
-										<p className='text-xs text-gray-400'>Android native</p>
+										<p className='font-mono text-xs text-cyan-400'>💎 Pure Rewards</p>
+										<p className='text-xs text-gray-400'>Browser-native signals</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-cyan-400'>🛡️ Zero Trust</p>
-										<p className='text-xs text-gray-400'>Built-in DLP</p>
+										<p className='font-mono text-xs text-cyan-400'>🛡️ Legit Infra</p>
+										<p className='text-xs text-gray-400'>Production stable</p>
 									</div>
 								</div>
 

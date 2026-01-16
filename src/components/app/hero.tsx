@@ -1,15 +1,13 @@
 import React from "react";
 
 const realtimeNarrative = [
-	"Building computer-use or browser-use RL environments is brutally time-consuming.",
-	"The challenge isn't infrastructure — it's the human cost of creating and curating realistic workflows, edge cases, and verifiable task logic.",
-	"Existing tools weren't made for this kind of authoring.",
-	"We rebuilt the browser from the ground up to solve this: Wootzapp turns human feedback into live RL environments.",
-	"Because we own the browser, every label and correction updates the environment in real time.",
-	"The feedback loop closes instantly: annotations become specs, specs become reward logic, and rewards become trainable environments.",
+	"We build RL environments. You train the models.",
+	"Standard browsers are black boxes. We rewrote the renderer and network stack.",
+	"This lets us generate deterministic, browser-native rewards no one else can.",
+	"To drive this custom browser, we built the v8 Async Rollout System.",
+	"Userspace reboots in 10s. Zero synchronous barriers.",
+	"Our goal: Enable the automation of all valuable work in the economy.",
 ];
-
-const realtimeSignals = ["Human-guided authoring", "Visual workflow IDE", "Production-safe clones"];
 
 type ArrowIconProps = {
 	className?: string;
@@ -52,13 +50,13 @@ export default function Hero() {
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-[72px] lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
 					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
-						Human-Curated Browser-Use RL Environments
+						The RL Environment Company
 					</span>
 					<h1 className='font-matter font-bold text-hero-sm sm:text-hero-md lg:text-hero-lg'>
-						The Browser for Browser-Use RL Environments
+						We Rewrote the Browser<br />To Build Your Gym.
 					</h1>
 					<p className='font-matter text-body text-brand-text-secondary lg:max-w-2xl'>
-						Purpose-built to let humans teach agents how to use software — by building computer-use RL environments from real workflows.
+						We bring the environment and the rollout system. Our custom browser renderer and v8 async infrastructure deliver the rewards and throughput you need to train agents for real work.
 					</p>
 					<div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
@@ -80,24 +78,28 @@ export default function Hero() {
 					<div className='grid gap-8 lg:grid-cols-2 lg:items-start'>
 						<div className='relative flex flex-col gap-6 rounded-2xl border border-brand-border/40 bg-gradient-to-br from-brand-base/55 via-brand-overlay/45 to-brand-surface/95 p-6 sm:p-8'>
 							<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-border/60 bg-brand-base/30 px-4 py-1 text-xs uppercase tracking-[0.18em] text-brand-text-secondary'>
-								Why Model Labs Choose Us
+								Capabilities
 							</span>
 							<h2 className='font-matter text-subsection font-bold text-brand-text-primary sm:text-subsection-lg'>
-								RL Isn't Held Back by Infra — It's Held Back by People Time
+								What You Can Build
 							</h2>
-							<p className='text-body-sm text-brand-text-muted/80 sm:text-body'>
-								We give humans the tools to build environments 10x faster.
-							</p>
-							<div className='flex flex-wrap gap-2'>
-								{realtimeSignals.map((signal) => (
-									<span
-										key={signal}
-										className='inline-flex items-center gap-2 rounded-full border border-brand-border/30 bg-brand-surface/70 px-3 py-1 text-xs font-matter text-brand-text-secondary shadow-sm shadow-brand-base/10'
-									>
-										<span className='size-1.5 rounded-full bg-brand-accent-100' />
-										{signal}
-									</span>
-								))}
+							<div className="grid gap-6 sm:grid-cols-2">
+								<div className="flex flex-col gap-1">
+									<h3 className="font-semibold text-brand-text-primary">SOTA Web Agents</h3>
+									<p className="text-sm text-brand-text-muted/80">Navigate complex, JS-heavy sites.</p>
+								</div>
+								<div className="flex flex-col gap-1">
+									<h3 className="font-semibold text-brand-text-primary">Resilient Scrapers</h3>
+									<p className="text-sm text-brand-text-muted/80">Adapt to layout changes automatically.</p>
+								</div>
+								<div className="flex flex-col gap-1">
+									<h3 className="font-semibold text-brand-text-primary">Auto-QA Systems</h3>
+									<p className="text-sm text-brand-text-muted/80">Self-healing tests that verify flows.</p>
+								</div>
+								<div className="flex flex-col gap-1">
+									<h3 className="font-semibold text-brand-text-primary">Process Automation</h3>
+									<p className="text-sm text-brand-text-muted/80">Execute tedious workflows end-to-end.</p>
+								</div>
 							</div>
 						</div>
 
