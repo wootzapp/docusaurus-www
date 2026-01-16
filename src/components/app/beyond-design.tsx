@@ -26,7 +26,7 @@ export function BeyondDesign() {
 		<section className='bg-brand-base py-[72px] lg:py-32 text-brand-text-primary'>
 			<div className='container-custom grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
 				<div className='flex flex-col gap-6'>
-					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/60 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
+					<span className='inline-flex w-fit items-center rounded-full border border-brand-accent-100/50 bg-brand-accent-100/10 px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-accent-100 shadow-sm backdrop-blur-sm'>
 						ChromiumRL Signals
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>

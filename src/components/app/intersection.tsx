@@ -25,7 +25,7 @@ export function Intersection() {
 			<div className='container-custom flex flex-col gap-12'>
 				<div className='grid gap-5 md:gap-8 lg:grid-cols-2'>
 					<div className='flex flex-col gap-6 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100 p-6 sm:p-8 shadow-sm shadow-brand-base/5'>
-						<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
+						<span className='inline-flex w-fit items-center rounded-full border border-brand-neutral-400 bg-white px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-base shadow-sm'>
 							Example environment (news homepage)
 						</span>
 						<p className='text-body-sm text-brand-base sm:text-body'>

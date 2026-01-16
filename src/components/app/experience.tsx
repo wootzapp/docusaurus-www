@@ -4,7 +4,7 @@ export function Experience() {
 			<div className='container-custom'>
 				<div className='mx-auto max-w-4xl flex flex-col gap-8 text-center'>
 					<div className='flex flex-col gap-5'>
-						<span className='mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/60 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
+						<span className='mx-auto inline-flex w-fit items-center rounded-full border border-brand-accent-100/50 bg-brand-accent-100/10 px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-accent-100 shadow-sm backdrop-blur-sm'>
 							Validation
 						</span>
 						<h2 className='font-matter text-section font-bold sm:text-section-lg'>

@@ -1,45 +1,6 @@
 import React from "react";
 
-const realtimeNarrative = [
-	"We build RL environments. You train the models.",
-	"Standard browsers are black boxes. We rewrote the renderer and network stack.",
-	"This lets us generate deterministic, browser-native rewards no one else can.",
-	"To drive this custom browser, we built the v8 Async Rollout System.",
-	"Userspace reboots in 10s. Zero synchronous barriers.",
-	"Our goal: Enable the automation of all valuable work in the economy.",
-];
 
-type ArrowIconProps = {
-	className?: string;
-};
-
-const ArrowIcon = ({ className = "" }: ArrowIconProps) => (
-	<svg
-		aria-hidden
-		viewBox='0 0 24 24'
-		fill='none'
-		className={`h-6 w-6 sm:h-8 sm:w-8 ${className}`.trim()}
-	>
-		<path
-			d='M12 3v14M5 10l7 7 7-7'
-			stroke='currentColor'
-			strokeWidth={1.5}
-			strokeLinecap='round'
-			strokeLinejoin='round'
-		/>
-	</svg>
-);
-
-const EndIcon = ({ className = "" }: ArrowIconProps) => (
-	<svg
-		aria-hidden
-		viewBox='0 0 24 24'
-		fill='none'
-		className={`h-6 w-6 sm:h-8 sm:w-8 ${className}`.trim()}
-	>
-		<circle cx={12} cy={12} r={5} stroke='currentColor' strokeWidth={1.5} fill='currentColor' />
-	</svg>
-);
 
 export default function Hero() {
 	return (
@@ -49,7 +10,7 @@ export default function Hero() {
 
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-[72px] lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
-					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-accent-100/40 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-text-secondary'>
+					<span className='inline-flex w-fit items-center rounded-full border border-brand-accent-100/50 bg-brand-accent-100/10 px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-accent-100 shadow-sm backdrop-blur-sm'>
 						The RL Environment Company
 					</span>
 					<h1 className='font-matter font-bold text-hero-sm sm:text-hero-md lg:text-hero-lg'>
@@ -75,53 +36,32 @@ export default function Hero() {
 				</div>
 
 				<div className='rounded-3xl border border-brand-border/60 bg-brand-surface/85 p-6 shadow-[0_32px_120px_-60px_rgba(12,10,9,0.8)] ring-1 ring-brand-overlay/30 sm:p-10'>
-					<div className='grid gap-8 lg:grid-cols-2 lg:items-start'>
-						<div className='relative flex flex-col gap-6 rounded-2xl border border-brand-border/40 bg-gradient-to-br from-brand-base/55 via-brand-overlay/45 to-brand-surface/95 p-6 sm:p-8'>
+					<div className='flex flex-col gap-8'>
+						<div className='flex flex-col gap-4'>
 							<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-border/60 bg-brand-base/30 px-4 py-1 text-xs uppercase tracking-[0.18em] text-brand-text-secondary'>
 								Capabilities
 							</span>
 							<h2 className='font-matter text-subsection font-bold text-brand-text-primary sm:text-subsection-lg'>
 								What You Can Build
 							</h2>
-							<div className="grid gap-6 sm:grid-cols-2">
-								<div className="flex flex-col gap-1">
-									<h3 className="font-semibold text-brand-text-primary">SOTA Web Agents</h3>
-									<p className="text-sm text-brand-text-muted/80">Navigate complex, JS-heavy sites.</p>
-								</div>
-								<div className="flex flex-col gap-1">
-									<h3 className="font-semibold text-brand-text-primary">Resilient Scrapers</h3>
-									<p className="text-sm text-brand-text-muted/80">Adapt to layout changes automatically.</p>
-								</div>
-								<div className="flex flex-col gap-1">
-									<h3 className="font-semibold text-brand-text-primary">Auto-QA Systems</h3>
-									<p className="text-sm text-brand-text-muted/80">Self-healing tests that verify flows.</p>
-								</div>
-								<div className="flex flex-col gap-1">
-									<h3 className="font-semibold text-brand-text-primary">Process Automation</h3>
-									<p className="text-sm text-brand-text-muted/80">Execute tedious workflows end-to-end.</p>
-								</div>
-							</div>
 						</div>
 
-						<div className='relative overflow-hidden rounded-2xl bg-brand-base/15 p-6 sm:p-8'>
-							<div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_70%)]' />
-							<div className='absolute left-5 top-10 bottom-10 hidden w-px bg-brand-accent-100/25 lg:block' />
-							<div className='relative flex flex-col gap-6'>
-								{realtimeNarrative.map((entry, index) => (
-									<React.Fragment key={entry}>
-										<div className='relative flex items-start gap-4'>
-											<span className='relative z-10 mt-1 flex size-8 items-center justify-center rounded-full bg-brand-accent-100/20 text-brand-accent-100 ring-1 ring-brand-accent-100/40'>
-												{index < realtimeNarrative.length - 1 ? <ArrowIcon className='text-brand-accent-100' /> : <EndIcon className='text-brand-accent-100' />}
-											</span>
-											<p className='font-matter text-body-sm text-brand-text-muted sm:text-body'>
-												{entry}
-											</p>
-										</div>
-										{index < realtimeNarrative.length - 1 && (
-											<ArrowIcon className='mx-6 text-brand-accent-100/70 lg:hidden' />
-										)}
-									</React.Fragment>
-								))}
+						<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+							<div className="flex flex-col gap-2 rounded-2xl border border-brand-border/40 bg-brand-surface/50 p-6 hover:bg-brand-surface/80 transition-colors">
+								<h3 className="font-semibold text-brand-text-primary">Frontend Codegen</h3>
+								<p className="text-sm text-brand-text-muted/80">Give your code generation models eyes. Our renderer generates visual and structural rewards, enabling agents to iterate on UI until it's pixel-perfect.</p>
+							</div>
+							<div className="flex flex-col gap-2 rounded-2xl border border-brand-border/40 bg-brand-surface/50 p-6 hover:bg-brand-surface/80 transition-colors">
+								<h3 className="font-semibold text-brand-text-primary">Agents</h3>
+								<p className="text-sm text-brand-text-muted/80">Train agents on the live web, not static snapshots. We handle the complexity of modern web apps—auth, popups, and dynamic DOMs—so you can focus on reasoning.</p>
+							</div>
+							<div className="flex flex-col gap-2 rounded-2xl border border-brand-border/40 bg-brand-surface/50 p-6 hover:bg-brand-surface/80 transition-colors">
+								<h3 className="font-semibold text-brand-text-primary">Browser Games</h3>
+								<p className="text-sm text-brand-text-muted/80">Turn any browser game into a reasoning gym. We expose internal game state and provide deterministic frame stepping for high-fidelity RL training.</p>
+							</div>
+							<div className="flex flex-col gap-2 rounded-2xl border border-brand-border/40 bg-brand-surface/50 p-6 hover:bg-brand-surface/80 transition-colors">
+								<h3 className="font-semibold text-brand-text-primary">Deep Search Evals</h3>
+								<p className="text-sm text-brand-text-muted/80">Evaluate long-horizon search capabilities. Let agents navigate the open web to find answers, with full trajectory replay and ground-truth validation.</p>
 							</div>
 						</div>
 					</div>

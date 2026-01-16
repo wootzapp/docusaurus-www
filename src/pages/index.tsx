@@ -5,6 +5,7 @@ import {Footer} from "../components/app/footer";
 import {Header} from "../components/app/header";
 import Hero from "../components/app/hero";
 import BrowserPlatform from "../components/app/browser-platform";
+import {Integration} from "../components/app/integration";
 import {Intersection} from "../components/app/intersection";
 import {PartnerShip} from "../components/app/partnership";
 import {BeyondDesign} from "../components/app/beyond-design";
@@ -20,6 +21,7 @@ export default function Home() {
 				<WootzBrowser />
 					<Browsing />
 					<BrowserPlatform />
+					<Integration />
 					<PartnerShip />
 					<BeyondDesign />
 				<Intersection />

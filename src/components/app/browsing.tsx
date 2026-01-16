@@ -5,39 +5,60 @@ export function Browsing() {
 		<section className='bg-white text-brand-base' id='what-we-do'>
 			<div className='container-custom flex flex-col gap-10 py-[72px] lg:py-32'>
 				<div className='max-w-4xl flex flex-col gap-4'>
-					<span className='inline-flex w-fit items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
+					<span className='inline-flex w-fit items-center rounded-full border border-brand-neutral-400 bg-white px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-base shadow-sm'>
 						The Async Rollout System
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						Zero Barriers. Max Throughput.
+						v8 Architecture: The Rollout Engine for SWE-RL
 					</h2>
 					<p className='text-body text-brand-base/80'>
-						Why do we build our own browser? To remove the synchronous barriers that slow down training. We rewrote the renderer and network stack to deliver the 10s resets and async inference needed to keep your GPUs fully fed.
+						A fully async, emulator-centric rollout system designed to saturate GPUs. Features pluggable scheduling algorithms, userspace reboots, and per-node inference routing.
 					</p>
 				</div>
 
-				<div className='grid gap-5 md:gap-8 md:grid-cols-2'>
-					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100/80 p-6 sm:p-8 shadow-sm'>
-						<h3 className='font-matter text-subsection font-bold text-brand-base'>WebGym-Style Semantics</h3>
-						<p className='text-body-sm text-brand-base/80 sm:text-body'>
-							We've removed the barriers that slow down training.
-						</p>
-						<ul className='flex flex-col gap-2 text-body-sm text-brand-base'>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />No step barriers: Envs wait only on their own actions</li>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />No episode barriers: Immediate slot reassignment</li>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Queue separation: Nav and screenshots don't block each other</li>
+				<div className='grid gap-5 md:gap-8 md:grid-cols-2 lg:grid-cols-3'>
+					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100/50 p-6 sm:p-8 shadow-sm'>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>Pluggable Scheduling</h3>
+						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
+							<li>
+								<span className="font-bold text-brand-base">SHDS</span>: <span className="text-brand-base/80">Short-Horizon Diversified Scheduler for coverage</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">Bandit-Time</span>: <span className="text-brand-base/80">Optimize reward/sec via UCB</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">GRPO</span>: <span className="text-brand-base/80">Automatic K-rollout grouping for advantage</span>
+							</li>
 						</ul>
 					</div>
 
-					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100/80 p-6 sm:p-8 shadow-sm'>
-						<h3 className='font-matter text-subsection font-bold text-brand-base'>Legit Infrastructure</h3>
-						<p className='text-body-sm text-brand-base/80 sm:text-body'>
-							Built for scale, fault tolerance, and efficiency.
-						</p>
-						<ul className='flex flex-col gap-2 text-body-sm text-brand-base'>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Per-node routing keeps screenshots local to the GPU</li>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />CDP disconnects handled as state transitions, not crashes</li>
-							<li className='flex items-start gap-2'><span className='mt-1 h-1.5 w-1.5 rounded-full bg-brand-border/60' />Reference-based transport minimizes serialization overhead</li>
+					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100/50 p-6 sm:p-8 shadow-sm'>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>Emulator-Centric Control</h3>
+						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
+							<li>
+								<span className="font-bold text-brand-base">Userspace Reboot</span>: <span className="text-brand-base/80">10s resets (kernel stays hot)</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">Browser-Owned CDP</span>: <span className="text-brand-base/80">Disconnects are state transitions</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">Direct Injection</span>: <span className="text-brand-base/80">DOM signals bypass the wire</span>
+							</li>
+						</ul>
+					</div>
+
+					<div className='flex flex-col gap-4 rounded-2xl border border-brand-neutral-300 bg-brand-neutral-100/50 p-6 sm:p-8 shadow-sm'>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>WebGym-Style Async</h3>
+						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
+							<li>
+								<span className="font-bold text-brand-base">No Barriers</span>: <span className="text-brand-base/80">Zero blocking on step/episode boundaries</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">Per-Node Routing</span>: <span className="text-brand-base/80">Local screenshot loading</span>
+							</li>
+							<li>
+								<span className="font-bold text-brand-base">Op Queues</span>: <span className="text-brand-base/80">Navigation/Screenshot isolation</span>
+							</li>
 						</ul>
 					</div>
 				</div>

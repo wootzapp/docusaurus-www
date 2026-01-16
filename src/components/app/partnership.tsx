@@ -24,7 +24,7 @@ export function PartnerShip() {
 		<section className='bg-brand-neutral-100 py-[72px] lg:py-32 text-brand-base' id='delivery-formats'>
 			<div className='container-custom flex flex-col gap-12'>
 				<div className='mx-auto max-w-3xl text-center flex flex-col gap-4'>
-					<span className='mx-auto inline-flex items-center gap-2 rounded-full border border-brand-neutral-300 px-4 py-1 text-xs uppercase tracking-[0.2em] text-brand-neutral-500'>
+					<span className='mx-auto inline-flex w-fit items-center rounded-full border border-brand-neutral-400 bg-white px-5 py-2 text-sm font-bold uppercase tracking-widest text-brand-base shadow-sm'>
 						Advanced Scheduling
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
