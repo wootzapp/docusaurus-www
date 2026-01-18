@@ -23,7 +23,7 @@ export function Experience() {
 
 					<div className='sci-panel mt-8 rounded-2xl p-6 sm:p-8'>
 						<p className='text-body-sm text-brand-text-secondary'>
-							WootzApp — The Rollout Infrastructure for SWE-RL
+							WootzApp — The Rollout Infrastructure for W8-RL
 						</p>
 					</div>
 				</div>

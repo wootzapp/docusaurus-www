@@ -129,7 +129,7 @@ export default function WootzBrowser() {
 									<div className='flex items-center space-x-4 text-xs text-brand-text-muted'>
 										<div className='flex items-center space-x-1'>
 											<span className='inline-block size-2 rounded-full bg-brand-accent-200' />
-											<span>v8 Rollout Spec</span>
+											<span>W8 Rollout Spec</span>
 										</div>
 										<div className='flex items-center space-x-1'>
 											<span>⭐</span>

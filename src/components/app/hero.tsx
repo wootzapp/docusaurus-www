@@ -26,7 +26,7 @@ export default function Hero() {
 						We Rewrote the Browser<br />To Build Your Gym.
 					</h1>
 					<p className='reveal reveal-delay-2 font-matter text-body text-brand-base/80 lg:max-w-2xl'>
-						We bring the environment and the rollout system. Our custom browser renderer and v8 async infrastructure deliver the rewards and throughput you need to train agents for real work.
+						We bring the environment and the rollout system. Our custom browser renderer and W8 async infrastructure deliver the rewards and throughput you need to train agents for real work.
 					</p>
 					<div className='reveal reveal-delay-3 flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a

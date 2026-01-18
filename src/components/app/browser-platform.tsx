@@ -4,7 +4,7 @@ const realtimeNarrative = [
 	"We provide the gymnasium. You build the athlete.",
 	"Standard browsers are black boxes. We rewrote the renderer and network stack.",
 	"This lets us generate deterministic, browser-native rewards no one else can.",
-	"To drive this custom browser, we built the v8 Async Rollout System.",
+	"To drive this custom browser, we built the W8 Async Rollout System.",
 	"Userspace reboots in 10s. Zero synchronous barriers.",
 	"Our goal: Simulate and automate every task in the knowledge economy.",
 ];
@@ -57,7 +57,7 @@ export function BrowserPlatform() {
 						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Infra</span>
 						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>We Bring the Rollout</h3>
 						<p className='text-body-sm text-brand-text-secondary'>
-							We provide the rollout system because we own the browser. Our v8 architecture delivers the 10s resets and async inference needed for scale.
+							We provide the rollout system because we own the browser. Our W8 architecture delivers the 10s resets and async inference needed for scale.
 						</p>
 					</div>
 
