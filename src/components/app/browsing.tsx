@@ -11,7 +11,7 @@ export function Browsing() {
 						The Async Rollout System
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						W8-RL: The Rollout Engine for Browser-based RL
+						W8-RL: The Rollout Engine for Browser based RL
 					</h2>
 					<p className='text-body text-brand-base/80'>
 						A fully async, emulator-centric rollout system designed to saturate GPUs. Features pluggable scheduling algorithms, userspace reboots, and per-node inference routing.

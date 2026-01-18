@@ -10,7 +10,7 @@ export function Integration() {
 						Integrated with Infrastructure & Training Platforms
 					</span>
 					<h2 className='font-matter text-subsection font-bold text-brand-base sm:text-subsection-lg'>
-						The Environment Layer for Your Training Stack
+						Native integration with Training & Finetuning Partners
 					</h2>
 					<p className='font-matter text-body text-brand-base/80'>
 						We don't train models—we provide the reality they learn from. WootzApp integrates natively with inference providers like <span className='font-bold text-brand-base'>Together.ai</span> and orchestration frameworks like <span className='font-bold text-brand-base'>Ray</span> and <span className='font-bold text-brand-base'>CleanRL</span>. You bring the policy and the compute; we supply the massive-scale, interactive browser simulations required to close the loop.
