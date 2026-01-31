@@ -1,11 +1,10 @@
 ---
-id: reference/files
 title: File Glossary
 sidebar_position: 3
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 ## Core
 
@@ -47,3 +46,4 @@ All commands run inside Docker containers. Use the provided scripts.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

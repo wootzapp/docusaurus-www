@@ -1,11 +1,10 @@
 ---
-id: guides/design2code
 title: Design2Code Runs
 sidebar_position: 1
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 Design2Code tasks are HTML generation tasks evaluated in the emulator browser.
 All reward paths use **EnvActor + ChromiumRL**, and **Design2Code requires a SUBMIT action**.
@@ -84,3 +83,4 @@ Reward curves are written as `*.steps.jsonl` and `*.steps.csv`.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

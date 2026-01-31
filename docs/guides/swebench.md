@@ -1,11 +1,10 @@
 ---
-id: guides/swebench
 title: SWE-bench-verified Runs
 sidebar_position: 2
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 SWE-bench-verified tasks are run via the Ray rollout path.
 Each task is a dedicated Docker container defined in `tasks/<instance_id>/`.
@@ -38,4 +37,5 @@ Only tasks with a Dockerfile are runnable. See `tasks/README.md` for details.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

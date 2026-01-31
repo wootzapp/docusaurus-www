@@ -1,11 +1,10 @@
 ---
-id: architecture/overview
 title: Architecture Overview
 sidebar_position: 1
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 W8-RL is built around Ray actors and a real emulator browser.
 
@@ -44,4 +43,5 @@ All execution happens inside Docker containers.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

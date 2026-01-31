@@ -1,5 +1,4 @@
 ---
-id: reference/glossary
 title: Glossary
 sidebar_position: 4
 ---

@@ -1,11 +1,10 @@
 ---
-id: operations/troubleshooting
 title: Troubleshooting
 sidebar_position: 1
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 ## PermissionError on Docker socket
 
@@ -44,4 +43,5 @@ OpenEnv has a Ray timeout for all actor calls. If a step hangs, check:
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

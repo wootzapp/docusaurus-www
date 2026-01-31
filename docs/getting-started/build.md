@@ -1,5 +1,4 @@
 ---
-id: getting-started/build
 title: Build the Stack
 sidebar_position: 2
 ---

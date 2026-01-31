@@ -1,11 +1,10 @@
 ---
-id: guides/tinker-training
 title: Tinker RL Training
 sidebar_position: 3
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 Tinker training performs real gradient updates using GRPO-style group rollouts.
 All training runs inside `ray-worker` and uses EnvActor + emulator rewards.
@@ -77,4 +76,5 @@ If `HF_HUB_ENABLE_HF_TRANSFER=1` is set, `hf_transfer` must be installed. Otherw
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

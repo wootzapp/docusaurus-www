@@ -1,5 +1,4 @@
 ---
-id: rewards/chromiumrl
 title: ChromiumRL Signals
 sidebar_position: 1
 ---

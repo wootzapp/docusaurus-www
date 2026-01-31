@@ -1,5 +1,4 @@
 ---
-id: rewards/design2code
 title: Design2Code Rewards
 sidebar_position: 2
 ---

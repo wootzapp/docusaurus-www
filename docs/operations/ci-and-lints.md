@@ -1,11 +1,10 @@
 ---
-id: operations/ci-and-lints
 title: CI and Lints
 sidebar_position: 3
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 W8-RL uses lint tests to enforce architecture contracts.
 All lint runs must happen in Docker.
@@ -34,4 +33,5 @@ Lint tests enforce:
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

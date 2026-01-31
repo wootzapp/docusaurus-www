@@ -81,6 +81,6 @@ This enables glob-based parallel sharding (`tasks/difficulty/[1-3]/**/*.json`) a
 
 ## Next Steps
 
-- Read the Architecture overview: [Architecture Overview](../architecture/overview)
-- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
-- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+- Read the Architecture overview: [Architecture Overview](./architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](./guides/design2code)
+- Review troubleshooting: [Troubleshooting](./operations/troubleshooting)

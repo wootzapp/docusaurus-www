@@ -1,5 +1,4 @@
 ---
-id: architecture/emulator-and-rewards
 title: Emulator and Reward Flow
 sidebar_position: 3
 ---

@@ -1,11 +1,10 @@
 ---
-id: compatibility/skyrl
 title: SkyRL Compatibility
 sidebar_position: 1
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 W8-RL supports SkyRL via a Ray-backed BaseTextEnv adapter.
 SkyRL runs in **external-policy mode only**.
@@ -43,3 +42,4 @@ Run the command below from the repo root in Docker:
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

@@ -1,11 +1,10 @@
 ---
-id: compatibility/tinker
 title: Tinker Compatibility
 sidebar_position: 3
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 W8-RL includes a Tinker adapter for token-based RL training using the Tinker Cookbook API.
 It wraps EnvActor directly and runs inside `ray-worker`.
@@ -37,4 +36,5 @@ See [Tinker RL Training](../guides/tinker-training).
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

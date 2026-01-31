@@ -1,11 +1,10 @@
 ---
-id: getting-started/prereqs
 title: Prerequisites
 sidebar_position: 1
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 ## Required
 
@@ -36,4 +35,5 @@ The scripts do this automatically. Prefer scripts.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

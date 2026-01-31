@@ -1,11 +1,10 @@
 ---
-id: reference/envvars
 title: Environment Variables
 sidebar_position: 2
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 Common environment variables used across W8-RL.
 
@@ -46,4 +45,5 @@ Common environment variables used across W8-RL.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

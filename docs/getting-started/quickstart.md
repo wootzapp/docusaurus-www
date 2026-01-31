@@ -1,11 +1,10 @@
 ---
-id: getting-started/quickstart
 title: Quickstart
 sidebar_position: 3
 ---
 :::note Docker-only execution
 All commands run inside Docker containers. Use the provided scripts.
-:::note
+:::
 
 ## Design2Code via SkyRL (OpenHands)
 
@@ -41,4 +40,5 @@ Outputs are written under `/home/ray/app/output/` in the container.
 - Read the Architecture overview: [Architecture Overview](../architecture/overview)
 - Run a Design2Code task: [Design2Code Runs](../guides/design2code)
 - Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
 

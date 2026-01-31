@@ -1,5 +1,4 @@
 ---
-id: guides/outputs
 title: Outputs and Reward Curves
 sidebar_position: 4
 ---
