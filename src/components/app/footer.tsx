@@ -12,6 +12,12 @@ function BaseUrlLink({href, children, ...props}: {href: string; children: React.
 
 // JSON object containing footer links
 const footerLinks = {
+  docs: [
+    {
+      label: "W8-RL Docs",
+      href: "/docs/intro",
+    },
+  ],
   necessary: [
     {
       label: "Privacy",
@@ -50,6 +56,17 @@ export function Footer() {
 					<a href='mailto:founders@wootzapp.com' className='font-mono text-body-sm font-semibold text-brand-accent-200 hover:underline'>
 						founders@wootzapp.com
 					</a>
+				</div>
+
+				<div className='flex flex-col gap-4'>
+					<h3 className='font-mono text-body-sm font-bold uppercase tracking-[0.2em] text-brand-text-muted'>Documentation</h3>
+					<div className='flex flex-col gap-2 text-body-sm text-brand-text-secondary'>
+						{footerLinks.docs.map((link, index) => (
+							<BaseUrlLink key={index} href={link.href} className='hover:text-brand-text-primary'>
+								{link.label}
+							</BaseUrlLink>
+						))}
+					</div>
 				</div>
 
 				<div className='flex flex-col gap-4'>
