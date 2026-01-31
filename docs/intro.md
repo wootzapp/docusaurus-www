@@ -1,47 +1,25 @@
 ---
+title: W8-RL Overview
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+W8-RL is a Ray-distributed rollout framework for web-agent RL. It uses a real browser (WootzApp) to generate **ChromiumRL visual + semantic rewards** and runs entirely in Docker.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+W8-RL exposes **three compatibility paths** on top of the same EnvActor core:
 
-## Getting Started
+- **SkyRL** (BaseTextEnv interface, Ray-backed)
+- **OpenEnv** (HTTP via Ray Serve + FastAPI)
+- **Tinker** (token-based RL training via Tinker Cookbook)
 
-Get started by **creating a new site**.
+All paths share the same execution core:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```
+Task container -> EnvActor -> emulator browser -> ChromiumRL signals -> reward bundle
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+:::caution Docker-only execution
+Everything must run in Docker. Do not run Python or tests on the host.
+Use the provided scripts or `docker compose run`.
+:::
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+If you want a quick start, see [Getting Started](getting-started/quickstart).
