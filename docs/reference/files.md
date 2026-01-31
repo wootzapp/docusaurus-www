@@ -1,7 +1,11 @@
 ---
+id: reference/files
 title: File Glossary
 sidebar_position: 3
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 ## Core
 
@@ -24,7 +28,7 @@ sidebar_position: 3
 ## Tinker
 
 - `w8_rl/tinker/env_adapter.py` - EnvActor adapter
-- `w8_rl/tinker/renderer.py` - ObsRef &lt;-&gt; tokens
+- `w8_rl/tinker/renderer.py` - ObsRef to tokens
 - `scripts/train_design2code_tinker.py` - GRPO training loop
 
 ## Tasks
@@ -38,3 +42,8 @@ sidebar_position: 3
 - `scripts/run_design2code_openenv.sh` - OpenEnv evaluation
 - `scripts/run_design2code_tinker.sh` - Tinker rollout
 - `scripts/train_design2code_tinker.sh` - Tinker training
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)

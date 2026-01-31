@@ -82,6 +82,7 @@ const sidebars: SidebarsConfig = {
             'reference/cli',
             'reference/envvars',
             'reference/files',
+            'reference/glossary',
           ],
         },
       ],

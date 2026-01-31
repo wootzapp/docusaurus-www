@@ -1,13 +1,17 @@
 ---
+id: operations/troubleshooting
 title: Troubleshooting
 sidebar_position: 1
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 ## PermissionError on Docker socket
 
 If you see:
 
-```
+```text
 PermissionError: [Errno 13] Permission denied: /var/run/docker.sock
 ```
 
@@ -35,3 +39,9 @@ OpenEnv has a Ray timeout for all actor calls. If a step hangs, check:
 - Ray connectivity (`RAY_ADDRESS`)
 - SessionManager actor health
 - task container health
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

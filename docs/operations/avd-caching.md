@@ -1,7 +1,11 @@
 ---
+id: operations/avd-caching
 title: AVD Snapshot Caching
 sidebar_position: 2
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 AVD snapshot caching allows faster emulator startup by reusing saved snapshots.
 
@@ -14,6 +18,7 @@ The SWE-bench runner supports two explicit modes:
 
 ## Examples
 
+Run the command below from the repo root in Docker:
 ```bash
 # Fast mode (default)
 ./scripts/run_all_tasks.sh --task django__django-10914 --avd-rehydrate
@@ -23,3 +28,9 @@ The SWE-bench runner supports two explicit modes:
 ```
 
 When rehydrate is enabled, the emulator uses existing snapshots when available.
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

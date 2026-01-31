@@ -1,7 +1,11 @@
 ---
+id: getting-started/prereqs
 title: Prerequisites
 sidebar_position: 1
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 ## Required
 
@@ -11,6 +15,7 @@ sidebar_position: 1
 
 ## Files to place
 
+Run the command below from the repo root in Docker:
 ```bash
 mkdir -p secrets
 cp /path/to/service-account.json secrets/gcp-service-account.json
@@ -26,3 +31,9 @@ export DOCKER_GID=$(stat -c '%g' /var/run/docker.sock)
 ```
 
 The scripts do this automatically. Prefer scripts.
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

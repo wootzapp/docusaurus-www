@@ -1,7 +1,11 @@
 ---
+id: reference/cli
 title: CLI and Scripts
 sidebar_position: 1
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 All commands must run in Docker. Use the provided scripts.
 
@@ -16,6 +20,7 @@ All commands must run in Docker. Use the provided scripts.
 
 ## run_all_tasks.sh
 
+Run the command below from the repo root in Docker:
 ```bash
 ./scripts/run_all_tasks.sh --task django__django-10914
 ./scripts/run_all_tasks.sh --limit 5
@@ -25,6 +30,7 @@ All commands must run in Docker. Use the provided scripts.
 
 ## run_design2code_skyrl.sh
 
+Run the command below from the repo root in Docker:
 ```bash
 ./scripts/run_design2code_skyrl.sh design2code_0000 \
   --episodes 3 \
@@ -33,12 +39,14 @@ All commands must run in Docker. Use the provided scripts.
 
 ## run_design2code_openenv.sh
 
+Run the command below from the repo root in Docker:
 ```bash
 ./scripts/run_design2code_openenv.sh design2code_0000 --use-openhands --episodes 3
 ```
 
 ## run_design2code_tinker.sh
 
+Run the command below from the repo root in Docker:
 ```bash
 ./scripts/run_design2code_tinker.sh --task-dir tasks --limit 12 \
   --policy tinker \
@@ -47,3 +55,9 @@ All commands must run in Docker. Use the provided scripts.
   --max-tokens 4096 \
   --max-total-tokens 3000000
 ```
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+

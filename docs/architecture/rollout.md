@@ -1,7 +1,11 @@
 ---
+id: architecture/rollout
 title: Rollout Algorithms
 sidebar_position: 2
 ---
+:::note Docker-only execution
+All commands run inside Docker containers. Use the provided scripts.
+:::note
 
 W8-RL provides multiple rollout schedulers to maximize throughput and task diversity.
 These are configured at runtime via `--scheduler-type` and `--horizon-policy`.
@@ -30,6 +34,7 @@ This increases throughput without reducing signal quality.
 
 ## Example
 
+Run the command below from the repo root in Docker:
 ```bash
 python -m w8_rl.rollout.coordinator_main \
   --scheduler-type shds \
@@ -38,3 +43,9 @@ python -m w8_rl.rollout.coordinator_main \
 ```
 
 All rollout execution still runs inside Docker.
+## Next Steps
+
+- Read the Architecture overview: [Architecture Overview](../architecture/overview)
+- Run a Design2Code task: [Design2Code Runs](../guides/design2code)
+- Review troubleshooting: [Troubleshooting](../operations/troubleshooting)
+
