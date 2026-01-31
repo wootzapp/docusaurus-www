@@ -447,3 +447,100 @@
 .navbar__title {
 	color: var(--ifm-color-primary);
 }
+
+/* Docs theme alignment */
+html.docs-wrapper {
+	--docs-bg: #f7ede3;
+	--docs-surface: #fdf7f1;
+	--docs-text: #1f130d;
+	--docs-muted: #5c4231;
+	--docs-border: rgba(61, 35, 22, 0.18);
+	--docs-link: #b45a1f;
+	--docs-link-hover: #d9772a;
+	--docs-code-bg: #fff7f0;
+	--docs-code-text: #1f130d;
+	--docs-accent: #b45a1f;
+	--docs-accent-soft: rgba(217, 119, 42, 0.12);
+
+	--ifm-background-color: var(--docs-bg);
+	--ifm-background-surface-color: var(--docs-bg);
+	--ifm-font-color-base: var(--docs-text);
+	--ifm-heading-color: var(--docs-text);
+	--ifm-link-color: var(--docs-link);
+	--ifm-link-hover-color: var(--docs-link-hover);
+	--ifm-menu-color: var(--docs-text);
+	--ifm-menu-color-active: var(--docs-text);
+	--ifm-toc-border-color: var(--docs-border);
+	--ifm-color-emphasis-200: rgba(61, 35, 22, 0.12);
+	--ifm-color-emphasis-300: var(--docs-border);
+}
+
+html.docs-wrapper body {
+	background-color: var(--docs-bg);
+	color: var(--docs-text);
+}
+
+html.docs-wrapper .main-wrapper,
+html.docs-wrapper [class*="docsWrapper_"],
+html.docs-wrapper [class*="docRoot_"],
+html.docs-wrapper [class*="docMainContainer"],
+html.docs-wrapper [class*="docItemContainer"],
+html.docs-wrapper [class*="docItemCol_"],
+html.docs-wrapper [class*="theme-doc-breadcrumbs"] {
+	background-color: var(--docs-bg);
+	color: var(--docs-text);
+}
+
+html.docs-wrapper .navbarTransparent {
+	background-color: rgba(20, 12, 9, 0.88) !important;
+	border-bottom-color: rgba(242, 139, 50, 0.28);
+}
+
+html.docs-wrapper .theme-doc-markdown,
+html.docs-wrapper .markdown {
+	color: var(--docs-text);
+}
+
+html.docs-wrapper a,
+html.docs-wrapper a:visited,
+html.docs-wrapper .theme-doc-markdown a,
+html.docs-wrapper .markdown a {
+	color: var(--docs-link) !important;
+}
+
+html.docs-wrapper a:hover,
+html.docs-wrapper a:active,
+html.docs-wrapper a:focus,
+html.docs-wrapper .theme-doc-markdown a:hover,
+html.docs-wrapper .markdown a:hover {
+	color: var(--docs-link-hover) !important;
+}
+
+html.docs-wrapper .breadcrumbs__link,
+html.docs-wrapper .breadcrumbs__item--active .breadcrumbs__link {
+	color: var(--docs-text);
+}
+
+html.docs-wrapper .menu__link {
+	color: var(--docs-text);
+}
+
+html.docs-wrapper .menu__link:hover,
+html.docs-wrapper .menu__link--active {
+	color: var(--docs-text);
+	background-color: var(--docs-accent-soft);
+}
+
+html.docs-wrapper .theme-doc-sidebar-container {
+	background: var(--docs-bg);
+	border-right: 1px solid var(--docs-border);
+}
+
+html.docs-wrapper .table-of-contents__link {
+	color: var(--docs-muted);
+}
+
+html.docs-wrapper .table-of-contents__link:hover,
+html.docs-wrapper .table-of-contents__link--active {
+	color: var(--docs-link);
+}

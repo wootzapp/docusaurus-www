@@ -1,16 +1,18 @@
 /* custom-markdown.css */
 
 /* General content styling */
-.markdown {
+  .markdown {
     --ifm-h1-font-size: 2.5rem;
     --ifm-h2-font-size: 2rem;
     --ifm-h3-font-size: 1.5rem;
     --ifm-h4-font-size: 1.25rem;
     --ifm-h5-font-size: 1rem;
     --ifm-h6-font-size: 0.875rem;
-    
+
+    font-family: "Matter", sans-serif;
     font-size: 1rem;
     line-height: 1.7;
+    color: var(--docs-text, #1f130d);
   }
   
   /* Headers */
@@ -19,6 +21,7 @@
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--ifm-color-primary);
+    color: var(--docs-text, #1f130d);
   }
   
   .markdown h2 {
@@ -27,23 +30,37 @@
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--ifm-color-gray-200);
+    color: var(--docs-text, #1f130d);
   }
   
   .markdown h3 {
     font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+    color: var(--docs-text, #1f130d);
   }
   
   /* Paragraphs */
   .markdown p {
     margin-bottom: 1.25rem;
   }
+
+  /* Links */
+  .markdown a {
+    color: var(--docs-link, #b45a1f);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .markdown a:hover {
+    color: var(--docs-link-hover, #d9772a);
+    text-decoration: underline;
+  }
   
   /* Bold text */
   .markdown strong {
     font-weight: 700;
-    color: var(--ifm-color-primary-darker);
+    color: var(--docs-text, #1f130d);
   }
   
   /* Lists */
@@ -72,7 +89,7 @@
     border-left: 4px solid var(--ifm-color-primary);
     padding: 0.75rem 1rem;
     margin: 0 0 1rem 0;
-    background-color: var(--ifm-color-primary-lightest);
+    background-color: var(--docs-accent-soft, rgba(217, 119, 42, 0.12));
     border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
   }
   
@@ -84,6 +101,8 @@
   .markdown code {
     border-radius: var(--ifm-code-border-radius);
     font-size: 0.9em;
+    background-color: var(--docs-code-bg, #fff7f0);
+    color: var(--docs-code-text, #1f130d);
   }
   
   /* Tables */
@@ -101,7 +120,7 @@
   }
   
   .markdown th {
-    background-color: var(--ifm-color-gray-100);
+    background-color: var(--docs-surface, #fdf7f1);
     font-weight: 600;
   }
   
@@ -109,7 +128,7 @@
   .markdown hr {
     margin: 2rem 0;
     border: 0;
-    border-top: 1px solid var(--ifm-color-gray-300);
+    border-top: 1px solid var(--docs-border, rgba(61, 35, 22, 0.18));
   }
   
   /* Images */
