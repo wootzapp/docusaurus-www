@@ -33,6 +33,12 @@ export default function GoPageContent() {
 		<main className='go-page'>
 			<section className='go-hero' aria-labelledby='go-title'>
 				<div className='go-grid' />
+				<div className='go-motion-field' aria-hidden='true'>
+					<span className='go-motion-orb' />
+					<span className='go-motion-wave' />
+					<span className='go-motion-current' />
+					<span className='go-motion-ember' />
+				</div>
 
 				<div className='go-frame'>
 					<div className='go-copy'>
@@ -58,12 +64,17 @@ export default function GoPageContent() {
 						</div>
 
 						<a href='/go' className='go-url-card' aria-label='Open www.wootzapp.com/go'>
-							<span>Visit</span>
-							<strong>www.wootzapp.com/go</strong>
+							<span className='go-url-copy'>
+								<span className='go-url-label'>Visit</span>
+								<strong>www.wootzapp.com/go</strong>
+							</span>
+							<img
+								src='/img/go-qr.svg'
+								alt='QR code for www.wootzapp.com/go'
+								className='go-url-qr'
+							/>
 						</a>
 					</div>
-
-					<div className='go-presenter-space' aria-hidden='true' />
 				</div>
 			</section>
 
