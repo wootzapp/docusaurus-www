@@ -1191,3 +1191,465 @@ html.docs-wrapper .table-of-contents__link--active {
 		animation: none !important;
 	}
 }
+
+/* Presentation landing page: /go */
+.go-page {
+	min-height: 100vh;
+	overflow-x: hidden;
+	background: #110806;
+	color: #fff6ea;
+	font-family: "Matter", sans-serif;
+	text-size-adjust: 100%;
+}
+
+.go-hero {
+	position: relative;
+	isolation: isolate;
+	min-height: 100svh;
+	display: flex;
+	align-items: center;
+	padding: clamp(2rem, 5vh, 4rem) 0;
+	background:
+		radial-gradient(circle at 14% 18%, rgba(242, 139, 50, 0.24), transparent 34%),
+		radial-gradient(circle at 72% 74%, rgba(255, 177, 95, 0.16), transparent 38%),
+		linear-gradient(135deg, #0c0504 0%, #1f100a 48%, #3a1d0e 100%);
+}
+
+.go-grid {
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background-image:
+		linear-gradient(rgba(255, 177, 95, 0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 177, 95, 0.055) 1px, transparent 1px);
+	background-size: 44px 44px;
+	mask-image: linear-gradient(90deg, black 0%, black 58%, transparent 92%);
+	opacity: 0.7;
+}
+
+.go-hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background:
+		linear-gradient(90deg, rgba(10, 5, 4, 0.12) 0%, rgba(10, 5, 4, 0.02) 58%, rgba(10, 5, 4, 0.62) 100%),
+		repeating-linear-gradient(180deg, rgba(255, 244, 230, 0.055) 0 1px, transparent 1px 5px);
+	pointer-events: none;
+}
+
+.go-frame {
+	position: relative;
+	z-index: 1;
+	width: min(100% - clamp(2rem, 5vw, 5rem), 1480px);
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: minmax(0, 860px) minmax(260px, 1fr);
+	gap: clamp(1.75rem, 4.5vw, 5rem);
+	align-items: center;
+}
+
+.go-copy {
+	max-width: 860px;
+	min-width: 0;
+}
+
+.go-brand-row {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	margin-bottom: 0.85rem;
+	padding: 0.42rem 0.68rem;
+	border: 1px solid rgba(255, 177, 95, 0.28);
+	border-radius: 8px;
+	background: rgba(12, 6, 5, 0.55);
+	color: #ffd1a4;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: clamp(0.75rem, 1vw, 0.9rem);
+	font-weight: 700;
+	letter-spacing: 0;
+	box-shadow: 0 0 30px -18px rgba(255, 177, 95, 0.8);
+}
+
+.go-brand-mark,
+.go-profile-mark {
+	display: block;
+	object-fit: contain;
+}
+
+.go-brand-mark {
+	width: 1.35rem;
+	height: 1.35rem;
+}
+
+.go-kicker {
+	margin: 0 0 0.65rem;
+	color: #ffb15f;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: clamp(0.78rem, 1vw, 0.96rem);
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.go-title {
+	max-width: 860px;
+	margin: 0;
+	color: #fff7ed;
+	font-size: clamp(2.35rem, 3.45vw, 4.25rem);
+	font-weight: 700;
+	line-height: 1.02;
+	letter-spacing: 0;
+	text-shadow:
+		0 2px 0 rgba(92, 41, 13, 0.45),
+		0 0 36px rgba(255, 177, 95, 0.22);
+	overflow-wrap: normal;
+	text-wrap: pretty;
+	word-break: normal;
+	hyphens: none;
+}
+
+.go-recent-card {
+	position: relative;
+	width: min(100%, 830px);
+	margin-top: clamp(1rem, 2vh, 1.45rem);
+	padding: clamp(1rem, 1.65vw, 1.35rem);
+	border: 1px solid rgba(255, 177, 95, 0.5);
+	border-radius: 8px;
+	background:
+		linear-gradient(180deg, rgba(14, 7, 5, 0.98), rgba(30, 14, 8, 0.94)),
+		linear-gradient(90deg, rgba(242, 139, 50, 0.22), transparent 52%);
+	box-shadow:
+		0 30px 80px -46px rgba(0, 0, 0, 0.95),
+		0 0 48px -28px rgba(242, 139, 50, 0.8),
+		inset 0 1px 0 rgba(255, 213, 161, 0.18);
+	overflow: hidden;
+}
+
+.go-recent-card::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: 4px;
+	background: linear-gradient(180deg, #ffd1a4, #f28b32 48%, #8f4b1d);
+	pointer-events: none;
+}
+
+.go-recent-heading {
+	position: relative;
+	margin: 0 0 0.78rem;
+	color: #ffd8ad;
+	font-size: clamp(1.16rem, 1.55vw, 1.52rem);
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.go-recent-list {
+	position: relative;
+	display: grid;
+	gap: 0.62rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: go-recent;
+}
+
+.go-recent-list li {
+	display: grid;
+	grid-template-columns: 2.15rem minmax(0, 1fr);
+	align-items: start;
+	gap: 0.78rem;
+	color: #fff8ef;
+	font-size: clamp(1.15rem, 1.55vw, 1.48rem);
+	font-weight: 700;
+	line-height: 1.26;
+	counter-increment: go-recent;
+}
+
+.go-recent-list li::before {
+	content: counter(go-recent);
+	display: grid;
+	place-items: center;
+	width: 2.15rem;
+	height: 2.15rem;
+	border: 1px solid rgba(255, 213, 161, 0.62);
+	border-radius: 6px;
+	background: rgba(242, 139, 50, 0.28);
+	color: #ffe5c7;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.go-url-card {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.1rem;
+	width: min(100%, 830px);
+	margin-top: 1rem;
+	padding: clamp(0.9rem, 1.45vw, 1.16rem) clamp(1rem, 1.7vw, 1.35rem);
+	border: 2px solid rgba(255, 230, 203, 0.82);
+	border-radius: 8px;
+	background: linear-gradient(135deg, #ffe6ca 0%, #ffb15f 38%, #f28b32 100%);
+	color: #120704;
+	box-shadow:
+		0 24px 60px -32px rgba(242, 139, 50, 1),
+		0 0 54px -24px rgba(255, 177, 95, 1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.go-url-card:hover {
+	transform: translateY(-2px);
+	color: #160905;
+	text-decoration: none;
+	box-shadow:
+		0 30px 64px -34px rgba(242, 139, 50, 1),
+		0 0 52px -20px rgba(255, 177, 95, 1);
+}
+
+.go-url-card span {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: clamp(0.86rem, 1.1vw, 1.02rem);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	opacity: 0.84;
+}
+
+.go-url-card strong {
+	font-size: clamp(1.55rem, 2.65vw, 2.45rem);
+	line-height: 1.05;
+	letter-spacing: 0;
+}
+
+.go-presenter-space {
+	min-height: min(58vh, 560px);
+	position: relative;
+}
+
+.go-links-section {
+	position: relative;
+	padding: clamp(3.5rem, 8vw, 6.5rem) 0;
+	background:
+		linear-gradient(180deg, #fff5e8 0%, #f7e7d3 100%),
+		radial-gradient(circle at 20% 0%, rgba(242, 139, 50, 0.16), transparent 40%);
+	color: #1d100a;
+}
+
+.go-links-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image:
+		linear-gradient(rgba(143, 75, 29, 0.06) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(143, 75, 29, 0.05) 1px, transparent 1px);
+	background-size: 36px 36px;
+	pointer-events: none;
+}
+
+.go-links-wrap {
+	position: relative;
+	z-index: 1;
+	width: min(100% - 2rem, 760px);
+	margin: 0 auto;
+}
+
+.go-links-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+}
+
+.go-profile-mark {
+	width: 5rem;
+	height: 5rem;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+	background: #1d100a;
+	box-shadow: 0 22px 48px -34px rgba(31, 19, 13, 0.6);
+}
+
+.go-profile-handle {
+	margin: 0;
+	color: #8f4b1d;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.go-links-title {
+	width: 100%;
+	max-width: 42rem;
+	margin: 0.7rem 0 0;
+	color: #1d100a;
+	font-size: clamp(1.85rem, 3vw, 2.65rem);
+	font-weight: 700;
+	line-height: 1.08;
+	letter-spacing: 0;
+	overflow-wrap: normal;
+	text-wrap: pretty;
+	word-break: normal;
+	hyphens: none;
+}
+
+.go-links-copy {
+	max-width: 35rem;
+	margin: 1rem auto 0;
+	color: rgba(31, 19, 13, 0.78);
+	font-size: clamp(1rem, 2vw, 1.12rem);
+	line-height: 1.62;
+}
+
+.go-link-stack {
+	width: 100%;
+	display: grid;
+	gap: 0.8rem;
+	margin-top: 1.75rem;
+}
+
+.go-link-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid rgba(143, 75, 29, 0.16);
+	border-radius: 8px;
+	background: rgba(255, 252, 247, 0.9);
+	color: #1d100a;
+	text-align: left;
+	box-shadow:
+		0 18px 42px -34px rgba(31, 19, 13, 0.5),
+		inset 0 1px 0 rgba(255, 255, 255, 0.74);
+	transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.go-link-card:hover {
+	transform: translateY(-2px);
+	border-color: rgba(242, 139, 50, 0.46);
+	background: #fffaf3;
+	color: #1d100a;
+	text-decoration: none;
+}
+
+.go-link-card span {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.28rem;
+}
+
+.go-link-card strong {
+	color: #1d100a;
+	font-size: 1rem;
+	line-height: 1.25;
+}
+
+.go-link-card small {
+	color: rgba(31, 19, 13, 0.68);
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+.go-link-card b {
+	flex: 0 0 auto;
+	padding: 0.45rem 0.6rem;
+	border-radius: 6px;
+	background: #1d100a;
+	color: #ffd1a4;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 0.72rem;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+.go-mini-url {
+	display: inline-flex;
+	margin-top: 1.25rem;
+	padding: 0.62rem 0.8rem;
+	border: 1px solid rgba(143, 75, 29, 0.16);
+	border-radius: 8px;
+	background: rgba(255, 252, 247, 0.62);
+	color: #8f4b1d;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 0;
+}
+
+.go-mini-url:hover {
+	color: #5b2e12;
+	text-decoration: none;
+}
+
+@media (max-width: 1020px) {
+	.go-frame {
+		grid-template-columns: 1fr;
+	}
+
+	.go-presenter-space {
+		display: none;
+	}
+
+	.go-copy {
+		max-width: 100%;
+	}
+
+	.go-title {
+		max-width: 100%;
+		font-size: clamp(2.45rem, 9.6vw, 4.7rem);
+	}
+}
+
+@media (max-width: 640px) {
+	.go-hero {
+		align-items: flex-start;
+		padding-top: 4.25rem;
+	}
+
+	.go-grid {
+		mask-image: none;
+	}
+
+	.go-brand-row {
+		margin-bottom: 1rem;
+	}
+
+	.go-title {
+		max-width: 100%;
+		font-size: clamp(2.2rem, 10.4vw, 3.4rem);
+	}
+
+	.go-recent-list li {
+		grid-template-columns: 1.75rem minmax(0, 1fr);
+		gap: 0.62rem;
+		font-size: 0.98rem;
+	}
+
+	.go-recent-list li::before {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
+
+	.go-url-card {
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.go-link-card {
+		align-items: flex-start;
+	}
+}
