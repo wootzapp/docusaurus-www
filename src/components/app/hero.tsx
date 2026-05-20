@@ -30,7 +30,7 @@ export default function Hero() {
 					</p>
 					<div className='reveal reveal-delay-3 flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
-							href='https://calendar.app.google.com/UCdRbHAHJYTwUEgF6'
+							href='https://calendar.app.google/jjLE5C9TczR2vhHe9'
 							className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/60 bg-brand-accent-100 px-4 py-2 text-btn font-mono font-semibold tracking-[0.16em] text-brand-base shadow-[0_12px_35px_-18px_rgba(242,139,50,0.7)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_45px_-18px_rgba(242,139,50,0.85)]'
 						>
 							Request Early Access

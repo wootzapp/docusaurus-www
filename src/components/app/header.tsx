@@ -67,7 +67,7 @@ export const Header = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:inline-block">
-          <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="rounded-full border border-brand-border/60 bg-brand-accent-100 px-4 py-2 text-btn font-matter font-semibold text-brand-base transition hover:-translate-y-0.5 hover:shadow-md hover:text-brand-surface hover:no-underline">
+          <a href="https://calendar.app.google/jjLE5C9TczR2vhHe9" className="rounded-full border border-brand-border/60 bg-brand-accent-100 px-4 py-2 text-btn font-matter font-semibold text-brand-base transition hover:-translate-y-0.5 hover:shadow-md hover:text-brand-surface hover:no-underline">
             Get Started
           </a>
         </div>
@@ -120,7 +120,7 @@ export const Header = () => {
 
             {/* Mobile CTA Button */}
             <div className="mt-4">
-              <a href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6" className="w-full block text-center rounded-full border border-brand-border/60 bg-brand-accent-100 py-3 text-btn font-matter font-semibold text-brand-base hover:text-brand-surface hover:no-underline">
+              <a href="https://calendar.app.google/jjLE5C9TczR2vhHe9" className="w-full block text-center rounded-full border border-brand-border/60 bg-brand-accent-100 py-3 text-btn font-matter font-semibold text-brand-base hover:text-brand-surface hover:no-underline">
                 Get Started
               </a>
             </div>

@@ -19,7 +19,7 @@ export default function NavbarMobileSidebarLayout({header, primaryMenu, secondar
   <div className='relative group mt-3'>
     <div className='bg-brand-border/80 rounded-md absolute inset-0 translate-y-[2px]'></div>
     <a
-      href="https://calendar.app.google.com/UCdRbHAHJYTwUEgF6"
+      href="https://calendar.app.google/jjLE5C9TczR2vhHe9"
       target="_blank"
       rel="noopener noreferrer"
       className="w-full hover:no-underline"

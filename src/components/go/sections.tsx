@@ -9,7 +9,7 @@ const linkCards = [
 	{
 		label: "Book a meeting",
 		copy: "For model labs, GPU neoclouds, and private-code partners.",
-		href: "https://calendar.app.google.com/UCdRbHAHJYTwUEgF6",
+		href: "https://calendar.app.google/jjLE5C9TczR2vhHe9",
 	},
 	{
 		label: "WootzApp website",
@@ -20,6 +20,11 @@ const linkCards = [
 		label: "Private YouTube demo",
 		copy: "A short walkthrough of the WootzApp environment loop.",
 		href: "https://www.youtube.com/watch?v=OtjI9PznF2E",
+	},
+	{
+		label: "Huggingface Preprint - Wootzapp Domdiff RL",
+		copy: "ChromiumRL WootzApp DOM diff dataset on Hugging Face.",
+		href: "https://huggingface.co/datasets/WootzappLab/chromiumrl-wootzapp-domdiff",
 	},
 ];
 
