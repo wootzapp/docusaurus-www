@@ -1,9 +1,12 @@
-const recentSignals = [
+const demandSignals = [
 	"POC with one of the top-3 Model Lab",
 	"POC with a neolab",
 	"POC with Lovable competitors",
 	"Partnership with GPU neoclouds to offer RL to their customers",
 ];
+
+const supplySignal =
+	"Supply side data partnerships with a publicly listed Indian company with 18,000 employees and 7 group companies";
 
 const linkCards = [
 	{
@@ -49,18 +52,22 @@ export default function GoPageContent() {
 
 						<p className='go-kicker'>Confidential RL Environment Infrastructure</p>
 						<h1 id='go-title' className='go-title'>
-							Foundational Model Labs use Wootzapp for their most secretive RL Environments
+							Foundation Model Labs use Wootzapp for their most secretive RL Environments
 						</h1>
 
 						<div className='go-recent-card'>
 							<p className='go-recent-heading'>In the past 30 days, we have</p>
 							<ol className='go-recent-list'>
-								{recentSignals.map((signal) => (
+								{demandSignals.map((signal) => (
 									<li key={signal}>
 										<span>{signal}</span>
 									</li>
 								))}
 							</ol>
+							<div className='go-supply-signal'>
+								<span className='go-supply-label'>Supply side</span>
+								<strong>{supplySignal}</strong>
+							</div>
 						</div>
 
 						<a href='/go' className='go-url-card' aria-label='Open www.wootzapp.com/go'>

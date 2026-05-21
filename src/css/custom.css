@@ -1482,6 +1482,57 @@ html.docs-wrapper .table-of-contents__link--active {
 	line-height: 1;
 }
 
+.go-supply-signal {
+	position: relative;
+	display: grid;
+	gap: 0.42rem;
+	margin-top: 0.92rem;
+	padding: clamp(0.86rem, 1.2vw, 1.08rem) clamp(0.95rem, 1.45vw, 1.35rem);
+	border: 1px solid rgba(255, 209, 117, 0.54);
+	border-radius: 8px;
+	background:
+		linear-gradient(100deg, rgba(90, 45, 15, 0.92), rgba(34, 16, 7, 0.96) 56%, rgba(14, 7, 5, 0.9)),
+		radial-gradient(circle at 12% 50%, rgba(255, 209, 117, 0.28), transparent 38%);
+	box-shadow:
+		0 20px 50px -34px rgba(255, 177, 95, 0.9),
+		inset 0 1px 0 rgba(255, 235, 196, 0.18);
+	overflow: hidden;
+}
+
+.go-supply-signal::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: 100%;
+	background: linear-gradient(90deg, rgba(255, 209, 117, 0.16), transparent 54%);
+	pointer-events: none;
+}
+
+.go-supply-label,
+.go-supply-signal strong {
+	position: relative;
+	z-index: 1;
+}
+
+.go-supply-label {
+	color: #ffd175;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: clamp(0.76rem, 0.9vw, 0.9rem);
+	font-weight: 800;
+	line-height: 1.1;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+.go-supply-signal strong {
+	color: #fff1c9;
+	font-size: clamp(1.05rem, 1.42vw, 1.34rem);
+	font-weight: 800;
+	line-height: 1.24;
+	letter-spacing: 0;
+	overflow-wrap: anywhere;
+}
+
 .go-url-card {
 	display: inline-flex;
 	align-items: center;

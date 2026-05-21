@@ -13,7 +13,7 @@ export default function GoPage() {
 				<meta property='og:title' content='WootzApp Go' />
 				<meta
 					property='og:description'
-					content='Foundational Model Labs use WootzApp for their most secretive RL Environments.'
+					content='Foundation Model Labs use WootzApp for their most secretive RL Environments.'
 				/>
 			</Head>
 			<GoPageContent />
