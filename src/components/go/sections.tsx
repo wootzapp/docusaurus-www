@@ -38,7 +38,51 @@ export default function GoPageContent() {
 				<div className='go-grid' />
 				<div className='go-motion-field' aria-hidden='true'>
 					<span className='go-motion-orb' />
-					<span className='go-motion-wave' />
+					<svg className='go-wave-ribbons' viewBox='0 0 100 100' preserveAspectRatio='none'>
+						<defs>
+							<linearGradient id='go-ribbon-hot' x1='0' y1='0' x2='100' y2='0' gradientUnits='userSpaceOnUse'>
+								<stop offset='0%' stopColor='#f28b32' stopOpacity='0' />
+								<stop offset='20%' stopColor='#f28b32' stopOpacity='0.72' />
+								<stop offset='48%' stopColor='#ffe1bc' stopOpacity='0.82' />
+								<stop offset='76%' stopColor='#ffb15f' stopOpacity='0.68' />
+								<stop offset='100%' stopColor='#f28b32' stopOpacity='0' />
+							</linearGradient>
+							<linearGradient id='go-ribbon-deep' x1='0' y1='0' x2='100' y2='0' gradientUnits='userSpaceOnUse'>
+								<stop offset='0%' stopColor='#7d3d18' stopOpacity='0' />
+								<stop offset='34%' stopColor='#a6501e' stopOpacity='0.58' />
+								<stop offset='62%' stopColor='#f28b32' stopOpacity='0.76' />
+								<stop offset='100%' stopColor='#7d3d18' stopOpacity='0' />
+							</linearGradient>
+						</defs>
+						<g className='go-ribbon go-ribbon-a'>
+							<path
+								className='go-ribbon-path go-ribbon-path-main'
+								d='M -8 31 C 5 18 18 17 31 31 C 43 44 55 49 68 34 C 80 21 94 21 108 34'
+								stroke='url(#go-ribbon-hot)'
+							/>
+						</g>
+						<g className='go-ribbon go-ribbon-b'>
+							<path
+								className='go-ribbon-path go-ribbon-path-secondary'
+								d='M -8 50 C 7 42 21 37 35 48 C 49 60 61 64 75 50 C 87 38 98 39 108 47'
+								stroke='url(#go-ribbon-deep)'
+							/>
+						</g>
+						<g className='go-ribbon go-ribbon-c'>
+							<path
+								className='go-ribbon-path go-ribbon-path-main'
+								d='M -8 67 C 9 76 22 75 36 62 C 49 49 62 47 76 60 C 88 71 98 72 108 64'
+								stroke='url(#go-ribbon-hot)'
+							/>
+						</g>
+						<g className='go-ribbon go-ribbon-d'>
+							<path
+								className='go-ribbon-path go-ribbon-path-fine'
+								d='M -8 20 C 8 27 20 29 35 20 C 49 12 63 10 78 19 C 91 27 101 27 108 22'
+								stroke='url(#go-ribbon-hot)'
+							/>
+						</g>
+					</svg>
 					<span className='go-motion-current' />
 					<span className='go-motion-ember' />
 				</div>
