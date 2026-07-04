@@ -9,7 +9,7 @@ export default function PrivatePage() {
 	return (
 		<Layout
 			title={`Private Data Collaborations | ${siteConfig.title}`}
-			description='WootzApp licenses private codebases and enterprise workflows to build defensible W8-RL environments for coding and computer-use models.'
+			description='Turn private codebases and enterprise workflows into AI-ready W8-RL assets with sanitization, verification, and documentation attached.'
 		>
 			<Head>
 				<meta name='robots' content='noindex,nofollow' />

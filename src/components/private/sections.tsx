@@ -1,8 +1,8 @@
 const heroSignals = [
-	"AI-ready RL assets",
-	"Signal-preserving sanitization",
-	"Browser evidence packages",
+	"New revenue from dormant systems",
 	"Non-exclusive licensing",
+	"Source and IP retained",
+	"Documented W8-RL delivery",
 ];
 
 const indiaCities = ["Delhi", "Bengaluru", "Pune", "Hyderabad", "Chennai"];
@@ -32,38 +32,42 @@ const indiaProofStats = [
 
 const thesisItems = [
 	{
-		label: "Asset creation",
-		title: "Private systems become AI-ready RL assets.",
-		copy: "We license private codebases and enterprise workflows, then package the useful behavior into W8-RL environments for coding and computer-use models.",
+		label: "Assess",
+		title: "We scope the asset and the intended AI use.",
+		copy: "We work with your team to understand the codebase, workflow, sensitivity, setup path, and downstream model use case before anything is packaged.",
 	},
 	{
-		label: "Sanitization",
-		title: "Signal is preserved while risky surfaces are constrained.",
-		copy: "W8 maps what can be captured, redacted, retained, or kept inside a controlled deployment so the output is useful without becoming an uncontrolled raw-data transfer.",
+		label: "Engineer",
+		title: "We preserve the signal and constrain what should not move.",
+		copy: "W8 sanitizes risky fields, captures approved browser evidence, builds tasks and rewards, and turns the system into a repeatable W8-RL environment.",
 	},
 	{
-		label: "Verification",
-		title: "The browser provides the evidence a verifier needs.",
-		copy: "Screenshots, DOM state, actions, and outcomes support process rewards and outcome labels, so model teams can train against behavior that actually happened.",
+		label: "Document",
+		title: "Every delivery comes with an evidence package.",
+		copy: "The environment ships with what was retained, what was removed, what can be replayed, how rewards are scored, and why the asset is safe to use downstream.",
 	},
 ];
 
 const fdrlRows = [
 	{
-		label: "Align on scope and standards",
-		copy: "We identify the systems, workflows, model use cases, privacy constraints, and buyer requirements before any environment is packaged.",
+		label: "Source",
+		copy: "Identify candidate codebases, admin workflows, ERP systems, fintech flows, or enterprise operations data that could become useful training signal.",
 	},
 	{
-		label: "Map and sanitize the useful signal",
-		copy: "FDRLs find where sensitive data appears, what evidence can be captured, which fields must be removed, and which artifacts can leave the enterprise boundary.",
+		label: "Assess",
+		copy: "Map data owners, sensitivity, access constraints, setup complexity, and the intended AI use case before committing to an asset package.",
 	},
 	{
-		label: "Package verifier-ready environments",
-		copy: "W8-RL turns approved code, workflow state, browser evidence, task specs, and rubrics into repeatable environments with process and outcome rewards.",
+		label: "Engineer",
+		copy: "Sanitize what should not travel, preserve useful behavior, capture browser evidence, and build tasks, rubrics, process rewards, and outcome labels.",
 	},
 	{
-		label: "Document and re-assess",
-		copy: "As systems, recipients, and requirements change, the program updates the artifact policy, verifier design, and documentation attached to each environment.",
+		label: "Deliver",
+		copy: "Ship a W8-RL environment with documentation attached: retained artifacts, redactions, verifier design, reward traces, and deployment assumptions.",
+	},
+	{
+		label: "Re-assess",
+		copy: "When the system, buyer, or permitted use changes, update the asset package so the documentation and environment stay current.",
 	},
 ];
 
@@ -96,20 +100,20 @@ const fitGroups = [
 
 const commercialRows = [
 	{
-		label: "Access model",
-		copy: "Usually non-exclusive. You retain ownership of the source system, data, and IP while W8-RL creates an AI-ready environment layer.",
+		label: "You keep ownership",
+		copy: "The structure is usually non-exclusive. You retain the source system, data, IP, customers, and existing commercial rights.",
 	},
 	{
-		label: "What can leave",
-		copy: "The output is a reviewed package: snapshots, task definitions, rubrics, reward traces, privacy decisions, and environment artifacts, not an uncontrolled dump of source archives or sensitive records.",
+		label: "We create the asset layer",
+		copy: "W8-RL creates the AI-ready layer: sanitized snapshots, task definitions, rubrics, reward traces, browser evidence, and environment artifacts.",
 	},
 	{
-		label: "What FDRLs make possible",
-		copy: "On-ground deployment lets us understand the data and workflow deeply enough to preserve signal while removing or constraining what should not travel.",
+		label: "You approve what moves",
+		copy: "Sensitive fields, source archives, customer records, and deployment assumptions are scoped before delivery. Nothing depends on broad extraction.",
 	},
 	{
-		label: "Pricing drivers",
-		copy: "Workflow complexity, privacy review scope, setup maturity, verifier design, and how much environment packaging is required.",
+		label: "Why FDRLs matter",
+		copy: "On-ground deployment lets us understand enough of the system to preserve training utility while keeping the commercial and privacy posture clear.",
 	},
 ];
 
@@ -124,7 +128,7 @@ const faqs = [
 	},
 	{
 		question: "What leaves the enterprise boundary?",
-		answer: "Only the artifacts agreed in the program design: reviewed snapshots, task specs, rubrics, reward traces, documentation, or packaged environments. Sensitive fields can be redacted, constrained, or kept inside a controlled deployment.",
+		answer: "Only the artifacts agreed in the asset design: reviewed snapshots, task specs, rubrics, reward traces, documentation, or packaged environments. Sensitive fields can be redacted, constrained, or kept inside a controlled deployment.",
 	},
 	{
 		question: "How is sensitive data protected?",
@@ -136,7 +140,7 @@ const faqs = [
 	},
 	{
 		question: "How do you think about pricing?",
-		answer: "Pricing depends on workflow complexity, privacy constraints, setup maturity, verifier design, and whether the engagement is a focused pilot or a standing program.",
+		answer: "Pricing depends on asset quality, workflow complexity, setup maturity, privacy constraints, verifier design, and whether the engagement is a focused pilot or a standing program.",
 	},
 	{
 		question: "What makes a workflow especially useful?",
@@ -145,7 +149,8 @@ const faqs = [
 ];
 
 const qualificationChecklist = [
-	"Codebase or workflow summary and what the user is trying to accomplish",
+	"What the codebase, dataset, or workflow does",
+	"Why it is hard, mature, or commercially realistic",
 	"Which screens, fields, records, or documents contain sensitive data",
 	"Whether test accounts, synthetic tenants, or staging data are available",
 	"Which artifacts can leave the enterprise boundary and which must stay inside",
@@ -171,13 +176,13 @@ export default function PrivatePageContent() {
 						<div className='max-w-4xl flex flex-col gap-5'>
 							<span className='private-section-tag private-section-tag--dark'>Private Data Collaborations</span>
 							<h1 className='private-display text-brand-text-primary'>
-								Turn real-world enterprise data into AI-ready RL assets that stay defensible.
+								Turn private enterprise systems into AI-ready RL assets.
 							</h1>
 							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
-								WootzApp non-exclusively licenses private codebases and workflows, sanitizes what should not travel, and packages useful behavior into W8-RL environments for coding and computer-use models.
+								You sit on codebases, admin tools, ERP flows, fintech systems, or operations data that could power coding and computer-use models. It just has to be usable, controlled, and defensible first.
 							</p>
 							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
-								Your IP stays yours. Model teams get verified training signal. Our browser captures the evidence a verifier needs while W8 controls what leaves the enterprise boundary.
+								WootzApp licenses that asset non-exclusively, engineers it into a W8-RL environment, and attaches the documentation model teams need to trust it. Your IP stays yours. You approve what leaves.
 							</p>
 							<div className='flex flex-wrap gap-2.5'>
 								{heroSignals.map((signal) => (
@@ -191,10 +196,10 @@ export default function PrivatePageContent() {
 							</div>
 							<div className='flex flex-col gap-3 pt-1 sm:flex-row sm:items-center'>
 								<a
-									href='mailto:founders@wootzapp.com'
+									href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
 									className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/60 bg-brand-accent-100 px-4 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-base shadow-[0_12px_35px_-18px_rgba(242,139,50,0.7)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_45px_-18px_rgba(242,139,50,0.85)] hover:text-brand-base hover:no-underline'
 								>
-									Email founders@wootzapp.com
+									Become a data partner
 								</a>
 								<a
 									href='#qualification'
@@ -209,17 +214,17 @@ export default function PrivatePageContent() {
 							<div className='p-5 sm:p-6'>
 								<p className='private-mini-label'>What you get</p>
 								<h2 className='private-note-heading mt-3 text-brand-base'>
-									A practical way to turn unused private systems into licensed RL assets.
+									A new revenue stream from systems your team already built.
 								</h2>
 								<div className='mt-4 space-y-4'>
 									<p className='private-note-body'>
-										Private systems become valuable to model teams when the signal is captured, sanitized, documented, and packaged into an environment that can be replayed and scored.
+										Model teams need realistic private systems, not toy repos. We make those systems trainable by capturing the useful behavior, sanitizing risky surfaces, and packaging replayable environments.
 									</p>
 									<p className='private-note-body'>
-										Our FDRLs work with your team on the ground so boundary decisions, redactions, verifier updates, and artifact approvals happen inside the operating rhythm.
+										Our FDRLs work with your team on the ground so setup, redactions, verifier updates, and artifact approvals happen with the people who actually understand the system.
 									</p>
 									<p className='private-note-body'>
-										We have presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai, giving us proximity to the IT services, financial software, ERP, and enterprise operations teams that own this private signal.
+										You keep the source system and commercial rights. W8-RL creates the AI-ready asset layer that can be licensed, explained, and maintained.
 									</p>
 								</div>
 								<div className='mt-5 flex flex-wrap gap-2'>
@@ -230,7 +235,7 @@ export default function PrivatePageContent() {
 									))}
 								</div>
 								<p className='private-note-caption mt-5'>
-									That local presence is what makes private enterprise systems practical as defensible RL assets, not just interesting source material.
+									Delhi, Bengaluru, Pune, Hyderabad, and Chennai give us proximity to the teams that own the private enterprise systems model labs cannot get from public corpora.
 								</p>
 							</div>
 						</div>
@@ -266,13 +271,13 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-[1.125rem]'>
 							<span className='private-section-tag private-section-tag--light'>From Private Systems To RL Assets</span>
 							<h2 className='private-heading text-brand-base'>
-								W8-RL turns licensed private systems into trainable environments.
+								One pipeline: assess, engineer, document, and re-assess.
 							</h2>
 							<p className='private-body max-w-3xl text-brand-base/85'>
-								The platform assesses what is useful, sanitizes what is sensitive, captures the browser evidence a verifier needs, and delivers environment artifacts that model teams can train against.
+								W8-RL turns private systems into AI-ready assets for RL. The pipeline covers the full lifecycle: from initial asset assessment through signal-preserving engineering to documentation that travels with the environment.
 							</p>
 							<p className='private-body max-w-3xl text-brand-base/78'>
-								The forward-deployed team is the operating model for that pipeline. The same FDRLs learn the codebase, workflow, privacy constraints, verifier design, and downstream requirements so the environment stays defensible as context changes.
+								When the system, recipient, or permitted use changes, the asset can be re-assessed instead of starting over. That is what makes private enterprise data practical for model training.
 							</p>
 							<div className='private-paper-card private-thesis-card p-5 sm:p-6'>
 								<div className='space-y-1'>
@@ -315,10 +320,10 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-5'>
 							<span className='private-section-tag private-section-tag--dark'>Good Fit</span>
 							<h2 className='private-heading text-brand-text-primary'>
-								What makes a private system worth turning into an RL asset.
+								What makes a private system valuable to model teams.
 							</h2>
 							<p className='private-body max-w-3xl text-brand-text-secondary'>
-								The goal is not broad source access or broad data extraction. The goal is a controlled package that preserves enough behavior, context, and browser-visible evidence to train and verify agents while keeping sensitive systems defensible.
+								The best assets contain real work: messy setup, business logic, edge cases, integrations, admin flows, and outcomes that cannot be learned from public code alone.
 							</p>
 							<div className='private-dark-card private-fit-board p-5 sm:p-6'>
 								{fitGroups.map((group) => (
@@ -370,10 +375,10 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-5'>
 							<span className='private-section-tag private-section-tag--light'>Details</span>
 							<h2 className='private-heading text-brand-base'>
-								What to send before we scope the asset.
+								What to send first.
 							</h2>
 							<p className='private-body max-w-2xl text-brand-base/80'>
-								Keep the first note short. We are looking for system context, sensitive surfaces, and enough evidence to decide whether the codebase or workflow can become a defensible W8-RL environment.
+								Keep the first note short. Do not send source code or sensitive records upfront. Send enough context for us to decide whether the asset is worth scoping.
 							</p>
 						</div>
 
@@ -412,22 +417,22 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-4'>
 							<span className='private-section-tag private-section-tag--dark'>Private Conversation</span>
 							<h2 className='private-subheading text-brand-text-primary'>
-								If your team is sitting on private systems that could become AI-ready RL assets, we&apos;d be glad to talk.
+								If your team is sitting on private systems that could power AI, start with a short note.
 							</h2>
 							<p className='private-body text-brand-text-secondary'>
-								A short note is enough to start. We can begin with context, sensitive boundaries, and what W8 would need to sanitize, document, and verify before anything moves.
+								We can begin with context, not paperwork: what the system does, why it is realistic, what must stay private, and who owns the decision.
 							</p>
 						</div>
 						<div className='flex flex-col gap-3 sm:flex-row lg:justify-end'>
 							<a
 								className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/60 bg-brand-accent-100 px-5 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-base shadow-[0_12px_35px_-18px_rgba(242,139,50,0.7)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_45px_-18px_rgba(242,139,50,0.85)] hover:text-brand-base hover:no-underline'
-								href='mailto:founders@wootzapp.com'
+								href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
 							>
 								founders@wootzapp.com
 							</a>
 							<a
 								className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/35 bg-brand-surface/60 px-5 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-text-primary transition hover:-translate-y-0.5 hover:border-brand-accent-200/60 hover:bg-brand-surface hover:text-brand-text-primary hover:no-underline'
-								href='mailto:founders@wootzapp.com'
+								href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
 							>
 								Start a private conversation
 							</a>
