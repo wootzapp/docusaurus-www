@@ -20,13 +20,13 @@ export default function Hero() {
 			<div className='container-custom relative z-10 flex flex-col gap-16 py-[72px] lg:py-32'>
 				<div className='max-w-3xl flex flex-col gap-6'>
 					<span className='reveal inline-flex w-fit items-center rounded-full border border-brand-base/20 bg-brand-neutral-100/80 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-brand-base shadow-sm backdrop-blur-sm font-mono'>
-						The RL Environment Company
+						The Privacy Pipeline For Enterprise RL
 					</span>
 					<h1 className='reveal reveal-delay-1 font-matter font-bold text-hero-sm text-brand-base sm:text-hero-md lg:text-hero-lg'>
-						We Rewrote the Browser<br />To Build Your Gym.
+						We Forked The Browser Renderer.<br />To Build Your Private Data Gym.
 					</h1>
 					<p className='reveal reveal-delay-2 font-matter text-body text-brand-base/80 lg:max-w-2xl'>
-						We bring the environment and the rollout system. Our custom browser renderer and W8 async infrastructure deliver the rewards and throughput you need to train agents for real work.
+						WootzApp turns sensitive enterprise data and workflows into privacy-preserving W8-RL environments. Our browser captures the evidence a verifier needs. W8 controls what leaves the enterprise boundary.
 					</p>
 					<div className='reveal reveal-delay-3 flex flex-col gap-3 sm:flex-row sm:items-center'>
 						<a
@@ -39,38 +39,38 @@ export default function Hero() {
 							href='#example-environment'
 							className='inline-flex items-center justify-center rounded-md border border-brand-border px-4 py-2 text-btn font-mono font-semibold tracking-[0.16em] text-brand-base transition hover:text-brand-base hover:border-brand-accent-200/60'
 						>
-							See Demo
+							See the pipeline
 						</a>
 					</div>
 				</div>
 
 				<div className='terminal-window glow-box'>
 					<div className='terminal-header justify-start'>
-						<span className='terminal-title'>Capabilities</span>
+						<span className='terminal-title'>Privacy Lifecycle</span>
 					</div>
 					<div className='terminal-body flex flex-col gap-8 p-6 sm:p-10'>
 						<div className='flex flex-col gap-4'>
 							<h2 className='font-mono text-subsection font-semibold tracking-[0.04em] text-brand-text-primary sm:text-subsection-lg'>
-								What You Can Build
+								What The Renderer Makes Possible
 							</h2>
 						</div>
 
 						<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 							<div className="sci-chip flex flex-col gap-2 rounded-2xl p-6 transition-colors hover:border-brand-accent-200/60">
-								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Frontend Codegen</h3>
-								<p className="text-sm text-brand-text-muted/80">Give your code generation models eyes. Our renderer generates visual and structural rewards, enabling agents to iterate on UI until it's pixel-perfect.</p>
+								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Map</h3>
+								<p className="text-sm text-brand-text-muted/80">Identify enterprise data boundaries, sensitive surfaces, and what evidence can safely become part of an RL environment.</p>
 							</div>
 							<div className="sci-chip flex flex-col gap-2 rounded-2xl p-6 transition-colors hover:border-brand-accent-200/60">
-								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Agents</h3>
-								<p className="text-sm text-brand-text-muted/80">Train agents on the live web, not static snapshots. We handle the complexity of modern web apps—auth, popups, and dynamic DOMs—so you can focus on reasoning.</p>
+								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Snapshot</h3>
+								<p className="text-sm text-brand-text-muted/80">Capture browser-visible state, screenshots, DOM evidence, and actions without handing over uncontrolled raw systems.</p>
 							</div>
 							<div className="sci-chip flex flex-col gap-2 rounded-2xl p-6 transition-colors hover:border-brand-accent-200/60">
-								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Browser Games</h3>
-								<p className="text-sm text-brand-text-muted/80">Turn any browser game into a reasoning gym. We expose internal game state and provide deterministic frame stepping for high-fidelity RL training.</p>
+								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Sanitize</h3>
+								<p className="text-sm text-brand-text-muted/80">Constrain, redact, or keep sensitive fields inside controlled deployments while preserving training utility.</p>
 							</div>
 							<div className="sci-chip flex flex-col gap-2 rounded-2xl p-6 transition-colors hover:border-brand-accent-200/60">
-								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Deep Search Evals</h3>
-								<p className="text-sm text-brand-text-muted/80">Evaluate long-horizon search capabilities. Let agents navigate the open web to find answers, with full trajectory replay and ground-truth validation.</p>
+								<h3 className="font-mono text-sm font-semibold text-brand-text-primary">Verify</h3>
+								<p className="text-sm text-brand-text-muted/80">Score process and outcome separately using browser evidence, rubrics, and trajectory replay.</p>
 							</div>
 						</div>
 					</div>

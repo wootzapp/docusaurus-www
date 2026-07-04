@@ -2,20 +2,20 @@ import React from "react";
 
 const schedulerFeatures = [
 	{
-		title: "Short-Horizon Diversified (SHDS)",
-		description: "Maximize task coverage by mixing easy and hard tasks with adaptive horizons. Prevents overfitting while maintaining throughput.",
+		title: "Rubric-Scoped Subtasks",
+		description: "Each workflow is broken into specific, non-overlapping checks so one upstream mistake does not poison every downstream reward.",
 	},
 	{
-		title: "Bandit-Time Scheduling",
-		description: "Optimizes for reward-per-second using UCB scores and variance tracking. Perfect for high-efficiency training runs.",
+		title: "Process vs. Outcome",
+		description: "We score how well the agent executed separately from whether the user-visible goal was actually completed.",
 	},
 	{
-		title: "GRPO Grouping",
-		description: "Automatic task grouping ensures K trajectories per task for advantage computation, compatible with modern RL algorithms.",
+		title: "Failure Separation",
+		description: "Reasoning errors and hallucinated actions are treated differently from environment blockers like login state or missing test data.",
 	},
 	{
-		title: "Early Stop Policies",
-		description: "DomProgress and visual hash monitoring prevent wasted compute on stuck or looped episodes.",
+		title: "Evidence Packaging",
+		description: "Screenshots, DOM state, actions, rubrics, and privacy decisions travel together so the environment can be examined later.",
 	},
 ];
 
@@ -26,13 +26,13 @@ export function PartnerShip() {
 			<div className='container-custom relative z-10 flex flex-col gap-12'>
 				<div className='mx-auto max-w-3xl text-center flex flex-col gap-4'>
 					<span className='sci-chip mx-auto inline-flex w-fit items-center rounded-full border-dashed px-5 py-2 text-xs font-bold uppercase tracking-[0.28em] text-brand-accent-100 shadow-sm font-mono'>
-						Advanced Scheduling
+						Verifier Design
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						Maximize Throughput with Smart Scheduling
+						Good training data starts with good verifiers.
 					</h2>
 					<p className='text-body-sm text-brand-neutral-500 sm:text-body'>
-						Raw speed isn't enough. We provide the scheduling algorithms to make sure every GPU cycle counts.
+						Browser-agent failures are subtle. W8-RL uses browser evidence and task-specific rubrics so models are not rewarded for plausible but wrong work.
 					</p>
 				</div>
 

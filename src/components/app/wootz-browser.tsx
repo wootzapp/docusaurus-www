@@ -52,19 +52,19 @@ export default function WootzBrowser() {
 							{/* terminal */}
 							<div className='space-y-4 bg-brand-base p-4'>
 								<p className='mb-3 font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-accent-200'>
-									researcher@lab:~$ # The interface to your RL environment
+									researcher@lab:~$ # Browser evidence pipeline
 								</p>
 
 								<div className='space-y-4'>
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-accent-200'>
 											<span className='text-brand-accent-100'>$ </span>
-											swe-rl rollout --workers 4 --backend gemini
+											w8 snapshot --workflow claims-admin --mode private
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ Userspace reboot (10s) ........... OK</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ Async batching ................... ACTIVE</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ CDP reward stream ................ CONNECTED</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ Boundary map ..................... LOADED</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ Sensitive fields ................. CONSTRAINED</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>✓ Browser evidence ................. CAPTURED</p>
 										</div>
 									</div>
 
@@ -72,12 +72,12 @@ export default function WootzBrowser() {
 
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-accent-200'>
-											<span className='text-brand-accent-100'>$ </span>swe-rl evaluate --suite swe-bench-verified
+											<span className='text-brand-accent-100'>$ </span>w8 verify --trajectory run_0421
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>Running evaluation on 50 tasks...</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>[Env 0] Success: 0.82 (Reward: 0.94)</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>[Env 1] Success: 0.79 (Reward: 0.88)</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>process_reward: 0.86</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>outcome_success: true</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>environment_blocker: false</p>
 										</div>
 									</div>
 
@@ -85,11 +85,11 @@ export default function WootzBrowser() {
 
 									<div className='space-y-1'>
 										<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-accent-200'>
-											<span className='text-brand-accent-100'>$ </span>cat metrics.json | grep -i utilization
+											<span className='text-brand-accent-100'>$ </span>cat privacy-ledger.json
 										</p>
 										<div className='ml-2 space-y-0.5'>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>"concurrency_utilization": 0.92</p>
-											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>"gpu_saturation": 0.88</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>"retained_fields": "approved"</p>
+											<p className='font-["Fira_Code","JetBrains_Mono",ui-monospace] text-xs text-brand-text-secondary'>"exported_artifacts": "reviewed"</p>
 										</div>
 									</div>
 								</div>
@@ -129,10 +129,9 @@ export default function WootzBrowser() {
 									<div className='flex items-center space-x-4 text-xs text-brand-text-muted'>
 										<div className='flex items-center space-x-1'>
 											<span className='inline-block size-2 rounded-full bg-brand-accent-200' />
-											<span>W8 Rollout Spec</span>
+											<span>W8 Privacy Spec</span>
 										</div>
 										<div className='flex items-center space-x-1'>
-											<span>⭐</span>
 											<span className='text-brand-text-secondary'>Production Ready</span>
 										</div>
 										<span>Verified</span>
@@ -140,33 +139,31 @@ export default function WootzBrowser() {
 								</div>
 
 								<p className='text-xs leading-relaxed text-brand-text-secondary sm:text-sm'>
-									The only browser built for RL. We expose internal renderer signals to generate rewards that standard browsers can't, all while running 10x faster rollouts.
+									The browser is the verifier. WootzApp records screenshots, DOM state, actions, and outcomes so W8-RL can score both execution quality and user-visible success without uncontrolled raw data movement.
 								</p>
 
 								<div className='grid gap-3 sm:grid-cols-2'>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-brand-accent-200'>⚡ 10s Reset</p>
-										<p className='text-xs text-brand-text-muted'>Userspace reboot</p>
+										<p className='font-mono text-xs text-brand-accent-200'>Evidence</p>
+										<p className='text-xs text-brand-text-muted'>Screenshots + DOM</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-brand-accent-200'>🔄 Async Infra</p>
-										<p className='text-xs text-brand-text-muted'>No step barriers</p>
+										<p className='font-mono text-xs text-brand-accent-200'>Privacy</p>
+										<p className='text-xs text-brand-text-muted'>Reviewed artifacts</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-brand-accent-200'>💎 Pure Rewards</p>
-										<p className='text-xs text-brand-text-muted'>Browser-native signals</p>
+										<p className='font-mono text-xs text-brand-accent-200'>Process</p>
+										<p className='text-xs text-brand-text-muted'>Rubric rewards</p>
 									</div>
 									<div className='space-y-1'>
-										<p className='font-mono text-xs text-brand-accent-200'>🛡️ Legit Infra</p>
-										<p className='text-xs text-brand-text-muted'>Production stable</p>
+										<p className='font-mono text-xs text-brand-accent-200'>Outcome</p>
+										<p className='text-xs text-brand-text-muted'>Goal success</p>
 									</div>
 								</div>
 
 								<div className='flex flex-col gap-2 pt-2 sm:flex-row'>
 									<a
-										href='https://github.com/wootzapp/wootz-browser'
-										target='_blank'
-										rel='noreferrer'
+										href='/docs/intro'
 										className='inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-text-primary px-4 py-2 font-mono text-xs font-medium text-brand-base transition hover:bg-brand-accent-200 hover:text-brand-base sm:w-auto'
 									>
 										<svg
@@ -183,12 +180,10 @@ export default function WootzBrowser() {
 											<path d='m16 18 6-6-6-6' />
 											<path d='m8 6-6 6 6 6' />
 										</svg>
-										View Source
+										View W8 Docs
 									</a>
 									<a
-										href='https://github.com/wootzapp/wootz-browser/fork'
-										target='_blank'
-										rel='noreferrer'
+										href='/private'
 										className='inline-flex w-full items-center justify-center gap-2 rounded-md border border-brand-border px-4 py-2 font-mono text-xs font-medium text-brand-text-secondary transition hover:border-brand-accent-200 hover:bg-brand-accent-200 hover:text-brand-base sm:w-auto'
 									>
 										<svg
@@ -206,7 +201,7 @@ export default function WootzBrowser() {
 											<path d='M10 14 21 3' />
 											<path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' />
 										</svg>
-										Fork the Code
+										Forward Deployed
 									</a>
 								</div>
 							</div>

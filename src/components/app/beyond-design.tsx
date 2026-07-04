@@ -1,23 +1,23 @@
 const rewardAreas = [
 	{
-		title: "Sample Efficiency",
-		description: "Reach target scores with 4x fewer samples using our dense rewards.",
+		title: "Screenshot Evidence",
+		description: "Relevant screenshots are grouped against rubric criteria so subtle visual failures can be caught.",
 	},
 	{
-		title: "Reward Gradient",
-		description: "Monotonic rewards that don't plateau, guiding models through near-misses.",
+		title: "DOM Grounding",
+		description: "Structured browser state helps catch copied numbers, missing fields, and hallucinated interface claims.",
 	},
 	{
-		title: "Dense Signals",
-		description: "Feedback on every render, not just sparse pass/fail flags.",
+		title: "Action Trace",
+		description: "Every click, input, navigation, and submission stays tied to the resulting browser state.",
 	},
 	{
-		title: "Determinism",
-		description: "Locked viewports, fonts, and time for reproducible grading.",
+		title: "Privacy Ledger",
+		description: "Retained, redacted, and constrained artifacts are documented alongside the environment.",
 	},
 	{
-		title: "Scale",
-		description: "Run 1000s of concurrent environments with minimal overhead.",
+		title: "Outcome Labels",
+		description: "The final user-visible goal is checked separately from the quality of the agent's intermediate process.",
 	},
 ];
 
@@ -28,22 +28,22 @@ export function BeyondDesign() {
 			<div className='container-custom relative z-10 grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
 				<div className='flex flex-col gap-6'>
 					<span className='sci-chip inline-flex w-fit items-center rounded-full border-dashed border-brand-accent-200/60 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-accent-100 shadow-[0_0_30px_-20px_rgba(242,139,50,0.9)] backdrop-blur-sm font-mono'>
-						ChromiumRL Signals
+						Browser Evidence
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						Rewards from the Metal Up
+						A forked renderer is a better verifier.
 					</h2>
 					<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-						Because we own the renderer, we can grade layout stability, paint events, and network purity—signals impossible to get from Selenium or Playwright.
+						Agents can sound confident while doing the wrong thing. A browser renderer can show what actually happened: what was visible, what changed, what was submitted, and whether the user outcome was satisfied.
 					</p>
 					<div className='sci-panel glow-box flex flex-col gap-3 rounded-2xl p-6 sm:p-8'>
-						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Proof of Superiority</h3>
+						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Private enterprise data, packaged as a gym.</h3>
 						<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-							Our rewards show higher monotonicity and better near-miss separation than standard pass/fail tests. We don't just tell you if you failed—we tell you by how much.
+							W8-RL uses the renderer fork to preserve browser evidence while documenting what sensitive fields were removed, constrained, or kept inside the deployment.
 						</p>
 					</div>
 					<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-						Every pixel, every DOM node, and every network request is part of the grade.
+						Process rewards, outcome labels, and privacy decisions travel with every environment.
 					</p>
 				</div>
 

@@ -8,8 +8,8 @@ export default function PrivatePage() {
 
 	return (
 		<Layout
-			title={`Private Codebase Licensing | ${siteConfig.title}`}
-			description='WootzApp specializes in India-scale private legacy codebases, using FDRL teams to turn them into W8-RL environments.'
+			title={`Private Data Collaborations | ${siteConfig.title}`}
+			description='WootzApp licenses private codebases and enterprise workflows to build defensible W8-RL environments for coding and computer-use models.'
 		>
 			<Head>
 				<meta name='robots' content='noindex,nofollow' />

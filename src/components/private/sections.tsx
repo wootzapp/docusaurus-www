@@ -1,7 +1,8 @@
 const heroSignals = [
+	"AI-ready RL assets",
+	"Signal-preserving sanitization",
+	"Browser evidence packages",
 	"Non-exclusive licensing",
-	"W8-RL environments",
-	"India-scale private code",
 ];
 
 const indiaCities = ["Delhi", "Bengaluru", "Pune", "Hyderabad", "Chennai"];
@@ -31,64 +32,64 @@ const indiaProofStats = [
 
 const thesisItems = [
 	{
-		label: "Training quality",
-		title: "W8-RL gives model teams higher-quality environments.",
-		copy: "It packages legacy systems into repeatable environments, runs stable rollouts, and scores browser behavior with dense browser-visible rewards instead of relying on unit tests alone.",
+		label: "Asset creation",
+		title: "Private systems become AI-ready RL assets.",
+		copy: "We license private codebases and enterprise workflows, then package the useful behavior into W8-RL environments for coding and computer-use models.",
 	},
 	{
-		label: "Operational cost",
-		title: "W8-RL makes legacy systems cheaper to operationalize.",
-		copy: "Reusable rollout, reward, and evaluation infrastructure lowers one-off environment work and reduces wasted compute on systems that cannot be graded reliably.",
+		label: "Sanitization",
+		title: "Signal is preserved while risky surfaces are constrained.",
+		copy: "W8 maps what can be captured, redacted, retained, or kept inside a controlled deployment so the output is useful without becoming an uncontrolled raw-data transfer.",
 	},
 	{
-		label: "Commercial fit",
-		title: "The model works for Indian IT and enterprise software teams.",
-		copy: "Code owners keep their IP through non-exclusive licensing, while W8-RL turns older IT services, ERP, payments, and enterprise workflows into trainable environments.",
+		label: "Verification",
+		title: "The browser provides the evidence a verifier needs.",
+		copy: "Screenshots, DOM state, actions, and outcomes support process rewards and outcome labels, so model teams can train against behavior that actually happened.",
 	},
 ];
 
 const fdrlRows = [
 	{
-		label: "Forward Deployed RL Engineers",
-		copy: "Our FDRLs work on ground with counterpart teams to understand workflows, stand up environments, and translate legacy product behavior into RL-ready tasks.",
+		label: "Align on scope and standards",
+		copy: "We identify the systems, workflows, model use cases, privacy constraints, and buyer requirements before any environment is packaged.",
 	},
 	{
-		label: "What they transform",
-		copy: "They turn old, unused, and legacy codebases into richer RL environments with better rollouts, finer-grained rewards, and more realistic browser-visible evaluation.",
+		label: "Map and sanitize the useful signal",
+		copy: "FDRLs find where sensitive data appears, what evidence can be captured, which fields must be removed, and which artifacts can leave the enterprise boundary.",
 	},
 	{
-		label: "Why model companies care",
-		copy: "This is how we reach the private operational systems that do not exist in public source corpora and convert them into usable training substrates.",
+		label: "Package verifier-ready environments",
+		copy: "W8-RL turns approved code, workflow state, browser evidence, task specs, and rubrics into repeatable environments with process and outcome rewards.",
 	},
 	{
-		label: "What gets monetized",
-		copy: "The company keeps its IP while the legacy codebase becomes monetizable through non-exclusive access for environment creation and training-data generation.",
+		label: "Document and re-assess",
+		copy: "As systems, recipients, and requirements change, the program updates the artifact policy, verifier design, and documentation attached to each environment.",
 	},
 ];
 
 const fitGroups = [
 	{
-		title: "Good fit systems",
+		title: "Good fit assets",
 		items: [
-			"Private production systems with real business logic",
-			"Integrated workflows, not toy repos or tutorials",
-			"Older enterprise software with real maintenance history",
+			"Private codebases, admin systems, and operational workflows with real business logic",
+			"ERP, fintech, card-stack, IT-services, claims, or enterprise operations flows",
+			"Systems where public corpora do not capture the actual work",
 		],
 	},
 	{
-		title: "What helps most",
+		title: "What helps sanitization",
 		items: [
-			"Good tests or at least reliable verification surfaces",
-			"Backend-heavy or full-stack systems with admin flows",
-			"Meaningful size, usually around 100k+ lines or equivalent complexity",
+			"Clear data owners and approval paths",
+			"Test accounts, synthetic tenants, or controlled staging data",
+			"Known fields, screens, records, and artifacts that should never be exported",
 		],
 	},
 	{
 		title: "What we can adapt around",
 		items: [
-			"Swapped databases, secrets, or infrastructure dependencies",
-			"Legacy ERP, payments, card-stack, and enterprise IT setups",
-			"Codebases that need packaging before they become trainable",
+			"Swapped databases, secrets, and infrastructure dependencies",
+			"On-prem, VPC, or managed workflows with constrained data movement",
+			"Legacy systems that need packaging before they become trainable",
 		],
 	},
 ];
@@ -96,53 +97,61 @@ const fitGroups = [
 const commercialRows = [
 	{
 		label: "Access model",
-		copy: "Usually non-exclusive. You retain ownership and can continue to use the code however you want.",
+		copy: "Usually non-exclusive. You retain ownership of the source system, data, and IP while W8-RL creates an AI-ready environment layer.",
 	},
 	{
-		label: "What we do with it",
-		copy: "We do not package up the repo and sell it raw. We build training environments, reward pipelines, and research artifacts on top of it.",
+		label: "What can leave",
+		copy: "The output is a reviewed package: snapshots, task definitions, rubrics, reward traces, privacy decisions, and environment artifacts, not an uncontrolled dump of source archives or sensitive records.",
 	},
 	{
-		label: "What FDRLs add",
-		copy: "On-ground deployment lets us understand the legacy workflow well enough to create realistic tasks, dense rewards, and higher-quality rollouts.",
+		label: "What FDRLs make possible",
+		copy: "On-ground deployment lets us understand the data and workflow deeply enough to preserve signal while removing or constraining what should not travel.",
 	},
 	{
 		label: "Pricing drivers",
-		copy: "Size, maturity, test quality, integration complexity, and whether the codebase supports realistic environment construction.",
+		copy: "Workflow complexity, privacy review scope, setup maturity, verifier design, and how much environment packaging is required.",
 	},
 ];
 
 const faqs = [
 	{
 		question: "Do you need exclusive rights?",
-		answer: "No. Non-exclusive access is completely acceptable. In many cases that is the preferred structure.",
+		answer: "No. Non-exclusive licensing is usually the right structure. You keep ownership and can continue to use the system, data, and IP however your business requires.",
 	},
 	{
-		question: "Are you reselling the codebase?",
-		answer: "No. We use codebases to build environments, reward structures, and training data on top of them. We are not packaging up and reselling the raw repo.",
+		question: "Are you reselling raw data or source code?",
+		answer: "No. We build privacy-reviewed environments, reward structures, and training artifacts on top of private workflows. We are not packaging up and reselling source archives or sensitive records.",
+	},
+	{
+		question: "What leaves the enterprise boundary?",
+		answer: "Only the artifacts agreed in the program design: reviewed snapshots, task specs, rubrics, reward traces, documentation, or packaged environments. Sensitive fields can be redacted, constrained, or kept inside a controlled deployment.",
+	},
+	{
+		question: "How is sensitive data protected?",
+		answer: "FDRLs map sensitive surfaces first, define what can be captured, remove or constrain risky fields, and document the decisions attached to each environment. The goal is signal-preserving sanitization, not broad extraction.",
 	},
 	{
 		question: "What kinds of companies do you work with?",
-		answer: "We work with Indian IT services companies, financial services IT providers, card stack companies, ERP companies, and enterprise software companies, with active presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai.",
+		answer: "We work with Indian IT services companies, financial services IT providers, card stack companies, ERP companies, and enterprise software companies, with presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai.",
 	},
 	{
 		question: "How do you think about pricing?",
-		answer: "Typical non-exclusive deals are often around $5k-$25k, with many codebases landing closer to $5k-$10k depending on quality, maturity, and usefulness.",
+		answer: "Pricing depends on workflow complexity, privacy constraints, setup maturity, verifier design, and whether the engagement is a focused pilot or a standing program.",
 	},
 	{
-		question: "What makes a codebase especially useful?",
-		answer: "Strong tests, real integration points, realistic setup complexity, and behavior that requires more than a binary verifier to evaluate well.",
+		question: "What makes a workflow especially useful?",
+		answer: "Useful assets have real decisions, meaningful user outcomes, setup complexity, and enough evidence to score process and outcome separately.",
 	},
 ];
 
 const qualificationChecklist = [
-	"Stack summary and what the system actually does",
-	"Approximate lines of real code and backend/frontend split",
-	"How good the test coverage is in practice",
-	"Whether it can be run independently with infrastructure swapped out",
-	"Whether it comes from an IT services, enterprise software, ERP, card stack, or financial-services workflow",
-	"Whether there are admin flows, browser-visible workflows, or integration-heavy surfaces",
-	"Any reason the codebase is unusual, legacy, private, or particularly well-crafted",
+	"Codebase or workflow summary and what the user is trying to accomplish",
+	"Which screens, fields, records, or documents contain sensitive data",
+	"Whether test accounts, synthetic tenants, or staging data are available",
+	"Which artifacts can leave the enterprise boundary and which must stay inside",
+	"Whether the workflow comes from IT services, ERP, card stack, fintech, or enterprise operations",
+	"Where process failures and outcome failures can be observed in the browser",
+	"Any existing tests, logs, audit trails, or documentation that can support verifier design",
 ];
 
 export default function PrivatePageContent() {
@@ -160,12 +169,15 @@ export default function PrivatePageContent() {
 				<div className='container-custom relative z-10 py-[76px] lg:py-[108px]'>
 					<div className='grid items-start gap-8 lg:grid-cols-[minmax(0,1.18fr)_minmax(300px,0.82fr)] lg:gap-8 xl:gap-10'>
 						<div className='max-w-4xl flex flex-col gap-5'>
-							<span className='private-section-tag private-section-tag--dark'>Private Codebase Licensing for W8-RL</span>
+							<span className='private-section-tag private-section-tag--dark'>Private Data Collaborations</span>
 							<h1 className='private-display text-brand-text-primary'>
-								We license private codebases to build RL environments for coding models.
+								Turn real-world enterprise data into AI-ready RL assets that stay defensible.
 							</h1>
 							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
-								If your team is sitting on older internal systems that still carry years of real work, WootzApp helps them find a second life. W8-RL is our proprietary infrastructure for turning private software into repeatable RL environments with better rollouts and dense browser-visible rewards, without asking you to give up the underlying IP.
+								WootzApp non-exclusively licenses private codebases and workflows, sanitizes what should not travel, and packages useful behavior into W8-RL environments for coding and computer-use models.
+							</p>
+							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
+								Your IP stays yours. Model teams get verified training signal. Our browser captures the evidence a verifier needs while W8 controls what leaves the enterprise boundary.
 							</p>
 							<div className='flex flex-wrap gap-2.5'>
 								{heroSignals.map((signal) => (
@@ -195,19 +207,19 @@ export default function PrivatePageContent() {
 
 						<div className='private-note-card private-paper-card xl:justify-self-end'>
 							<div className='p-5 sm:p-6'>
-								<p className='private-mini-label'>A note to teams sitting on legacy code</p>
+								<p className='private-mini-label'>What you get</p>
 								<h2 className='private-note-heading mt-3 text-brand-base'>
-									These systems still carry years of care and know-how.
+									A practical way to turn unused private systems into licensed RL assets.
 								</h2>
 								<div className='mt-4 space-y-4'>
 									<p className='private-note-body'>
-										India is not a side market for us. It is one of the densest concentrations of IT services delivery, software talent, GCC infrastructure, and private enterprise workflows anywhere in the world. Even when a system is no longer strategic, it still represents real craft.
+										Private systems become valuable to model teams when the signal is captured, sanitized, documented, and packaged into an environment that can be replayed and scored.
 									</p>
 									<p className='private-note-body'>
-										We have presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai, and our Forward Deployed RL Engineers (FDRL) spend time on ground with teams so the process feels local, respectful, and practical rather than extractive.
+										Our FDRLs work with your team on the ground so boundary decisions, redactions, verifier updates, and artifact approvals happen inside the operating rhythm.
 									</p>
 									<p className='private-note-body'>
-										You keep your IP. Our IP is W8-RL: the rollout, reward, and evaluation infrastructure that turns older systems into trainable environments.
+										We have presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai, giving us proximity to the IT services, financial software, ERP, and enterprise operations teams that own this private signal.
 									</p>
 								</div>
 								<div className='mt-5 flex flex-wrap gap-2'>
@@ -218,7 +230,7 @@ export default function PrivatePageContent() {
 									))}
 								</div>
 								<p className='private-note-caption mt-5'>
-									That same local presence is what lets W8-RL work with truly private systems that public corpora never touch.
+									That local presence is what makes private enterprise systems practical as defensible RL assets, not just interesting source material.
 								</p>
 							</div>
 						</div>
@@ -228,7 +240,7 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-3 lg:max-w-4xl'>
 							<p className='private-proof-kicker'>Why We Specialize In India</p>
 							<p className='private-body text-brand-text-secondary'>
-								India is where large-scale services delivery, GCC infrastructure, and private enterprise software overlap. That density is why W8-RL specializes here: it gives us access to the kind of legacy workflows and browser-visible operational behavior that public corpora do not contain.
+								India is where large-scale services delivery, GCC infrastructure, and private enterprise software overlap. That density is why W8-RL specializes here: the right forward-deployed program can preserve training signal while respecting the privacy posture that enterprise data owners need.
 							</p>
 						</div>
 						<div className='private-proof-grid mt-5'>
@@ -252,15 +264,15 @@ export default function PrivatePageContent() {
 				<div className='container-custom relative z-10 py-[60px] lg:py-[84px]'>
 					<div className='grid items-start gap-7 lg:grid-cols-[minmax(0,1.06fr)_minmax(320px,0.94fr)] lg:gap-8'>
 						<div className='flex flex-col gap-[1.125rem]'>
-							<span className='private-section-tag private-section-tag--light'>Why W8-RL Wins</span>
+							<span className='private-section-tag private-section-tag--light'>From Private Systems To RL Assets</span>
 							<h2 className='private-heading text-brand-base'>
-								W8-RL is about quality, cost, and operational fit.
+								W8-RL turns licensed private systems into trainable environments.
 							</h2>
 							<p className='private-body max-w-3xl text-brand-base/85'>
-								Model companies care about environment quality and evaluation signal. Indian IT and enterprise software teams care about practical terms, retained IP, and whether the process is worth the effort. W8-RL is built for both sides.
+								The platform assesses what is useful, sanitizes what is sensitive, captures the browser evidence a verifier needs, and delivers environment artifacts that model teams can train against.
 							</p>
 							<p className='private-body max-w-3xl text-brand-base/78'>
-								It gives model teams better rollouts, denser browser-visible rewards, and more reliable evaluation, while making older private systems cheaper and easier to turn into usable RL environments. India gives us unusually high density of those systems.
+								The forward-deployed team is the operating model for that pipeline. The same FDRLs learn the codebase, workflow, privacy constraints, verifier design, and downstream requirements so the environment stays defensible as context changes.
 							</p>
 							<div className='private-paper-card private-thesis-card p-5 sm:p-6'>
 								<div className='space-y-1'>
@@ -280,7 +292,7 @@ export default function PrivatePageContent() {
 
 						<div className='terminal-window glow-box lg:mt-2'>
 							<div className='terminal-header justify-start'>
-								<span className='terminal-title'>FDRL Deployment Model</span>
+								<span className='terminal-title'>W8-RL Asset Pipeline</span>
 							</div>
 							<div className='terminal-body flex flex-col gap-4 p-5 sm:p-6 text-brand-text-secondary'>
 								{fdrlRows.map((row, index) => (
@@ -303,10 +315,10 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-5'>
 							<span className='private-section-tag private-section-tag--dark'>Good Fit</span>
 							<h2 className='private-heading text-brand-text-primary'>
-								What tends to work well for us.
+								What makes a private system worth turning into an RL asset.
 							</h2>
 							<p className='private-body max-w-3xl text-brand-text-secondary'>
-								We generally prefer older private systems that already contain real workflows, integration edges, and useful verification surfaces. The goal is not raw repo access. The goal is turning the system into a usable W8-RL environment without forcing a heavy lift on your team.
+								The goal is not broad source access or broad data extraction. The goal is a controlled package that preserves enough behavior, context, and browser-visible evidence to train and verify agents while keeping sensitive systems defensible.
 							</p>
 							<div className='private-dark-card private-fit-board p-5 sm:p-6'>
 								{fitGroups.map((group) => (
@@ -329,7 +341,7 @@ export default function PrivatePageContent() {
 
 						<div className='terminal-window glow-box xl:mt-2'>
 							<div className='terminal-header justify-start'>
-								<span className='terminal-title'>Commercial Shape</span>
+								<span className='terminal-title'>Program Shape</span>
 							</div>
 							<div className='terminal-body flex flex-col gap-4 p-5 sm:p-6 text-brand-text-secondary'>
 								{commercialRows.map((row, index) => (
@@ -340,7 +352,7 @@ export default function PrivatePageContent() {
 									</div>
 								))}
 								<p className='private-terminal-note private-body-compact'>
-									Typical non-exclusive deals are often in the $5k-$25k range, with many codebases landing closer to $5k-$10k depending on quality, maturity, and usefulness.
+									Commercial terms can start as a focused pilot or become a standing program. The constant is the same: retained IP, sanitized artifacts, defensibility documentation, and W8-RL environments that model teams can actually train on.
 								</p>
 							</div>
 						</div>
@@ -358,10 +370,10 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-5'>
 							<span className='private-section-tag private-section-tag--light'>Details</span>
 							<h2 className='private-heading text-brand-base'>
-								What to send and what people usually ask.
+								What to send before we scope the asset.
 							</h2>
 							<p className='private-body max-w-2xl text-brand-base/80'>
-								Keep the first note short. If the system looks like a fit, we can go deeper after the first pass.
+								Keep the first note short. We are looking for system context, sensitive surfaces, and enough evidence to decide whether the codebase or workflow can become a defensible W8-RL environment.
 							</p>
 						</div>
 
@@ -400,10 +412,10 @@ export default function PrivatePageContent() {
 						<div className='flex flex-col gap-4'>
 							<span className='private-section-tag private-section-tag--dark'>Private Conversation</span>
 							<h2 className='private-subheading text-brand-text-primary'>
-								If your team is sitting on older private systems, we&apos;d be glad to talk.
+								If your team is sitting on private systems that could become AI-ready RL assets, we&apos;d be glad to talk.
 							</h2>
 							<p className='private-body text-brand-text-secondary'>
-								A short note is enough to start. We can begin with context, not paperwork, and see whether a respectful non-exclusive path makes sense.
+								A short note is enough to start. We can begin with context, sensitive boundaries, and what W8 would need to sanitize, document, and verify before anything moves.
 							</p>
 						</div>
 						<div className='flex flex-col gap-3 sm:flex-row lg:justify-end'>

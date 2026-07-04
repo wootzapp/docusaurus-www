@@ -1,12 +1,12 @@
 import React from "react";
 
 const realtimeNarrative = [
-	"We provide the gymnasium. You build the athlete.",
-	"Standard browsers are black boxes. We rewrote the renderer and network stack.",
-	"This lets us generate deterministic, browser-native rewards no one else can.",
-	"To drive this custom browser, we built the W8 Async Rollout System.",
-	"Userspace reboots in 10s. Zero synchronous barriers.",
-	"Our goal: Simulate and automate every task in the knowledge economy.",
+	"Private data assets and enterprise workflows hold the signal model labs need.",
+	"Enterprise data owners need control over what leaves their boundary.",
+	"The browser captures the evidence a verifier needs: screenshots, DOM state, actions, and outcomes.",
+	"W8 converts that evidence into privacy-reviewed RL assets and pipelines.",
+	"Rewards, rollouts, and outcome labels are designed around the asset.",
+	"Every environment ships with documentation of what was retained and why.",
 ];
 
 export function BrowserPlatform() {
@@ -21,11 +21,10 @@ export function BrowserPlatform() {
 					<div className="terminal-body grid gap-12 p-6 sm:p-10 lg:grid-cols-2">
 						<div className="flex flex-col justify-center gap-6">
 							<h2 className='font-mono text-subsection font-semibold tracking-[0.04em] text-brand-text-primary sm:text-subsection-lg'>
-								We Build Environments,<br />Not Models
+								We Own RL From<br />The Data Layer
 							</h2>
 							<p className='font-matter text-body text-brand-text-secondary'>
-								We are a software company that builds the gymnasium. You build the athlete.
-								Standard browsers are black boxes. We rewrote the renderer and network stack to generate deterministic, browser-native rewards no one else can.
+								Training pipelines are becoming commoditized. The hard part is the private data asset, the evidence capture, the reward design, and the privacy-reviewed pipeline around it. Our browser captures the evidence a verifier needs while W8 controls what leaves the enterprise boundary.
 							</p>
 						</div>
 
@@ -46,26 +45,26 @@ export function BrowserPlatform() {
 
 				<div className='grid gap-5 md:gap-8 md:grid-cols-3'>
 					<div className='sci-panel flex h-full flex-col gap-3 rounded-2xl p-6 sm:p-8'>
-						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Gym</span>
-						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>You Train, We Grade</h3>
+						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Asset</span>
+						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Private Signal, Made Usable</h3>
 						<p className='text-body-sm text-brand-text-secondary'>
-							Models are dropped into our environments and tasked with objectives like building features or debugging. We grade their work based on success.
+							Codebases, workflows, and operational data become trainable RL assets only after useful behavior is captured, sanitized, and documented.
 						</p>
 					</div>
 
 					<div className='sci-panel flex h-full flex-col gap-3 rounded-2xl p-6 sm:p-8'>
-						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Infra</span>
-						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>We Bring the Rollout</h3>
+						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Pipeline</span>
+						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>W8 Controls the Pipeline</h3>
 						<p className='text-body-sm text-brand-text-secondary'>
-							We provide the rollout system because we own the browser. Our W8 architecture delivers the 10s resets and async inference needed for scale.
+							W8 maps enterprise boundaries, captures approved evidence, redacts or constrains sensitive fields, and packages repeatable RL environments with reward traces.
 						</p>
 					</div>
 
 					<div className='sci-panel flex h-full flex-col gap-3 rounded-2xl p-6 sm:p-8'>
-						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Goal</span>
-						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Automate Everything</h3>
+						<span className='font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-text-secondary'>The Verifier</span>
+						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Defensible Training Signal</h3>
 						<p className='text-body-sm text-brand-text-secondary'>
-							We're starting with the hardest problem: software engineering. But our infrastructure is built to scale until every task in the knowledge economy can be simulated, graded, and automated.
+							Model labs can train on enterprise-grade workflows while data owners retain IP, privacy posture, and documentation of what was delivered.
 						</p>
 					</div>
 				</div>

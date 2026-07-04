@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Wootzapp",
-  tagline: "We convert expert human judgment into reinforcement-learning",
+  tagline: "Privacy-preserving enterprise workflows for W8-RL",
   favicon: "/img/favicon.ico",
 
 
@@ -80,17 +80,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'We convert expert human judgment into reinforcement-learning',
+      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'We convert expert human judgment into reinforcement-learning',
+      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'We convert expert human judgment into reinforcement-learning',
+      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
