@@ -7,7 +7,6 @@ import Hero from "../components/app/hero";
 import BrowserPlatform from "../components/app/browser-platform";
 import {Integration} from "../components/app/integration";
 import {Intersection} from "../components/app/intersection";
-import {PartnerShip} from "../components/app/partnership";
 import {BeyondDesign} from "../components/app/beyond-design";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import WootzBrowser from "../components/app/wootz-browser";
@@ -20,10 +19,9 @@ export default function Home() {
 				<Hero />
 				<WootzBrowser />
 					<Browsing />
+					<BeyondDesign />
 					<BrowserPlatform />
 					<Integration />
-					<PartnerShip />
-					<BeyondDesign />
 				<Intersection />
 				<Experience />
 			</div>

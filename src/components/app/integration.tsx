@@ -7,16 +7,13 @@ export function Integration() {
 			<div className='container-custom relative z-10 flex flex-col items-center gap-12 text-center'>
 				<div className='flex flex-col gap-6 max-w-4xl'>
 					<span className='sci-chip mx-auto inline-flex w-fit items-center rounded-full border-dashed px-5 py-2 text-xs font-bold uppercase tracking-[0.28em] text-brand-accent-100 shadow-sm backdrop-blur-sm font-mono'>
-						Deployment With Privacy Boundaries
+						Private Data Utility
 					</span>
 					<h2 className='font-matter text-subsection font-bold text-brand-base sm:text-subsection-lg'>
-						Fits the way enterprise data owners already work.
+						More private systems become usable and licensable.
 					</h2>
 					<p className='font-matter text-body text-brand-base/80'>
-						RL starts with the data assets and pipelines. WootzApp works with enterprise teams, IT services providers, and model labs to package enterprise workflows into W8-RL environments with privacy-reviewed browser evidence, rewards, and rollout infrastructure.
-					</p>
-					<p className='font-matter text-body text-brand-base/80'>
-						Deploy the workflow capture where the data owner is comfortable: controlled staging, VPC, on-prem, or a managed review path with explicit artifact boundaries.
+						W8-RL expands the portion of private enterprise systems that can safely move into RL pipelines. Codebases and workflows that were too sensitive to license become documented, replayable assets with verifier evidence attached.
 					</p>
 				</div>
 

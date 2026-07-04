@@ -1,23 +1,23 @@
 const rewardAreas = [
 	{
-		title: "Screenshot Evidence",
-		description: "Relevant screenshots are grouped against rubric criteria so subtle visual failures can be caught.",
+		title: "Rubric-Scoped Evidence",
+		description: "Screenshots and DOM state are grouped against specific checks so subtle failures can be caught without noisy context.",
 	},
 	{
-		title: "DOM Grounding",
-		description: "Structured browser state helps catch copied numbers, missing fields, and hallucinated interface claims.",
+		title: "Process Reward",
+		description: "Execution quality is scored separately: incomplete subtasks, hallucinated actions, and side effects are not hidden by a lucky final state.",
 	},
 	{
-		title: "Action Trace",
-		description: "Every click, input, navigation, and submission stays tied to the resulting browser state.",
+		title: "Outcome Label",
+		description: "The final user-visible goal is checked independently from the agent's intermediate process.",
+	},
+	{
+		title: "Failure Separation",
+		description: "Agent reasoning errors are separated from environment blockers like login state, missing inventory, or unavailable test data.",
 	},
 	{
 		title: "Privacy Ledger",
 		description: "Retained, redacted, and constrained artifacts are documented alongside the environment.",
-	},
-	{
-		title: "Outcome Labels",
-		description: "The final user-visible goal is checked separately from the quality of the agent's intermediate process.",
 	},
 ];
 
@@ -31,19 +31,19 @@ export function BeyondDesign() {
 						Browser Evidence
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						A forked renderer is a better verifier.
+						Browser evidence makes privacy-reviewed RL inspectable.
 					</h2>
 					<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-						Agents can sound confident while doing the wrong thing. A browser renderer can show what actually happened: what was visible, what changed, what was submitted, and whether the user outcome was satisfied.
+						Reliable RL starts with reliable verifiers. Browser evidence shows what actually happened: what was visible, what changed, what was submitted, and whether the user outcome was satisfied.
 					</p>
 					<div className='sci-panel glow-box flex flex-col gap-3 rounded-2xl p-6 sm:p-8'>
 						<h3 className='font-matter text-subsection font-bold text-brand-text-primary'>Private enterprise data, packaged as a gym.</h3>
 						<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-							W8-RL uses the renderer fork to preserve browser evidence while documenting what sensitive fields were removed, constrained, or kept inside the deployment.
+							W8-RL uses the renderer fork to preserve verifier evidence while documenting what sensitive fields were removed, constrained, or kept inside the deployment.
 						</p>
 					</div>
 					<p className='text-body-sm text-brand-text-secondary sm:text-body'>
-						Process rewards, outcome labels, and privacy decisions travel with every environment.
+						Process rewards, outcome labels, failure separation, and privacy decisions travel with every environment.
 					</p>
 				</div>
 

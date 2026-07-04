@@ -53,6 +53,9 @@ export default function Hero() {
 							<h2 className='font-mono text-subsection font-semibold tracking-[0.04em] text-brand-text-primary sm:text-subsection-lg'>
 								What The Renderer Makes Possible
 							</h2>
+							<p className='max-w-3xl text-body-sm text-brand-text-secondary sm:text-body'>
+								A forked renderer is a better verifier: it captures the browser evidence needed to turn private enterprise data into trainable, privacy-reviewed W8-RL gyms.
+							</p>
 						</div>
 
 						<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

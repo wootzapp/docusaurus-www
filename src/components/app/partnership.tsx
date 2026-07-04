@@ -29,7 +29,7 @@ export function PartnerShip() {
 						Verifier Design
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						Good training data starts with good verifiers.
+						Reliable RL starts with reliable verifiers.
 					</h2>
 					<p className='text-body-sm text-brand-neutral-500 sm:text-body'>
 						Browser-agent failures are subtle. W8-RL uses browser evidence and task-specific rubrics so models are not rewarded for plausible but wrong work.

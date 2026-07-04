@@ -11,23 +11,23 @@ export function Browsing() {
 						The W8 Privacy Pipeline
 					</span>
 					<h2 className='font-matter text-section font-bold sm:text-section-lg'>
-						W8-RL turns private enterprise workflows into trainable environments.
+						W8-RL makes private enterprise data usable for RL without losing control.
 					</h2>
 					<p className='text-body text-brand-base/80'>
-						W8 maps sensitive enterprise workflow boundaries, captures browser evidence, constrains what can leave, and packages the result as repeatable environments with documented process and outcome verification.
+						W8 assesses, sanitizes, documents, and packages sensitive systems so useful signal can move into model-training pipelines as defensible RL assets.
 					</p>
 				</div>
 
 				<div className='grid gap-5 md:gap-8 md:grid-cols-2 lg:grid-cols-3'>
 					<div className='relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-brand-neutral-300/80 bg-white/70 p-6 shadow-[0_24px_60px_-45px_rgba(31,19,13,0.35)] backdrop-blur sm:p-8'>
 						<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
-						<h3 className='font-matter text-subsection font-bold text-brand-base'>Workflow Boundary Map</h3>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>Privacy Assessment</h3>
 						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
 							<li>
-								<span className="font-bold text-brand-base font-mono">Sensitive surfaces</span>: <span className="text-brand-base/80">Fields, screens, records, and documents are identified before capture.</span>
+								<span className="font-bold text-brand-base font-mono">Sensitive surfaces</span>: <span className="text-brand-base/80">Fields, screens, records, source areas, and documents are identified before capture.</span>
 							</li>
 							<li>
-								<span className="font-bold text-brand-base font-mono">Approved journeys</span>: <span className="text-brand-base/80">Only agreed workflows become tasks, rubrics, and rollout environments.</span>
+								<span className="font-bold text-brand-base font-mono">Approved scope</span>: <span className="text-brand-base/80">Only agreed systems and workflows become tasks, rubrics, and rollout environments.</span>
 							</li>
 							<li>
 								<span className="font-bold text-brand-base font-mono">Artifact policy</span>: <span className="text-brand-base/80">Each exported artifact has an explicit retention and redaction posture.</span>
@@ -37,13 +37,13 @@ export function Browsing() {
 
 					<div className='relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-brand-neutral-300/80 bg-white/70 p-6 shadow-[0_24px_60px_-45px_rgba(31,19,13,0.35)] backdrop-blur sm:p-8'>
 						<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
-						<h3 className='font-matter text-subsection font-bold text-brand-base'>Browser Evidence Capture</h3>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>Signal-Preserving Engineering</h3>
 						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
 							<li>
-								<span className="font-bold text-brand-base font-mono">Screenshots</span>: <span className="text-brand-base/80">Visual reality is grouped against the rubric, not trusted from agent claims.</span>
+								<span className="font-bold text-brand-base font-mono">Screenshots</span>: <span className="text-brand-base/80">Visual reality is captured where it adds verifier value.</span>
 							</li>
 							<li>
-								<span className="font-bold text-brand-base font-mono">DOM state</span>: <span className="text-brand-base/80">Structured browser state supports precise checks beyond pass/fail tests.</span>
+								<span className="font-bold text-brand-base font-mono">DOM state</span>: <span className="text-brand-base/80">Structured browser state supports precise checks while sensitive fields are constrained.</span>
 							</li>
 							<li>
 								<span className="font-bold text-brand-base font-mono">Trajectory replay</span>: <span className="text-brand-base/80">Actions, observations, and outcomes remain inspectable.</span>
@@ -53,7 +53,7 @@ export function Browsing() {
 
 					<div className='relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-brand-neutral-300/80 bg-white/70 p-6 shadow-[0_24px_60px_-45px_rgba(31,19,13,0.35)] backdrop-blur sm:p-8'>
 						<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
-						<h3 className='font-matter text-subsection font-bold text-brand-base'>Privacy-Reviewed Delivery</h3>
+						<h3 className='font-matter text-subsection font-bold text-brand-base'>Documented Delivery</h3>
 						<ul className='flex flex-col gap-4 text-body-sm text-brand-base'>
 							<li>
 								<span className="font-bold text-brand-base font-mono">Process reward</span>: <span className="text-brand-base/80">How well did the agent execute the workflow?</span>
