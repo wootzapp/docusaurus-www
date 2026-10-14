@@ -12,8 +12,8 @@ import FinalCta from "../components/home/final-cta";
 export default function Home() {
 	return (
 		<Layout
-			title="Optimize What Others Can't See"
-			description='WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.'
+			title="Ground Truth Others Can't Trace"
+			description='WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.'
 		>
 			<main className='ed-page'>
 				<Hero />

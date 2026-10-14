@@ -22,7 +22,7 @@ const footerColumns = [
 	{
 		title: "Products",
 		links: [
-			{label: "RL environments", href: "/#model-labs"},
+			{label: "Data and environments", href: "/#model-labs"},
 			{label: "Enterprise models", href: "/#enterprise"},
 		],
 	},
@@ -52,7 +52,7 @@ export function Footer() {
 				<div className='grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,2.6fr)] xl:gap-16'>
 					<div className='flex flex-col gap-4'>
 						<span className='text-2xl font-semibold tracking-[-0.01em]'>WootzApp</span>
-						<p className='m-0 max-w-xs text-[0.9375rem] leading-relaxed text-ed-graphite'>RL environments and custom models from evidence others can&apos;t see.</p>
+						<p className='m-0 max-w-xs text-[0.9375rem] leading-relaxed text-ed-graphite'>Training data and custom models from ground truth others can&apos;t trace.</p>
 						<a href={`mailto:${links.email}`} className='ed-link w-fit text-[0.9375rem]'>
 							{links.email}
 						</a>

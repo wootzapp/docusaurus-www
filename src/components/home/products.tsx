@@ -25,8 +25,8 @@ const products: Product[] = [
 	{
 		id: "model-labs",
 		audience: "For frontier model labs",
-		title: "RL environments with rewards grounded in observed state.",
-		copy: "We record each environment inside our hypervisor and the W8 browser. The reward reads page state and the runtime record directly, so it scores what the agent did, including the attempts the sandbox stopped.",
+		title: "Datasets, evals, and environments from traces nobody else captures.",
+		copy: "We record work traces from experts and agent traces from models inside our hypervisor and the W8 browser. Our team turns them into datasets, evals, and resettable environments that beat state-of-the-art models. Rewards read page state and the runtime record directly, so they score what the agent did, including the attempts the sandbox stopped.",
 		advantages: [
 			{
 				layer: "browser",
@@ -49,15 +49,15 @@ const products: Product[] = [
 				copy: "Deterministic checks wherever the outcome is observable. Model judges cover visual and subjective criteria.",
 			},
 		],
-		delivered: "Resettable environments with fixtures, task specifications, verifiers, reward functions, and recorded trajectories.",
-		tagline: "Get the work behind the transcript.",
-		cta: "Discuss RL environments",
+		delivered: "Trace datasets, evals, and resettable environments with fixtures, task specifications, verifiers, and reward functions.",
+		tagline: "Our data passes the quality gates of the world's leading frontier model labs.",
+		cta: "Discuss data and environments",
 	},
 	{
 		id: "enterprise",
 		audience: "For enterprise AI teams",
 		title: "Small models trained on what your agents actually do.",
-		copy: "Your harness runs unchanged inside our hypervisor. We observe the execution environment independently of the agent, verify outcomes in W8, and train small models on the runs that verifiably succeeded.",
+		copy: "Your harness runs unchanged inside our hypervisor and produces agent traces from your real tasks. W8 verifies the browser outcomes. The team that builds data for frontier labs trains small models on the traces that verifiably succeeded.",
 		advantages: [
 			{
 				layer: "hypervisor",
@@ -99,7 +99,7 @@ export default function Products() {
 		<Section id='products'>
 			<div className='flex flex-col gap-6'>
 				<Eyebrow>What we build / Two products, two observation points</Eyebrow>
-				<h2 className='ed-h2 m-0 max-w-[64rem]'>RL environments and custom models that see below the harness and inside the browser.</h2>
+				<h2 className='ed-h2 m-0 max-w-[64rem]'>Training data for frontier labs. Custom small models for enterprises.</h2>
 				<ul className='m-0 flex list-none flex-col gap-3 p-0 md:flex-row md:gap-10'>
 					{legend.map((item) => (
 						<li key={item.layer} className='flex flex-wrap items-baseline gap-x-3 gap-y-1.5 text-[0.9375rem] text-ed-graphite'>

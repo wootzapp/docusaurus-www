@@ -607,6 +607,11 @@ html.docs-wrapper .table-of-contents__link--active {
 	text-wrap: balance;
 }
 
+/* Hero headline: sized so "others can't trace." fits the hero column on one line. */
+.ed-display--hero {
+	font-size: clamp(2.5rem, 6.2vw, 5.25rem);
+}
+
 .ed-h2 {
 	font-size: clamp(2rem, 4.6vw, 3.625rem);
 	font-weight: 600;

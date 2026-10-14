@@ -12,8 +12,8 @@ const steps: {label: string; copy: string; layer: Layer}[] = [
 		layer: "browser",
 	},
 	{
-		label: "Optimize",
-		copy: "Package the result as an RL environment for a model lab, or train and evaluate a small model for an enterprise.",
+		label: "Train",
+		copy: "Our team builds datasets, evals, and environments for model labs, or trains and evaluates a small model for an enterprise.",
 		layer: "both",
 	},
 ];
@@ -22,7 +22,7 @@ const rail = [
 	{label: "Inputs", items: ["Existing agent", "Expert operator"]},
 	{label: "Observation points", items: ["OpenShell execution layer", "W8 browser"]},
 	{label: "Evidence + verifiers", items: ["Runtime events", "Browser states", "Rubrics · state checks"]},
-	{label: "Products", items: ["RL environments · model labs", "Fine-tuned small models · enterprises"]},
+	{label: "Products", items: ["Datasets, evals, environments · model labs", "Fine-tuned small models · enterprises"]},
 ];
 
 export default function Learning() {

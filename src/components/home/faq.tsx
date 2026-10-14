@@ -8,10 +8,21 @@ const items = [
 		question: "What does WootzApp sell?",
 		answer: (
 			<p className='m-0'>
-				Two products built on two observation points. <strong className='text-ed-ink'>RL environments</strong> for frontier model labs,
-				recorded inside our hypervisor and the W8 browser so rewards read runtime and page state directly.{" "}
-				<strong className='text-ed-ink'>Custom small models</strong> for enterprises, trained on runs of your own agents that the hypervisor
-				observed from below the harness and W8 verified in the browser.
+				Two products built from agent traces and work traces. <strong className='text-ed-ink'>Datasets, evals, and RL environments</strong>{" "}
+				for frontier model labs, engineered by our team from traces recorded inside our hypervisor and the W8 browser. Our data passes the
+				quality gates of the world&apos;s leading frontier model labs.{" "}
+				<strong className='text-ed-ink'>Custom small models</strong> for enterprises, trained on traces of your own agents that the
+				hypervisor recorded from below the harness and W8 verified in the browser.
+			</p>
+		),
+	},
+		{
+		question: "What is a work trace?",
+		answer: (
+			<p className='m-0'>
+				A recording of an authorized expert doing a real task inside our hypervisor and W8: their actions, the runtime events, the page
+				state at every step, and the assessed outcome. An <strong className='text-ed-ink'>agent trace</strong> is the same record produced
+				by an AI agent.
 			</p>
 		),
 	},

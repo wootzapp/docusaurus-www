@@ -12,25 +12,32 @@ export default function Hero() {
 			<div className='ed-container pb-16 pt-12 sm:pt-16 lg:pb-20 lg:pt-24'>
 				<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:gap-16'>
 					<div className='flex flex-col gap-8'>
-						<Eyebrow>WootzApp / Below the harness. Inside the browser.</Eyebrow>
-						<h1 className='ed-display m-0'>Optimize what others can&apos;t see.</h1>
-						<p className='ed-h3 m-0 max-w-[34rem] text-ed-graphite'>Bring your production harness. Change almost nothing.</p>
+						<Eyebrow>WootzApp / Agent traces. Work traces.</Eyebrow>
+						<h1 className='ed-display ed-display--hero m-0'>
+							Ground truth
+							<br />
+							others can&apos;t trace.
+						</h1>
+						<p className='ed-h3 m-0 max-w-[34rem] text-ed-graphite'>Agent traces and work traces, captured below the harness and inside the browser.</p>
 						<div className='ed-lede flex max-w-[40rem] flex-col gap-4 text-ed-graphite'>
 							<p className='m-0'>
-								We build <strong className='font-semibold text-ed-ink'>RL environments for frontier model labs</strong> and train{" "}
-								<strong className='font-semibold text-ed-ink'>custom small models for enterprises</strong> from evidence captured at two
-								observation points we built. An OpenShell-based hypervisor watches execution below the harness. W8, our own Chromium browser,
-								records the page state screenshots miss.
+								An OpenShell-based hypervisor records execution below the harness. W8, our own Chromium browser, records the page state
+								screenshots miss. Our team turns those traces into{" "}
+								<strong className='font-semibold text-ed-ink'>datasets, evals, and RL environments for frontier model labs</strong>, and{" "}
+								<strong className='font-semibold text-ed-ink'>custom small models for enterprises</strong>.
 							</p>
-							<p className='m-0 font-semibold text-ed-ink'>Your agent doesn&apos;t need to change. Your visibility does.</p>
+							<p className='m-0 font-semibold text-ed-ink'>Bring your production harness. Change almost nothing.</p>
 						</div>
 						<div className='flex flex-col gap-4'>
 							<div className='flex flex-col gap-3 sm:flex-row'>
-								<CtaLink href='#model-labs'>RL environments for model labs</CtaLink>
+								<CtaLink href='#model-labs'>Data and environments for labs</CtaLink>
 								<CtaLink href='#enterprise' variant='secondary'>
 									Custom models for enterprises
 								</CtaLink>
 							</div>
+							<p className='ed-mono m-0 text-[0.8125rem] leading-relaxed text-ed-graphite'>
+								Our data passes the quality gates of the world&apos;s leading frontier model labs.
+							</p>
 							<CtaLink href='/research' variant='text' className='w-fit'>
 								Read the published benchmark
 							</CtaLink>

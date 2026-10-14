@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Wootzapp",
-  tagline: "Optimize what others can't see.",
+  tagline: "Ground truth others can't trace.",
   favicon: "/img/favicon.ico",
 
 
@@ -92,17 +92,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
+      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
+      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
+      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
@@ -117,7 +117,7 @@ baseUrl: "/",
         src: "/img/fav.png",
       },
       items: [
-        { to: "/#model-labs", label: "RL Environments", position: "left", activeBaseRegex: "^$" },
+        { to: "/#model-labs", label: "Data & Environments", position: "left", activeBaseRegex: "^$" },
         { to: "/#enterprise", label: "Enterprise Models", position: "left", activeBaseRegex: "^$" },
         { to: "/#technology", label: "Technology", position: "left", activeBaseRegex: "^$" },
         { to: "/research", label: "Research", position: "left" },
