@@ -26,6 +26,18 @@ module.exports = {
         'btn': ['15px', { lineHeight: '1.4' }],
       },
       colors: {
+        // Editorial system (homepage, /research, /private, shared chrome)
+        ed: {
+          canvas: "#f0f0f0",
+          surface: "#ffffff",
+          ash: "#e9e7e3",
+          ink: "#131315",
+          graphite: "#3a3a3d",
+          smoke: "#4f4f53",
+          rule: "#c9c6c2",
+          accent: "#f28b32",
+          "accent-ink": "#8a3f0e",
+        },
         brand: {
           base: "#140c09",
           surface: "#1c110d",
@@ -53,6 +65,8 @@ module.exports = {
 
       fontFamily: {
         matter: ["Matter", ...fontFamily.sans],
+        "sans-ed": ['"Inter"', ...fontFamily.sans],
+        "mono-ed": ['"IBM Plex Mono"', ...fontFamily.mono],
       },
     },
   },

@@ -9,7 +9,7 @@
     --ifm-h5-font-size: 1rem;
     --ifm-h6-font-size: 0.875rem;
 
-    font-family: "Matter", sans-serif;
+    font-family: var(--ifm-font-family-base);
     font-size: 1rem;
     line-height: 1.7;
     color: var(--docs-text, #1f130d);

@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Wootzapp",
-  tagline: "Privacy-preserving enterprise workflows for W8-RL",
+  tagline: "Optimize what others can't see.",
   favicon: "/img/favicon.ico",
 
 
@@ -20,6 +20,13 @@ baseUrl: "/",
   projectName: "docusaurus-www", // Usually your repo name.
 
   onBrokenLinks: "throw",
+
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:opsz,wght@14..32,400..700&display=swap",
+      type: "text/css",
+    },
+  ],
   onBrokenMarkdownLinks: "warn",
 
   i18n: {
@@ -77,20 +84,25 @@ baseUrl: "/",
 
   themeConfig: {
     image: "/img/og_wootzapp.png",
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     metadata: [
     // 1) Standard meta description
     {
-      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
+      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
+      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'WootzApp turns private enterprise workflows into privacy-preserving W8-RL environments with browser evidence, process rewards, and outcome verification.',
+      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
@@ -105,12 +117,11 @@ baseUrl: "/",
         src: "/img/fav.png",
       },
       items: [
-        {
-          position: "left",
-          label: "Github",
-          to: "https://github.com/wootzapp/wootz-browser",
-        },
-        { to: "https://x.com/wootzapp", label: "Twitter", position: "left" },
+        { to: "/#technology", label: "Technology", position: "left", activeBaseRegex: "^$" },
+        { to: "/research", label: "Research", position: "left" },
+        { to: "/#enterprise", label: "For Enterprises", position: "left", activeBaseRegex: "^$" },
+        { to: "/#model-labs", label: "For Model Labs", position: "left", activeBaseRegex: "^$" },
+        { to: "/docs/intro", label: "Docs", position: "left" },
       ],
     },
     footer: {

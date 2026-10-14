@@ -9,6 +9,7 @@ import NavbarLogo from "@theme/Navbar/Logo";
 import NavbarSearch from "@theme/Navbar/Search";
 
 import styles from "./styles.module.css";
+import {links} from "@site/src/data/research";
 
 function useNavbarItems() {
 	// TODO temporary casting until ThemeConfig type is improved
@@ -74,19 +75,14 @@ export default function NavbarContent(): ReactNode {
 				// Ask the user to add the respective navbar items => more flexible
 				<>
 <NavbarItems items={rightItems} />
-<div className="hidden md:inline-block relative group mr-4">
-  <div className="bg-brand-border/80 rounded-md absolute inset-0 translate-y-[2px]"></div>
-  <a
-    href="https://calendar.app.google/jjLE5C9TczR2vhHe9"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full hover:no-underline"
-  >
-    <button className="relative px-4 py-0.5 md:px-6 md:py-2 text-brand-base text-xs lg:text-sm font-mono font-semibold tracking-[0.16em] bg-brand-accent-100 rounded-md transition-transform duration-150 -translate-y-1 group-hover:-translate-y-1.5 active:-translate-y-0.5 cursor-pointer border-[1.5px] border-brand-accent-200/70 shadow-[0_12px_30px_-20px_rgba(242,139,50,0.8)] w-full">
-      Get Started
-    </button>
-  </a>
-</div>
+<a
+	href={links.booking}
+	target='_blank'
+	rel='noopener noreferrer'
+	className='ed-btn ed-btn--primary mr-2 hidden min-h-0 px-4 py-2 text-sm md:inline-flex'
+>
+	Talk to us
+</a>
 
 					{/* <NavbarColorModeToggle className={styles.colorModeToggle} /> */}
 					{!searchBarItem && (

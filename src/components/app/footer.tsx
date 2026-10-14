@@ -1,83 +1,86 @@
 import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import {links} from "@site/src/data/research";
 
-function BaseUrlLink({href, children, ...props}: {href: string; children: React.ReactNode; [key: string]: any}) {
-	const resolvedHref = href.startsWith("/") ? useBaseUrl(href) : href;
-	return (
-		<a href={resolvedHref} {...props}>
-			{children}
-		</a>
-	);
-}
-
-// JSON object containing footer links
-const footerLinks = {
-  docs: [
-    {
-      label: "W8-RL Docs",
-      href: "/docs/intro",
-    },
-  ],
-  necessary: [
-    {
-      label: "Privacy",
-      href: "/privacy",
-    },
-    {
-      label: "Twitter",
-      href: "https://x.com/WootzApp/status/1794753728047915314",
-    },
-    {
-      label: "Github",
-      href: "https://github.com/wootzapp/wootz-browser",
-    },
-  ],
-};
+const footerColumns = [
+	{
+		title: "Technology",
+		links: [
+			{label: "Agent Hypervisor", href: "/#hypervisor"},
+			{label: "W8 browser evidence", href: "/#browser"},
+			{label: "Docs", href: "/docs/intro"},
+		],
+	},
+	{
+		title: "Research",
+		links: [
+			{label: "Published benchmark", href: "/research"},
+			{label: "Technical report", href: links.benchReport},
+			{label: "Per-task results", href: links.benchResults},
+		],
+	},
+	{
+		title: "Deploy",
+		links: [
+			{label: "For Enterprises", href: "/#enterprise"},
+			{label: "For Model Labs", href: "/#model-labs"},
+		],
+	},
+	{
+		title: "Open source",
+		links: [
+			{label: "w8-domdiff-bench", href: links.benchRepo},
+			{label: "openrind-shell", href: links.openrindRepo},
+			{label: "Trajectory dataset", href: links.dataset},
+		],
+	},
+	{
+		title: "Company",
+		links: [
+			{label: "Talk to us", href: links.booking},
+			{label: "Twitter", href: links.twitter},
+			{label: "Data rights", href: "/docs/important/privacy"},
+		],
+	},
+];
 
 export function Footer() {
 	const currentYear = new Date().getFullYear();
 	return (
-		<footer className='sci-grid relative overflow-hidden bg-brand-base py-[72px] text-brand-text-primary lg:py-32'>
-			<div className='absolute inset-0 sci-scanlines sci-scanlines--strong pointer-events-none' />
-			<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
-			<div className='container-custom relative z-10 flex flex-col gap-12 md:flex-row md:justify-between'>
-				<div className='flex flex-col gap-4'>
-					<span className='text-subsection font-bold tracking-wide'>WootzApp</span>
-					<p className='max-w-xs text-body-sm text-brand-text-muted'>
-						{`© ${currentYear} WootzApp Inc. All rights reserved.`}
-					</p>
-				</div>
-
-				<div className='flex max-w-sm flex-col gap-4'>
-					<h3 className='font-mono text-body-sm font-bold uppercase tracking-[0.2em] text-brand-accent-200'>Contact</h3>
-					<p className='text-body-sm text-brand-text-muted'>
-						For technical documentation, partnership inquiries, or investor information please reach out.
-					</p>
-					<a href='mailto:founders@wootzapp.com' className='font-mono text-body-sm font-semibold text-brand-accent-200 hover:underline'>
-						founders@wootzapp.com
-					</a>
-				</div>
-
-				<div className='flex flex-col gap-4'>
-					<h3 className='font-mono text-body-sm font-bold uppercase tracking-[0.2em] text-brand-text-muted'>Documentation</h3>
-					<div className='flex flex-col gap-2 text-body-sm text-brand-text-secondary'>
-						{footerLinks.docs.map((link, index) => (
-							<BaseUrlLink key={index} href={link.href} className='hover:text-brand-text-primary'>
-								{link.label}
-							</BaseUrlLink>
-						))}
+		<footer className='border-t border-ed-ink bg-ed-canvas font-sans-ed text-ed-ink'>
+			<div className='ed-container flex flex-col gap-14 py-16 lg:py-20'>
+				<div className='grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,2.6fr)] xl:gap-16'>
+					<div className='flex flex-col gap-4'>
+						<span className='text-2xl font-semibold tracking-[-0.01em]'>WootzApp</span>
+						<p className='m-0 max-w-xs text-[0.9375rem] leading-relaxed text-ed-graphite'>Execution-native ground truth for AI training.</p>
+						<a href={`mailto:${links.email}`} className='ed-link w-fit text-[0.9375rem]'>
+							{links.email}
+						</a>
 					</div>
-				</div>
-
-				<div className='flex flex-col gap-4'>
-					<h3 className='font-mono text-body-sm font-bold uppercase tracking-[0.2em] text-brand-text-muted'>Necessary links</h3>
-					<div className='flex flex-col gap-2 text-body-sm text-brand-text-secondary'>
-						{footerLinks.necessary.map((link, index) => (
-							<BaseUrlLink key={index} href={link.href} className='hover:text-brand-text-primary'>
-								{link.label}
-							</BaseUrlLink>
+					<nav aria-label='Footer' className='grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5'>
+						{footerColumns.map((column) => (
+							<div key={column.title} className='flex flex-col gap-4'>
+								<p className='ed-eyebrow m-0 text-ed-smoke'>{column.title}</p>
+								<ul className='m-0 flex list-none flex-col gap-2.5 p-0'>
+									{column.links.map((link) => (
+										<li key={link.label}>
+											<Link
+												to={link.href}
+												{...(link.href.startsWith("http") ? {target: "_blank", rel: "noopener noreferrer"} : {})}
+												className='text-[0.9375rem] text-ed-ink hover:text-ed-accent-ink hover:no-underline'
+											>
+												{link.label}
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
 						))}
-					</div>
+					</nav>
+				</div>
+				<div className='flex flex-col gap-2 border-t border-ed-rule pt-6 text-[0.8125rem] text-ed-smoke sm:flex-row sm:justify-between'>
+					<span>© {currentYear} WootzApp Inc. All rights reserved.</span>
+					<span>Built on NVIDIA OpenShell. No NVIDIA endorsement implied.</span>
 				</div>
 			</div>
 		</footer>

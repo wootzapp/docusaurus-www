@@ -1,3 +1,11 @@
+import React from "react";
+import Section from "../editorial/section";
+import Eyebrow from "../editorial/eyebrow";
+import CtaLink from "../editorial/cta-link";
+import Accordion from "../editorial/accordion";
+
+const partnerMail = "mailto:founders@wootzapp.com?subject=Private%20data%20collaboration";
+
 const heroSignals = [
 	"New revenue from dormant systems",
 	"Non-exclusive licensing",
@@ -77,7 +85,7 @@ const fitGroups = [
 		items: [
 			"Private codebases, admin systems, and operational workflows with real business logic",
 			"ERP, fintech, card-stack, IT-services, claims, or enterprise operations flows",
-			"Systems where public corpora do not capture the actual work",
+			"Systems whose real work is absent from public corpora",
 		],
 	},
 	{
@@ -109,7 +117,7 @@ const commercialRows = [
 	},
 	{
 		label: "You approve what moves",
-		copy: "Sensitive fields, source archives, customer records, and deployment assumptions are scoped before delivery. Nothing depends on broad extraction.",
+		copy: "Sensitive fields, source archives, customer records, and deployment assumptions are scoped before delivery. Delivery moves only the scoped artifacts.",
 	},
 	{
 		label: "Why FDRLs matter",
@@ -124,7 +132,7 @@ const faqs = [
 	},
 	{
 		question: "Are you reselling raw data or source code?",
-		answer: "No. We build privacy-reviewed environments, reward structures, and training artifacts on top of private workflows. We are not packaging up and reselling source archives or sensitive records.",
+		answer: "No. We build privacy-reviewed environments, reward structures, and training artifacts on top of private workflows. ",
 	},
 	{
 		question: "What leaves the enterprise boundary?",
@@ -132,7 +140,7 @@ const faqs = [
 	},
 	{
 		question: "How is sensitive data protected?",
-		answer: "FDRLs map sensitive surfaces first, define what can be captured, remove or constrain risky fields, and document the decisions attached to each environment. The goal is signal-preserving sanitization, not broad extraction.",
+		answer: "FDRLs map sensitive surfaces first, define what can be captured, remove or constrain risky fields, and document the decisions attached to each environment. The goal is signal-preserving sanitization.",
 	},
 	{
 		question: "What kinds of companies do you work with?",
@@ -159,287 +167,234 @@ const qualificationChecklist = [
 	"Any existing tests, logs, audit trails, or documentation that can support verifier design",
 ];
 
+function Dot() {
+	return <span aria-hidden='true' className='mt-[0.6em] size-1.5 shrink-0 bg-ed-accent' />;
+}
+
+function RowList({title, rows}: {title: string; rows: {label: string; copy: string}[]}) {
+	return (
+		<div className='border border-ed-ink bg-ed-surface'>
+			<p className='ed-eyebrow m-0 border-b border-ed-ink px-5 py-3 text-ed-ink sm:px-6'>{title}</p>
+			<ol className='m-0 flex list-none flex-col p-0'>
+				{rows.map((row, index) => (
+					<li key={row.label} className='grid grid-cols-[2.25rem_minmax(0,1fr)] gap-2 border-b border-ed-rule px-5 py-4 last:border-b-0 sm:px-6'>
+						<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
+						<div className='flex flex-col gap-1.5'>
+							<span className='font-semibold'>{row.label}</span>
+							<span className='text-[0.9375rem] leading-relaxed text-ed-graphite'>{row.copy}</span>
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
+	);
+}
+
 export default function PrivatePageContent() {
 	return (
-		<div className='private-page -mt-[64px] flex flex-col'>
-			<section className='private-band private-band--dark sci-grid relative overflow-hidden bg-brand-base text-brand-text-primary'>
-				<div className='absolute inset-0 sci-scanlines pointer-events-none' />
-				<div className='hero-aurora pointer-events-none' />
-				<div className='hero-aurora hero-aurora--two pointer-events-none' />
-				<div className='hero-beam pointer-events-none' />
-				<div className='private-hero-gradient pointer-events-none' />
-				<div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent-100/40 to-transparent' />
-				<div className='absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-accent-200/25 to-transparent' />
-
-				<div className='container-custom relative z-10 py-[76px] lg:py-[108px]'>
-					<div className='grid items-start gap-8 lg:grid-cols-[minmax(0,1.18fr)_minmax(300px,0.82fr)] lg:gap-8 xl:gap-10'>
-						<div className='max-w-4xl flex flex-col gap-5'>
-							<span className='private-section-tag private-section-tag--dark'>Private Data Collaborations</span>
-							<h1 className='private-display text-brand-text-primary'>
-								Turn private enterprise systems into AI-ready RL assets.
-							</h1>
-							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
-								You sit on codebases, admin tools, ERP flows, fintech systems, or operations data that could power coding and computer-use models. It just has to be usable, controlled, and defensible first.
-							</p>
-							<p className='private-body max-w-[44rem] text-brand-text-secondary'>
-								WootzApp licenses that asset non-exclusively, engineers it into a W8-RL environment, and attaches the documentation model teams need to trust it. Your IP stays yours. You approve what leaves.
-							</p>
-							<div className='flex flex-wrap gap-2.5'>
-								{heroSignals.map((signal) => (
-									<span
-										key={signal}
-										className='private-signal-chip inline-flex items-center rounded-full'
-									>
-										{signal}
-									</span>
-								))}
-							</div>
-							<div className='flex flex-col gap-3 pt-1 sm:flex-row sm:items-center'>
-								<a
-									href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
-									className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/60 bg-brand-accent-100 px-4 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-base shadow-[0_12px_35px_-18px_rgba(242,139,50,0.7)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_45px_-18px_rgba(242,139,50,0.85)] hover:text-brand-base hover:no-underline'
-								>
-									Become a data partner
-								</a>
-								<a
-									href='#qualification'
-									className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/35 bg-brand-surface/60 px-4 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-text-primary transition hover:-translate-y-0.5 hover:border-brand-accent-200/60 hover:bg-brand-surface hover:text-brand-text-primary hover:no-underline'
-								>
-									See qualification checklist
-								</a>
-							</div>
-						</div>
-
-						<div className='private-note-card private-paper-card xl:justify-self-end'>
-							<div className='p-5 sm:p-6'>
-								<p className='private-mini-label'>What you get</p>
-								<h2 className='private-note-heading mt-3 text-brand-base'>
-									A new revenue stream from systems your team already built.
-								</h2>
-								<div className='mt-4 space-y-4'>
-									<p className='private-note-body'>
-										Model teams need realistic private systems, not toy repos. We make those systems trainable by capturing the useful behavior, sanitizing risky surfaces, and packaging replayable environments.
-									</p>
-									<p className='private-note-body'>
-										Our FDRLs work with your team on the ground so setup, redactions, verifier updates, and artifact approvals happen with the people who actually understand the system.
-									</p>
-									<p className='private-note-body'>
-										You keep the source system and commercial rights. W8-RL creates the AI-ready asset layer that can be licensed, explained, and maintained.
-									</p>
-								</div>
-								<div className='mt-5 flex flex-wrap gap-2'>
-									{indiaCities.map((city) => (
-										<span key={city} className='private-note-chip'>
-											{city}
-										</span>
-									))}
-								</div>
-								<p className='private-note-caption mt-5'>
-									Delhi, Bengaluru, Pune, Hyderabad, and Chennai give us proximity to the teams that own the private enterprise systems model labs cannot get from public corpora.
+		<main className='ed-page'>
+			<section className='bg-ed-canvas text-ed-ink'>
+				<div className='ed-container pb-16 pt-12 sm:pt-16 lg:pb-20 lg:pt-24'>
+					<div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-16'>
+						<div className='flex flex-col gap-7'>
+							<Eyebrow>Private Data Collaborations</Eyebrow>
+							<h1 className='ed-display m-0'>Turn private enterprise systems into AI-ready RL assets.</h1>
+							<div className='ed-lede flex max-w-[42rem] flex-col gap-4 text-ed-graphite'>
+								<p className='m-0'>
+									You sit on codebases, admin tools, ERP flows, fintech systems, or operations data that could power coding and computer-use
+									models. It just has to be usable, controlled, and defensible first.
+								</p>
+								<p className='m-0'>
+									WootzApp licenses that asset non-exclusively, engineers it into a W8-RL environment, and attaches the documentation model teams
+									need to trust it. Your IP stays yours. You approve what leaves.
 								</p>
 							</div>
+							<ul className='m-0 flex list-none flex-wrap gap-2 p-0'>
+								{heroSignals.map((signal) => (
+									<li key={signal} className='ed-mono border border-ed-rule bg-ed-surface px-3 py-1.5 text-[0.75rem] text-ed-graphite'>
+										{signal}
+									</li>
+								))}
+							</ul>
+							<div className='flex flex-col gap-3 sm:flex-row'>
+								<CtaLink href={partnerMail}>Become a data partner</CtaLink>
+								<CtaLink href='#qualification' variant='secondary'>
+									See qualification checklist
+								</CtaLink>
+							</div>
 						</div>
+
+						<aside className='flex flex-col gap-5 border border-ed-ink bg-ed-surface p-6 sm:p-7'>
+							<Eyebrow className='text-ed-accent-ink'>What you get</Eyebrow>
+							<h2 className='ed-h3 m-0'>A new revenue stream from systems your team already built.</h2>
+							<div className='flex flex-col gap-4 text-[0.9375rem] leading-relaxed text-ed-graphite'>
+								<p className='m-0'>
+									Model teams need realistic private systems. We make those systems trainable by capturing the useful behavior,
+									sanitizing risky surfaces, and packaging replayable environments.
+								</p>
+								<p className='m-0'>
+									Our FDRLs work with your team on the ground so setup, redactions, verifier updates, and artifact approvals happen with the
+									people who actually understand the system.
+								</p>
+								<p className='m-0'>
+									You keep the source system and commercial rights. W8-RL creates the AI-ready asset layer that can be licensed, explained, and
+									maintained.
+								</p>
+							</div>
+							<ul className='m-0 flex list-none flex-wrap gap-2 border-t border-ed-rule p-0 pt-5'>
+								{indiaCities.map((city) => (
+									<li key={city} className='ed-mono border border-ed-rule px-2.5 py-1 text-[0.75rem] text-ed-ink'>
+										{city}
+									</li>
+								))}
+							</ul>
+							<p className='m-0 text-[0.8125rem] leading-relaxed text-ed-smoke'>
+								Delhi, Bengaluru, Pune, Hyderabad, and Chennai give us proximity to the teams that own the private enterprise systems model labs
+								cannot get from public corpora.
+							</p>
+						</aside>
 					</div>
 
-					<div className='private-proof-strip mt-8 lg:mt-10'>
-						<div className='flex flex-col gap-3 lg:max-w-4xl'>
-							<p className='private-proof-kicker'>Why We Specialize In India</p>
-							<p className='private-body text-brand-text-secondary'>
-								India is where large-scale services delivery, GCC infrastructure, and private enterprise software overlap. That density is why W8-RL specializes here: the right forward-deployed program can preserve training signal while respecting the privacy posture that enterprise data owners need.
+					<div className='mt-16 border-t border-ed-ink pt-8 lg:mt-20'>
+						<div className='grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16'>
+							<Eyebrow>Why We Specialize In India</Eyebrow>
+							<p className='ed-body m-0 max-w-[48rem] text-ed-graphite'>
+								India is where large-scale services delivery, GCC infrastructure, and private enterprise software overlap. That density is why W8-RL specializes here: a forward-deployed program preserves training signal and respects the privacy posture that enterprise data owners need.
 							</p>
 						</div>
-						<div className='private-proof-grid mt-5'>
+						<div className='mt-10 grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4'>
 							{indiaProofStats.map((stat) => (
-								<article key={stat.label} className='private-proof-card'>
-									<p className='private-proof-value'>{stat.value}</p>
-									<p className='private-proof-label'>{stat.label}</p>
-									<p className='private-proof-copy'>{stat.copy}</p>
+								<article
+									key={stat.label}
+									className='flex flex-col gap-3 border-t border-ed-rule py-6 sm:pr-6 lg:border-l lg:border-t-0 lg:px-6 lg:py-2 lg:first:border-l-0 lg:first:pl-0'
+								>
+									<p className='m-0 text-[1.625rem] font-medium leading-[1.2] tracking-[-0.01em]'>{stat.value}</p>
+									<p className='ed-eyebrow m-0 text-ed-accent-ink'>{stat.label}</p>
+									<p className='m-0 text-[0.9375rem] leading-relaxed text-ed-graphite'>{stat.copy}</p>
 								</article>
 							))}
 						</div>
-						<p className='private-proof-caption mt-4'>
+						<p className='ed-mono m-0 mt-6 text-[0.75rem] text-ed-smoke'>
 							Selected benchmarks from India&apos;s Economic Survey 2024-25 and IBEF 2025 reporting.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section className='private-band private-band--light sci-grid relative overflow-hidden bg-brand-neutral-100 text-brand-base'>
-				<div className='absolute inset-0 sci-scanlines sci-scanlines--soft pointer-events-none' />
-				<div className='container-custom relative z-10 py-[60px] lg:py-[84px]'>
-					<div className='grid items-start gap-7 lg:grid-cols-[minmax(0,1.06fr)_minmax(320px,0.94fr)] lg:gap-8'>
-						<div className='flex flex-col gap-[1.125rem]'>
-							<span className='private-section-tag private-section-tag--light'>From Private Systems To RL Assets</span>
-							<h2 className='private-heading text-brand-base'>
-								One pipeline: assess, engineer, document, and re-assess.
-							</h2>
-							<p className='private-body max-w-3xl text-brand-base/85'>
-								W8-RL turns private systems into AI-ready assets for RL. The pipeline covers the full lifecycle: from initial asset assessment through signal-preserving engineering to documentation that travels with the environment.
-							</p>
-							<p className='private-body max-w-3xl text-brand-base/78'>
-								When the system, recipient, or permitted use changes, the asset can be re-assessed instead of starting over. That is what makes private enterprise data practical for model training.
-							</p>
-							<div className='private-paper-card private-thesis-card p-5 sm:p-6'>
-								<div className='space-y-1'>
-									{thesisItems.map((item, index) => (
-										<article key={item.title} className='private-thesis-item'>
-											<div className='private-thesis-index'>{index + 1}</div>
-											<div className='min-w-0'>
-												<p className='private-mini-label'>{item.label}</p>
-												<h3 className='private-subheading mt-2 text-brand-base'>{item.title}</h3>
-												<p className='private-body-compact mt-3 text-brand-base/82'>{item.copy}</p>
-											</div>
-										</article>
-									))}
-								</div>
-							</div>
-						</div>
-
-						<div className='terminal-window glow-box lg:mt-2'>
-							<div className='terminal-header justify-start'>
-								<span className='terminal-title'>W8-RL Asset Pipeline</span>
-							</div>
-							<div className='terminal-body flex flex-col gap-4 p-5 sm:p-6 text-brand-text-secondary'>
-								{fdrlRows.map((row, index) => (
-									<div key={row.label}>
-										<p className='terminal-prompt text-[0.76rem] uppercase tracking-[0.15em]'>$ {row.label}</p>
-										<p className='private-body-compact mt-2'>{row.copy}</p>
-										{index < fdrlRows.length - 1 ? <div className='terminal-divider mt-4' /> : null}
+			<Section tone='surface'>
+				<div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-16'>
+					<div className='flex flex-col gap-6'>
+						<Eyebrow>From Private Systems To RL Assets</Eyebrow>
+						<h2 className='ed-h2 m-0'>One pipeline: assess, engineer, document, and re-assess.</h2>
+						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
+							W8-RL turns private systems into AI-ready assets for RL. The pipeline covers the full lifecycle: from initial asset assessment
+							through signal-preserving engineering to documentation that travels with the environment.
+						</p>
+						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
+							When the system, recipient, or permitted use changes, the asset is re-assessed in place. That keeps private enterprise data practical for model training.
+						</p>
+						<ol className='m-0 mt-2 flex list-none flex-col border-t border-ed-ink p-0'>
+							{thesisItems.map((item, index) => (
+								<li key={item.title} className='grid grid-cols-[2.25rem_minmax(0,1fr)] gap-2 border-b border-ed-rule py-5'>
+									<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
+									<div className='flex flex-col gap-2'>
+										<p className='ed-eyebrow m-0 text-ed-smoke'>{item.label}</p>
+										<h3 className='m-0 text-xl font-medium tracking-[-0.015em]'>{item.title}</h3>
+										<p className='m-0 text-[0.9375rem] leading-relaxed text-ed-graphite'>{item.copy}</p>
 									</div>
-								))}
-							</div>
-						</div>
+								</li>
+							))}
+						</ol>
 					</div>
+					<RowList title='W8-RL Asset Pipeline' rows={fdrlRows} />
 				</div>
-			</section>
+			</Section>
 
-			<section className='private-band private-band--dark sci-grid relative overflow-hidden bg-brand-base text-brand-text-primary'>
-				<div className='absolute inset-0 sci-scanlines sci-scanlines--strong pointer-events-none' />
-				<div className='container-custom relative z-10 py-[60px] lg:py-[84px]'>
-					<div className='grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:gap-9'>
-						<div className='flex flex-col gap-5'>
-							<span className='private-section-tag private-section-tag--dark'>Good Fit</span>
-							<h2 className='private-heading text-brand-text-primary'>
-								What makes a private system valuable to model teams.
-							</h2>
-							<p className='private-body max-w-3xl text-brand-text-secondary'>
-								The best assets contain real work: messy setup, business logic, edge cases, integrations, admin flows, and outcomes that cannot be learned from public code alone.
-							</p>
-							<div className='private-dark-card private-fit-board p-5 sm:p-6'>
-								{fitGroups.map((group) => (
-									<article key={group.title} className='private-fit-row'>
-										<h3 className='private-fit-heading'>
-											{group.title}
-										</h3>
-										<ul className='private-fit-list'>
-											{group.items.map((item) => (
-												<li key={item} className='private-fit-item'>
-													<span className='private-fit-dot' />
-													<span className='private-body-compact text-brand-text-secondary'>{item}</span>
-												</li>
-											))}
-										</ul>
-									</article>
-								))}
-							</div>
-						</div>
-
-						<div className='terminal-window glow-box xl:mt-2'>
-							<div className='terminal-header justify-start'>
-								<span className='terminal-title'>Program Shape</span>
-							</div>
-							<div className='terminal-body flex flex-col gap-4 p-5 sm:p-6 text-brand-text-secondary'>
-								{commercialRows.map((row, index) => (
-									<div key={row.label}>
-										<p className='terminal-prompt text-[0.76rem] uppercase tracking-[0.15em]'>$ {row.label}</p>
-										<p className='private-body-compact mt-2'>{row.copy}</p>
-										{index < commercialRows.length - 1 ? <div className='terminal-divider mt-4' /> : null}
-									</div>
-								))}
-								<p className='private-terminal-note private-body-compact'>
-									Commercial terms can start as a focused pilot or become a standing program. The constant is the same: retained IP, sanitized artifacts, defensibility documentation, and W8-RL environments that model teams can actually train on.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section
-				className='private-band private-band--light sci-grid relative overflow-hidden bg-brand-neutral-100 text-brand-base'
-				id='qualification'
-			>
-				<div className='absolute inset-0 sci-scanlines sci-scanlines--soft pointer-events-none' />
-				<div className='container-custom relative z-10 py-[60px] lg:py-[84px]'>
-					<div className='grid items-start gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]'>
-						<div className='flex flex-col gap-5'>
-							<span className='private-section-tag private-section-tag--light'>Details</span>
-							<h2 className='private-heading text-brand-base'>
-								What to send first.
-							</h2>
-							<p className='private-body max-w-2xl text-brand-base/80'>
-								Keep the first note short. Do not send source code or sensitive records upfront. Send enough context for us to decide whether the asset is worth scoping.
-							</p>
-						</div>
-
-						<div className='grid gap-4'>
-							<details className='private-paper-card private-accordion'>
-								<summary className='private-accordion-summary'>
-									<span className='private-accordion-title'>What to send us first</span>
-									<span className='private-accordion-icon' aria-hidden='true' />
-								</summary>
-								<div className='private-accordion-body'>
-									<ul className='flex flex-col gap-3.5 text-brand-base/85'>
-										{qualificationChecklist.map((item) => (
-											<li key={item} className='flex items-start gap-3'>
-												<span className='private-fit-dot mt-2' />
-												<span className='private-body'>{item}</span>
+			<Section>
+				<div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-16'>
+					<div className='flex flex-col gap-6'>
+						<Eyebrow>Good Fit</Eyebrow>
+						<h2 className='ed-h2 m-0'>What makes a private system valuable to model teams.</h2>
+						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
+							The best assets contain real work: messy setup, business logic, edge cases, integrations, admin flows, and outcomes that cannot be
+							learned from public code alone.
+						</p>
+						<div className='mt-2 flex flex-col border-t border-ed-ink'>
+							{fitGroups.map((group) => (
+								<article key={group.title} className='grid grid-cols-1 gap-3 border-b border-ed-rule py-5 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.6fr)] sm:gap-6'>
+									<h3 className='ed-eyebrow m-0 text-ed-ink'>{group.title}</h3>
+									<ul className='m-0 flex list-none flex-col gap-2.5 p-0'>
+										{group.items.map((item) => (
+											<li key={item} className='flex gap-3 text-[0.9375rem] leading-relaxed text-ed-graphite'>
+												<Dot />
+												<span>{item}</span>
 											</li>
 										))}
 									</ul>
-								</div>
-							</details>
-							{faqs.map((item) => (
-								<details key={item.question} className='private-paper-card private-accordion'>
-									<summary className='private-accordion-summary'>
-										<span className='private-accordion-title'>{item.question}</span>
-										<span className='private-accordion-icon' aria-hidden='true' />
-									</summary>
-									<div className='private-accordion-body'>
-										<p className='private-body-compact text-brand-base/80'>{item.answer}</p>
-									</div>
-								</details>
+								</article>
 							))}
 						</div>
 					</div>
+					<div className='flex flex-col gap-4'>
+						<RowList title='Program Shape' rows={commercialRows} />
+						<p className='m-0 border-l-2 border-ed-accent pl-4 text-[0.9375rem] leading-relaxed text-ed-graphite'>
+							Commercial terms can start as a focused pilot or become a standing program. The constant is the same: retained IP, sanitized
+							artifacts, defensibility documentation, and W8-RL environments that model teams can actually train on.
+						</p>
+					</div>
+				</div>
+			</Section>
 
-					<div className='private-cta-strip mt-8 grid gap-5 p-5 sm:p-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center'>
-						<div className='flex flex-col gap-4'>
-							<span className='private-section-tag private-section-tag--dark'>Private Conversation</span>
-							<h2 className='private-subheading text-brand-text-primary'>
-								If your team is sitting on private systems that could power AI, start with a short note.
-							</h2>
-							<p className='private-body text-brand-text-secondary'>
-								We can begin with context, not paperwork: what the system does, why it is realistic, what must stay private, and who owns the decision.
-							</p>
-						</div>
-						<div className='flex flex-col gap-3 sm:flex-row lg:justify-end'>
-							<a
-								className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/60 bg-brand-accent-100 px-5 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-base shadow-[0_12px_35px_-18px_rgba(242,139,50,0.7)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_45px_-18px_rgba(242,139,50,0.85)] hover:text-brand-base hover:no-underline'
-								href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
-							>
-								founders@wootzapp.com
-							</a>
-							<a
-								className='inline-flex items-center justify-center rounded-md border border-brand-accent-200/35 bg-brand-surface/60 px-5 py-2.5 text-[0.88rem] font-mono font-semibold tracking-[0.14em] text-brand-text-primary transition hover:-translate-y-0.5 hover:border-brand-accent-200/60 hover:bg-brand-surface hover:text-brand-text-primary hover:no-underline'
-								href='mailto:founders@wootzapp.com?subject=Private%20data%20collaboration'
-							>
-								Start a private conversation
-							</a>
-						</div>
+			<Section id='qualification' tone='surface'>
+				<div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16'>
+					<div className='flex flex-col gap-6'>
+						<Eyebrow>Details</Eyebrow>
+						<h2 className='ed-h2 m-0'>What to send first.</h2>
+						<p className='ed-body m-0 max-w-[32rem] text-ed-graphite'>
+							Keep the first note short and send context only. Source code and sensitive records come later, once scoping starts. We use the note to decide whether to scope the asset.
+						</p>
+					</div>
+					<Accordion
+						items={[
+							{
+								question: "What to send us first",
+								answer: (
+									<ul className='m-0 flex list-none flex-col gap-3 p-0'>
+										{qualificationChecklist.map((item) => (
+											<li key={item} className='flex gap-3'>
+												<Dot />
+												<span>{item}</span>
+											</li>
+										))}
+									</ul>
+								),
+							},
+							...faqs.map((item) => ({question: item.question, answer: <p className='m-0'>{item.answer}</p>})),
+						]}
+					/>
+				</div>
+			</Section>
+
+			<section className='bg-ed-ink text-ed-canvas'>
+				<div className='ed-container grid grid-cols-1 gap-10 py-20 lg:grid-cols-[minmax(0,1.4fr)_auto] lg:items-end lg:py-28'>
+					<div className='flex flex-col gap-6'>
+						<Eyebrow className='text-ed-accent'>Private Conversation</Eyebrow>
+						<h2 className='ed-h2 m-0 max-w-[52rem]'>If your team is sitting on private systems that could power AI, start with a short note.</h2>
+						<p className='ed-lede m-0 max-w-[40rem] text-ed-canvas/80'>
+							We begin with context: what the system does, why it is realistic, what must stay private, and who owns the
+							decision.
+						</p>
+					</div>
+					<div className='flex flex-col gap-3 sm:flex-row lg:flex-col'>
+						<CtaLink href={partnerMail} variant='inverse'>
+							Start a private conversation
+						</CtaLink>
+						<a href={partnerMail} className='ed-mono text-[0.875rem] text-ed-canvas underline underline-offset-4 hover:text-ed-accent'>
+							founders@wootzapp.com
+						</a>
 					</div>
 				</div>
 			</section>
-		</div>
+		</main>
 	);
 }
