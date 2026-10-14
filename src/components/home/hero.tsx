@@ -12,25 +12,23 @@ export default function Hero() {
 			<div className='ed-container pb-16 pt-12 sm:pt-16 lg:pb-20 lg:pt-24'>
 				<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:gap-16'>
 					<div className='flex flex-col gap-8'>
-						<Eyebrow>WootzApp / Execution-native ground truth</Eyebrow>
+						<Eyebrow>WootzApp / Below the harness. Inside the browser.</Eyebrow>
 						<h1 className='ed-display m-0'>Optimize what others can&apos;t see.</h1>
-						<p className='ed-h3 m-0 max-w-[34rem] text-ed-graphite'>Below the harness. Inside the browser. Beyond the trace.</p>
+						<p className='ed-h3 m-0 max-w-[34rem] text-ed-graphite'>Bring your production harness. Change almost nothing.</p>
 						<div className='ed-lede flex max-w-[40rem] flex-col gap-4 text-ed-graphite'>
 							<p className='m-0'>
-								Bring your production agent and keep its logic intact. Our OpenShell-based execution layer observes the environment{" "}
-								<strong className='font-semibold text-ed-ink'>independently of the harness</strong>. Our instrumented Chromium browser
-								preserves the page state and transitions <strong className='font-semibold text-ed-ink'>beyond what screenshots can show</strong>.
+								We build <strong className='font-semibold text-ed-ink'>RL environments for frontier model labs</strong> and train{" "}
+								<strong className='font-semibold text-ed-ink'>custom small models for enterprises</strong> from evidence captured at two
+								observation points we built. An OpenShell-based hypervisor watches execution below the harness. W8, our own Chromium browser,
+								records the page state screenshots miss.
 							</p>
-							<p className='m-0'>
-								Two privileged observation points. One richer source of ground truth for{" "}
-								<strong className='font-semibold text-ed-ink'>evaluations, rewards, model improvement, and training data</strong>.
-							</p>
+							<p className='m-0 font-semibold text-ed-ink'>Your agent doesn&apos;t need to change. Your visibility does.</p>
 						</div>
 						<div className='flex flex-col gap-4'>
 							<div className='flex flex-col gap-3 sm:flex-row'>
-								<CtaLink href={links.booking}>Bring your production harness</CtaLink>
-								<CtaLink href='#technology' variant='secondary'>
-									Explore the technology
+								<CtaLink href='#model-labs'>RL environments for model labs</CtaLink>
+								<CtaLink href='#enterprise' variant='secondary'>
+									Custom models for enterprises
 								</CtaLink>
 							</div>
 							<CtaLink href='/research' variant='text' className='w-fit'>

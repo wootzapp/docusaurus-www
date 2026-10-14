@@ -20,10 +20,10 @@ const footerColumns = [
 		],
 	},
 	{
-		title: "Deploy",
+		title: "Products",
 		links: [
-			{label: "For Enterprises", href: "/#enterprise"},
-			{label: "For Model Labs", href: "/#model-labs"},
+			{label: "RL environments", href: "/#model-labs"},
+			{label: "Enterprise models", href: "/#enterprise"},
 		],
 	},
 	{
@@ -52,7 +52,7 @@ export function Footer() {
 				<div className='grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,2.6fr)] xl:gap-16'>
 					<div className='flex flex-col gap-4'>
 						<span className='text-2xl font-semibold tracking-[-0.01em]'>WootzApp</span>
-						<p className='m-0 max-w-xs text-[0.9375rem] leading-relaxed text-ed-graphite'>Execution-native ground truth for AI training.</p>
+						<p className='m-0 max-w-xs text-[0.9375rem] leading-relaxed text-ed-graphite'>RL environments and custom models from evidence others can&apos;t see.</p>
 						<a href={`mailto:${links.email}`} className='ed-link w-fit text-[0.9375rem]'>
 							{links.email}
 						</a>

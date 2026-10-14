@@ -1,17 +1,20 @@
 import React from "react";
 import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
+import LayerTag, {type Layer} from "./layer-tag";
 
-const steps = [
-	{label: "Run", copy: "Run the existing agent or an authorized human workflow inside the configured environment."},
-	{label: "Observe", copy: "Observe supported runtime events, model/tool activity, and W8 browser states."},
+const steps: {label: string; copy: string; layer: Layer}[] = [
+	{label: "Run", copy: "Run the existing agent or an authorized human workflow inside the configured environment.", layer: "hypervisor"},
+	{label: "Observe", copy: "Observe supported runtime events, model/tool activity, and W8 browser states.", layer: "both"},
 	{
 		label: "Verify",
 		copy: "Verify outcome evidence against expert-defined rubrics or machine-checkable state assertions where applicable.",
+		layer: "browser",
 	},
 	{
 		label: "Optimize",
-		copy: "Optimize with the resulting examples, evals, reward candidates, routing decisions, and training environments.",
+		copy: "Package the result as an RL environment for a model lab, or train and evaluate a small model for an enterprise.",
+		layer: "both",
 	},
 ];
 
@@ -19,18 +22,19 @@ const rail = [
 	{label: "Inputs", items: ["Existing agent", "Expert operator"]},
 	{label: "Observation points", items: ["OpenShell execution layer", "W8 browser"]},
 	{label: "Evidence + verifiers", items: ["Runtime events", "Browser states", "Rubrics · state checks"]},
-	{label: "Outputs", items: ["Private training", "Licensable training assets"]},
+	{label: "Products", items: ["RL environments · model labs", "Fine-tuned small models · enterprises"]},
 ];
 
 export default function Learning() {
 	return (
 		<Section>
 			<div className='flex flex-col gap-6'>
-				<Eyebrow>From evidence to learning</Eyebrow>
-				<h2 className='ed-h2 m-0'>Train on what actually happened.</h2>
-				<p className='ed-lede m-0 max-w-[44rem] text-ed-graphite'>
-					Useful supervision links{" "}
-					<strong className='text-ed-ink'>intent, attempted execution, observed state, and outcome</strong>.
+				<Eyebrow>Deterministic rewards</Eyebrow>
+				<h2 className='ed-h2 m-0'>Deterministic rewards. First-class infrastructure.</h2>
+				<p className='ed-lede m-0 max-w-[48rem] text-ed-graphite'>
+					A trace records what an agent attempted. A verifier decides whether it worked. We build the verifier into the capture layer:{" "}
+					<strong className='text-ed-ink'>browser-state checks from W8, runtime checks from the hypervisor</strong>. Visual and subjective
+					criteria keep model or human grading.
 				</p>
 			</div>
 
@@ -40,7 +44,10 @@ export default function Learning() {
 						key={step.label}
 						className='flex flex-col gap-3 border-b border-ed-rule py-6 sm:pr-6 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0'
 					>
-						<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
+						<span className='flex flex-wrap items-center justify-between gap-2'>
+							<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
+							<LayerTag layer={step.layer} />
+						</span>
 						<span className='text-2xl font-medium tracking-[-0.01em]'>{step.label}</span>
 						<span className='text-[0.9375rem] leading-relaxed text-ed-graphite'>{step.copy}</span>
 					</li>
@@ -77,7 +84,7 @@ export default function Learning() {
 					))}
 				</div>
 				<figcaption className='ed-mono mt-3 max-w-[52rem] text-[0.75rem] leading-relaxed text-ed-smoke'>
-					A resettable RL environment adds explicit fixtures, reproducible resets, and validated reward implementations to a captured trajectory.
+					We turn a captured trajectory into a resettable RL environment by adding explicit fixtures, reproducible resets, and validated reward implementations.
 				</figcaption>
 			</figure>
 		</Section>

@@ -92,17 +92,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
+      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
+      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'Train on what your agent executed. WootzApp combines an OpenShell-based agent observation layer with Chromium-native browser evidence for private post-training, real-world training datasets, and verified RL environments.',
+      content: 'WootzApp builds RL environments for model labs and custom small models for enterprises from evidence captured below the agent harness, by an OpenShell-based hypervisor, and inside the browser, by W8.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {
@@ -117,10 +117,10 @@ baseUrl: "/",
         src: "/img/fav.png",
       },
       items: [
+        { to: "/#model-labs", label: "RL Environments", position: "left", activeBaseRegex: "^$" },
+        { to: "/#enterprise", label: "Enterprise Models", position: "left", activeBaseRegex: "^$" },
         { to: "/#technology", label: "Technology", position: "left", activeBaseRegex: "^$" },
         { to: "/research", label: "Research", position: "left" },
-        { to: "/#enterprise", label: "For Enterprises", position: "left", activeBaseRegex: "^$" },
-        { to: "/#model-labs", label: "For Model Labs", position: "left", activeBaseRegex: "^$" },
         { to: "/docs/intro", label: "Docs", position: "left" },
       ],
     },

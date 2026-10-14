@@ -5,10 +5,23 @@ import Accordion from "../editorial/accordion";
 
 const items = [
 	{
-		question: "Isn't bring-your-own-harness already available elsewhere?",
+		question: "What does WootzApp sell?",
 		answer: (
 			<p className='m-0'>
-				Yes. WootzApp differs in <strong className='text-ed-ink'>where observation happens</strong>. Other platforms train within an existing harness and accept deterministic grading artifacts. WootzApp collects evidence independently of the harness and retains more of the browser state the grader needs.
+				Two products built on two observation points. <strong className='text-ed-ink'>RL environments</strong> for frontier model labs,
+				recorded inside our hypervisor and the W8 browser so rewards read runtime and page state directly.{" "}
+				<strong className='text-ed-ink'>Custom small models</strong> for enterprises, trained on runs of your own agents that the hypervisor
+				observed from below the harness and W8 verified in the browser.
+			</p>
+		),
+	},
+	{
+		question: "Do we need to change our agent?",
+		answer: (
+			<p className='m-0'>
+				No rewrite of core agent logic and no tracing SDK. Setup is image packaging, sandbox configuration, and gateway routing. From
+				there the hypervisor observes the agent <strong className='text-ed-ink'>from below the harness</strong>, independently of what the
+				agent logs, and W8 records the browser state its tasks depend on.
 			</p>
 		),
 	},

@@ -15,7 +15,7 @@ export default function BlindSpot() {
 						{line}
 					</p>
 				))}
-				<p className='ed-statement m-0 text-ed-accent'>WootzApp sees beneath the harness—and inside the browser.</p>
+				<p className='ed-statement m-0 text-ed-accent'>Others train on what your harness exposes. We reveal what your harness cannot see.</p>
 				<p className='ed-lede m-0 mt-4 text-ed-canvas/80'>That&apos;s the evidence other layers cannot independently establish.</p>
 			</div>
 		</section>
