@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Wootzapp",
-  tagline: "Ground truth others can't trace.",
+  tagline: "The hypervisor for RL.",
   favicon: "/img/favicon.ico",
 
 
@@ -92,17 +92,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'WootzApp captures agent traces and work traces below the harness, with an OpenShell-based hypervisor, and inside the browser, with W8. Our team turns them into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {

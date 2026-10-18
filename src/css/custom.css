@@ -609,7 +609,16 @@ html.docs-wrapper .table-of-contents__link--active {
 
 /* Hero headline: sized so "others can't trace." fits the hero column on one line. */
 .ed-display--hero {
-	font-size: clamp(2.5rem, 6.2vw, 5.25rem);
+	font-size: clamp(2.5rem, 5.6vw, 4.75rem);
+}
+
+/* Hero subline: clearly below the headline, still display-sized. */
+.ed-subhead {
+	font-size: clamp(1.625rem, 3vw, 2.625rem);
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: -0.008em;
+	text-wrap: balance;
 }
 
 .ed-h2 {
@@ -656,8 +665,9 @@ html.docs-wrapper .table-of-contents__link--active {
 	justify-content: center;
 	gap: 0.5rem;
 	min-height: 2.875rem;
-	padding: 0.75rem 1.25rem;
+	padding: 0.75rem 1.375rem;
 	border: 1px solid #131315;
+	border-radius: 999px;
 	font-size: 0.9375rem;
 	font-weight: 500;
 	line-height: 1.2;
@@ -818,6 +828,8 @@ html.docs-wrapper .table-of-contents__link--active {
 .ed-bar-track {
 	position: relative;
 	height: 0.875rem;
+	overflow: hidden;
+	border-radius: 999px;
 	background-color: #e9e7e3;
 }
 
@@ -825,6 +837,7 @@ html.docs-wrapper .table-of-contents__link--active {
 	position: absolute;
 	inset-block: 0;
 	left: 0;
+	border-radius: 999px;
 	background-color: #131315;
 }
 
@@ -833,7 +846,9 @@ html.docs-wrapper .table-of-contents__link--active {
 }
 
 .ed-specimen {
+	overflow: hidden;
 	border: 1px solid #c9c6c2;
+	border-radius: 12px;
 	background-color: #ffffff;
 	font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 	font-size: 0.8125rem;
@@ -882,6 +897,123 @@ html.docs-wrapper .table-of-contents__link--active {
 	}
 }
 
+/* Cards, icon tiles and hero visual */
+/* Zero-specificity default so Tailwind bg-* utilities can override it. */
+:where(.ed-card) {
+	background-color: #ffffff;
+}
+
+.ed-card {
+	border: 1px solid #dedbd6;
+	border-radius: 20px;
+	box-shadow:
+		0 1px 2px rgba(19, 19, 21, 0.04),
+		0 12px 32px -16px rgba(19, 19, 21, 0.14);
+}
+
+.ed-card--lift {
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.ed-card--lift:hover {
+	transform: translateY(-2px);
+	box-shadow:
+		0 1px 2px rgba(19, 19, 21, 0.05),
+		0 20px 40px -18px rgba(19, 19, 21, 0.22);
+}
+
+.ed-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	flex-shrink: 0;
+	border-radius: 12px;
+	background-color: #f0eeea;
+	color: #131315;
+	font-size: 1.25rem;
+}
+
+.ed-icon--accent {
+	background-color: #fde9d6;
+	color: #8a3f0e;
+}
+
+.ed-hero-bg {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.ed-hero-bg::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-image: radial-gradient(rgba(19, 19, 21, 0.09) 1px, transparent 1px);
+	background-size: 22px 22px;
+	mask-image: linear-gradient(to bottom, #000 40%, transparent);
+}
+
+.ed-hero-bg::after {
+	content: "";
+	position: absolute;
+	top: -10%;
+	right: -10%;
+	z-index: -1;
+	width: 60%;
+	height: 90%;
+	background: radial-gradient(closest-side, rgba(242, 139, 50, 0.22), transparent);
+	pointer-events: none;
+}
+
+/* Trace diagram lanes: dots travel from source to output. */
+.ed-lane {
+	position: relative;
+	height: 2px;
+	overflow: visible;
+	background: linear-gradient(90deg, rgba(19, 19, 21, 0.12), rgba(242, 139, 50, 0.6));
+}
+
+.ed-lane__dot {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	border-radius: 999px;
+	background-color: #f28b32;
+	box-shadow: 0 0 0 4px rgba(242, 139, 50, 0.18);
+	animation: ed-lane-travel 3.2s linear infinite;
+}
+
+.ed-lane__dot--2 {
+	animation-delay: -1.1s;
+}
+
+.ed-lane__dot--3 {
+	animation-delay: -2.2s;
+}
+
+@keyframes ed-lane-travel {
+	0% {
+		left: 0;
+		opacity: 0;
+	}
+	10%,
+	85% {
+		opacity: 1;
+	}
+	100% {
+		left: calc(100% - 8px);
+		opacity: 0;
+	}
+}
+
 @media (min-width: 640px) {
 	.ed-container {
 		padding-inline: 1.5rem;
@@ -896,8 +1028,23 @@ html.docs-wrapper .table-of-contents__link--active {
 
 @media (prefers-reduced-motion: reduce) {
 	.ed-fade-in,
-	.ed-cursor::after {
+	.ed-cursor::after,
+	.ed-lane__dot {
 		animation: none;
+	}
+
+	.ed-lane__dot--2 {
+		left: 45%;
+	}
+
+	.ed-lane__dot--3 {
+		left: 80%;
+	}
+
+	.ed-card--lift,
+	.ed-card--lift:hover {
+		transition: none;
+		transform: none;
 	}
 }
 

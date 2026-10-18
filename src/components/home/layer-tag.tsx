@@ -19,7 +19,7 @@ const styles: Record<Single, string> = {
 
 function Chip({layer}: {layer: Single}) {
 	return (
-		<span className={clsx("ed-eyebrow inline-block whitespace-nowrap border px-1.5 py-0.5 text-[0.75rem] leading-none", styles[layer])}>
+		<span className={clsx("ed-eyebrow inline-block whitespace-nowrap rounded-full border px-2.5 py-1 text-[0.75rem] leading-none", styles[layer])}>
 			{labels[layer]}
 		</span>
 	);
