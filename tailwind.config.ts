@@ -37,6 +37,7 @@ module.exports = {
           rule: "#c9c6c2",
           accent: "#f28b32",
           "accent-ink": "#8a3f0e",
+          "accent-tint": "#fbe6d2",
         },
         brand: {
           base: "#140c09",

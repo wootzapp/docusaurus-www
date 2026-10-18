@@ -1,6 +1,6 @@
 import React, {type ReactNode} from "react";
+import clsx from "clsx";
 import {LuDatabase, LuCpu, LuScanSearch, LuTerminal, LuCircleCheck, LuPackageCheck, LuRoute} from "react-icons/lu";
-import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
 import CtaLink from "../editorial/cta-link";
 import useAnchor from "../editorial/use-anchor";
@@ -9,6 +9,7 @@ import {links} from "@site/src/data/research";
 
 type Product = {
 	id: string;
+	dark: boolean;
 	icon: ReactNode;
 	audience: string;
 	title: string;
@@ -21,6 +22,7 @@ type Product = {
 const products: Product[] = [
 	{
 		id: "model-labs",
+		dark: true,
 		icon: <LuDatabase />,
 		audience: "For frontier model labs",
 		title: "Datasets, evals, and RL environments.",
@@ -34,6 +36,7 @@ const products: Product[] = [
 	},
 	{
 		id: "enterprise",
+		dark: false,
 		icon: <LuCpu />,
 		audience: "For enterprise AI teams",
 		title: "Small models trained on your agents' real work.",
@@ -47,43 +50,52 @@ const products: Product[] = [
 	},
 ];
 
+// Full-bleed split panels: one dark, one tinted.
 export default function Products() {
+	useAnchor("products");
 	useAnchor("model-labs");
 	useAnchor("enterprise");
 	return (
-		<Section id='products' tone='surface'>
-			<div className='flex flex-col gap-5'>
-				<Eyebrow>What we build</Eyebrow>
-				<h2 className='ed-h2 m-0 max-w-[50rem]'>Two products. One capture layer.</h2>
-			</div>
-			<div className='mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6'>
-				{products.map((product) => (
-					<article key={product.id} id={product.id} className='ed-card flex scroll-mt-24 flex-col gap-6 bg-ed-canvas p-6 sm:p-8 lg:p-10'>
+		<section id='products' className='grid grid-cols-1 lg:grid-cols-2'>
+			{products.map((product, index) => (
+				<article
+					key={product.id}
+					id={product.id}
+					className={clsx(
+						"flex scroll-mt-16 px-4 py-16 sm:px-6 sm:py-20 lg:py-28",
+						product.dark ? "bg-ed-ink text-ed-canvas" : "bg-ed-accent-tint text-ed-ink",
+						index === 0 ? "lg:justify-end lg:pl-8 lg:pr-16" : "lg:pl-16 lg:pr-8"
+					)}
+				>
+					<div className='flex w-full max-w-[34rem] flex-col gap-7'>
 						<div className='flex items-center gap-3'>
-							<span className='ed-icon ed-icon--accent'>{product.icon}</span>
-							<Eyebrow className='text-ed-accent-ink'>{product.audience}</Eyebrow>
+							<span className={clsx("ed-icon", product.dark ? "bg-white/10 text-ed-accent" : "bg-white text-ed-accent-ink")}>{product.icon}</span>
+							<Eyebrow className={product.dark ? "text-ed-accent" : "text-ed-accent-ink"}>{product.audience}</Eyebrow>
 						</div>
-						<div className='flex flex-col gap-3'>
-							<h3 className='ed-h3 m-0'>{product.title}</h3>
-							<p className='ed-body m-0 text-ed-graphite'>{product.line}</p>
+						<div className='flex flex-col gap-4'>
+							<h2 className='ed-h2 m-0'>{product.title}</h2>
+							<p className={clsx("ed-lede m-0", product.dark ? "text-ed-canvas/75" : "text-ed-graphite")}>{product.line}</p>
 						</div>
-						<ul className='m-0 flex list-none flex-col gap-2.5 p-0'>
+						<ul className={clsx("m-0 flex list-none flex-col border-t p-0", product.dark ? "border-white/15" : "border-ed-ink/15")}>
 							{product.points.map((point) => (
-								<li key={point.label} className='flex items-center gap-3 rounded-xl border border-ed-rule bg-ed-surface px-4 py-3'>
-									<span className='text-lg text-ed-ink' aria-hidden='true'>
+								<li
+									key={point.label}
+									className={clsx("flex items-center gap-3 border-b py-4", product.dark ? "border-white/15" : "border-ed-ink/15")}
+								>
+									<span className={clsx("text-lg", product.dark ? "text-ed-accent" : "text-ed-accent-ink")} aria-hidden='true'>
 										{point.icon}
 									</span>
-									<span className='flex-1 text-[0.9375rem] font-medium'>{point.label}</span>
-									<LayerTag layer={point.layer} className='hidden sm:inline-flex' />
+									<span className='flex-1 text-[1rem] font-medium'>{point.label}</span>
+									<LayerTag layer={point.layer} tone={product.dark ? "dark" : "light"} className='hidden sm:inline-flex' />
 								</li>
 							))}
 						</ul>
-						<CtaLink href={links.booking} className='mt-auto w-fit'>
+						<CtaLink href={links.booking} variant={product.dark ? "inverse" : "primary"} className='w-fit'>
 							{product.cta}
 						</CtaLink>
-					</article>
-				))}
-			</div>
-		</Section>
+					</div>
+				</article>
+			))}
+		</section>
 	);
 }

@@ -1,4 +1,5 @@
 import React, {type ReactNode} from "react";
+import clsx from "clsx";
 import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
 import CtaLink from "../editorial/cta-link";
@@ -11,18 +12,18 @@ const events = ["Model request", "Proxy decision", "Workspace update", "Egress a
 
 function BoundaryVisual() {
 	return (
-		<div className='grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-3'>
-			<div className='flex flex-col gap-2 rounded-xl border border-ed-ink p-3'>
+		<div className='grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-4'>
+			<div className='flex flex-col gap-3 rounded-2xl border border-ed-ink bg-ed-surface p-4'>
 				<span className='ed-eyebrow text-[0.75rem] text-ed-smoke'>OpenShell sandbox</span>
-				<div className='rounded-lg border border-dashed border-ed-rule bg-ed-canvas px-3 py-4 text-center'>
-					<span className='text-[0.875rem] font-medium'>Your harness</span>
-					<span className='ed-mono block text-[0.75rem] text-ed-smoke'>unchanged</span>
+				<div className='flex flex-1 flex-col items-center justify-center rounded-xl border border-dashed border-ed-rule bg-ed-canvas px-3 py-6 text-center'>
+					<span className='text-[1rem] font-semibold'>Your harness</span>
+					<span className='ed-mono text-[0.75rem] text-ed-smoke'>unchanged</span>
 				</div>
 			</div>
-			<ul className='m-0 flex list-none flex-col gap-1.5 p-0'>
+			<ul className='m-0 flex list-none flex-col justify-center gap-2 p-0'>
 				{events.map((event) => (
-					<li key={event} className='flex items-center gap-2 rounded-lg bg-ed-canvas px-3 py-2 text-[0.8125rem] font-medium'>
-						<span aria-hidden='true' className='size-1.5 shrink-0 rounded-full bg-ed-accent' />
+					<li key={event} className='flex items-center gap-2.5 rounded-xl bg-ed-surface px-3.5 py-2.5 text-[0.875rem] font-medium shadow-sm'>
+						<span aria-hidden='true' className='size-2 shrink-0 rounded-full bg-ed-accent' />
 						{event}
 					</li>
 				))}
@@ -33,15 +34,15 @@ function BoundaryVisual() {
 
 function PageVisual() {
 	return (
-		<div className='grid grid-cols-2 gap-3'>
+		<div className='grid grid-cols-2 gap-4'>
 			<Specimen title='Screenshot' label='Frame' kind='recorded'>
-				<div className='flex flex-col gap-1.5'>
-					<div className='rounded border border-ed-rule bg-ed-canvas py-3 text-center text-[0.75rem] text-ed-smoke'>Gallery</div>
+				<div className='flex flex-col gap-2'>
+					<div className='rounded border border-ed-rule bg-ed-canvas py-4 text-center text-[0.75rem] text-ed-smoke'>Gallery</div>
 					<div className='border-t-2 border-dashed border-ed-accent pt-1 text-[0.75rem] text-ed-accent-ink'>viewport ends</div>
 				</div>
 			</Specimen>
 			<Specimen title='W8 record' label='Page' kind='recorded'>
-				<ul className='m-0 flex list-none flex-col gap-1 p-0'>
+				<ul className='m-0 flex list-none flex-col gap-1.5 p-0'>
 					{taskTwo.dom.map((line) => (
 						<li key={line} className='ed-mark w-fit text-[0.75rem] text-ed-ink'>
 							{line}
@@ -53,7 +54,7 @@ function PageVisual() {
 	);
 }
 
-const cards: {id: string; layer: Layer; title: string; copy: string; visual: ReactNode; href: string; link: string}[] = [
+const rows: {id: string; layer: Layer; title: string; copy: string; visual: ReactNode; href: string; link: string}[] = [
 	{
 		id: "hypervisor",
 		layer: "hypervisor",
@@ -74,6 +75,7 @@ const cards: {id: string; layer: Layer; title: string; copy: string; visual: Rea
 	},
 ];
 
+// Zigzag rows: the visual and the copy swap sides.
 export default function Technology() {
 	useAnchor("hypervisor");
 	useAnchor("browser");
@@ -83,22 +85,27 @@ export default function Technology() {
 				<Eyebrow>The technology</Eyebrow>
 				<h2 className='ed-h2 m-0'>Two observation points we built.</h2>
 			</div>
-			<div className='mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6'>
-				{cards.map((card) => (
-					<article key={card.id} id={card.id} className='ed-card flex scroll-mt-24 flex-col gap-6 bg-ed-canvas p-6 sm:p-8'>
-						<div className='rounded-2xl bg-ed-surface p-4'>{card.visual}</div>
-						<div className='flex flex-col gap-3'>
-							<LayerTag layer={card.layer} />
-							<h3 className='ed-h3 m-0'>{card.title}</h3>
-							<p className='ed-body m-0 text-ed-graphite'>{card.copy}</p>
+			<div className='mt-14 flex flex-col gap-16 lg:gap-24'>
+				{rows.map((row, index) => (
+					<article
+						key={row.id}
+						id={row.id}
+						className='grid scroll-mt-24 grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16'
+					>
+						<div className={clsx("rounded-3xl bg-ed-canvas p-5 sm:p-8", index % 2 === 1 && "lg:order-2")}>{row.visual}</div>
+						<div className='flex flex-col gap-4'>
+							<span className='ed-mono text-[0.8125rem] text-ed-smoke'>0{index + 1}</span>
+							<LayerTag layer={row.layer} />
+							<h3 className='ed-h2 m-0'>{row.title}</h3>
+							<p className='ed-lede m-0 max-w-[30rem] text-ed-graphite'>{row.copy}</p>
+							<CtaLink href={row.href} variant='text' className='w-fit'>
+								{row.link}
+							</CtaLink>
 						</div>
-						<CtaLink href={card.href} variant='text' className='mt-auto w-fit'>
-							{card.link}
-						</CtaLink>
 					</article>
 				))}
 			</div>
-			<p className='ed-mono m-0 mt-6 text-[0.75rem] text-ed-smoke'>Built on NVIDIA OpenShell; no NVIDIA endorsement implied.</p>
+			<p className='ed-mono m-0 mt-14 text-[0.75rem] text-ed-smoke'>Built on NVIDIA OpenShell; no NVIDIA endorsement implied.</p>
 		</Section>
 	);
 }

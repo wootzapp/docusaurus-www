@@ -932,12 +932,16 @@ html.docs-wrapper .table-of-contents__link--active {
 	height: 2.75rem;
 	flex-shrink: 0;
 	border-radius: 12px;
-	background-color: #f0eeea;
-	color: #131315;
 	font-size: 1.25rem;
 }
 
-.ed-icon--accent {
+/* Zero-specificity colours so Tailwind bg-* and text-* utilities can override them. */
+:where(.ed-icon) {
+	background-color: #f0eeea;
+	color: #131315;
+}
+
+:where(.ed-icon--accent) {
 	background-color: #fde9d6;
 	color: #8a3f0e;
 }
