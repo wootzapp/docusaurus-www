@@ -5,7 +5,8 @@ import CtaLink from "../editorial/cta-link";
 import EvidenceBars from "../editorial/evidence-bars";
 import PaperHeader from "../work/paper-header";
 import Citation from "../work/citation";
-import {citation, gapCategories, links, report, storageSample, study, taskExamples, taskResultsUrl} from "@site/src/data/research";
+import {citation, gapCategories, links, report, storageSample, study, taskDataUrl, taskExamples} from "@site/src/data/research";
+import TaskNineteenPair from "../work/task-nineteen-pair";
 
 const methodSteps = [
 	{title: "Record once.", copy: "Each task produces a trajectory of actions and ordered browser states."},
@@ -44,7 +45,7 @@ const nextStudies = [
 
 const sources = [
 	{label: "Technical report and metric definitions", href: links.benchReport},
-	{label: "Task-by-task scoring and source audit", href: links.benchResults},
+	{label: "Published results and summary.json", href: links.benchResults},
 	{label: "Verifier, scripts, and comparison instructions", href: links.benchVerifier},
 	{label: "Browser Agent Tasks dataset (Hugging Face)", href: links.dataset},
 	{label: "Openrind Shell OpenShell runtime source", href: links.openrindBranch},
@@ -79,7 +80,7 @@ function ResearchHero() {
 			]}
 			sources={[
 				{label: "Technical report", href: links.benchReport},
-				{label: "Per-task results", href: links.benchResults},
+				{label: "Results", href: links.benchResults},
 				{label: "Verifier", href: links.benchVerifier},
 				{label: "Task set", href: links.dataset},
 			]}
@@ -201,22 +202,28 @@ function GapCategories() {
 			</div>
 
 			<div className='mt-20 flex flex-col gap-6'>
-				<Eyebrow>What the recorded examples show</Eyebrow>
-				<ol className='m-0 grid grid-cols-1 list-none gap-0 border-t border-ed-ink p-0 md:grid-cols-2'>
+				<Eyebrow>Preserved details · Table 4 of the report</Eyebrow>
+				<TaskNineteenPair />
+				<ol className='m-0 grid grid-cols-1 list-none gap-0 border-t border-ed-ink p-0 md:grid-cols-3'>
 					{taskExamples.map((task) => (
-						<li key={task.id} className='flex flex-col gap-3 border-b border-ed-rule py-6 md:odd:pr-8 md:even:pl-8'>
+						<li key={task.id} className='flex flex-col gap-3 border-b border-ed-rule py-6 md:px-6 md:first:pl-0 md:last:pr-0'>
 							<p className='ed-mono m-0 text-[0.8125rem] text-ed-accent-ink'>
 								Task {task.id} / {task.title}
 							</p>
 							<p className='m-0 text-[0.9375rem] leading-relaxed text-ed-graphite'>{task.copy}</p>
-							<a href={taskResultsUrl(task.id, task.title)} target='_blank' rel='noopener noreferrer' className='ed-link w-fit text-[0.875rem]'>
-								Task {task.id} audit ↗
-							</a>
+							<span className='flex flex-wrap gap-x-4 gap-y-1 text-[0.875rem]'>
+								<a href={taskDataUrl(task.id, "ss")} target='_blank' rel='noopener noreferrer' className='ed-link'>
+									Screenshot run ↗
+								</a>
+								<a href={taskDataUrl(task.id, "dom")} target='_blank' rel='noopener noreferrer' className='ed-link'>
+									W8 run ↗
+								</a>
+							</span>
 						</li>
 					))}
 				</ol>
-				<CtaLink href={links.benchResults} variant='text' className='w-fit'>
-					Inspect all 100 task reports
+				<CtaLink href={links.benchExamples} variant='text' className='w-fit'>
+					Table 4 in the technical report
 				</CtaLink>
 			</div>
 		</Section>

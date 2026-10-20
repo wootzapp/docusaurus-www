@@ -4,6 +4,7 @@ import Section from "../../components/editorial/section";
 import Eyebrow from "../../components/editorial/eyebrow";
 import Specimen from "../../components/editorial/specimen";
 import PaperHeader from "../../components/work/paper-header";
+import TaskNineteenPair from "../../components/work/task-nineteen-pair";
 import {links, report, study, tasksDataset} from "@site/src/data/research";
 
 const loadSnippet = `from datasets import load_dataset
@@ -18,7 +19,7 @@ export default function BrowserAgentTasksPage() {
 	return (
 		<Layout
 			title={tasksDataset.name}
-			description={`${tasksDataset.tasks} multi-step public-web browser-agent tasks across ${tasksDataset.sites} sites, with instructions, stopping conditions, and scope constraints.`}
+			description={`${tasksDataset.tasks} public-web browser-agent tasks across ${tasksDataset.sites} sites, each recorded twice: ${tasksDataset.screenshots} screenshots and ${tasksDataset.domStates} W8 DOM-model states.`}
 		>
 			<main className='ed-page'>
 				<PaperHeader
@@ -30,11 +31,12 @@ export default function BrowserAgentTasksPage() {
 					abstract={
 						<>
 							<p className='m-0'>
-								Multi-step browser tasks for collecting agent trajectories and evaluating screenshot, DOM, and DOM-diff evidence. Each task
-								states the instruction, a public starting page, when to stop, and what the agent must leave untouched.
+								{tasksDataset.tasks} multi-step public-web tasks, each with its paired recordings: the screenshot run and the W8 run of the same
+								task, with final answers and agent logs. Each task states the instruction, a public starting page, when to stop, and what the
+								agent must leave untouched.
 							</p>
 							<p className='m-0'>
-								This is the task set behind{" "}
+								This is the data behind{" "}
 								<Link to='/research/w8-domdiff-bench' className='ed-link'>
 									{study.name}
 								</Link>
@@ -45,8 +47,8 @@ export default function BrowserAgentTasksPage() {
 					stats={[
 						{value: String(tasksDataset.tasks), label: "Tasks"},
 						{value: String(tasksDataset.sites), label: "Distinct sites"},
-						{value: String(tasksDataset.categories), label: "Task categories"},
-						{value: String(tasksDataset.fields.length), label: `Fields per task · ${tasksDataset.format}`},
+						{value: String(tasksDataset.screenshots), label: "Screenshots (screenshot runs)"},
+						{value: String(tasksDataset.domStates), label: "DOM-model states (W8 runs)"},
 					]}
 					sources={[{label: "Hugging Face", href: links.dataset}]}
 				/>
@@ -54,8 +56,40 @@ export default function BrowserAgentTasksPage() {
 				<Section tone='surface'>
 					<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-20'>
 						<div className='flex flex-col gap-5'>
-							<Eyebrow>Schema</Eyebrow>
-							<h2 className='ed-h3 m-0'>One task definition per line of tasks.jsonl.</h2>
+							<Eyebrow>Layout</Eyebrow>
+							<h2 className='ed-h3 m-0'>Task definitions, plus two recordings of every run.</h2>
+							<p className='ed-body m-0 text-ed-graphite'>
+								tasks.jsonl holds one task per line. Under trajectories/, each task has one folder per recording.
+							</p>
+						</div>
+						<table className='ed-table'>
+							<thead>
+								<tr>
+									<th>Path</th>
+									<th>Contents</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td className='ed-mono text-[0.8125rem] text-ed-ink'>tasks.jsonl</td>
+									<td>{tasksDataset.tasks} task definitions</td>
+								</tr>
+								{tasksDataset.runs.map((run) => (
+									<tr key={run.folder}>
+										<td className='ed-mono text-[0.8125rem] text-ed-ink'>trajectories/{run.folder}</td>
+										<td className='ed-mono text-[0.8125rem] text-ed-graphite'>{run.files}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</Section>
+
+				<Section>
+					<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-20'>
+						<div className='flex flex-col gap-5'>
+							<Eyebrow>Task schema</Eyebrow>
+							<h2 className='ed-h3 m-0'>Six fields per task.</h2>
 						</div>
 						<table className='ed-table'>
 							<thead>
@@ -78,42 +112,38 @@ export default function BrowserAgentTasksPage() {
 					</div>
 				</Section>
 
-				<Section>
+				<Section tone='surface'>
 					<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-20'>
 						<div className='flex flex-col gap-5'>
-							<Eyebrow>Example record</Eyebrow>
-							<h2 className='ed-h3 m-0'>{sample.task_id}</h2>
+							<Eyebrow>Example · {sample.task_id}</Eyebrow>
+							<h2 className='ed-h3 m-0'>One task, both recordings.</h2>
 							<p className='ed-body m-0 text-ed-graphite'>
-								This task produced the Task 2 evidence example in {study.name}: the screenshot record stopped before the developer and
-								release-date fields, and the W8 record preserved both.
+								This is the &ldquo;exact release date&rdquo; example in Table 4 of the {study.name} report. The screenshot run shows a relative
+								date; the W8 run keeps the exact timestamp.
 							</p>
-							<Link to='/research/w8-domdiff-bench' className='ed-link w-fit text-[0.9375rem] font-medium'>
-								See the Task 2 result →
-							</Link>
 						</div>
-						<Specimen title='tasks.jsonl' label={`Dataset row · ${sample.task_id}`} kind='recorded'>
-							<pre className='m-0 whitespace-pre-wrap bg-transparent p-0 font-[inherit] text-[inherit]'>{JSON.stringify(sample, null, 2)}</pre>
-						</Specimen>
+						<div className='flex flex-col gap-4'>
+							<Specimen title='tasks.jsonl' label={`Dataset row · ${sample.task_id}`} kind='recorded'>
+								<pre className='m-0 whitespace-pre-wrap bg-transparent p-0 font-[inherit] text-[inherit]'>{JSON.stringify(sample, null, 2)}</pre>
+							</Specimen>
+							<TaskNineteenPair />
+						</div>
 					</div>
 				</Section>
 
-				<Section tone='surface'>
+				<Section>
 					<div className='grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20'>
 						<div className='flex flex-col gap-5'>
-							<Eyebrow>Load it</Eyebrow>
-							<pre className='ed-mono m-0 overflow-x-auto rounded-2xl border border-ed-rule bg-ed-canvas p-6 text-[0.8125rem] leading-relaxed text-ed-ink'>
+							<Eyebrow>Load the tasks</Eyebrow>
+							<pre className='ed-mono m-0 overflow-x-auto rounded-2xl border border-ed-rule bg-ed-surface p-6 text-[0.8125rem] leading-relaxed text-ed-ink'>
 								{loadSnippet}
 							</pre>
 						</div>
 						<div className='flex flex-col gap-5'>
 							<Eyebrow>Scope</Eyebrow>
-							<ul className='m-0 flex list-none flex-col gap-3 p-0 text-[1rem] leading-relaxed text-ed-graphite'>
-								<li>Every task runs on the public web. Agents do not sign in, purchase, submit irreversible forms, or start navigation.</li>
-								<li>
-									The planned trajectory export keeps the ordered actions, one observation after each meaningful action, the final answer, and
-									the final browser state.
-								</li>
-							</ul>
+							<p className='m-0 text-[1rem] leading-relaxed text-ed-graphite'>
+								Every task runs on the public web. Agents do not sign in, purchase, submit irreversible forms, or start navigation.
+							</p>
 						</div>
 					</div>
 				</Section>

@@ -17,7 +17,7 @@ const footerColumns = [
 			{label: "Our work", href: "/research"},
 			{label: "W8 DOM-diff Bench", href: "/research/w8-domdiff-bench"},
 			{label: "Technical report", href: links.benchReport},
-			{label: "Per-task results", href: links.benchResults},
+			{label: "Results", href: links.benchResults},
 		],
 	},
 	{

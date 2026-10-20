@@ -3,10 +3,10 @@ import clsx from "clsx";
 import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
 import CtaLink from "../editorial/cta-link";
-import Specimen from "../editorial/specimen";
+import TaskNineteenPair from "../work/task-nineteen-pair";
 import useAnchor from "../editorial/use-anchor";
 import LayerTag, {type Layer} from "./layer-tag";
-import {links, taskTwo} from "@site/src/data/research";
+import {links} from "@site/src/data/research";
 
 const events = ["Model request", "Proxy decision", "Workspace update", "Egress attempt"];
 
@@ -33,25 +33,7 @@ function BoundaryVisual() {
 }
 
 function PageVisual() {
-	return (
-		<div className='grid grid-cols-2 gap-4'>
-			<Specimen title='Screenshot' label='Frame' kind='recorded'>
-				<div className='flex flex-col gap-2'>
-					<div className='rounded border border-ed-rule bg-ed-canvas py-4 text-center text-[0.75rem] text-ed-smoke'>Gallery</div>
-					<div className='border-t-2 border-dashed border-ed-accent pt-1 text-[0.75rem] text-ed-accent-ink'>viewport ends</div>
-				</div>
-			</Specimen>
-			<Specimen title='W8 record' label='Page' kind='recorded'>
-				<ul className='m-0 flex list-none flex-col gap-1.5 p-0'>
-					{taskTwo.dom.map((line) => (
-						<li key={line} className='ed-mark w-fit text-[0.75rem] text-ed-ink'>
-							{line}
-						</li>
-					))}
-				</ul>
-			</Specimen>
-		</div>
-	);
+	return <TaskNineteenPair compact />;
 }
 
 const rows: {id: string; layer: Layer; title: string; copy: string; visual: ReactNode; href: string; link: string}[] = [

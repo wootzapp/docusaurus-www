@@ -11,8 +11,10 @@ export const links = {
 	benchMetric:
 		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#42-measuring-evidence-preservation",
 	benchLimits: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#6-capabilities-and-boundaries",
-	benchResults: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/results.md",
-	benchVerifier: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/verifier",
+	benchExamples:
+		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#53-preserving-the-details-agents-need",
+	benchResults: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/results",
+	benchVerifier: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/w8bench/verifier",
 	dataset: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks",
 	openrindRepo: "https://github.com/openrind/openrind-shell",
 	openrindBranch: "https://github.com/openrind/openrind-shell/tree/nemo",
@@ -54,52 +56,40 @@ export const storageSample = {
 	],
 };
 
-// GitHub heading anchor for "## Task N — Title" in results.md.
-export function taskResultsUrl(id: number, title: string): string {
-	const slug = `task ${id} — ${title}`
-		.toLowerCase()
-		.replace(/[^a-z0-9 -]/g, "")
-		.replace(/ /g, "-");
-	return `${links.benchResults}#${slug}`;
+// Paired recordings for one task in the published dataset.
+export function taskDataUrl(id: number, run: "dom" | "ss"): string {
+	return `${links.dataset}/tree/main/trajectories/data-${run}/task_${String(id).padStart(2, "0")}`;
 }
 
-// Recorded excerpts. Wording follows the per-task evidence audits in results.md.
-export const taskTwo = {
-	id: 2,
-	title: "Xbox cross-site research",
-	criterion: "Report the publisher, developer, and release date",
-	screenshot: [
-		{key: "screenshot9.png", value: "product page visible"},
-		{key: "screenshot10.png", value: "stops at Gallery / Description"},
-		{key: "developer field", value: "not in frame"},
-		{key: "release date", value: "not in frame"},
-	],
-	// Verbatim values quoted in the Task 2 audit for dom_model10.txt.
-	dom: ["Developed by → Tiburon", "Release date → 8/13/2026"],
-	scores: {screenshot: "0/5", dom: "3/5"},
-	note: "The publisher label–value relationship remained ambiguous in both records.",
+// Task 19, verbatim from the published recordings (data-ss/task_19/screenshot0.png, data-dom/task_19/dom_model0.txt).
+// It is the "Exact release date" row of Table 4 in the technical report.
+export const taskNineteen = {
+	id: 19,
+	title: "GitHub release research",
+	criterion: "Report the release date of the latest pytorch/pytorch release",
+	screenshotFile: "screenshot0.png",
+	screenshotImage: "/img/research/task19-screenshot.png",
+	screenshotText: "ethche released this 2 weeks ago",
+	domFile: "dom_model0.txt",
+	domText: "ethche released this 02 Sep 17:40",
 };
 
+// Table 4 of the technical report: preserved information from Tasks 19, 24, and 75.
 export const taskExamples = [
 	{
-		id: 2,
-		title: "Xbox cross-site research",
-		copy: "The screenshot sequence stopped before the developer and release-date fields. W8's structured state preserved Developed by → Tiburon and Release date → 8/13/2026. The publisher relationship stayed ambiguous, even in DOM evidence.",
-	},
-	{
 		id: 19,
-		title: "GitHub release research",
-		copy: "The screenshot showed only “released this last week”. The structured state preserved the exact timestamp, 02 Sep 17:40, which matched the agent's final answer.",
+		title: "Exact release date",
+		copy: `The exact release date is explicit in the structured state (“${taskNineteen.domText.replace("ethche released this ", "")}”). The screenshot record shows only a relative date (“${taskNineteen.screenshotText.replace("ethche released this ", "")}”).`,
 	},
 	{
-		id: 18,
-		title: "GitHub issue search",
-		copy: "Screenshots rendered issue dates as relative times. The structured state preserved the exact opened dates.",
+		id: 24,
+		title: "Complete ranked list",
+		copy: "Structured states preserve ranks 1–30. The captured screenshot frames cover ranks 1–29.",
 	},
 	{
-		id: 5,
-		title: "George H. W. Bush Foundation event lookup",
-		copy: "A second event sat outside the screenshot viewport. The structured state preserved it, supporting the chronological comparison the rubric asked for.",
+		id: 75,
+		title: "Exact endpoint URL",
+		copy: "The exact endpoint URL is explicit in the structured header. It is not visible in the captured screenshot frames.",
 	},
 ];
 
@@ -120,12 +110,14 @@ export const citation = `@techreport{wootzapp2026w8domdiffbench,
   url         = {https://github.com/wootzapp/w8-domdiff-bench}
 }`;
 
-// Browser Agent Tasks dataset, counted from tasks.jsonl on Hugging Face (Sep 30 2026 revision).
+// Browser Agent Tasks dataset, counted from the Hugging Face repository (Sep 30 2026 revision).
 export const tasksDataset = {
 	name: "Browser Agent Tasks",
 	tasks: 100,
 	sites: 90,
 	categories: 99,
+	screenshots: 465,
+	domStates: 465,
 	format: "JSONL",
 	fields: [
 		{name: "task_id", type: "string", description: "Stable identifier"},
@@ -135,16 +127,21 @@ export const tasksDataset = {
 		{name: "stopping_condition", type: "string", description: "When the agent must stop"},
 		{name: "constraints", type: "list<string>", description: "Safety and scope restrictions"},
 	],
-	// Verbatim record browser_task_002; the same task as the Task 2 evidence example.
+	// Verbatim record browser_task_019: the Table 4 "Exact release date" task.
 	sample: {
-		task_id: "browser_task_002",
-		category: "cross-site research",
+		task_id: "browser_task_019",
+		category: "github release research",
 		instruction:
-			"On Xbox.com, find a game listed under the “Best sellers” section. Open its product page and report the game’s publisher, developer, and release date.",
-		start_url: "https://www.xbox.com/",
-		stopping_condition: "Stop after opening the product page and recording the publisher, developer, and release date.",
-		constraints: ["Do not sign in.", "Do not buy or download anything."],
+			"Find the latest release of pytorch/pytorch. Report the release tag, release date, and the first three highlight bullets from the release notes in their displayed order.",
+		start_url: "https://github.com/pytorch/pytorch/releases",
+		stopping_condition: "Stop after the latest release metadata and first three highlights have been recorded.",
+		constraints: ["Do not sign in.", "Do not create issues or modify repository content."],
 	},
+	// Per-task folders under trajectories/, one for each recording of the same run.
+	runs: [
+		{folder: "data-ss/task_NN", files: "screenshotN.png, final_answer.json, task_data.json, web_surfer.log"},
+		{folder: "data-dom/task_NN", files: "dom_modelN.txt, final_answer.json, task_data.json, web_surfer.log"},
+	],
 };
 
 // Our work: each entry has a homepage row and a full page.
@@ -173,9 +170,9 @@ export const work: WorkEntry[] = [
 		name: "Browser Agent Tasks",
 		kind: "Dataset",
 		date: "Sep 2026",
-		line: "Multi-step public-web tasks with instructions, stopping conditions, and scope constraints. The task set behind W8 DOM-diff Bench.",
-		meta: [`${tasksDataset.tasks} tasks`, `${tasksDataset.sites} sites`, "JSONL"],
-		result: `${tasksDataset.categories} task categories`,
+		line: "Public-web browser tasks with paired screenshot and W8 recordings of each run. The data behind W8 DOM-diff Bench.",
+		meta: [`${tasksDataset.tasks} tasks`, `${tasksDataset.sites} sites`, "Paired runs"],
+		result: `${tasksDataset.screenshots + tasksDataset.domStates} recorded browser states`,
 	},
 	{
 		slug: "openrind-shell",

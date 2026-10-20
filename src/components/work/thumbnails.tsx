@@ -1,5 +1,5 @@
 import React from "react";
-import {study, taskTwo, tasksDataset} from "@site/src/data/research";
+import {study, taskNineteen, tasksDataset} from "@site/src/data/research";
 
 // Small visuals drawn from each artifact's real content. Decorative: the row text carries the meaning.
 
@@ -23,7 +23,7 @@ function BenchThumb() {
 					</div>
 				</div>
 			))}
-			<div className='ed-mono truncate text-[0.625rem] text-ed-accent'>{taskTwo.dom[0]}</div>
+			<div className='ed-mono truncate text-[0.625rem] text-ed-accent'>{taskNineteen.domText.replace("ethche ", "")}</div>
 		</div>
 	);
 }
