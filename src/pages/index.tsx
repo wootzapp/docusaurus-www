@@ -1,6 +1,6 @@
 import Layout from "@theme/Layout";
 import Hero from "../components/home/hero";
-import ResearchBlock from "../components/home/research-block";
+import OurWork from "../components/home/our-work";
 import Products from "../components/home/products";
 import HowItWorks from "../components/home/how-it-works";
 import BlindSpot from "../components/home/blind-spot";
@@ -16,7 +16,7 @@ export default function Home() {
 		>
 			<main className='ed-page'>
 				<Hero />
-				<ResearchBlock />
+				<OurWork />
 				<Products />
 				<HowItWorks />
 				<BlindSpot />

@@ -70,7 +70,7 @@ const rows: {id: string; layer: Layer; title: string; copy: string; visual: Reac
 		title: "Inside the browser",
 		copy: "Our Chromium browser records the page state screenshots miss: exact values, controls, and off-screen content.",
 		visual: <PageVisual />,
-		href: "/research",
+		href: "/research/w8-domdiff-bench",
 		link: "See the benchmark",
 	},
 ];

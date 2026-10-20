@@ -14,7 +14,8 @@ const footerColumns = [
 	{
 		title: "Research",
 		links: [
-			{label: "Published benchmark", href: "/research"},
+			{label: "Our work", href: "/research"},
+			{label: "W8 DOM-diff Bench", href: "/research/w8-domdiff-bench"},
 			{label: "Technical report", href: links.benchReport},
 			{label: "Per-task results", href: links.benchResults},
 		],
@@ -31,7 +32,7 @@ const footerColumns = [
 		links: [
 			{label: "w8-domdiff-bench", href: links.benchRepo},
 			{label: "openrind-shell", href: links.openrindRepo},
-			{label: "Trajectory dataset", href: links.dataset},
+			{label: "Browser Agent Tasks", href: links.dataset},
 		],
 	},
 	{

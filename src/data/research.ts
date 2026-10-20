@@ -102,3 +102,87 @@ export const taskExamples = [
 		copy: "A second event sat outside the screenshot viewport. The structured state preserved it, supporting the chronological comparison the rubric asked for.",
 	},
 ];
+
+// Technical report metadata, as published in the w8-domdiff-bench README.
+export const report = {
+	title: "w8-domdiff-bench: Browser Evidence Infrastructure for Agent Development",
+	byline: "WootzApp Research",
+	type: "Technical report",
+	license: "AGPL-3.0",
+};
+
+export const citation = `@techreport{wootzapp2026w8domdiffbench,
+  title       = {w8-domdiff-bench: Browser Evidence Infrastructure for Agent Development},
+  author      = {{WootzApp Research}},
+  institution = {WootzApp},
+  year        = {2026},
+  month       = oct,
+  url         = {https://github.com/wootzapp/w8-domdiff-bench}
+}`;
+
+// Browser Agent Tasks dataset, counted from tasks.jsonl on Hugging Face (Sep 30 2026 revision).
+export const tasksDataset = {
+	name: "Browser Agent Tasks",
+	tasks: 100,
+	sites: 90,
+	categories: 99,
+	format: "JSONL",
+	fields: [
+		{name: "task_id", type: "string", description: "Stable identifier"},
+		{name: "category", type: "string", description: "Task family"},
+		{name: "instruction", type: "string", description: "Complete instruction given to the browser agent"},
+		{name: "start_url", type: "string", description: "Suggested public starting page"},
+		{name: "stopping_condition", type: "string", description: "When the agent must stop"},
+		{name: "constraints", type: "list<string>", description: "Safety and scope restrictions"},
+	],
+	// Verbatim record browser_task_002; the same task as the Task 2 evidence example.
+	sample: {
+		task_id: "browser_task_002",
+		category: "cross-site research",
+		instruction:
+			"On Xbox.com, find a game listed under the “Best sellers” section. Open its product page and report the game’s publisher, developer, and release date.",
+		start_url: "https://www.xbox.com/",
+		stopping_condition: "Stop after opening the product page and recording the publisher, developer, and release date.",
+		constraints: ["Do not sign in.", "Do not buy or download anything."],
+	},
+};
+
+// Our work: each entry has a homepage row and a full page.
+export type WorkEntry = {
+	slug: "w8-domdiff-bench" | "browser-agent-tasks" | "openrind-shell";
+	name: string;
+	kind: string;
+	date?: string;
+	line: string;
+	meta: string[];
+	result: string;
+};
+
+export const work: WorkEntry[] = [
+	{
+		slug: "w8-domdiff-bench",
+		name: "W8 DOM-diff Bench",
+		kind: "Benchmark",
+		date: study.publishedShort,
+		line: `What screenshot recordings lose against structured browser state, measured on the same ${study.tasks} agent runs.`,
+		meta: [`${study.tasks} tasks`, `${study.criteria} criteria`, "Paired evaluation"],
+		result: `${study.screenshotRate} → ${study.domRate} missing evidence`,
+	},
+	{
+		slug: "browser-agent-tasks",
+		name: "Browser Agent Tasks",
+		kind: "Dataset",
+		date: "Sep 2026",
+		line: "Multi-step public-web tasks with instructions, stopping conditions, and scope constraints. The task set behind W8 DOM-diff Bench.",
+		meta: [`${tasksDataset.tasks} tasks`, `${tasksDataset.sites} sites`, "JSONL"],
+		result: `${tasksDataset.categories} task categories`,
+	},
+	{
+		slug: "openrind-shell",
+		name: "Openrind Shell",
+		kind: "Open-source runtime",
+		line: "Runs coding agents in an isolated OpenShell sandbox, with the project filesystem on a PostgreSQL-backed FUSE mount.",
+		meta: ["OpenShell", "FUSE", "PostgreSQL"],
+		result: "All /sandbox/work I/O through one daemon",
+	},
+];

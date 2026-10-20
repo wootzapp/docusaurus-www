@@ -3,7 +3,9 @@ import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
 import CtaLink from "../editorial/cta-link";
 import EvidenceBars from "../editorial/evidence-bars";
-import {gapCategories, links, storageSample, study, taskExamples, taskResultsUrl} from "@site/src/data/research";
+import PaperHeader from "../work/paper-header";
+import Citation from "../work/citation";
+import {citation, gapCategories, links, report, storageSample, study, taskExamples, taskResultsUrl} from "@site/src/data/research";
 
 const methodSteps = [
 	{title: "Record once.", copy: "Each task produces a trajectory of actions and ordered browser states."},
@@ -44,55 +46,44 @@ const sources = [
 	{label: "Technical report and metric definitions", href: links.benchReport},
 	{label: "Task-by-task scoring and source audit", href: links.benchResults},
 	{label: "Verifier, scripts, and comparison instructions", href: links.benchVerifier},
-	{label: "Published browser-agent trajectory dataset", href: links.dataset},
+	{label: "Browser Agent Tasks dataset (Hugging Face)", href: links.dataset},
 	{label: "Openrind Shell OpenShell runtime source", href: links.openrindBranch},
 ];
 
 function ResearchHero() {
-	const index = [
-		{value: String(study.tasks), label: "Paired browser tasks"},
-		{value: String(study.criteria), label: "Audited rubric criteria"},
-		{value: `${study.screenshotGaps} (${study.screenshotRate})`, label: "Screenshot-side missing-evidence criteria"},
-		{value: `${study.domGaps} (${study.domRate})`, label: "DOM-side missing-evidence criteria"},
-	];
 	return (
-		<section className='bg-ed-canvas text-ed-ink'>
-			<div className='ed-container pb-16 pt-12 sm:pt-16 lg:pb-20 lg:pt-24'>
-				<div className='flex flex-col gap-8'>
-					<Eyebrow>Research</Eyebrow>
-					<h1 className='ed-display m-0 max-w-[68rem]'>If the evidence wasn&apos;t recorded, no verifier can recover it.</h1>
-					<div className='ed-lede flex max-w-[44rem] flex-col gap-4 text-ed-graphite'>
-						<p className='m-0'>
-							Agent evaluation usually starts after the trajectory has been captured. We ask the earlier question:{" "}
-							<strong className='text-ed-ink'>what did the recording fail to preserve?</strong>
-						</p>
-						<p className='m-0'>
-							W8&apos;s first published study measures that loss directly, comparing screenshots with structured evidence from our own
-							Chromium-based browser on the same browser-agent trajectories.
-						</p>
-					</div>
-					<div className='flex flex-col gap-3 sm:flex-row'>
-						<CtaLink href={links.benchReport}>Read the technical report</CtaLink>
-						<CtaLink href={links.benchVerifier} variant='secondary'>
-							Reproduce the comparison
-						</CtaLink>
-					</div>
-				</div>
-				<div className='mt-16 border-t border-ed-ink pt-6'>
-					<Eyebrow>
-						{study.publishedShort} / {study.name}
-					</Eyebrow>
-					<dl className='m-0 mt-6 grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4'>
-						{index.map((item) => (
-							<div key={item.label} className='flex flex-col gap-2'>
-								<dt className='order-2 text-[0.875rem] text-ed-smoke'>{item.label}</dt>
-								<dd className='order-1 m-0 text-[clamp(2rem,4vw,3rem)] font-medium leading-[1.05] tracking-[-0.01em]'>{item.value}</dd>
-							</div>
-						))}
-					</dl>
-				</div>
-			</div>
-		</section>
+		<PaperHeader
+			kind={report.type}
+			date={study.published}
+			title={study.name}
+			subtitle={report.title}
+			byline={report.byline}
+			abstract={
+				<>
+					<p className='m-0'>
+						Agent evaluation usually starts after the trajectory has been captured. We ask the earlier question:{" "}
+						<strong className='text-ed-ink'>what did the recording fail to preserve?</strong>
+					</p>
+					<p className='m-0'>
+						We ran the same {study.tasks} browser-agent tasks once and kept two records of each run: screenshots, and structured page state
+						from W8, our Chromium-based browser. Across {study.criteria} audited rubric criteria, screenshots lacked the required evidence on{" "}
+						{study.screenshotRate} of criteria and W8 on {study.domRate}, {study.reduction} fewer gaps.
+					</p>
+				</>
+			}
+			stats={[
+				{value: String(study.tasks), label: "Paired browser tasks"},
+				{value: String(study.criteria), label: "Audited rubric criteria"},
+				{value: `${study.screenshotGaps} (${study.screenshotRate})`, label: "Screenshot-side missing evidence"},
+				{value: `${study.domGaps} (${study.domRate})`, label: "W8-side missing evidence"},
+			]}
+			sources={[
+				{label: "Technical report", href: links.benchReport},
+				{label: "Per-task results", href: links.benchResults},
+				{label: "Verifier", href: links.benchVerifier},
+				{label: "Task set", href: links.dataset},
+			]}
+		/>
 	);
 }
 
@@ -332,7 +323,7 @@ function PostTraining() {
 	);
 }
 
-function NextMeasurements() {
+export function NextMeasurements() {
 	return (
 		<Section>
 			<div className='flex flex-col gap-6'>
@@ -399,8 +390,8 @@ export default function ResearchPageContent() {
 			<Method />
 			<StorageMeasurement />
 			<PostTraining />
-			<NextMeasurements />
 			<Reproduce />
+			<Citation bibtex={citation} />
 		</main>
 	);
 }
