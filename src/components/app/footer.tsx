@@ -8,7 +8,7 @@ const footerColumns = [
 		links: [
 			{label: "Agent Hypervisor", href: "/#hypervisor"},
 			{label: "W8 browser evidence", href: "/#browser"},
-			{label: "Docs", href: "/docs/intro"},
+			{label: "Docs", href: "/docs"},
 		],
 	},
 	{

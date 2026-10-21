@@ -163,7 +163,7 @@ export default function WootzBrowser() {
 
 								<div className='flex flex-col gap-2 pt-2 sm:flex-row'>
 									<a
-										href='/docs/intro'
+										href='/docs'
 										className='inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-text-primary px-4 py-2 font-mono text-xs font-medium text-brand-base transition hover:bg-brand-accent-200 hover:text-brand-base sm:w-auto'
 									>
 										<svg

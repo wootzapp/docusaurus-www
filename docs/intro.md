@@ -1,6 +1,7 @@
 ---
 id: intro
 title: W8-RL Overview
+slug: /
 sidebar_position: 1
 ---
 W8-RL is a Ray-distributed rollout framework for web-agent RL. It uses a real browser (WootzApp) to generate **ChromiumRL visual + semantic rewards** and runs entirely in Docker.

@@ -137,7 +137,7 @@ baseUrl: "/",
         { to: "/#enterprise", label: "Enterprise Models", position: "left", activeBaseRegex: "^$" },
         { to: "/#technology", label: "Technology", position: "left", activeBaseRegex: "^$" },
         { to: "/research", label: "Research", position: "left" },
-        { to: "/docs/intro", label: "Docs", position: "left" },
+        { to: "/docs", label: "Docs", position: "left" },
       ],
     },
     prism: {
