@@ -18,7 +18,7 @@ function Arrow() {
 // Schematic of the capture pipeline: who works, where it is recorded, what it becomes.
 export default function TraceDiagram() {
 	return (
-		<figure className='ed-card m-0 flex flex-col p-5 sm:p-6' aria-label='Agents and experts are recorded by W8 and the hypervisor, then turned into training data and custom models.'>
+		<figure className='ed-card m-0 flex flex-col p-5 sm:p-6' aria-label='Agents and experts are recorded by W8 and the hypervisor, below the point where a model proxy stops, then turned into training data and custom models.'>
 			<div className='grid grid-cols-2 gap-3'>
 				{[
 					{icon: <LuBot />, label: "Agent", sub: "agent traces"},
@@ -37,6 +37,17 @@ export default function TraceDiagram() {
 			<Arrow />
 
 			<div className='flex flex-col gap-4 rounded-xl border border-ed-rule p-4'>
+				<div className='flex flex-col gap-2 text-ed-smoke'>
+					<div className='flex flex-wrap items-center justify-between gap-2'>
+						<LayerTag layer='proxy' />
+						<span className='text-[0.8125rem]'>prompts · completions</span>
+					</div>
+					<div className='flex items-center gap-2' aria-hidden='true'>
+						<span className='h-px flex-1 border-t border-dashed border-ed-rule' />
+						<span className='ed-mono text-[0.75rem] uppercase tracking-wider'>proxy-based capture ends here</span>
+						<span className='h-px flex-1 border-t border-dashed border-ed-rule' />
+					</div>
+				</div>
 				{lanes.map((lane) => (
 					<div key={lane.label} className='flex flex-col gap-2.5'>
 						<div className='flex flex-wrap items-center justify-between gap-2'>

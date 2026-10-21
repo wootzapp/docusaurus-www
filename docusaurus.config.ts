@@ -92,17 +92,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'WootzApp is the hypervisor for RL. Our OpenShell-based hypervisor records agent and expert work below the harness, and W8, our Chromium browser engine, records full page state. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {

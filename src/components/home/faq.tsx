@@ -14,6 +14,17 @@ const items = [
 		),
 	},
 	{
+		question: "How is this different from training on my production traffic?",
+		answer: (
+			<p className='m-0'>
+				Production traffic is captured at the model proxy: prompts in, completions out, and the tool calls that pass through the model&apos;s
+				context. The hypervisor also records the processes, network egress, policy decisions, and file changes behind each call, and W8
+				records the full page at every step. The training set holds what the agent did and what the page held, alongside what the model
+				said.
+			</p>
+		),
+	},
+	{
 		question: "What is a work trace?",
 		answer: (
 			<p className='m-0'>

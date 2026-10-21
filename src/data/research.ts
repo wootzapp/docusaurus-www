@@ -183,3 +183,42 @@ export const work: WorkEntry[] = [
 		result: "All /sandbox/work I/O through one daemon",
 	},
 ];
+
+// What reaches the training set, by capture point. `proxy: true` marks evidence that passes through a model proxy.
+export type EvidenceGroup = {
+	label: string;
+	layer?: "hypervisor" | "browser";
+	via?: string;
+	rows: {label: string; proxy: boolean}[];
+};
+
+export const evidenceGroups: EvidenceGroup[] = [
+	{
+		label: "Model layer",
+		via: "via gateway",
+		rows: [
+			{label: "Prompts in", proxy: true},
+			{label: "Completions out", proxy: true},
+			{label: "Tool calls and results in the model's context", proxy: true},
+		],
+	},
+	{
+		label: "Below the harness",
+		layer: "hypervisor",
+		rows: [
+			{label: "Processes", proxy: false},
+			{label: "Network egress, including denied attempts", proxy: false},
+			{label: "Policy decisions", proxy: false},
+			{label: "File changes", proxy: false},
+		],
+	},
+	{
+		label: "Inside the page",
+		layer: "browser",
+		rows: [
+			{label: "Full DOM state at every step", proxy: false},
+			{label: "Exact values and control states", proxy: false},
+			{label: "Off-screen content", proxy: false},
+		],
+	},
+];

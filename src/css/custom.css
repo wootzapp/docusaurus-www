@@ -897,6 +897,30 @@ html.docs-wrapper .table-of-contents__link--active {
 	}
 }
 
+/* Coverage matrix: evidence rows by capture-point columns. Column colour comes from <col>. */
+.ed-matrix {
+	display: table;
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.ed-matrix thead,
+.ed-matrix tbody,
+.ed-matrix tfoot,
+.ed-matrix tr,
+.ed-matrix tr:nth-child(2n) {
+	background-color: transparent;
+	border: 0;
+}
+
+.ed-matrix th,
+.ed-matrix td {
+	border: 0;
+	vertical-align: middle;
+}
+
 /* Cards, icon tiles and hero visual */
 /* Zero-specificity default so Tailwind bg-* utilities can override it. */
 :where(.ed-card) {

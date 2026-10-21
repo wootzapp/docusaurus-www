@@ -45,6 +45,7 @@ export default function Hero() {
 								</li>
 							))}
 						</ul>
+						<p className='ed-mono m-0 text-[0.9375rem] text-ed-accent-ink'>A model proxy sees none of this.</p>
 						<p className='m-0 max-w-[38rem] text-[1.0625rem] font-medium'>
 							Our team turns both into training data for frontier labs and custom models for enterprises.
 						</p>
