@@ -2,6 +2,19 @@ import {themes as prismThemes} from "prism-react-renderer";
 import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+// Code highlighting in the site palette: ink for code, smoke for comments and punctuation, accent for strings.
+const codeTheme = {
+  plain: {color: "#131315", backgroundColor: "#e9e7e3"},
+  styles: [
+    {types: ["comment", "prolog", "doctype", "cdata"], style: {color: "#4f4f53", fontStyle: "italic" as const}},
+    {types: ["punctuation", "operator"], style: {color: "#4f4f53"}},
+    {types: ["string", "char", "attr-value", "inserted"], style: {color: "#8a3f0e"}},
+    {types: ["keyword", "tag", "selector", "builtin", "boolean"], style: {color: "#131315", fontWeight: "500" as const}},
+    {types: ["function", "class-name", "attr-name", "property", "variable", "number", "constant", "symbol"], style: {color: "#131315"}},
+    {types: ["deleted"], style: {color: "#8a3f0e", textDecorationLine: "line-through" as const}},
+  ],
+};
+
 const config: Config = {
   title: "Wootzapp",
   tagline: "The hypervisor for RL.",
@@ -49,6 +62,9 @@ baseUrl: "/",
             //"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
+          blogTitle: "Blog",
+          blogDescription: "Notes on traces, evidence, and training data.",
+          blogSidebarTitle: "Recent posts",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -124,54 +140,9 @@ baseUrl: "/",
         { to: "/docs/intro", label: "Docs", position: "left" },
       ],
     },
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: codeTheme,
+      darkTheme: codeTheme,
     },
   } satisfies Preset.ThemeConfig,
 };
