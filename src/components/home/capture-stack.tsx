@@ -21,7 +21,7 @@ function Mark({captured, ours}: {captured: boolean; ours?: boolean}) {
 // Coverage matrix: what a model proxy's training set holds against what ours holds.
 export default function CaptureStack() {
 	return (
-		<Section id='capture'>
+		<Section id='capture' className='ed-grid-bg'>
 			<div className='grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.25fr)] lg:items-start lg:gap-20'>
 				<div className='flex flex-col gap-6'>
 					<Eyebrow>Where the data comes from</Eyebrow>
@@ -64,7 +64,7 @@ export default function CaptureStack() {
 							{evidenceGroups.map((group) => (
 								<React.Fragment key={group.label}>
 									<tr>
-										<th scope='rowgroup' colSpan={2} className='border-t border-ed-rule bg-ed-canvas px-5 pb-2 pt-3 text-left text-[0.8125rem] font-semibold text-ed-ink'>
+										<th scope='rowgroup' colSpan={2} className='border-t border-ed-rule bg-ed-canvas px-5 pb-2 pt-3 text-left text-[0.8125rem] font-medium text-ed-ink'>
 											{group.label}
 										</th>
 										<td className='border-t border-ed-canvas/20 px-2 pb-2 pt-3 text-center'>

@@ -31,7 +31,7 @@ export default function WorkList({size = "default"}: {size?: "default" | "large"
 									<span className='text-ed-accent-ink'>{entry.kind}</span>
 									{entry.date ? <span>· {entry.date}</span> : null}
 								</div>
-								<span className={clsx("font-semibold underline decoration-ed-rule underline-offset-[6px] group-hover:decoration-ed-ink", size === "large" ? "text-[1.75rem]" : "text-[1.5rem]")}>
+								<span className={clsx("font-medium underline decoration-ed-rule underline-offset-[6px] group-hover:decoration-ed-ink", size === "large" ? "text-[1.75rem]" : "text-[1.5rem]")}>
 									{entry.name}
 								</span>
 								<p className='m-0 max-w-[40rem] text-[1rem] leading-relaxed text-ed-graphite'>{entry.line}</p>
@@ -44,7 +44,7 @@ export default function WorkList({size = "default"}: {size?: "default" | "large"
 								</div>
 							</div>
 							<div className='flex items-center justify-between gap-6 sm:col-span-2 lg:col-span-1 lg:flex-col lg:items-end lg:justify-center lg:gap-3'>
-								<span className='text-[1.125rem] font-semibold leading-snug text-ed-ink lg:max-w-[15rem] lg:text-right'>{entry.result}</span>
+								<span className='text-[1.125rem] font-medium leading-snug text-ed-ink lg:max-w-[15rem] lg:text-right'>{entry.result}</span>
 								<span className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ed-rule text-ed-smoke transition-colors group-hover:border-ed-ink group-hover:bg-ed-ink group-hover:text-ed-canvas'>
 									<LuArrowRight aria-hidden='true' />
 								</span>

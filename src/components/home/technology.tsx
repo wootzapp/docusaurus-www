@@ -16,7 +16,7 @@ function BoundaryVisual() {
 			<div className='flex flex-col gap-3 rounded-2xl border border-ed-ink bg-ed-surface p-4'>
 				<span className='ed-eyebrow text-[0.75rem] text-ed-smoke'>OpenShell sandbox</span>
 				<div className='flex flex-1 flex-col items-center justify-center rounded-xl border border-dashed border-ed-rule bg-ed-canvas px-3 py-6 text-center'>
-					<span className='text-[1rem] font-semibold'>Your harness</span>
+					<span className='text-[1rem] font-medium'>Your harness</span>
 					<span className='ed-mono text-[0.75rem] text-ed-smoke'>unchanged</span>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ export default function Technology() {
 	useAnchor("hypervisor");
 	useAnchor("browser");
 	return (
-		<Section id='technology' tone='surface'>
+		<Section id='technology' tone='surface' className='ed-grid-bg'>
 			<div className='flex flex-col gap-5'>
 				<Eyebrow>The technology</Eyebrow>
 				<h2 className='ed-h2 m-0'>Two observation points a model proxy doesn&apos;t have.</h2>

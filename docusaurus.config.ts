@@ -23,7 +23,7 @@ baseUrl: "/",
 
   stylesheets: [
     {
-      href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:opsz,wght@14..32,400..700&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap",
       type: "text/css",
     },
   ],

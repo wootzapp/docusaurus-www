@@ -66,8 +66,8 @@ module.exports = {
 
       fontFamily: {
         matter: ["Matter", ...fontFamily.sans],
-        "sans-ed": ['"Inter"', ...fontFamily.sans],
-        "mono-ed": ['"IBM Plex Mono"', ...fontFamily.mono],
+        "sans-ed": ['"Instrument Sans"', ...fontFamily.sans],
+        "mono-ed": ['"JetBrains Mono"', ...fontFamily.mono],
       },
     },
   },

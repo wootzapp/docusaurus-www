@@ -180,7 +180,7 @@ function RowList({title, rows}: {title: string; rows: {label: string; copy: stri
 					<li key={row.label} className='grid grid-cols-[2.25rem_minmax(0,1fr)] gap-2 border-b border-ed-rule px-5 py-4 last:border-b-0 sm:px-6'>
 						<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
 						<div className='flex flex-col gap-1.5'>
-							<span className='font-semibold'>{row.label}</span>
+							<span className='font-medium'>{row.label}</span>
 							<span className='text-[0.9375rem] leading-relaxed text-ed-graphite'>{row.copy}</span>
 						</div>
 					</li>

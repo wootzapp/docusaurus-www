@@ -23,11 +23,11 @@ export default function HowItWorks() {
 					{steps.map((step, index) => (
 						<li key={step.title} className='relative flex flex-col gap-4'>
 							<span className='relative flex items-center gap-3'>
-								<span className='bg-ed-canvas pr-3 text-[4.5rem] font-semibold leading-none tracking-[-0.02em] text-ed-accent-ink'>
+								<span className='bg-ed-canvas pr-3 text-[4.5rem] font-normal leading-none tracking-[-0.02em] text-ed-accent-ink'>
 									{index + 1}
 								</span>
 							</span>
-							<h3 className='m-0 text-[1.5rem] font-semibold'>{step.title}</h3>
+							<h3 className='m-0 text-[1.5rem] font-medium'>{step.title}</h3>
 							<p className='m-0 text-[1rem] leading-relaxed text-ed-graphite'>{step.copy}</p>
 							{step.layer ? <LayerTag layer={step.layer} /> : null}
 						</li>

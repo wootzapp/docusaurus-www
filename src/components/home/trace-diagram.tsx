@@ -27,7 +27,7 @@ export default function TraceDiagram() {
 					<div key={source.label} className='flex items-center gap-3 rounded-xl border border-ed-rule bg-ed-canvas px-3 py-2.5'>
 						<span className='ed-icon h-9 w-9 text-base'>{source.icon}</span>
 						<span className='flex flex-col leading-tight'>
-							<span className='text-[0.9375rem] font-semibold'>{source.label}</span>
+							<span className='text-[0.9375rem] font-medium'>{source.label}</span>
 							<span className='ed-mono text-[0.75rem] text-ed-smoke'>{source.sub}</span>
 						</span>
 					</div>
@@ -77,7 +77,7 @@ export default function TraceDiagram() {
 					<div key={output.label} className='flex items-center gap-3 rounded-xl bg-ed-ink px-3 py-2.5 text-ed-canvas'>
 						<span className='ed-icon h-9 w-9 bg-white/10 text-base text-ed-accent'>{output.icon}</span>
 						<span className='flex flex-col leading-tight'>
-							<span className='text-[0.875rem] font-semibold'>{output.label}</span>
+							<span className='text-[0.875rem] font-medium'>{output.label}</span>
 							<span className='ed-mono text-[0.75rem] text-ed-canvas/70'>{output.sub}</span>
 						</span>
 					</div>

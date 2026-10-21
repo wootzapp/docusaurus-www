@@ -39,7 +39,7 @@ export default function Hero() {
 								<li key={layer.name} className='flex gap-4'>
 									<span className='ed-icon ed-icon--accent'>{layer.icon}</span>
 									<span className='flex flex-col gap-0.5'>
-										<span className='text-[1.0625rem] font-semibold'>{layer.name}</span>
+										<span className='text-[1.0625rem] font-medium'>{layer.name}</span>
 										<span className='text-[0.9375rem] leading-relaxed text-ed-graphite'>{layer.copy}</span>
 									</span>
 								</li>

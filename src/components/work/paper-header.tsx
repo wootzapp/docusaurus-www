@@ -60,7 +60,7 @@ export default function PaperHeader({
 					{stats.map((stat) => (
 						<div key={stat.label} className='flex flex-col gap-2'>
 							<dt className='order-2 text-[0.875rem] text-ed-smoke'>{stat.label}</dt>
-							<dd className='order-1 m-0 text-[clamp(1.75rem,3.6vw,2.75rem)] font-semibold leading-[1.05]'>{stat.value}</dd>
+							<dd className='order-1 m-0 text-[clamp(1.75rem,3.6vw,2.75rem)] font-medium leading-[1.05]'>{stat.value}</dd>
 						</div>
 					))}
 				</dl>

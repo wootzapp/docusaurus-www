@@ -104,7 +104,7 @@ function EvidenceFidelity() {
 					</p>
 				</div>
 				<div className='flex flex-col gap-8'>
-					<p className='m-0 font-semibold'>Exhibit 1 — Criteria with asymmetric missing source evidence. Lower is better.</p>
+					<p className='m-0 font-medium'>Exhibit 1 — Criteria with asymmetric missing source evidence. Lower is better.</p>
 					<table className='ed-table'>
 						<thead>
 							<tr>
@@ -119,14 +119,14 @@ function EvidenceFidelity() {
 								<td className='ed-num'>
 									{study.screenshotGaps} of {study.criteria}
 								</td>
-								<td className='ed-num font-semibold'>{study.screenshotRate}</td>
+								<td className='ed-num font-medium'>{study.screenshotRate}</td>
 							</tr>
 							<tr>
 								<td>W8 DOM-diff Optimized</td>
 								<td className='ed-num'>
 									{study.domGaps} of {study.criteria}
 								</td>
-								<td className='ed-num font-semibold text-ed-accent-ink'>{study.domRate}</td>
+								<td className='ed-num font-medium text-ed-accent-ink'>{study.domRate}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -174,7 +174,7 @@ function GapCategories() {
 				<div className='flex flex-col gap-6'>
 					<Eyebrow>Where evidence disappeared</Eyebrow>
 					<h2 className='ed-h3 m-0'>Each confirmed gap is assigned one primary category, so counts sum without double counting.</h2>
-					<p className='m-0 font-semibold'>Exhibit 2 — Source-evidence gaps by category.</p>
+					<p className='m-0 font-medium'>Exhibit 2 — Source-evidence gaps by category.</p>
 				</div>
 				<table className='ed-table'>
 					<thead>
@@ -193,9 +193,9 @@ function GapCategories() {
 							</tr>
 						))}
 						<tr>
-							<td className='font-semibold'>Total</td>
-							<td className='ed-num font-semibold'>{totals.screenshot}</td>
-							<td className='ed-num font-semibold'>{totals.dom}</td>
+							<td className='font-medium'>Total</td>
+							<td className='ed-num font-medium'>{totals.screenshot}</td>
+							<td className='ed-num font-medium'>{totals.dom}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -247,7 +247,7 @@ function Method() {
 							<li key={step.title} className='grid grid-cols-[2.5rem_minmax(0,1fr)] gap-2 border-b border-ed-rule py-5'>
 								<span className='ed-mono text-[0.8125rem] text-ed-accent-ink'>0{index + 1}</span>
 								<p className='m-0 text-[0.9375rem] leading-relaxed text-ed-graphite'>
-									<strong className='font-semibold text-ed-ink'>{step.title}</strong> {step.copy}
+									<strong className='font-medium text-ed-ink'>{step.title}</strong> {step.copy}
 								</p>
 							</li>
 						))}
