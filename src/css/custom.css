@@ -597,65 +597,66 @@ html.docs-wrapper .table-of-contents__link--active {
 	color: var(--docs-link);
 }
 
-/* Blog: list rows and post pages (components in src/theme/Blog*). Rhythm measured from a long-form reference; type is ours. */
-html.blog-wrapper body {
+/* Long-form prose: blog posts (src/theme/Blog*) and research entries (src/theme/Research*). Rhythm measured from a long-form reference; type is ours. */
+html.blog-wrapper body,
+html.research-wrapper body {
 	background-color: #f0f0f0;
 }
 
 /* Left column: Contents list. */
-.ed-blog-aside [class*="tableOfContents"] {
+.ed-toc [class*="tableOfContents"] {
 	position: static;
 	max-height: none;
 	overflow: visible;
 }
 
-.ed-blog-aside .table-of-contents {
+.ed-toc .table-of-contents {
 	padding: 0;
 	border-left: 0;
 	font-size: 0.875rem;
 	line-height: 1.4;
 }
 
-.ed-blog-aside .table-of-contents li {
+.ed-toc .table-of-contents li {
 	margin: 0 0 0.625rem;
 }
 
-.ed-blog-aside .table-of-contents ul {
+.ed-toc .table-of-contents ul {
 	padding-left: 1rem;
 	margin-top: 0.75rem;
 }
 
-.ed-blog-aside .table-of-contents__link {
+.ed-toc .table-of-contents__link {
 	display: block;
 	color: #131315;
 }
 
-.ed-blog-aside .table-of-contents ul .table-of-contents__link {
+.ed-toc .table-of-contents ul .table-of-contents__link {
 	color: #4f4f53;
 }
 
-.ed-blog-aside .table-of-contents__link:hover,
-.ed-blog-aside .table-of-contents__link--active {
+.ed-toc .table-of-contents__link:hover,
+.ed-toc .table-of-contents__link--active {
 	color: #8a3f0e;
 }
 
 /* Article: 19px on 1.65 leading, 24px between paragraphs. */
-.ed-blog-post .markdown {
+.ed-prose .markdown {
 	font-size: 1.1875rem;
 	line-height: 1.65;
 	letter-spacing: -0.005em;
 	color: #131315;
 }
 
-.ed-blog-post .markdown > p,
-.ed-blog-post .markdown > ul,
-.ed-blog-post .markdown > ol,
-.ed-blog-post .markdown > table,
-.ed-blog-post .markdown > .theme-code-block {
+.ed-prose .markdown > p,
+.ed-prose .markdown > ul,
+.ed-prose .markdown > ol,
+.ed-prose .markdown > table,
+.ed-prose .markdown > .theme-code-block {
 	margin: 0 0 1.5rem;
 }
 
-.ed-blog-post .markdown h2 {
+.ed-prose .markdown h2 {
 	margin: 3.5rem 0 1.25rem;
 	font-size: 2.125rem;
 	font-weight: 400;
@@ -663,7 +664,7 @@ html.blog-wrapper body {
 	letter-spacing: -0.03em;
 }
 
-.ed-blog-post .markdown h3 {
+.ed-prose .markdown h3 {
 	margin: 2.5rem 0 1rem;
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -671,17 +672,17 @@ html.blog-wrapper body {
 	letter-spacing: -0.02em;
 }
 
-.ed-blog-post .markdown h4 {
+.ed-prose .markdown h4 {
 	margin: 2rem 0 0.75rem;
 	font-size: 1.1875rem;
 	font-weight: 500;
 }
 
-.ed-blog-post .markdown strong {
+.ed-prose .markdown strong {
 	font-weight: 500;
 }
 
-.ed-blog-post .markdown a {
+.ed-prose .markdown a {
 	color: #131315;
 	font-weight: 400;
 	text-decoration: underline;
@@ -689,31 +690,31 @@ html.blog-wrapper body {
 	text-underline-offset: 0.18em;
 }
 
-.ed-blog-post .markdown a:hover {
+.ed-prose .markdown a:hover {
 	color: #8a3f0e;
 }
 
-.ed-blog-post .markdown ul,
-.ed-blog-post .markdown ol {
+.ed-prose .markdown ul,
+.ed-prose .markdown ol {
 	padding-left: 1.5rem;
 }
 
-.ed-blog-post .markdown li {
+.ed-prose .markdown li {
 	margin: 0 0 0.5rem;
 }
 
-.ed-blog-post .markdown li + li {
+.ed-prose .markdown li + li {
 	margin-top: 0;
 }
 
-.ed-blog-post .markdown img {
+.ed-prose .markdown img {
 	display: block;
 	max-width: 100%;
 	margin: 1.5rem 0;
 	border-radius: 8px;
 }
 
-.ed-blog-post .markdown blockquote {
+.ed-prose .markdown blockquote {
 	margin: 1.5rem 0;
 	padding: 0 0 0 1.25rem;
 	border-left: 2px solid #f28b32;
@@ -722,14 +723,14 @@ html.blog-wrapper body {
 	color: #3a3a3d;
 }
 
-.ed-blog-post .markdown hr {
+.ed-prose .markdown hr {
 	margin: 3.5rem 0 1.25rem;
 	border: 0;
 	border-top: 1px solid #131315;
 }
 
 /* Code: flat panels, no shadow. */
-.ed-blog-post .markdown :not(pre) > code {
+.ed-prose .markdown :not(pre) > code {
 	font-size: 0.8em;
 	padding: 0.125em 0.375em;
 	border: 0;
@@ -739,24 +740,24 @@ html.blog-wrapper body {
 	vertical-align: baseline;
 }
 
-.ed-blog-post .theme-code-block {
+.ed-prose .theme-code-block {
 	border-radius: 8px;
 	box-shadow: none;
 }
 
-.ed-blog-post .theme-code-block,
-.ed-blog-post .prism-code {
+.ed-prose .theme-code-block,
+.ed-prose .prism-code {
 	background-color: #e9e7e3;
 }
 
-.ed-blog-post .prism-code {
+.ed-prose .prism-code {
 	padding: 1.25rem;
 	border-radius: 8px;
 	font-size: 0.875rem;
 	line-height: 1.55;
 }
 
-.ed-blog-post pre code {
+.ed-prose pre code {
 	padding: 0;
 	border: 0;
 	background: transparent;
@@ -764,7 +765,7 @@ html.blog-wrapper body {
 }
 
 /* Admonitions in posts: a neutral note, no colour coding. */
-.ed-blog-post .theme-admonition {
+.ed-prose .theme-admonition {
 	--ifm-alert-background-color: transparent;
 	--ifm-alert-border-color: #131315;
 	--ifm-alert-foreground-color: #131315;
@@ -778,7 +779,7 @@ html.blog-wrapper body {
 	color: #131315;
 }
 
-.ed-blog-post .theme-admonition [class*="admonitionHeading"] {
+.ed-prose .theme-admonition [class*="admonitionHeading"] {
 	margin-bottom: 0.5rem;
 	font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 	font-size: 0.75rem;
@@ -788,16 +789,44 @@ html.blog-wrapper body {
 	color: #4f4f53;
 }
 
-.ed-blog-post .theme-admonition [class*="admonitionIcon"] {
+.ed-prose .theme-admonition [class*="admonitionIcon"] {
 	display: none;
 }
 
-.ed-blog-post .theme-admonition p:last-child {
+.ed-prose .theme-admonition p:last-child {
 	margin-bottom: 0;
 }
 
-/* Tables: full width, mono column heads, a hairline under each row. */
-.ed-blog-post .markdown table {
+/* Blocks placed from markdown: figures (EvidenceBars), specimens and captions. */
+.ed-prose .markdown > :first-child {
+	margin-top: 0;
+}
+
+.ed-prose .markdown > figure,
+.ed-prose .markdown > .ed-specimen {
+	margin: 0 0 1.5rem;
+}
+
+.ed-prose .markdown .ed-caption {
+	display: block;
+	margin: -0.75rem 0 1.5rem;
+	font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.75rem;
+	line-height: 1.6;
+	color: #4f4f53;
+}
+
+/* Tables: full width, mono column heads, a hairline under each row. Wide ones scroll (table wrapper in src/theme/MDXComponents). */
+.ed-prose .markdown .ed-table-scroll {
+	margin: 0 0 1.5rem;
+	overflow-x: auto;
+}
+
+.ed-prose .markdown .ed-table-scroll > table {
+	margin: 0;
+}
+
+.ed-prose .markdown table {
 	display: table;
 	width: 100%;
 	border-collapse: collapse;
@@ -805,14 +834,14 @@ html.blog-wrapper body {
 	line-height: 1.5;
 }
 
-.ed-blog-post .markdown thead,
-.ed-blog-post .markdown tr,
-.ed-blog-post .markdown tr:nth-child(2n) {
+.ed-prose .markdown thead,
+.ed-prose .markdown tr,
+.ed-prose .markdown tr:nth-child(2n) {
 	background-color: transparent;
 	border: 0;
 }
 
-.ed-blog-post .markdown th {
+.ed-prose .markdown th {
 	padding: 0.5rem 1rem 0.5rem 0;
 	border: 0;
 	border-bottom: 1px solid #131315;
@@ -826,7 +855,7 @@ html.blog-wrapper body {
 	color: #4f4f53;
 }
 
-.ed-blog-post .markdown td {
+.ed-prose .markdown td {
 	padding: 0.5rem 1rem 0.5rem 0;
 	border: 0;
 	border-bottom: 1px solid #c9c6c2;
@@ -834,7 +863,7 @@ html.blog-wrapper body {
 }
 
 /* The article ends on a rule before the newer/older links. */
-.ed-blog-post {
+.ed-prose {
 	padding-bottom: 2.5rem;
 	border-bottom: 1px solid #c9c6c2;
 }

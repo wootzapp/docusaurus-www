@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import WorkList from "../work/work-list";
+import {useResearchEntries} from "../work/entries";
 import useAnchor from "../editorial/use-anchor";
 import {links} from "@site/src/data/research";
 
 export default function OurWork() {
 	useAnchor("research");
+	const entries = useResearchEntries();
 	return (
 		<section id='research' className='scroll-mt-20 border-t border-ed-rule bg-ed-surface text-ed-ink'>
 			<div className='ed-container py-16 sm:py-20 lg:py-24'>
@@ -15,7 +17,7 @@ export default function OurWork() {
 						All work →
 					</Link>
 				</div>
-				<WorkList />
+				<WorkList entries={entries} />
 				<p className='m-0 pt-8 text-[0.9375rem] text-ed-graphite'>
 					For research and data partnerships:{" "}
 					<a href={`mailto:${links.email}`} className='ed-link'>

@@ -80,7 +80,7 @@ export function ListRow({number, children}: {number?: number; children: ReactNod
 // Post view: the article body only. The page component renders the title band and the metadata rail.
 function PostView({children}: {children: ReactNode}): ReactNode {
 	return (
-		<BlogPostItemContainer className='ed-blog-post'>
+		<BlogPostItemContainer className='ed-prose'>
 			<BlogPostItemContent>{children}</BlogPostItemContent>
 		</BlogPostItemContainer>
 	);

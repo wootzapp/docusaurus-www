@@ -82,7 +82,7 @@ function BlogPostPageContent({children}: {children: ReactNode}): ReactNode {
 								) : null}
 							</dl>
 							{showToc ? (
-								<div className='ed-blog-aside hidden flex-col gap-3 border-t border-ed-rule pt-4 lg:flex'>
+								<div className='ed-toc hidden flex-col gap-3 border-t border-ed-rule pt-4 lg:flex'>
 									<p className='ed-eyebrow m-0 text-ed-smoke'>Contents</p>
 									<TOC toc={toc} minHeadingLevel={minLevel} maxHeadingLevel={maxLevel} />
 								</div>

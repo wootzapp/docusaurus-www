@@ -1,6 +1,7 @@
 import {themes as prismThemes} from "prism-react-renderer";
 import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import researchEntries from "./plugins/research-entries";
 
 // Code highlighting in the site palette: ink for code, smoke for comments and punctuation, accent for strings.
 const codeTheme = {
@@ -96,6 +97,30 @@ baseUrl: "/",
         ],
       },
     ],
+    // /research: markdown entries in ./research, rendered by the templates in src/theme/Research*.
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "research",
+        path: "research",
+        routeBasePath: "research",
+        blogTitle: "Our work",
+        blogDescription: "Preprints, benchmarks, datasets, and open-source infrastructure from WootzApp Research.",
+        blogListComponent: "@theme/ResearchListPage",
+        blogPostComponent: "@theme/ResearchPostPage",
+        postsPerPage: "ALL",
+        blogSidebarCount: 0,
+        showReadingTime: false,
+        archiveBasePath: null,
+        onUntruncatedBlogPosts: "ignore",
+        feedOptions: {
+          type: ["rss", "atom"],
+          title: "WootzApp Research",
+          description: "Preprints, benchmarks, datasets, and open-source infrastructure from WootzApp Research.",
+        },
+      },
+    ],
+    researchEntries,
   ],
 
   themeConfig: {
