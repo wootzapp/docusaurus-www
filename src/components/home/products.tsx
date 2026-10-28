@@ -16,6 +16,7 @@ type Product = {
 	line: string;
 	points: {icon: ReactNode; label: string; layer: Layer}[];
 	cta: string;
+	href?: string;
 };
 
 // Three points per product, each tied to the layer that makes it possible.
@@ -46,7 +47,8 @@ const products: Product[] = [
 			{icon: <LuCircleCheck />, label: "Only verified runs in training", layer: "browser"},
 			{icon: <LuRoute />, label: "Frontier fallback at your gateway", layer: "hypervisor"},
 		],
-		cta: "Discuss a custom model",
+		cta: "See W8 Intelligence",
+		href: "/intelligence",
 	},
 ];
 
@@ -90,7 +92,7 @@ export default function Products() {
 								</li>
 							))}
 						</ul>
-						<CtaLink href={links.booking} variant={product.dark ? "inverse" : "primary"} className='w-fit'>
+						<CtaLink href={product.href ?? links.booking} variant={product.dark ? "inverse" : "primary"} className='w-fit'>
 							{product.cta}
 						</CtaLink>
 					</div>

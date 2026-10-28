@@ -24,7 +24,7 @@ const footerColumns = [
 		title: "Products",
 		links: [
 			{label: "Data and environments", href: "/#model-labs"},
-			{label: "Enterprise models", href: "/#enterprise"},
+			{label: "Enterprise models", href: "/intelligence"},
 		],
 	},
 	{

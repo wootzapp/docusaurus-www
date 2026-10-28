@@ -2,12 +2,13 @@ import React, {type ReactNode} from "react";
 import clsx from "clsx";
 import useAnchor from "./use-anchor";
 
-type Tone = "canvas" | "surface" | "ink";
+export type Tone = "canvas" | "surface" | "ink" | "tint";
 
 const toneClasses: Record<Tone, string> = {
 	canvas: "bg-ed-canvas text-ed-ink",
 	surface: "bg-ed-surface text-ed-ink",
 	ink: "bg-ed-ink text-ed-canvas",
+	tint: "bg-ed-accent-tint text-ed-ink",
 };
 
 export default function Section({

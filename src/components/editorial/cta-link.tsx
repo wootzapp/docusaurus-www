@@ -2,7 +2,7 @@ import React, {type ReactNode} from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 
-type Variant = "primary" | "secondary" | "inverse" | "text";
+type Variant = "primary" | "secondary" | "inverse" | "outline" | "text";
 
 export default function CtaLink({
 	href,

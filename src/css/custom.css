@@ -2283,3 +2283,48 @@ html.blog-wrapper .pagination-nav__label {
 		opacity: 0.18;
 	}
 }
+
+/* W8 Intelligence (/intelligence): a brief laid out like a document, on the editorial tokens.
+   White paper, a numeral gutter with a vertical spine, square corners, ledger lines in the ink hero. */
+.intel {
+	background-color: #ffffff;
+}
+
+.intel .ed-btn {
+	border-radius: 4px;
+}
+
+.intel-display {
+	font-size: clamp(2.75rem, 7.2vw, 6.75rem);
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -0.045em;
+}
+
+.intel-ledger {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.intel-ledger::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-image: repeating-linear-gradient(to bottom, rgba(240, 240, 240, 0.09) 0 1px, transparent 1px 2.5rem);
+	mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 65%, transparent);
+}
+
+/* Outline button for ink backgrounds. */
+.ed-btn--outline {
+	background-color: transparent;
+	border-color: rgba(240, 240, 240, 0.5);
+	color: #f0f0f0;
+}
+
+.ed-btn--outline:hover {
+	background-color: #f0f0f0;
+	border-color: #f0f0f0;
+	color: #131315;
+}

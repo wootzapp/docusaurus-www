@@ -2,14 +2,22 @@ import React from "react";
 import CtaLink from "../editorial/cta-link";
 import {links} from "@site/src/data/research";
 
-// Solid accent band to close the page.
-export default function FinalCta() {
+// Solid accent band to close a page.
+export default function FinalCta({
+	headline = "What your agent did matters more than what it said.",
+	cta = "Talk to us",
+	href = links.booking,
+}: {
+	headline?: string;
+	cta?: string;
+	href?: string;
+}) {
 	return (
 		<section className='bg-ed-accent text-ed-ink'>
 			<div className='ed-container flex flex-col items-start gap-10 py-20 sm:py-28 lg:flex-row lg:items-end lg:justify-between lg:py-32'>
-				<h2 className='ed-display m-0 max-w-[52rem]'>What your agent did matters more than what it said.</h2>
-				<CtaLink href={links.booking} className='shrink-0'>
-					Talk to us
+				<h2 className='ed-display m-0 max-w-[52rem]'>{headline}</h2>
+				<CtaLink href={href} className='shrink-0'>
+					{cta}
 				</CtaLink>
 			</div>
 		</section>
