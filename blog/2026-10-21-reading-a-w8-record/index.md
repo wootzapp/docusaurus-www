@@ -62,10 +62,10 @@ The record also keeps the interactive elements, each with a stable id the agent 
 | Commit | `2b3ec34` | `2b3ec34` |
 | Release date | "2 weeks ago" | `02 Sep 17:40` |
 
-Both records answer two of the three criteria. On the third, the screenshot holds a relative date and W8 holds the exact one, which is why Task 19 is the "exact release date" example in Table 4 of the technical report.
+Both records answer two of the three criteria. On the third, the screenshot holds a relative date and W8 holds the exact one, which is why Task 19 is the exact release date finding (criterion C3) in the technical report's criterion table.
 
 :::note
-Across the full benchmark, screenshots lacked required evidence on 26 of 639 audited criteria (4.07%) and W8 records on 2 (0.31%). The counts, the method, and the per-task recordings are on the [benchmark page](/research/w8-domdiff-bench).
+Across the full benchmark, screenshots lacked required evidence on 151 of 642 audited criteria (23.52%) and W8 records on 5 (0.78%). Exact page identity accounts for 117 of the screenshot losses; with the URL category set aside, screenshots still lose evidence on 34 criteria (5.30%). The counts, the method, and the per-task recordings are on the [benchmark page](/research/w8-domdiff-bench).
 :::
 
 > We built `w8-core`, our custom Chromium-based browser infrastructure, DOM-diff Optimized, a compact structured representation of captured page states, and `w8-domdiff-bench`, a paired evaluation suite for browser-agent evidence.

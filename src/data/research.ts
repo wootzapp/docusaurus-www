@@ -1,5 +1,5 @@
 // Figures and links shared by the homepage and the research thumbnails. The research entries themselves are markdown files in /research.
-// Figures come from the w8-domdiff-bench technical report (branch w8-reproducible, Oct 1 2026).
+// Figures come from the w8-domdiff-bench technical report (branch w8-reproducible; audit synced Oct 26 2026, README revised Oct 27 2026).
 // Do not edit a number here without changing the published report first.
 
 export const links = {
@@ -8,11 +8,15 @@ export const links = {
 	benchRepo: "https://github.com/wootzapp/w8-domdiff-bench",
 	benchBranch: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible",
 	benchReport: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md",
+	benchTechnicalReport: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md",
 	benchMetric:
-		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#42-measuring-evidence-preservation",
-	benchLimits: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#6-capabilities-and-boundaries",
+		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#paired-source-evidence-loss",
+	benchLimits: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#scope-and-limitations",
 	benchExamples:
-		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#53-preserving-the-details-agents-need",
+		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#source-evidence-gaps-by-task-and-criterion",
+	benchCategories: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/evidence-categories.md",
+	benchSummary: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/results/summary.json",
+	benchEvaluations: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks/tree/main/evaluation",
 	benchResults: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/results",
 	benchVerifier: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/w8bench/verifier",
 	dataset: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks",
@@ -24,17 +28,21 @@ export const links = {
 
 export const study = {
 	name: "W8 DOM-diff Bench",
-	published: "October 1, 2026",
+	published: "October 27, 2026",
 	publishedShort: "Oct 2026",
 	tasks: 100,
-	criteria: 639,
-	screenshotGaps: 26,
-	domGaps: 2,
-	screenshotRate: "4.07%",
-	domRate: "0.31%",
-	screenshotRateValue: 4.07,
-	domRateValue: 0.31,
-	reduction: "92.3%",
+	criteria: 642,
+	screenshotGaps: 151,
+	domGaps: 5,
+	screenshotRate: "23.52%",
+	domRate: "0.78%",
+	screenshotRateValue: 23.52,
+	domRateValue: 0.78,
+	reduction: "96.7%",
+	// Sensitivity view from the same audit: primary URL-category losses removed, all 642 criteria retained.
+	nonUrl: {screenshotGaps: 34, screenshotRate: "5.30%", screenshotRateValue: 5.3, reduction: "85.3%"},
+	affectedCriteria: 154,
+	affectedTasks: 91,
 };
 
 // Paired recordings for one task in the published dataset.
@@ -43,7 +51,7 @@ export function taskDataUrl(id: number, run: "dom" | "ss"): string {
 }
 
 // Task 19, verbatim from the published recordings (data-ss/task_19/screenshot0.png, data-dom/task_19/dom_model0.txt).
-// It is the "Exact release date" row of Table 4 in the technical report.
+// It is the Task 19 C3 "Exact text and values" finding in the technical report's criterion table.
 export const taskNineteen = {
 	id: 19,
 	title: "GitHub release research",
@@ -55,7 +63,7 @@ export const taskNineteen = {
 	domText: "ethche released this 02 Sep 17:40",
 };
 
-// Browser Agent Tasks dataset, counted from the Hugging Face repository (Sep 30 2026 revision).
+// Browser Agent Tasks dataset, counted from the Hugging Face repository (Oct 27 2026 revision).
 export const tasksDataset = {
 	name: "Browser Agent Tasks",
 	tasks: 100,
@@ -63,7 +71,8 @@ export const tasksDataset = {
 	categories: 99,
 	screenshots: 465,
 	domStates: 465,
-	// Verbatim record browser_task_019: the Table 4 "Exact release date" task.
+	evaluations: 100,
+	// Verbatim record browser_task_019: the exact release date task (criterion C3 in the report).
 	sample: {
 		task_id: "browser_task_019",
 		category: "github release research",

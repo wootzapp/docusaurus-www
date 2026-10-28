@@ -1,41 +1,44 @@
 ---
 title: Browser Agent Tasks
 slug: browser-agent-tasks
-date: 2026-09-30
+date: 2026-10-27T09:00:00Z
 kind: Dataset
-description: Public-web browser tasks with paired screenshot and W8 recordings of each run. The data behind W8 DOM-diff Bench.
+description: Public-web browser tasks with paired screenshot and W8 recordings of each run, the raw recordings, and the saved evaluations behind W8 DOM-diff Bench.
 subtitle: WootzappLab/browser-agent-tasks on Hugging Face
 byline: WootzApp Research
 abstract: |
   100 multi-step public-web tasks, each with its paired recordings: the screenshot run and the W8 run of the same task, with final answers and agent logs. Each task states the instruction, a public starting page, when to stop, and what the agent must leave untouched.
 
-  This is the data behind W8 DOM-diff Bench.
+  This is the data behind W8 DOM-diff Bench. The October 2026 revision adds the raw recordings and the saved evaluations: a frozen rubric, both verifier results, and the evidence audit for every task.
 stats:
   - value: "100"
     label: Tasks
   - value: "90"
     label: Distinct sites
-  - value: "465"
-    label: Screenshots (screenshot runs)
-  - value: "465"
-    label: DOM-model states (W8 runs)
+  - value: "930"
+    label: Recorded browser states, 465 per side
+  - value: "100"
+    label: Saved evaluation runs
 sources:
   - label: Hugging Face
     href: https://huggingface.co/datasets/WootzappLab/browser-agent-tasks
 result: 930 recorded browser states
-facts: [100 tasks, 90 sites, Paired runs]
+facts: [100 tasks, 90 sites, Paired runs, Saved audits]
 thumbnail: tasks
 ---
 
 ## Layout
 
-`tasks.jsonl` holds one task per line. Under `trajectories/`, each task has one folder per recording.
+`tasks.jsonl` holds one task per line. Under `trajectories/`, each task has one folder per recording. `recordings/` keeps the raw collection artifacts, and `evaluation/` keeps the saved comparison for each task.
 
 | Path | Contents |
 | :--- | :--- |
 | `tasks.jsonl` | 100 task definitions |
 | `trajectories/data-ss/task_NN` | `screenshotN.png`, `final_answer.json`, `task_data.json`, `web_surfer.log` |
 | `trajectories/data-dom/task_NN` | `dom_modelN.txt`, `final_answer.json`, `task_data.json`, `web_surfer.log` |
+| `recordings/<run-id>/` | Raw collection: `manifest.json`, `decisions.jsonl`, `trajectory.jsonl`, and one `steps/step_NNN/` per captured state with `dom.json`, `dom_full.txt`, `dom_model.txt`, and `screenshot.png` |
+| `evaluation/task_NN/<run-id>/` | `frozen_rubric.json`, `run_manifest.json`, `evidence_audit.json`, and the screenshot and DOM verifier results |
+| `EVALUATIONS.md`, `EVIDENCE-CATEGORIES.md`, `RECORDINGS.md` | Aggregate findings, the six loss categories, and the recording layout |
 
 The benchmark built on these recordings is [W8 DOM-diff Bench](/research/w8-domdiff-bench).
 
@@ -54,7 +57,7 @@ Six fields per task.
 
 ## Example: one task, both recordings
 
-This is the “exact release date” example in Table 4 of the W8 DOM-diff Bench report. The screenshot run shows a relative date; the W8 run keeps the exact timestamp.
+This is the exact release date finding in the W8 DOM-diff Bench report (Task 19, criterion C3). The screenshot run shows a relative date; the W8 run keeps the exact timestamp.
 
 ```json title="tasks.jsonl · browser_task_019"
 {
@@ -83,6 +86,10 @@ tasks = load_dataset(
 )
 ```
 
+## Collection
+
+Tasks ran in W8 through agent-browser. The recorder captured an initial state and one state after every executed action. The acting model worked from the DOM observations; screenshots were stored for the screenshot verifier and for inspection.
+
 ## Scope
 
-Every task runs on the public web. Agents do not sign in, purchase, submit irreversible forms, or start navigation.
+Every task runs on the public web. Agents do not sign in, purchase, submit irreversible forms, or start navigation. The dataset is published under the Apache 2.0 license.

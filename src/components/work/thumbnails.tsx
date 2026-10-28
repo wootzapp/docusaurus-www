@@ -22,7 +22,7 @@ function BenchThumb() {
 					<div className='h-1.5 overflow-hidden rounded-full bg-white/10'>
 						<div
 							className={row.accent ? "h-full rounded-full bg-ed-accent" : "h-full rounded-full bg-ed-canvas"}
-							style={{width: `${Math.max((row.value / 5) * 100, 3)}%`}}
+							style={{width: `${Math.max((row.value / 25) * 100, 3)}%`}}
 						/>
 					</div>
 				</div>
