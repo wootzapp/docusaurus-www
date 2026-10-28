@@ -105,7 +105,7 @@ baseUrl: "/",
         path: "research",
         routeBasePath: "research",
         blogTitle: "Our work",
-        blogDescription: "Preprints, benchmarks, datasets, and open-source infrastructure from WootzApp Research.",
+        blogDescription: "Preprints, benchmarks, datasets, and open-source code from WootzApp Research.",
         blogListComponent: "@theme/ResearchListPage",
         blogPostComponent: "@theme/ResearchPostPage",
         postsPerPage: "ALL",
@@ -116,7 +116,7 @@ baseUrl: "/",
         feedOptions: {
           type: ["rss", "atom"],
           title: "WootzApp Research",
-          description: "Preprints, benchmarks, datasets, and open-source infrastructure from WootzApp Research.",
+          description: "Preprints, benchmarks, datasets, and open-source code from WootzApp Research.",
         },
       },
     ],
@@ -133,17 +133,17 @@ baseUrl: "/",
     metadata: [
     // 1) Standard meta description
     {
-      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said. Our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser, records the whole page. Our team turns both into datasets, evals, and RL environments for frontier labs, and small models for enterprises.',
     },
     // 2) Open Graph description (used by Telegram, Facebook, LinkedIn…)
     {
       property: 'og:description',
-      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said. Our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser, records the whole page. Our team turns both into datasets, evals, and RL environments for frontier labs, and small models for enterprises.',
     },
     // 3) Twitter Card description
     {
       name: 'twitter:description',
-      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said; our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser engine, records the full page. Our team turns both into datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises.',
+      content: 'WootzApp is the hypervisor for RL. A model proxy records what the model said. Our OpenShell-based hypervisor records what the agent did below the harness, and W8, our Chromium browser, records the whole page. Our team turns both into datasets, evals, and RL environments for frontier labs, and small models for enterprises.',
     },
     // (you can still leave twitter:card or override it to “summary_large_image”)
     {

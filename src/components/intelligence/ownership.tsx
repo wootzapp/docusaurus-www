@@ -2,9 +2,9 @@ import React from "react";
 import Chapter from "./chapter";
 
 const items = [
-	{title: "Your data", copy: "Recorded for your model alone. Enterprise training and model-lab data are separate contracts."},
+	{title: "Your data", copy: "Recorded for your model alone. Enterprise data and lab data sit under separate contracts."},
 	{title: "Your model", copy: "The weights, evals, and environments built from your runs are yours to run and improve."},
-	{title: "Your perimeter", copy: "The model serves inside your infrastructure, with frontier fallback through your gateway."},
+	{title: "Your perimeter", copy: "The model serves inside your walls, with frontier fallback through your gateway."},
 ];
 
 export default function Ownership() {
@@ -14,7 +14,7 @@ export default function Ownership() {
 			tone='tint'
 			title='You own the intelligence.'
 			titleClassName='ed-statement'
-			lede='Your edge is the work your people already do. A model trained on that work belongs to you.'
+			lede='Your edge is the work your people do today. A model trained on that work belongs to you.'
 		>
 			<div className='grid grid-cols-1 border-t border-ed-ink/25 sm:grid-cols-3'>
 				{items.map((item) => (

@@ -8,7 +8,7 @@ import useAnchor from "../editorial/use-anchor";
 import LayerTag, {type Layer} from "./layer-tag";
 import {links} from "@site/src/data/research";
 
-const events = ["Model request", "Proxy decision", "Workspace update", "Egress attempt"];
+const events = ["Model request", "Proxy decision", "Workspace update", "Network call"];
 
 function BoundaryVisual() {
 	return (
@@ -41,7 +41,7 @@ const rows: {id: string; layer: Layer; title: string; copy: string; contrast: st
 		id: "hypervisor",
 		layer: "hypervisor",
 		title: "Below the harness",
-		copy: "An OpenShell-based sandbox records processes, egress, policy decisions, and file changes, whatever the agent logs.",
+		copy: "An OpenShell sandbox records each process, network call, allow or deny, and file change. It does this whatever the agent logs.",
 		contrast: "A proxy sees the model call. The hypervisor sees what the call set in motion.",
 		visual: <BoundaryVisual />,
 		href: links.openrindArchitecture,
@@ -51,7 +51,7 @@ const rows: {id: string; layer: Layer; title: string; copy: string; contrast: st
 		id: "browser",
 		layer: "browser",
 		title: "Inside the browser",
-		copy: "Our Chromium browser records the page state screenshots miss: exact values, controls, and off-screen content.",
+		copy: "Our Chromium browser records what screenshots miss: exact values, control states, and content off screen.",
 		contrast: "A proxy sees the screenshot the agent sent to the model. W8 sees the whole page.",
 		visual: <PageVisual />,
 		href: "/research/w8-domdiff-bench",
@@ -67,7 +67,7 @@ export default function Technology() {
 		<Section id='technology' tone='surface' className='ed-grid-bg'>
 			<div className='flex flex-col gap-5'>
 				<Eyebrow>The technology</Eyebrow>
-				<h2 className='ed-h2 m-0'>Two observation points a model proxy doesn&apos;t have.</h2>
+				<h2 className='ed-h2 m-0'>Two vantage points a model proxy lacks.</h2>
 			</div>
 			<div className='mt-14 flex flex-col gap-16 lg:gap-24'>
 				{rows.map((row, index) => (

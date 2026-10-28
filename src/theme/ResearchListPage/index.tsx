@@ -25,7 +25,7 @@ export default function ResearchListPage(props: Props): ReactNode {
 								<Eyebrow>WootzApp Research</Eyebrow>
 								<h1 className='ed-display ed-display--hero m-0'>{metadata.blogTitle}</h1>
 								<p className='ed-lede m-0 text-ed-graphite'>
-									Preprints, benchmarks, datasets, and open-source infrastructure. Each entry links to its full write-up, data, and code.
+									Preprints, benchmarks, datasets, and open-source code. Each entry links to its write-up, data, and code.
 								</p>
 							</div>
 						</div>

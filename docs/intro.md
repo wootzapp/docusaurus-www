@@ -4,9 +4,9 @@ title: W8-RL Overview
 slug: /
 sidebar_position: 1
 ---
-W8-RL is a Ray-distributed rollout framework for web-agent RL. It uses a real browser (WootzApp) to generate **ChromiumRL visual + semantic rewards** and runs entirely in Docker.
+W8-RL is a rollout framework for web-agent RL, distributed with Ray. It uses a real browser (WootzApp) to produce **ChromiumRL visual and semantic rewards**. It runs in Docker only.
 
-W8-RL exposes **three compatibility paths** on top of the same EnvActor core:
+W8-RL offers **three ways in**, all on the same EnvActor core:
 
 - **SkyRL** (BaseTextEnv interface, Ray-backed)
 - **OpenEnv** (HTTP via Ray Serve + FastAPI)
@@ -23,7 +23,7 @@ Everything must run in Docker. Do not run Python or tests on the host.
 Use the provided scripts or `docker compose run`.
 :::
 
-If you want a quick start, see [Getting Started](getting-started/quickstart).
+For a quick start, see [Getting Started](getting-started/quickstart).
 
 ## Tested with
 
@@ -32,30 +32,30 @@ If you want a quick start, see [Getting Started](getting-started/quickstart).
 
 ## W8-RL Differentiators
 
-What W8-RL does well compared to other web-agent RL systems:
+What W8-RL does well:
 
 | Capability | W8-RL Approach | Benefit |
 |------------|----------------|---------|
-| **Async rollouts** | FairScheduler with no synchronization barriers | Eliminates GPU idle time from straggler rollouts |
+| **Async rollouts** | FairScheduler with no synchronization barriers | No GPU idle time from slow rollouts |
 | **Queue scheduling** | Per-environment OperationDispatcher with separate queues by operation type | Handles long-tail latency; navigation can't block screenshots |
-| **Batch collection** | Timeout OR batch_size triggers | Smooth GPU utilization without CPU spikes |
-| **CDP resilience** | 8-state connection machine with automatic reconnection | Production-grade reliability for flaky browser connections |
-| **Browser isolation** | Full emulator pool with per-rollout isolation | No cross-contamination between parallel trajectories |
-| **ChromiumRL signals** | Paint time, CLS, LCP, FCP from browser internals | Performance-aware rewards beyond visual similarity |
+| **Batch collection** | Timeout OR batch_size triggers | Smooth GPU use without CPU spikes |
+| **CDP resilience** | 8-state connection machine with automatic reconnection | Survives flaky browser connections |
+| **Browser isolation** | Full emulator pool with per-rollout isolation | No cross-talk between parallel rollouts |
+| **ChromiumRL signals** | Paint time, CLS, LCP, FCP from browser internals | Rewards that see performance as well as looks |
 | **GPU pipelining** | `screenshot_queue_size=4` streams observations | Overlaps screenshot capture with inference |
-| **GRPO grouping** | K trajectories per task with relative advantage | Variance reduction within task groups |
+| **GRPO grouping** | K trajectories per task with relative advantage | Lower variance within task groups |
 
 ### Long-Tail Latency Handling
 
-Browser simulations have brutal long-tail latency—some rollouts take far longer than others while GPUs sit idle waiting. W8-RL addresses this:
+Browser runs have long-tail latency. Some rollouts take far longer than others while GPUs sit idle. W8-RL handles this in three ways:
 
-1. **Per-task timeout**: Stuck rollouts get killed, not waited on
-2. **Non-blocking threads**: While one rollout hangs, other threads utilize the GPU
-3. **Intervention only when needed**: Manual intervention only when (a) all threads finish while few still hang, or (b) one thread takes unexpectedly long
+1. **Per-task timeout**: stuck rollouts get killed.
+2. **Non-blocking threads**: while one rollout hangs, other threads use the GPU.
+3. **Intervention only when needed**: a person steps in only when all threads finish while a few hang, or when one thread runs far too long.
 
 ## Improvement Roadmap
 
-Planned enhancements based on research analysis:
+Planned work:
 
 | Gap | Priority | Approach | Status |
 |-----|----------|----------|--------|
@@ -68,7 +68,7 @@ Planned enhancements based on research analysis:
 
 ### Difficulty Classification
 
-Tasks are organized by fact count (total evaluation criteria in rubric):
+Tasks are grouped by fact count, the number of criteria in the rubric:
 
 ```
 tasks/difficulty/
@@ -78,7 +78,7 @@ tasks/difficulty/
 └── 7+/             # Hard (max 30 steps)
 ```
 
-This enables glob-based parallel sharding (`tasks/difficulty/[1-3]/**/*.json`) and natural horizon control.
+This allows glob-based sharding (`tasks/difficulty/[1-3]/**/*.json`) and sets the step budget per tier.
 
 ## Next Steps
 

@@ -21,17 +21,17 @@ const steps: Step[] = [
 	},
 	{
 		title: "Train",
-		copy: "Verified runs become evals, environments, and a small model trained on your work.",
+		copy: "Checked runs become evals, environments, and a small model trained on your work.",
 		layer: "team",
-		yours: "Approves every run that enters training.",
-		ours: "Builds the environments and runs the training.",
+		yours: "Approves each run that enters training.",
+		ours: "Builds them and runs the training.",
 	},
 	{
 		title: "Run",
-		copy: "The model serves inside your perimeter with frontier fallback at your gateway. New verified runs keep improving it.",
+		copy: "The model serves inside your walls, with frontier fallback at your gateway. New checked runs keep improving it.",
 		layer: "both",
 		yours: "Approves each model that ships and owns the gateway.",
-		ours: "Hands over the runbooks and stays through the retraining rounds.",
+		ours: "Hands over the runbooks and stays for the retraining rounds.",
 	},
 ];
 
@@ -42,7 +42,7 @@ export default function HowWeWork() {
 			id='how-we-work'
 			tone='ink'
 			title='Embedded with your team, from the first eval to the model in production.'
-			lede='Our engineers join at the first eval and stay through deployment. Each engagement ships to production and is measured there.'
+			lede='Our engineers join at the first eval and stay until the model ships. Each engagement goes live and gets measured there.'
 		>
 			<ol className='m-0 list-none border-t border-ed-canvas/30 p-0'>
 				{steps.map((step, index) => (

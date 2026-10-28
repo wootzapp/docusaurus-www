@@ -7,7 +7,7 @@ import Part from "./part";
 type Layer = {name: string; role: string; controls: string[]};
 
 const layers: Layer[] = [
-	{name: "Gateway", role: "Control plane", controls: ["Authenticates users", "Issues per-sandbox credentials", "Delivers policy", "Policy prover"]},
+	{name: "Gateway", role: "Control plane", controls: ["Authenticates users", "Issues per-sandbox keys", "Delivers policy", "Policy prover"]},
 	{name: "Supervisor", role: "Trusted side of the boundary", controls: ["Default-deny egress", "Binary identity, SHA-256", "Credential substitution", "DNS and private-IP guard", "Allow and deny log"]},
 	{name: "Sandbox", role: "The agent runs here", controls: ["Non-root process", "Landlock file rules", "seccomp syscall filters", "Own network namespace", "No credentials", "One egress path"]},
 ];
@@ -39,18 +39,18 @@ function Layers({depth = 0}: {depth?: number}) {
 					<Layers depth={depth + 1} />
 				</div>
 			) : (
-				<p className='ed-mono m-0 mt-4 text-[0.8125rem] text-ed-smoke'>Your harness, unchanged. Every connection leaves through the supervisor.</p>
+				<p className='ed-mono m-0 mt-4 text-[0.8125rem] text-ed-smoke'>Your harness, unchanged. Each connection leaves through the supervisor.</p>
 			)}
 		</div>
 	);
 }
 
 const enforced = [
-	{name: "Execution", copy: "Enforced at the kernel. Landlock limits files, seccomp limits syscalls, and the agent runs as a non-root process in its own network namespace with one egress path."},
+	{name: "Execution", copy: "Enforced in the kernel. Landlock limits files. seccomp limits syscalls. The agent runs as a non-root process in its own network namespace, with one way out."},
 	{name: "Policy", copy: "Lives in the supervisor and the gateway. The agent cannot read or change it. Proposed rules pass the policy prover, and flagged changes wait for human review."},
 	{name: "Credentials", copy: "Stay outside the sandbox. The agent sees a placeholder that the supervisor resolves only for approved hosts, ports, and paths."},
-	{name: "The record", copy: "Every connection is checked per host, port, and calling binary, and every allow and deny is logged. The hypervisor keeps processes, file changes, egress including denied attempts, and policy decisions. W8 keeps the page at every step."},
-	{name: "Training", copy: "Only runs your team approves enter training, and each reward points to its evidence in the record."},
+	{name: "The record", copy: "Each connection is checked by host, port, and calling binary. Each allow and deny is logged. The hypervisor keeps processes, file changes, network calls (denied ones too), and each allow or deny. W8 keeps the page at each step."},
+	{name: "Training", copy: "Only runs your team approves enter training. Each reward points to its evidence in the record."},
 ];
 
 export default function Boundary() {
@@ -77,15 +77,15 @@ export default function Boundary() {
 			<div className='flex flex-col gap-3 border-l-2 border-ed-accent pl-5'>
 				<span className='ed-eyebrow text-ed-smoke'>By extension, the hypervisor</span>
 				<p className='m-0 max-w-[48rem] text-[1rem] leading-relaxed text-ed-graphite'>
-					WootzApp's hypervisor is OpenShell with the project filesystem on a supervised FUSE mount, so file I/O passes through one daemon under
-					the same policy as the network, and the record of a run holds both.{" "}
+					WootzApp's hypervisor is OpenShell plus a project filesystem on a supervised FUSE mount. File I/O passes through one daemon under the
+					same policy as the network. The record of a run holds both.{" "}
 					<Link to='/research/openrind-shell' className='ed-link whitespace-nowrap'>
 						Openrind Shell →
 					</Link>
 				</p>
 			</div>
 			<p className='ed-mono m-0 text-[0.75rem] text-ed-smoke'>
-				Built on NVIDIA OpenShell; no NVIDIA endorsement implied. Layer and control descriptions follow the OpenShell{" "}
+				Built on NVIDIA OpenShell; no NVIDIA endorsement implied. The layers and controls follow the OpenShell{" "}
 				<a href='https://docs.nvidia.com/openshell/about/architecture' target='_blank' rel='noopener noreferrer' className='ed-link'>
 					architecture
 				</a>{" "}
@@ -93,7 +93,7 @@ export default function Boundary() {
 				<a href='https://docs.nvidia.com/openshell/security/best-practices' target='_blank' rel='noopener noreferrer' className='ed-link'>
 					security
 				</a>{" "}
-				documentation.
+				docs.
 			</p>
 		</Part>
 	);

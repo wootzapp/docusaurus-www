@@ -4,12 +4,12 @@ import CtaLink from "../editorial/cta-link";
 import {links} from "@site/src/data/research";
 
 const review = [
-	{question: "Where does the model run?", answer: "Your VPC, on-prem, or our managed infrastructure. In each case the model serves inside your perimeter."},
-	{question: "Who can reach the sandbox?", answer: "Sandboxes expose no network SSH port. Sessions enter through the gateway with expiring tokens, and the gateway transport uses mutual TLS."},
+	{question: "Where does the model run?", answer: "In your VPC, on your premises, or on servers we run. In each case the model serves inside your perimeter."},
+	{question: "Who can reach the sandbox?", answer: "Sandboxes expose no SSH port on the network. Sessions enter through the gateway with tokens that expire. Gateway traffic uses mutual TLS."},
 	{question: "Who approves what ships?", answer: "Your team approves which runs enter training and which model ships."},
 	{
 		question: "What does the record hold?",
-		answer: "Each run keeps its processes, file changes, egress, policy decisions, and page states. Each reward points to its evidence.",
+		answer: "Each run keeps its processes, file changes, network calls, allow and deny calls, and page states. Each reward points to its evidence.",
 	},
 ];
 

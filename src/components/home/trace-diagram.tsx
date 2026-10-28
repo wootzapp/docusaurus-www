@@ -3,8 +3,8 @@ import {LuBot, LuUser, LuArrowDown, LuDatabase, LuCpu} from "react-icons/lu";
 import LayerTag, {type Layer} from "./layer-tag";
 
 const lanes: {layer: Layer; label: string}[] = [
-	{layer: "browser", label: "Page state at every step"},
-	{layer: "hypervisor", label: "Processes · egress · file changes"},
+	{layer: "browser", label: "Page state at each step"},
+	{layer: "hypervisor", label: "Processes · network calls · file changes"},
 ];
 
 function Arrow() {
@@ -18,7 +18,7 @@ function Arrow() {
 // Schematic of the capture pipeline: who works, where it is recorded, what it becomes.
 export default function TraceDiagram() {
 	return (
-		<figure className='ed-card m-0 flex flex-col p-5 sm:p-6' aria-label='Agents and experts are recorded by W8 and the hypervisor, below the point where a model proxy stops, then turned into training data and custom models.'>
+		<figure className='ed-card m-0 flex flex-col p-5 sm:p-6' aria-label='W8 and the hypervisor record agents and experts below the point where a model proxy stops. The records become training data and small models.'>
 			<div className='grid grid-cols-2 gap-3'>
 				{[
 					{icon: <LuBot />, label: "Agent", sub: "agent traces"},
@@ -44,7 +44,7 @@ export default function TraceDiagram() {
 					</div>
 					<div className='flex items-center gap-2' aria-hidden='true'>
 						<span className='h-px flex-1 border-t border-dashed border-ed-rule' />
-						<span className='ed-mono text-[0.75rem] uppercase tracking-wider'>proxy-based capture ends here</span>
+						<span className='ed-mono text-[0.75rem] uppercase tracking-wider'>a proxy stops here</span>
 						<span className='h-px flex-1 border-t border-dashed border-ed-rule' />
 					</div>
 				</div>
@@ -63,7 +63,7 @@ export default function TraceDiagram() {
 				))}
 				<div className='flex items-center justify-between gap-2 border-t border-ed-rule pt-3'>
 					<LayerTag layer='team' />
-					<span className='text-[0.8125rem] text-ed-graphite'>Engineered into training data</span>
+					<span className='text-[0.8125rem] text-ed-graphite'>Turned into training data</span>
 				</div>
 			</div>
 
@@ -72,7 +72,7 @@ export default function TraceDiagram() {
 			<div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
 				{[
 					{icon: <LuDatabase />, label: "Datasets · evals · environments", sub: "for model labs"},
-					{icon: <LuCpu />, label: "Custom small models", sub: "for enterprises"},
+					{icon: <LuCpu />, label: "Small models", sub: "for enterprises"},
 				].map((output) => (
 					<div key={output.label} className='flex items-center gap-3 rounded-xl bg-ed-ink px-3 py-2.5 text-ed-canvas'>
 						<span className='ed-icon h-9 w-9 bg-white/10 text-base text-ed-accent'>{output.icon}</span>

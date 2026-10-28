@@ -6,7 +6,7 @@ authors: [wootzapp]
 tags: [w8, evidence, benchmark]
 ---
 
-Every task in W8 DOM-diff Bench was recorded twice: once as screenshots, once as W8 DOM-diff Optimized states. This post opens one pair, Task 19, and reads what each record kept.
+We recorded each task in W8 DOM-diff Bench twice: once as screenshots, once as W8 DOM-diff Optimized states. This post opens one pair, Task 19, and reads what each record kept.
 
 <!-- truncate -->
 
@@ -45,7 +45,7 @@ The same step in `dom_model0.txt`. The timestamp is in the page's markup, so the
 - 2b3ec34
 ```
 
-The record also keeps the interactive elements, each with a stable id the agent can act on:
+The record keeps the interactive elements, each with a stable id the agent can act on:
 
 ```text
 [19] link "Latest"
@@ -62,10 +62,10 @@ The record also keeps the interactive elements, each with a stable id the agent 
 | Commit | `2b3ec34` | `2b3ec34` |
 | Release date | "2 weeks ago" | `02 Sep 17:40` |
 
-Both records answer two of the three criteria. On the third, the screenshot holds a relative date and W8 holds the exact one, which is why Task 19 is the exact release date finding (criterion C3) in the technical report's criterion table.
+Both records answer two of the three criteria. On the third, the screenshot holds a relative date and W8 holds the exact one. That is why Task 19 is the exact release date finding (criterion C3) in the technical report.
 
 :::note
-Across the full benchmark, screenshots lacked required evidence on 151 of 642 audited criteria (23.52%) and W8 records on 5 (0.78%). Exact page identity accounts for 117 of the screenshot losses; with the URL category set aside, screenshots still lose evidence on 34 criteria (5.30%). The counts, the method, and the per-task recordings are on the [benchmark page](/research/w8-domdiff-bench).
+Across the full benchmark, screenshots lacked required evidence on 151 of 642 audited criteria (23.52%). W8 records lacked it on 5 (0.78%). URLs account for 117 of the screenshot losses. Set that category aside and screenshots lose evidence on 34 criteria (5.30%). The counts, the method, and the recordings are on the [benchmark page](/research/w8-domdiff-bench).
 :::
 
 > We built `w8-core`, our custom Chromium-based browser infrastructure, DOM-diff Optimized, a compact structured representation of captured page states, and `w8-domdiff-bench`, a paired evaluation suite for browser-agent evidence.
@@ -74,7 +74,7 @@ Across the full benchmark, screenshots lacked required evidence on 151 of 642 au
 
 ## Read the records yourself
 
-The task set and both recordings of every task are on Hugging Face.
+The task set and both recordings of each task are on Hugging Face.
 
 ```python
 from datasets import load_dataset

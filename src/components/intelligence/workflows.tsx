@@ -6,19 +6,19 @@ import LayerTag, {type Layer} from "../home/layer-tag";
 const rows: {title: string; work: string; layer: Layer; record: string; link?: {label: string; to: string}}[] = [
 	{
 		title: "Back-office operations",
-		work: "Claims, invoices, and reconciliations in browser-based systems.",
+		work: "Claims, invoices, and account matching in browser tools.",
 		layer: "browser",
-		record: "The exact value on every screen, including off-screen content.",
+		record: "The exact value on each screen, even content off screen.",
 	},
 	{
 		title: "IT operations",
-		work: "Tickets, scripts, and configuration changes.",
+		work: "Tickets, scripts, and config changes.",
 		layer: "hypervisor",
-		record: "Every process, file change, and egress attempt.",
+		record: "Each process, file change, and network call.",
 	},
 	{
 		title: "Software delivery",
-		work: "Coding agents in your repositories.",
+		work: "Coding agents in your repos.",
 		layer: "hypervisor",
 		record: "Compiler and test results as the grader.",
 		link: {label: "See the preprint →", to: "/research/let-execution-do-the-teaching"},
@@ -35,7 +35,7 @@ export default function Workflows() {
 	return (
 		<Chapter
 			id='workflows'
-			title='Workflows where the record already exists.'
+			title='Workflows where the record exists today.'
 			kicker='Illustrative'
 			lede='Any task your agents or experts run inside a sandbox or a browser is a candidate.'
 		>
@@ -99,7 +99,7 @@ export default function Workflows() {
 					</li>
 				))}
 			</ul>
-			<p className='ed-mono m-0 mt-5 text-[0.75rem] text-ed-smoke'>Illustrative workflow families. Each engagement starts with the workflow your team picks.</p>
+			<p className='ed-mono m-0 mt-5 text-[0.75rem] text-ed-smoke'>These are examples. Each engagement starts with the workflow your team picks.</p>
 		</Chapter>
 	);
 }

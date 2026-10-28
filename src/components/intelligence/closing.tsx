@@ -17,7 +17,7 @@ export default function Closing() {
 						<CtaLink href={links.booking} variant='inverse'>
 							Talk to us
 						</CtaLink>
-						<p className='ed-mono m-0 text-[0.8125rem] text-ed-canvas/60'>W8 Intelligence. Built with your team, run inside your perimeter.</p>
+						<p className='ed-mono m-0 text-[0.8125rem] text-ed-canvas/60'>W8 Intelligence. Built with your team, run inside your walls.</p>
 					</div>
 				</div>
 			</div>

@@ -10,8 +10,8 @@ const partnerMail = "mailto:founders@wootzapp.com?subject=Private%20data%20colla
 const heroSignals = [
 	"New revenue from dormant systems",
 	"Non-exclusive licensing",
-	"Source and IP retained",
-	"Documented W8-RL delivery",
+	"You keep source and IP",
+	"W8-RL handoff with notes",
 ];
 
 const indiaCities = ["Delhi", "Bengaluru", "Pune", "Hyderabad", "Chennai"];
@@ -20,22 +20,22 @@ const indiaProofStats = [
 	{
 		value: "US$283B -> US$350B",
 		label: "India tech sector",
-		copy: "FY25 to projected FY26 sector scale, showing why India is a strategic software market in its own right.",
+		copy: "Sector size, FY25 to projected FY26. India is a major software market in its own right.",
 	},
 	{
 		value: "5.8M professionals",
 		label: "Engineering depth",
-		copy: "India contributes 28% of global STEM talent and 23% of the world’s software engineering professionals.",
+		copy: "India supplies 28% of global STEM talent and 23% of the world’s software engineers.",
 	},
 	{
 		value: "4.3% of world services exports",
 		label: "Global services weight",
-		copy: "India ranks second globally in telecommunication, computer, and information services exports.",
+		copy: "India ranks second in the world for exports of telecom, computer, and information services.",
 	},
 	{
 		value: "1,800+ GCCs",
 		label: "Enterprise density",
-		copy: "India’s GCC base employs 1.9 million professionals and is projected to reach US$110B by 2030.",
+		copy: "India’s GCCs (global capability centers) employ 1.9 million people. Forecasts put them at US$110B by 2030.",
 	},
 ];
 
@@ -43,40 +43,40 @@ const thesisItems = [
 	{
 		label: "Assess",
 		title: "We scope the asset and the intended AI use.",
-		copy: "We work with your team to understand the codebase, workflow, sensitivity, setup path, and downstream model use case before anything is packaged.",
+		copy: "We work with your team to learn the code, the workflow, what is private, how setup works, and what the model will do. Then we package.",
 	},
 	{
 		label: "Engineer",
 		title: "We preserve the signal and constrain what should not move.",
-		copy: "W8 sanitizes risky fields, captures approved browser evidence, builds tasks and rewards, and turns the system into a repeatable W8-RL environment.",
+		copy: "W8 cleans risky fields, captures approved browser evidence, builds tasks and rewards, and turns the system into a W8-RL environment that replays.",
 	},
 	{
 		label: "Document",
-		title: "Every delivery comes with an evidence package.",
-		copy: "The environment ships with what was retained, what was removed, what can be replayed, how rewards are scored, and why the asset is safe to use downstream.",
+		title: "Each handoff comes with an evidence pack.",
+		copy: "It ships with notes: what we kept, what we removed, what replays, how rewards are scored, and why the asset is safe to use.",
 	},
 ];
 
 const fdrlRows = [
 	{
 		label: "Source",
-		copy: "Identify candidate codebases, admin workflows, ERP systems, fintech flows, or enterprise operations data that could become useful training signal.",
+		copy: "Find code, admin workflows, ERP systems, fintech flows, or ops data with useful training signal.",
 	},
 	{
 		label: "Assess",
-		copy: "Map data owners, sensitivity, access constraints, setup complexity, and the intended AI use case before committing to an asset package.",
+		copy: "Map the data owners, the private parts, access limits, setup effort, and the intended use before we commit to a package.",
 	},
 	{
 		label: "Engineer",
-		copy: "Sanitize what should not travel, preserve useful behavior, capture browser evidence, and build tasks, rubrics, process rewards, and outcome labels.",
+		copy: "Clean what must stay home, keep the useful behavior, capture browser evidence, and build tasks, rubrics, process rewards, and outcome labels.",
 	},
 	{
 		label: "Deliver",
-		copy: "Ship a W8-RL environment with documentation attached: retained artifacts, redactions, verifier design, reward traces, and deployment assumptions.",
+		copy: "Ship a W8-RL environment with its notes: what we kept, what we redacted, how the grader works, the reward traces, and the rollout assumptions.",
 	},
 	{
 		label: "Re-assess",
-		copy: "When the system, buyer, or permitted use changes, update the asset package so the documentation and environment stay current.",
+		copy: "When the system, the buyer, or the permitted use changes, we update the package so the notes and the files stay current.",
 	},
 ];
 
@@ -84,25 +84,25 @@ const fitGroups = [
 	{
 		title: "Good fit assets",
 		items: [
-			"Private codebases, admin systems, and operational workflows with real business logic",
-			"ERP, fintech, card-stack, IT-services, claims, or enterprise operations flows",
-			"Systems whose real work is absent from public corpora",
+			"Private code, admin systems, and workflows with real business logic",
+			"ERP, fintech, card-stack, IT-services, claims, or business ops flows",
+			"Systems whose real work is missing from public code",
 		],
 	},
 	{
-		title: "What helps sanitization",
+		title: "What helps the cleanup",
 		items: [
 			"Clear data owners and approval paths",
-			"Test accounts, synthetic tenants, or controlled staging data",
-			"Known fields, screens, records, and artifacts that should never be exported",
+			"Test accounts, synthetic tenants, or staging data",
+			"A list of fields, screens, and records that must never leave",
 		],
 	},
 	{
-		title: "What we can adapt around",
+		title: "What we can work around",
 		items: [
-			"Swapped databases, secrets, and infrastructure dependencies",
-			"On-prem, VPC, or managed workflows with constrained data movement",
-			"Legacy systems that need packaging before they become trainable",
+			"Swapped databases, secrets, and outside services",
+			"On-prem, VPC, or managed setups that limit data movement",
+			"Legacy systems that need packaging first",
 		],
 	},
 ];
@@ -110,62 +110,62 @@ const fitGroups = [
 const commercialRows = [
 	{
 		label: "You keep ownership",
-		copy: "The structure is usually non-exclusive. You retain the source system, data, IP, customers, and existing commercial rights.",
+		copy: "The license is non-exclusive in most cases. You keep the source system, data, IP, customers, and commercial rights.",
 	},
 	{
 		label: "We create the asset layer",
-		copy: "W8-RL creates the AI-ready layer: sanitized snapshots, task definitions, rubrics, reward traces, browser evidence, and environment artifacts.",
+		copy: "W8-RL creates the asset layer: cleaned snapshots, task definitions, rubrics, reward traces, browser evidence, and environment files.",
 	},
 	{
 		label: "You approve what moves",
-		copy: "Sensitive fields, source archives, customer records, and deployment assumptions are scoped before delivery. Delivery moves only the scoped artifacts.",
+		copy: "We scope private fields, source archives, customer records, and rollout assumptions before handoff. The handoff moves only what we scoped.",
 	},
 	{
 		label: "Why FDRLs matter",
-		copy: "On-ground deployment lets us understand enough of the system to preserve training utility while keeping the commercial and privacy posture clear.",
+		copy: "Being on site lets us learn enough of the system to keep the training value, with the commercial and privacy terms clear.",
 	},
 ];
 
 const faqs = [
 	{
 		question: "Do you need exclusive rights?",
-		answer: "No. Non-exclusive licensing is usually the right structure. You keep ownership and can continue to use the system, data, and IP however your business requires.",
+		answer: "No. A non-exclusive license is the right structure in most cases. You keep ownership and keep using the system, data, and IP as your business needs.",
 	},
 	{
 		question: "Are you reselling raw data or source code?",
-		answer: "No. We build privacy-reviewed environments, reward structures, and training artifacts on top of private workflows. ",
+		answer: "No. We build privacy-reviewed environments, rewards, and training files on top of private workflows.",
 	},
 	{
 		question: "What leaves the enterprise boundary?",
-		answer: "Only the artifacts agreed in the asset design: reviewed snapshots, task specs, rubrics, reward traces, documentation, or packaged environments. Sensitive fields can be redacted, constrained, or kept inside a controlled deployment.",
+		answer: "Only the files agreed in the asset design: reviewed snapshots, task specs, rubrics, reward traces, notes, or packaged environments. Private fields can be redacted, limited, or kept inside a controlled rollout.",
 	},
 	{
 		question: "How is sensitive data protected?",
-		answer: "FDRLs map sensitive surfaces first, define what can be captured, remove or constrain risky fields, and document the decisions attached to each environment. The goal is signal-preserving sanitization.",
+		answer: "FDRLs map the private surfaces first. They define what we can capture, remove or limit risky fields, and write down each decision next to the package. The goal is cleanup that keeps the signal.",
 	},
 	{
 		question: "What kinds of companies do you work with?",
-		answer: "We work with Indian IT services companies, financial services IT providers, card stack companies, ERP companies, and enterprise software companies, with presence in Delhi, Bengaluru, Pune, Hyderabad, and Chennai.",
+		answer: "Indian IT services firms, IT providers to banks and insurers, card stack firms, ERP firms, and software firms. We have people in Delhi, Bengaluru, Pune, Hyderabad, and Chennai.",
 	},
 	{
 		question: "How do you think about pricing?",
-		answer: "Pricing depends on asset quality, workflow complexity, setup maturity, privacy constraints, verifier design, and whether the engagement is a focused pilot or a standing program.",
+		answer: "Pricing depends on the asset, the workflow, the setup, the privacy limits, and the grader design. It also depends on whether the engagement is a pilot or a standing program.",
 	},
 	{
-		question: "What makes a workflow especially useful?",
-		answer: "Useful assets have real decisions, meaningful user outcomes, setup complexity, and enough evidence to score process and outcome separately.",
+		question: "What makes a workflow useful?",
+		answer: "Useful assets have real decisions and outcomes that matter. They have setup complexity. And they have enough evidence to score process and outcome apart.",
 	},
 ];
 
 const qualificationChecklist = [
-	"What the codebase, dataset, or workflow does",
-	"Why it is hard, mature, or commercially realistic",
-	"Which screens, fields, records, or documents contain sensitive data",
-	"Whether test accounts, synthetic tenants, or staging data are available",
-	"Which artifacts can leave the enterprise boundary and which must stay inside",
-	"Whether the workflow comes from IT services, ERP, card stack, fintech, or enterprise operations",
-	"Where process failures and outcome failures can be observed in the browser",
-	"Any existing tests, logs, audit trails, or documentation that can support verifier design",
+	"What the code, dataset, or workflow does",
+	"Why it is hard, mature, or real",
+	"Which screens, fields, records, or documents hold private data",
+	"Whether you have test accounts, synthetic tenants, or staging data",
+	"Which files can leave your boundary and which must stay",
+	"Whether the workflow comes from IT services, ERP, card stack, fintech, or business ops",
+	"Where the browser shows process failures and outcome failures",
+	"Any tests, logs, audit trails, or docs that help us design the grader",
 ];
 
 function Dot() {
@@ -180,14 +180,14 @@ export default function PrivatePageContent() {
 					<div className='grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-16'>
 						<div className='flex flex-col gap-7'>
 							<Eyebrow>Private Data Collaborations</Eyebrow>
-							<h1 className='ed-display m-0'>Turn private enterprise systems into AI-ready RL assets.</h1>
+							<h1 className='ed-display m-0'>Turn private enterprise systems into RL assets.</h1>
 							<div className='ed-lede flex max-w-[42rem] flex-col gap-4 text-ed-graphite'>
 								<p className='m-0'>
-									You sit on codebases, admin tools, ERP flows, fintech systems, or operations data that could power coding and computer-use
-									models. It just has to be usable, controlled, and defensible first.
+									You own codebases, admin tools, ERP flows, fintech systems, or operations data. Coding and computer-use models can learn
+									from them. First the asset has to be usable, controlled, and defensible.
 								</p>
 								<p className='m-0'>
-									WootzApp licenses that asset non-exclusively, engineers it into a W8-RL environment, and attaches the documentation model teams
+									WootzApp licenses the asset on a non-exclusive basis, turns it into a W8-RL environment, and attaches the notes model teams
 									need to trust it. Your IP stays yours. You approve what leaves.
 								</p>
 							</div>
@@ -201,26 +201,26 @@ export default function PrivatePageContent() {
 							<div className='flex flex-col gap-3 sm:flex-row'>
 								<CtaLink href={partnerMail}>Become a data partner</CtaLink>
 								<CtaLink href='#qualification' variant='secondary'>
-									See qualification checklist
+									See the checklist
 								</CtaLink>
 							</div>
 						</div>
 
 						<aside className='flex flex-col gap-5 border border-ed-ink bg-ed-surface p-6 sm:p-7'>
 							<Eyebrow className='text-ed-accent-ink'>What you get</Eyebrow>
-							<h2 className='ed-h3 m-0'>A new revenue stream from systems your team already built.</h2>
+							<h2 className='ed-h3 m-0'>New revenue from the systems you have built.</h2>
 							<div className='flex flex-col gap-4 text-[0.9375rem] leading-relaxed text-ed-graphite'>
 								<p className='m-0'>
-									Model teams need realistic private systems. We make those systems trainable by capturing the useful behavior,
-									sanitizing risky surfaces, and packaging replayable environments.
+									Model teams need real private systems. We make yours trainable. We capture the useful behavior, clean the risky parts, and
+									package it so it replays.
 								</p>
 								<p className='m-0'>
-									Our FDRLs work with your team on the ground so setup, redactions, verifier updates, and artifact approvals happen with the
-									people who actually understand the system.
+									Our FDRLs, forward-deployed RL engineers, work with your team on site. Setup, redactions, grader updates, and approvals
+									happen with the people who know the system.
 								</p>
 								<p className='m-0'>
-									You keep the source system and commercial rights. W8-RL creates the AI-ready asset layer that can be licensed, explained, and
-									maintained.
+									You keep the source system and the commercial rights. W8-RL creates the asset layer: something you can license, explain, and
+									maintain.
 								</p>
 							</div>
 							<ul className='m-0 flex list-none flex-wrap gap-2 border-t border-ed-rule p-0 pt-5'>
@@ -231,17 +231,17 @@ export default function PrivatePageContent() {
 								))}
 							</ul>
 							<p className='m-0 text-[0.8125rem] leading-relaxed text-ed-smoke'>
-								Delhi, Bengaluru, Pune, Hyderabad, and Chennai give us proximity to the teams that own the private enterprise systems model labs
-								cannot get from public corpora.
+								We are close to the teams in Delhi, Bengaluru, Pune, Hyderabad, and Chennai that own private systems. Model labs cannot get
+								those systems from public code.
 							</p>
 						</aside>
 					</div>
 
 					<div className='mt-16 border-t border-ed-ink pt-8 lg:mt-20'>
 						<div className='grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16'>
-							<Eyebrow>Why We Specialize In India</Eyebrow>
+							<Eyebrow>Why we focus on India</Eyebrow>
 							<p className='ed-body m-0 max-w-[48rem] text-ed-graphite'>
-								India is where large-scale services delivery, GCC infrastructure, and private enterprise software overlap. That density is why W8-RL specializes here: a forward-deployed program preserves training signal and respects the privacy posture that enterprise data owners need.
+								India is where big services firms, GCCs, and private business software overlap. That density is why W8-RL works here. A forward-deployed program keeps the training signal and respects the privacy rules data owners need.
 							</p>
 						</div>
 						<div className='mt-10 grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4'>
@@ -257,7 +257,7 @@ export default function PrivatePageContent() {
 							))}
 						</div>
 						<p className='ed-mono m-0 mt-6 text-[0.75rem] text-ed-smoke'>
-							Selected benchmarks from India&apos;s Economic Survey 2024-25 and IBEF 2025 reporting.
+							Figures from India&apos;s Economic Survey 2024-25 and IBEF 2025 reports.
 						</p>
 					</div>
 				</div>
@@ -269,11 +269,12 @@ export default function PrivatePageContent() {
 						<Eyebrow>From Private Systems To RL Assets</Eyebrow>
 						<h2 className='ed-h2 m-0'>One pipeline: assess, engineer, document, and re-assess.</h2>
 						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
-							W8-RL turns private systems into AI-ready assets for RL. The pipeline covers the full lifecycle: from initial asset assessment
-							through signal-preserving engineering to documentation that travels with the environment.
+							W8-RL turns private systems into RL assets. The pipeline runs from the first assessment, through engineering that keeps the
+							signal, to notes that travel with the environment.
 						</p>
 						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
-							When the system, recipient, or permitted use changes, the asset is re-assessed in place. That keeps private enterprise data practical for model training.
+							When the system, the buyer, or the permitted use changes, we re-assess the asset in place. That keeps private data usable for
+							training.
 						</p>
 						<ol className='m-0 mt-2 flex list-none flex-col border-t border-ed-ink p-0'>
 							{thesisItems.map((item, index) => (
@@ -298,8 +299,8 @@ export default function PrivatePageContent() {
 						<Eyebrow>Good Fit</Eyebrow>
 						<h2 className='ed-h2 m-0'>What makes a private system valuable to model teams.</h2>
 						<p className='ed-body m-0 max-w-[40rem] text-ed-graphite'>
-							The best assets contain real work: messy setup, business logic, edge cases, integrations, admin flows, and outcomes that cannot be
-							learned from public code alone.
+							The best assets hold real work: messy setup, business logic, edge cases, integrations, admin flows, and outcomes you cannot
+							learn from public code.
 						</p>
 						<div className='mt-2 flex flex-col border-t border-ed-ink'>
 							{fitGroups.map((group) => (
@@ -320,8 +321,8 @@ export default function PrivatePageContent() {
 					<div className='flex flex-col gap-4'>
 						<RowList title='Program Shape' rows={commercialRows} />
 						<p className='m-0 border-l-2 border-ed-accent pl-4 text-[0.9375rem] leading-relaxed text-ed-graphite'>
-							Commercial terms can start as a focused pilot or become a standing program. The constant is the same: retained IP, sanitized
-							artifacts, defensibility documentation, and W8-RL environments that model teams can actually train on.
+							Terms can start as a small pilot or run as a standing program. The constants stay: you keep the IP, the files are clean, the
+							notes defend the asset, and the W8-RL environments train.
 						</p>
 					</div>
 				</div>
@@ -361,10 +362,9 @@ export default function PrivatePageContent() {
 				<div className='ed-container grid grid-cols-1 gap-10 py-20 lg:grid-cols-[minmax(0,1.4fr)_auto] lg:items-end lg:py-28'>
 					<div className='flex flex-col gap-6'>
 						<Eyebrow className='text-ed-accent'>Private Conversation</Eyebrow>
-						<h2 className='ed-h2 m-0 max-w-[52rem]'>If your team is sitting on private systems that could power AI, start with a short note.</h2>
+						<h2 className='ed-h2 m-0 max-w-[52rem]'>If your team owns private systems that can train AI, start with a short note.</h2>
 						<p className='ed-lede m-0 max-w-[40rem] text-ed-canvas/80'>
-							We begin with context: what the system does, why it is realistic, what must stay private, and who owns the
-							decision.
+							We start with context: what the system does, why it is real, what must stay private, and who decides.
 						</p>
 					</div>
 					<div className='flex flex-col gap-3 sm:flex-row lg:flex-col'>

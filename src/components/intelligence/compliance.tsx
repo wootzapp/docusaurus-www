@@ -4,17 +4,17 @@ import Part from "./part";
 
 // What W8 Intelligence sells: the record that satisfies a review is the record the model is trained on.
 const challenges = [
-	{title: "The risk moved from answers to actions.", copy: "An agent writes code, calls APIs, and changes production systems. A review has to account for what ran, where it connected, and what it changed."},
-	{title: "Guardrails written in the prompt.", copy: "A rule in the prompt is overwritten by the next prompt. One injection or one compromised tool is enough to walk past it."},
+	{title: "The risk moved from answers to actions.", copy: "An agent writes code, calls APIs, and changes live systems. A review has to account for what ran, where it connected, and what it changed."},
+	{title: "Guardrails written in the prompt.", copy: "The next prompt can overwrite a rule in the prompt. One injection or one bad tool is enough to walk past it."},
 	{title: "Credentials inside the agent.", copy: "Keys in the agent's environment travel with everything the agent reads. A leak needs no exploit, only a request."},
-	{title: "A record the agent writes about itself.", copy: "The harness logs what its vendor chose to log, and a model proxy keeps what the model said. Nobody keeps what ran, what was refused, and what the page held."},
-	{title: "Training on trust.", copy: "Runs enter training with no record a reviewer can open, so the model inherits every gap in the evidence."},
+	{title: "A record the agent writes about itself.", copy: "The harness logs what its vendor chose to log. A model proxy keeps what the model said. Nobody keeps what ran, what was refused, and what the page held."},
+	{title: "Training on trust.", copy: "Runs enter training with no record a reviewer can open. The model inherits each gap."},
 ];
 
 const chain = [
-	{step: "Control", copy: "Every action passes policy enforced outside the agent, below the harness."},
-	{step: "Record", copy: "Every run keeps its evidence, including what was refused."},
-	{step: "Model", copy: "Only approved, evidenced runs enter training. The weights come from a record your reviewers can open, and they are yours."},
+	{step: "Control", copy: "Each action passes rules enforced outside the agent, below the harness."},
+	{step: "Record", copy: "Each run keeps its evidence, including what was refused."},
+	{step: "Model", copy: "Only approved runs with evidence enter training. The weights come from a record your reviewers can open. They are yours."},
 ];
 
 export default function Compliance() {
@@ -22,7 +22,7 @@ export default function Compliance() {
 		<Chapter
 			id='compliance'
 			title='Compliance and security are how the intelligence becomes yours.'
-			lede='Agents act on systems, so a review asks where policy is enforced, where credentials live, and what record survives. Answer those questions below the harness, and the record that satisfies the review becomes the training set for a model you own.'
+			lede='Agents act on live systems. So a review asks three things: where the rules are enforced, where the keys live, and what record survives. Answer them below the harness, and the record that passes the review becomes the training set for a model you own.'
 		>
 			<div className='flex flex-col gap-16 lg:gap-20'>
 				<Part kicker='The challenge' title='Agents act. Their guardrails and their records live in the wrong place.'>
@@ -36,7 +36,7 @@ export default function Compliance() {
 						))}
 						<li className='flex flex-col justify-end gap-3 border-b border-r border-ed-rule bg-ed-canvas p-5 lg:p-6'>
 							<span className='ed-eyebrow text-ed-smoke'>What a review asks for</span>
-							<p className='ed-mono m-0 text-[0.8125rem] leading-relaxed text-ed-ink'>Isolation. Policy enforced where the agent cannot reach it. Credentials the agent never holds. A runtime record of what ran and what was refused.</p>
+							<p className='ed-mono m-0 text-[0.8125rem] leading-relaxed text-ed-ink'>Isolation. Rules enforced where the agent cannot reach them. Keys the agent never holds. A runtime record of what ran and what was refused.</p>
 						</li>
 					</ol>
 				</Part>
@@ -58,7 +58,7 @@ export default function Compliance() {
 							))}
 						</ol>
 						<p className='m-0 mt-10 max-w-[52rem] border-t border-ed-ink/20 pt-8 text-[1.125rem] leading-relaxed text-ed-ink'>
-							The chain runs through one record, kept below the harness. A model proxy keeps what the model said and can start none of it.{" "}
+							The chain runs through one record, kept below the harness. A model proxy keeps what the model said, and that is where it stops.{" "}
 							<span className='font-medium text-ed-accent-ink'>We are the only ones who turn that record into a model you own.</span>
 						</p>
 					</div>

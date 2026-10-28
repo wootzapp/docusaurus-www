@@ -10,12 +10,12 @@ const layers: {icon: ReactNode; name: string; copy: string}[] = [
 	{
 		icon: <LuTerminal />,
 		name: "Hypervisor",
-		copy: "Runs your agent unchanged and records processes, network egress, policy decisions, and file changes below the harness.",
+		copy: "Runs your agent as is. Records each process, network call, allow or deny, and file change below the harness.",
 	},
 	{
 		icon: <LuScanSearch />,
 		name: "W8 browser engine",
-		copy: "Our Chromium engine records the full page state at every step: exact values, controls, and off-screen content.",
+		copy: "Our Chromium engine records the whole page at each step: exact values, control states, and content off screen.",
 	},
 ];
 
@@ -47,7 +47,7 @@ export default function Hero() {
 						</ul>
 						<p className='ed-mono m-0 text-[0.9375rem] text-ed-accent-ink'>A model proxy sees none of this.</p>
 						<p className='m-0 max-w-[38rem] text-[1.0625rem] font-medium'>
-							Our team turns both into training data for frontier labs and custom models for enterprises.
+							Our team turns both records into training data for frontier labs and small models for enterprises.
 						</p>
 						<div className='flex flex-col gap-3 sm:flex-row'>
 							<CtaLink href={links.booking}>Talk to us</CtaLink>

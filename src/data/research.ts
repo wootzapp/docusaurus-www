@@ -99,7 +99,7 @@ export const evidenceGroups: EvidenceGroup[] = [
 		rows: [
 			{label: "Prompts in", proxy: true},
 			{label: "Completions out", proxy: true},
-			{label: "Tool calls and results in the model's context", proxy: true},
+			{label: "Tool calls and results the model saw", proxy: true},
 		],
 	},
 	{
@@ -107,8 +107,8 @@ export const evidenceGroups: EvidenceGroup[] = [
 		layer: "hypervisor",
 		rows: [
 			{label: "Processes", proxy: false},
-			{label: "Network egress, including denied attempts", proxy: false},
-			{label: "Policy decisions", proxy: false},
+			{label: "Network calls, including denied ones", proxy: false},
+			{label: "Each allow or deny", proxy: false},
 			{label: "File changes", proxy: false},
 		],
 	},
@@ -116,9 +116,9 @@ export const evidenceGroups: EvidenceGroup[] = [
 		label: "Inside the page",
 		layer: "browser",
 		rows: [
-			{label: "Full DOM state at every step", proxy: false},
+			{label: "The whole page at each step", proxy: false},
 			{label: "Exact values and control states", proxy: false},
-			{label: "Off-screen content", proxy: false},
+			{label: "Content off screen", proxy: false},
 		],
 	},
 ];

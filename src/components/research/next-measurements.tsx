@@ -6,18 +6,18 @@ import {study} from "@site/src/data/research";
 const nextStudies = [
 	{
 		title: "Runtime evidence coverage",
-		copy: "Run the same unchanged harness in SDK-only and OpenShell-based conditions. Measure which model, process, tool, egress and policy events are visible under a published attack/failure corpus; report false positives, event loss, and integration work.",
-		status: "Protocol in preparation.",
+		copy: "Run the same harness two ways: SDK only, and inside OpenShell. Count which model, process, tool, network, and policy events each one sees under a published set of attacks and failures. Report false positives, lost events, and the setup work.",
+		status: "Protocol in progress.",
 	},
 	{
-		title: "Browser-state checks vs model judges",
-		copy: "Create a human-reviewed, task-specific held-out set with exact browser outcomes. Compare DOM-based deterministic checks, screenshot judges and DOM-assisted judges on agreement, false positives, false negatives, inference cost and latency.",
+		title: "Browser-state checks against model judges",
+		copy: "Build a held-out task set with exact browser outcomes, reviewed by people. Compare three graders: DOM checks, screenshot judges, and judges with DOM access. Score agreement, false alarms, misses, cost, and latency.",
 		status: `Next benchmark. Separate from the ${study.reduction} evidence study.`,
 	},
 	{
-		title: "Optimization impact",
-		copy: "Run matched model/routing/training experiments with and without W8-derived evidence. Score actual task success, regression rate, and cost per verified completion.",
-		status: "Future controlled study.",
+		title: "Training impact",
+		copy: "Run matched model, routing, and training experiments with and without W8 evidence. Score task success, regression rate, and cost per checked completion.",
+		status: "Planned controlled study.",
 	},
 ];
 

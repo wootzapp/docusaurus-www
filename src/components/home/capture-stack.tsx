@@ -27,12 +27,12 @@ export default function CaptureStack() {
 					<Eyebrow>Where the data comes from</Eyebrow>
 					<h2 className='ed-h2 m-0'>Others trace the model proxy. We trace the agent.</h2>
 					<p className='ed-lede m-0 text-ed-graphite'>
-						Other training platforms record their traces at the model proxy: what the model was asked and what it answered. Our hypervisor
-						and W8 browser engine record what the agent did and what the page held. A proxy-based trace holds {words[viaProxy]} of the{" "}
-						{words[total]} kinds of evidence below. Ours holds all {words[total]}.
+						Other training platforms record at the model proxy. They keep what the model was asked and what it answered. Our hypervisor
+						and W8 browser record what the agent did and what the page held. A proxy trace holds {words[viaProxy]} of the {words[total]}{" "}
+						kinds of evidence below. Ours holds all {words[total]}.
 					</p>
 					<p className='m-0 text-[1rem] leading-relaxed text-ed-graphite'>
-						Both records come from infrastructure we built.{" "}
+						We built both recorders.{" "}
 						<CtaLink href='#technology' variant='text'>
 							How they work
 						</CtaLink>
@@ -98,7 +98,7 @@ export default function CaptureStack() {
 							<tr>
 								<td colSpan={2} className='border-t border-ed-rule px-5 py-3 text-[0.8125rem] leading-relaxed text-ed-smoke'>
 									<LuX aria-hidden='true' className='-mt-0.5 mr-1 inline' />
-									enters a proxy-based trace only if your harness reports it.
+									reaches a proxy trace only if your harness reports it.
 								</td>
 								<td className='border-t border-ed-canvas/20' />
 							</tr>

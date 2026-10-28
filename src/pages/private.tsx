@@ -9,7 +9,7 @@ export default function PrivatePage() {
 	return (
 		<Layout
 			title={`Private Data Collaborations | ${siteConfig.title}`}
-			description='Turn private codebases and enterprise workflows into AI-ready W8-RL assets with sanitization, verification, and documentation attached.'
+			description='Turn private codebases and enterprise workflows into W8-RL assets: cleaned, verified, and documented.'
 		>
 			<Head>
 				<meta name='robots' content='noindex,nofollow' />

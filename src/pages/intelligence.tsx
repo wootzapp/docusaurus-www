@@ -15,7 +15,7 @@ export default function IntelligencePage() {
 	return (
 		<Layout
 			title='W8 Intelligence'
-			description='Custom small models trained on your own agent and expert work traces, recorded by the WootzApp hypervisor and W8 browser, built with an embedded team, governed by controls enforced outside the agent, and run inside your perimeter.'
+			description='Small models trained on your own agent and expert work. The WootzApp hypervisor and W8 browser record the work, our embedded team builds the model, rules are enforced outside the agent, and the model runs inside your walls.'
 		>
 			<main className='ed-page intel'>
 				<IntelligenceHero />

@@ -10,20 +10,19 @@ export const changeAgentFaq: FaqItem = {
 	question: "Do we need to change our agent?",
 	answer: (
 		<p className='m-0'>
-			No rewrite of core agent logic and no tracing SDK. Setup covers image packaging, sandbox configuration, credentials, and gateway
-			routing.
+			No. You keep your agent&apos;s logic and add no tracing SDK. Setup covers the image, the sandbox config, keys, and gateway
+				routing.
 		</p>
 	),
 };
 
 export const productionTrafficFaq: FaqItem = {
-	question: "How is this different from training on my production traffic?",
+	question: "How is this different from training on my live traffic?",
 	answer: (
 		<p className='m-0'>
-			Production traffic is captured at the model proxy: prompts in, completions out, and the tool calls that pass through the model&apos;s
-			context. The hypervisor also records the processes, network egress, policy decisions, and file changes behind each call, and W8
-			records the full page at every step. The training set holds what the agent did and what the page held, alongside what the model
-			said.
+			Live traffic is captured at the model proxy. That record holds prompts, completions, and the tool calls the model saw. The
+				hypervisor adds the processes, network calls, each allow or deny, and the file changes behind each call. W8 adds the whole page at every
+				step. So the training set holds what the agent did and what the page held, next to what the model said.
 		</p>
 	),
 };
@@ -32,8 +31,8 @@ export const resellFaq: FaqItem = {
 	question: "Do you resell enterprise data?",
 	answer: (
 		<p className='m-0'>
-			Not by default. Enterprise training and model-lab data are separate contracts. External licensing requires explicit rights and
-			permitted use.
+			No. Enterprise data and lab data sit under separate contracts. Any license to a third party needs explicit rights
+				and a stated use.
 		</p>
 	),
 };
@@ -43,8 +42,8 @@ export const homeFaqItems: FaqItem[] = [
 		question: "What does WootzApp sell?",
 		answer: (
 			<p className='m-0'>
-				Datasets, evals, and RL environments for frontier model labs, and custom small models for enterprises. Both are built from traces
-				captured by our hypervisor and the W8 browser.
+				Two things. Datasets, evals, and RL environments for frontier model labs. Small models for enterprises. Both come from traces our
+					hypervisor and W8 browser record.
 			</p>
 		),
 	},
@@ -53,8 +52,8 @@ export const homeFaqItems: FaqItem[] = [
 		question: "What is a work trace?",
 		answer: (
 			<p className='m-0'>
-				A recording of an expert doing a real task inside our hypervisor and W8: actions, runtime events, and page state at every step. An
-				agent trace is the same record produced by an AI agent.
+				A recording of an expert doing a real task inside our hypervisor and W8. It holds each action, each runtime event, and the page at
+					each step. An agent trace is the same record made by an AI agent.
 			</p>
 		),
 	},

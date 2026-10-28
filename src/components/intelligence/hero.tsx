@@ -5,9 +5,9 @@ import {links} from "@site/src/data/research";
 
 // The three things that build the model: two recorders and the embedded team.
 const builders: {layer: Layer; copy: string}[] = [
-	{layer: "hypervisor", copy: "Runs your harness unchanged and records processes, network egress, policy decisions, and file changes."},
-	{layer: "browser", copy: "Records the full page at every step: exact values, control states, off-screen content."},
-	{layer: "team", copy: "Co-designs the first eval with your engineers, trains the model, and stays through deployment."},
+	{layer: "hypervisor", copy: "Runs your harness as is. Records each process, network call, allow or deny, and file change."},
+	{layer: "browser", copy: "Records the whole page at each step: exact values, control states, and content off screen."},
+	{layer: "team", copy: "Writes the first eval with your engineers, trains the model, and stays until it goes live."},
 ];
 
 export default function IntelligenceHero() {
@@ -27,8 +27,8 @@ export default function IntelligenceHero() {
 					<div className='flex flex-col gap-7 lg:col-span-7'>
 						<p className='ed-subhead m-0 max-w-[36rem]'>Ground truth from your own work. Our team embedded in yours.</p>
 						<p className='ed-lede m-0 max-w-[36rem] text-ed-canvas/70'>
-							The hypervisor and W8 record the work your people and agents already do. Our engineers sit with yours and turn verified
-							runs into evals, environments, and a model you run inside your perimeter.
+							The hypervisor and W8 record the work your people and agents do today. Our engineers sit with yours. Together we turn
+							checked runs into evals, environments, and a model that runs inside your walls.
 						</p>
 						<div className='flex flex-col gap-3 sm:flex-row'>
 							<CtaLink href={links.booking} variant='inverse'>

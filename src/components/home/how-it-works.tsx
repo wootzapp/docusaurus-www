@@ -4,7 +4,7 @@ import Eyebrow from "../editorial/eyebrow";
 import LayerTag, {type Layer} from "./layer-tag";
 
 const steps: {title: string; copy: string; layer?: Layer}[] = [
-	{title: "Capture", copy: "The hypervisor and W8 record every run below the harness and inside the page.", layer: "both"},
+	{title: "Capture", copy: "The hypervisor and W8 record each run below the harness and inside the page.", layer: "both"},
 	{title: "Engineer", copy: "Our team builds datasets, evals, and environments.", layer: "team"},
 	{title: "Deliver", copy: "To frontier labs, or as a small model for your team."},
 ];
