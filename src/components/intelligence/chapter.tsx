@@ -2,14 +2,15 @@ import React, {type ReactNode} from "react";
 import clsx from "clsx";
 import useAnchor from "../editorial/use-anchor";
 
-// The six numbered chapters of the brief. The contents strip and the chapters share this list.
+// The seven numbered chapters of the brief. The contents strip and the chapters share this list.
 export const chapters = [
-	{n: "01", id: "research", label: "Research"},
+	{n: "01", id: "compliance", label: "Compliance"},
 	{n: "02", id: "how-we-work", label: "How we work"},
 	{n: "03", id: "ownership", label: "Ownership"},
 	{n: "04", id: "workflows", label: "Workflows"},
 	{n: "05", id: "security", label: "Security"},
 	{n: "06", id: "questions", label: "Questions"},
+	{n: "07", id: "research", label: "Research"},
 ] as const;
 
 export type ChapterId = (typeof chapters)[number]["id"];

@@ -5,7 +5,7 @@ import {links} from "@site/src/data/research";
 
 const review = [
 	{question: "Where does the model run?", answer: "Your VPC, on-prem, or our managed infrastructure. In each case the model serves inside your perimeter."},
-	{question: "What can the sandbox reach?", answer: "Default-deny network policy. Egress is allowed per endpoint, and denied attempts are recorded."},
+	{question: "Who can reach the sandbox?", answer: "Sandboxes expose no network SSH port. Sessions enter through the gateway with expiring tokens, and the gateway transport uses mutual TLS."},
 	{question: "Who approves what ships?", answer: "Your team approves which runs enter training and which model ships."},
 	{
 		question: "What does the record hold?",

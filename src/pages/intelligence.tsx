@@ -3,6 +3,7 @@ import IntelligenceHero from "../components/intelligence/hero";
 import Contents from "../components/intelligence/contents";
 import Proof from "../components/intelligence/proof";
 import HowWeWork from "../components/intelligence/how-we-work";
+import Compliance from "../components/intelligence/compliance";
 import Ownership from "../components/intelligence/ownership";
 import Workflows from "../components/intelligence/workflows";
 import Security from "../components/intelligence/security";
@@ -14,17 +15,18 @@ export default function IntelligencePage() {
 	return (
 		<Layout
 			title='W8 Intelligence'
-			description='Custom small models trained on your own agent and expert work traces, recorded by the WootzApp hypervisor and W8 browser, built with an embedded team, and run inside your perimeter.'
+			description='Custom small models trained on your own agent and expert work traces, recorded by the WootzApp hypervisor and W8 browser, built with an embedded team, governed by controls enforced outside the agent, and run inside your perimeter.'
 		>
 			<main className='ed-page intel'>
 				<IntelligenceHero />
 				<Contents />
-				<Proof />
+				<Compliance />
 				<HowWeWork />
 				<Ownership />
 				<Workflows />
 				<Security />
 				<Questions />
+				<Proof />
 				<Closing />
 			</main>
 		</Layout>

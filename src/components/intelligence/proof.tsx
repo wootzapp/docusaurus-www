@@ -2,9 +2,10 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import Chapter from "./chapter";
 import WorkCards from "../work/work-cards";
+import Boundary from "./boundary";
 import {useResearchEntries} from "../work/entries";
 
-// The research entries from /research, shown as exhibit cells.
+// The research entries from /research as exhibit cells, then the runtime they run on.
 export default function Proof() {
 	const entries = useResearchEntries();
 	return (
@@ -24,6 +25,9 @@ export default function Proof() {
 			}
 		>
 			<WorkCards entries={entries} />
+			<div className='mt-16 lg:mt-20'>
+				<Boundary />
+			</div>
 		</Chapter>
 	);
 }
