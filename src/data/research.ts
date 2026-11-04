@@ -1,5 +1,5 @@
 // Figures and links shared by the homepage and the research thumbnails. The research entries themselves are markdown files in /research.
-// Figures come from the w8-domdiff-bench technical report (branch w8-reproducible; audit synced Oct 26 2026, README revised Oct 27 2026).
+// Figures come from the w8-domdiff-bench paper and technical report (branch w8-reproducible; analysis of November 3, 2026, README revised November 4, 2026).
 // Do not edit a number here without changing the published report first.
 
 export const links = {
@@ -9,14 +9,15 @@ export const links = {
 	benchBranch: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible",
 	benchReport: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md",
 	benchTechnicalReport: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md",
-	benchMetric:
-		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#paired-source-evidence-loss",
-	benchLimits: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#scope-and-limitations",
-	benchExamples:
+	benchMetric: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#appendix-a-formal-definitions-and-equations",
+	benchLimits: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#8-limitations",
+	benchExamples: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/README.md#63-types-of-losses",
+	benchCriterionTable:
 		"https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/technical-report.md#source-evidence-gaps-by-task-and-criterion",
 	benchCategories: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/docs/evidence-categories.md",
 	benchSummary: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/results/summary.json",
-	benchEvaluations: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks/tree/main/evaluation",
+	benchAggregator: "https://github.com/wootzapp/w8-domdiff-bench/blob/w8-reproducible/w8bench/verifier/aggregate_runs.py",
+	benchEvaluations: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks/tree/main/evaluations",
 	benchResults: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/results",
 	benchVerifier: "https://github.com/wootzapp/w8-domdiff-bench/tree/w8-reproducible/w8bench/verifier",
 	dataset: "https://huggingface.co/datasets/WootzappLab/browser-agent-tasks",
@@ -26,61 +27,87 @@ export const links = {
 	twitter: "https://x.com/wootzapp",
 };
 
+// Matched panel: the 97 tasks with a paired audit in all three recorded runs, 619 criteria per run. Counts are means per run.
 export const study = {
 	name: "W8 DOM-diff Bench",
-	published: "October 27, 2026",
-	publishedShort: "Oct 2026",
+	published: "November 4, 2026",
+	publishedShort: "Nov 2026",
 	tasks: 100,
-	criteria: 642,
-	screenshotGaps: 151,
-	domGaps: 5,
-	screenshotRate: "23.52%",
-	domRate: "0.78%",
-	screenshotRateValue: 23.52,
-	domRateValue: 0.78,
-	reduction: "96.7%",
-	// Sensitivity view from the same audit: primary URL-category losses removed, all 642 criteria retained.
-	nonUrl: {screenshotGaps: 34, screenshotRate: "5.30%", screenshotRateValue: 5.3, reduction: "85.3%"},
-	affectedCriteria: 154,
-	affectedTasks: 91,
+	runs: 3,
+	matchedTasks: 97,
+	criteria: 619,
+	screenshotGaps: 61,
+	domGaps: 13,
+	screenshotRate: "9.85%",
+	domRate: "2.10%",
+	screenshotRateValue: 9.85,
+	domRateValue: 2.1,
+	screenshotInterval: "6.59–13.48%",
+	domInterval: "0.88–3.62%",
+	difference: "7.75 points",
+	differenceInterval: "4.07–11.71",
+	reduction: "78.69%",
+	reductionInterval: "57.25–91.62%",
+	perRun: [
+		{run: "run_1", screenshot: "51 (8.24%)", dom: "16 (2.58%)"},
+		{run: "run_2", screenshot: "62 (10.02%)", dom: "15 (2.42%)"},
+		{run: "run_3", screenshot: "70 (11.31%)", dom: "8 (1.29%)"},
+	],
+	// Exploratory subset: nine listed access-blocked tasks removed, defined after the recordings were inspected.
+	subset: {tasks: 88, criteria: 572, screenshotGaps: 60, screenshotRate: "10.49%", domGaps: 11, domRate: "1.92%", reduction: "81.67%"},
+	// Available evidence a verifier overlooked or misread, mean per run on the matched panel. A separate count from source loss.
+	verifierMisses: {screenshot: "54.67 (8.83%)", dom: "63.33 (10.23%)"},
+	affected: {observations: 219, criteria: 118, tasks: 49},
+	sizes: {states: 2592, recordings: 300, domModel: 5.25, domFull: 47.26, domJson: 206.45},
 };
 
-// Paired recordings for one task in the published dataset.
-export function taskDataUrl(id: number, run: "dom" | "ss"): string {
-	return `${links.dataset}/tree/main/trajectories/data-${run}/task_${String(id).padStart(2, "0")}`;
+// Paired records for one task in one recorded run of the published dataset.
+export function taskDataUrl(task: string, run: "dom" | "ss", runName = "run_1"): string {
+	return `${links.dataset}/tree/main/trajectories/${runName}/data-${run}/${task}`;
 }
 
-// Task 19, verbatim from the published recordings (data-ss/task_19/screenshot0.png, data-dom/task_19/dom_model0.txt).
-// It is the Task 19 C3 "Exact text and values" finding in the technical report's criterion table.
-export const taskNineteen = {
-	id: 19,
-	title: "GitHub release research",
-	criterion: "Report the release date of the latest pytorch/pytorch release",
-	screenshotFile: "screenshot0.png",
-	screenshotImage: "/img/research/task19-screenshot.png",
-	screenshotText: "ethche released this 2 weeks ago",
-	domFile: "dom_model0.txt",
-	domText: "ethche released this 02 Sep 17:40",
+// The specimen pair shown on the homepage, the benchmark entry, the dataset entry, and the blog post.
+// run_1 task_08, criterion C2, verbatim from the published recordings (data-ss/task_08/screenshot2.png, data-dom/task_08/dom_model2.txt).
+// It is the "publication date" example in Table 4 of the paper: the DOM record holds the timestamp, the screenshots a relative age.
+export const specimen = {
+	task: "task_08",
+	run: "run_1",
+	title: "software release research",
+	release: "Playwright v1.64.1",
+	criterion: "Record release metadata (tag and publication date)",
+	criterionIndex: 2,
+	recorded: "October 29, 2026",
+	screenshotFile: "screenshot2.png",
+	screenshotImage: "/img/research/task08-screenshot.png",
+	screenshotText: "dgozman released this 2 weeks ago",
+	domFile: "dom_model2.txt",
+	domText: "dgozman released this 14 Oct 11:51",
+	domListFile: "dom_model1.txt",
+	domListText: "v1.64.1 Latest Oct 14, 2026",
+	auditUrl: `${links.dataset}/blob/main/evaluations/run_1/task_08/batch_01/evidence_audit.json`,
 };
 
-// Browser Agent Tasks dataset, counted from the Hugging Face repository (Oct 27 2026 revision).
+// Browser Agent Tasks dataset, counted from the Hugging Face repository (November 4, 2026 revision).
 export const tasksDataset = {
 	name: "Browser Agent Tasks",
 	tasks: 100,
 	sites: 90,
-	categories: 99,
-	screenshots: 465,
-	domStates: 465,
-	evaluations: 100,
-	// Verbatim record browser_task_019: the exact release date task (criterion C3 in the report).
+	categories: 7,
+	runs: 3,
+	recordings: 300,
+	pairs: 296,
+	pairsPerRun: [100, 99, 97],
+	states: 2592,
+	// Verbatim record browser_task_008: the specimen task above.
 	sample: {
-		task_id: "browser_task_019",
-		category: "github release research",
+		task_id: "browser_task_008",
+		task_name: "software release research",
+		category: "linked-page research",
 		instruction:
-			"Find the latest release of pytorch/pytorch. Report the release tag, release date, and the first three highlight bullets from the release notes in their displayed order.",
-		start_url: "https://github.com/pytorch/pytorch/releases",
-		stopping_condition: "Stop after the latest release metadata and first three highlights have been recorded.",
-		constraints: ["Do not sign in.", "Do not create issues or modify repository content."],
+			"Go to the GitHub repository for Microsoft Playwright at https://github.com/microsoft/playwright. Open the Releases page and identify the newest non-preview release. Report its release tag, publication date, and three changes from the release notes. Verify one of those changes using the official Playwright documentation.",
+		start_url: "https://github.com/microsoft/playwright",
+		stopping_condition: "Stop after the release metadata, three release-note changes, and one documentation verification have been recorded.",
+		constraints: ["Do not sign in.", "Do not create issues, comments, pull requests, or file changes."],
 	},
 };
 

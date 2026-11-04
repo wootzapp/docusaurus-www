@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Section from "../editorial/section";
 import Eyebrow from "../editorial/eyebrow";
 import CtaLink from "../editorial/cta-link";
-import TaskNineteenPair from "../work/task-nineteen-pair";
+import RecordPair from "../work/record-pair";
 import useAnchor from "../editorial/use-anchor";
 import LayerTag, {type Layer} from "./layer-tag";
 import {links} from "@site/src/data/research";
@@ -33,7 +33,7 @@ function BoundaryVisual() {
 }
 
 function PageVisual() {
-	return <TaskNineteenPair compact />;
+	return <RecordPair compact />;
 }
 
 const rows: {id: string; layer: Layer; title: string; copy: string; contrast: string; visual: ReactNode; href: string; link: string}[] = [

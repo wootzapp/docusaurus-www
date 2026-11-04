@@ -3,7 +3,7 @@ import MDXComponents from "@theme-original/MDXComponents";
 import EvidenceBars from "@site/src/components/editorial/evidence-bars";
 import Specimen from "@site/src/components/editorial/specimen";
 import Caption from "@site/src/components/editorial/caption";
-import TaskNineteenPair from "@site/src/components/work/task-nineteen-pair";
+import RecordPair from "@site/src/components/work/record-pair";
 
 // Wide tables scroll sideways on narrow screens instead of widening the page.
 function Table(props: ComponentProps<"table">) {
@@ -21,5 +21,5 @@ export default {
 	EvidenceBars,
 	Specimen,
 	Caption,
-	TaskNineteenPair,
+	RecordPair,
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import {study, taskNineteen, tasksDataset} from "@site/src/data/research";
+import {study, specimen, tasksDataset} from "@site/src/data/research";
 import type {ResearchEntry} from "./entries";
 
 // Small visuals for the research list. Decorative: the row text carries the meaning.
@@ -22,12 +22,12 @@ function BenchThumb() {
 					<div className='h-1.5 overflow-hidden rounded-full bg-white/10'>
 						<div
 							className={row.accent ? "h-full rounded-full bg-ed-accent" : "h-full rounded-full bg-ed-canvas"}
-							style={{width: `${Math.max((row.value / 25) * 100, 3)}%`}}
+							style={{width: `${Math.max((row.value / 15) * 100, 3)}%`}}
 						/>
 					</div>
 				</div>
 			))}
-			<div className='ed-mono truncate text-[0.625rem] text-ed-accent'>{taskNineteen.domText.replace("ethche ", "")}</div>
+			<div className='ed-mono truncate text-[0.625rem] text-ed-accent'>{specimen.domText.replace("dgozman ", "")}</div>
 		</div>
 	);
 }
@@ -40,7 +40,7 @@ function TasksThumb() {
 			<div className='absolute left-4 right-3 top-3.5 h-[70%] rounded-lg border border-ed-ink/10 bg-white/80' />
 			<div className='ed-mono absolute bottom-2.5 left-2.5 right-4 top-5 flex flex-col gap-1 rounded-lg border border-ed-ink/15 bg-white p-2 text-[0.625rem] leading-tight text-ed-graphite'>
 				<span className='text-ed-accent-ink'>{sample.task_id}</span>
-				<span className='truncate text-ed-ink'>{sample.category}</span>
+				<span className='truncate text-ed-ink'>{sample.task_name}</span>
 				<span className='truncate'>{new URL(sample.start_url).host}</span>
 				<span className='mt-auto truncate text-ed-smoke'>{sample.constraints[0]}</span>
 			</div>
