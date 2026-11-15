@@ -160,6 +160,7 @@ baseUrl: "/",
       items: [
         { to: "/#model-labs", label: "Data & Environments", position: "left", activeBaseRegex: "^$" },
         { to: "/intelligence", label: "Enterprise Models", position: "left" },
+        { to: "/factory", label: "Factory", position: "left" },
         { to: "/#technology", label: "Technology", position: "left", activeBaseRegex: "^$" },
         { to: "/research", label: "Research", position: "left" },
         { to: "/docs", label: "Docs", position: "left" },
