@@ -1,23 +1,28 @@
+import React from "react";
 import Layout from "@theme/Layout";
-import FactoryHero from "../components/factory/FactoryHero";
-import ShellFoundation from "../components/factory/ShellFoundation";
-import GatewayTraining from "../components/factory/GatewayTraining";
-import FactoryResearch from "../components/factory/FactoryResearch";
-import FactoryPilot from "../components/factory/FactoryPilot";
-import styles from "../components/factory/Factory.module.css";
+import FactoryHero from "../components/factory/hero";
+import Problem from "../components/factory/problem";
+import Workspace from "../components/factory/workspace";
+import Ctf from "../components/factory/ctf";
+import Training from "../components/factory/training";
+import Published from "../components/factory/published";
+import FactoryClose from "../components/factory/close";
+import {meta} from "../components/factory/copy";
 
 export default function FactoryPage() {
 	return (
 		<Layout
-			title='Factory — Openrind Shell & Continual Learning'
-			description='Execution architecture and learning method: Openrind Shell combines Desktop VM execution, persistent project state, and session-scoped model-context capture with recorded-session RFT + OPSD.'
+			title={meta.title}
+			description={meta.description}
 		>
-			<main className={`ed-page ${styles.page}`}>
+			<main className='ed-page factory'>
 				<FactoryHero />
-				<ShellFoundation />
-				<GatewayTraining />
-				<FactoryResearch />
-				<FactoryPilot />
+				<Problem />
+				<Published />
+				<Workspace />
+				<Ctf />
+				<Training />
+				<FactoryClose />
 			</main>
 		</Layout>
 	);

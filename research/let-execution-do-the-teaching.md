@@ -1,16 +1,18 @@
 ---
 title: Let Execution Do the Teaching
 slug: let-execution-do-the-teaching
-date: 2026-09-23
-dateLabel: September 2026
-kind: Preprint
+date: 2026-11-15
+dateLabel: November 2026
+kind: arXiv paper
 description: "Post-training a coding model with execution as the grader. Compiler errors and failing tests build the repair practice. Executable checks score every answer."
 subtitle: How far can we push a coding model when execution does the grading?
-byline: Abhishek Mishra and Sandeep Srinivasa
+byline: Abhishek Mishra, Sandeep Srinivasa, Arko Chattopadhyay, Enrique Martinho Ferrao, and Guda Pranav Reddy
 abstract: |
   Improving a coding model takes three decisions. Find the behaviour that limits it. Create useful practice. Decide which attempts to reward. This study grounds all three in execution. It starts from GLM-4.7-Flash and combines whole-file supervised fine-tuning, C++ repair exercises, group-relative RL, and verifiers that turn program behaviour into rewards.
 
   The strongest setup reaches 45.2% success in the first test round and 61.5% within two rounds. The base model scores 1.9% and 17.3%. That setup uses a selected set of four eval trials and shares six tasks with the training set. The scope note below has the full caveats.
+
+  Published on arXiv on November 15, 2026 as 2611.19875 (cs.SE, cs.AI; 11 pages).
 stats:
   - value: "26"
     label: C++ tasks in Fixed26
@@ -21,8 +23,10 @@ stats:
   - value: 61.5%
     label: Finished within two rounds
 sources:
-  - label: Study
-    href: https://github.com/wootzapp/let-execution-do-the-teaching/blob/main/study.md
+  - label: arXiv:2611.19875
+    href: https://arxiv.org/abs/2611.19875
+  - label: PDF
+    href: https://arxiv.org/pdf/2611.19875
   - label: Repository
     href: https://github.com/wootzapp/let-execution-do-the-teaching
 result: 45.2% first-round, 61.5% within two rounds
@@ -30,12 +34,14 @@ facts: [26 C++ tasks, GRPO + LoRA, GLM-4.7-Flash]
 thumbnail: ledt
 citation: |
   @misc{mishra2026execution,
-    title  = {Let Execution Do the Teaching},
-    author = {Mishra, Abhishek and Srinivasa, Sandeep},
-    year   = {2026},
-    month  = sep,
-    note   = {Preprint},
-    url    = {https://github.com/wootzapp/let-execution-do-the-teaching/blob/main/study.md}
+    title         = {Let Execution Do the Teaching},
+    author        = {Mishra, Abhishek and Srinivasa, Sandeep and Chattopadhyay, Arko and Ferrao, Enrique Martinho and Reddy, Guda Pranav},
+    year          = {2026},
+    month         = nov,
+    eprint        = {2611.19875},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.SE},
+    url           = {https://arxiv.org/abs/2611.19875}
   }
 ---
 
@@ -54,7 +60,7 @@ Mean tasks solved, out of 26. Each setup ran the full suite four times. First ro
     {label: "Generalized C++, iter 14 · first round", value: 11.75, display: "11.75", accent: true},
     {label: "Generalized C++, iter 14 · two rounds", value: 16, display: "16", accent: true},
   ]}
-  caption='Exhibit 1 — Figure 2 of the study. Generalized C++ is the selected best-four cohort.'
+  caption='Exhibit 1 — Figure 2 of the paper. Generalized C++ is the selected best-four cohort.'
 />
 
 | Setup | Prompt contract | First round | Two rounds | Recovery |
@@ -120,7 +126,7 @@ First-round successes out of four trials (Table 5).
 
 ## Artifacts
 
-Adapters, datasets, and eval archives, hosted under WootzappLab on Hugging Face. The repositories are private at the time of writing; [Appendix B.3 of the study](https://github.com/wootzapp/let-execution-do-the-teaching/blob/main/study.md#b3-data-and-model-artifacts) lists them.
+Adapters, datasets, and eval archives, hosted under WootzappLab on Hugging Face. The repositories are private at the time of writing; Appendix B.3 of [the paper](https://arxiv.org/abs/2611.19875) lists them.
 
 - Phone-number validation adapter and run archive (model)
 - Multi-task C++ adapter and selected evals (model)

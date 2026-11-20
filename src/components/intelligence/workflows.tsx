@@ -21,7 +21,7 @@ const rows: {title: string; work: string; layer: Layer; record: string; link?: {
 		work: "Coding agents in your repos.",
 		layer: "hypervisor",
 		record: "Compiler and test results as the grader.",
-		link: {label: "See the preprint →", to: "/research/let-execution-do-the-teaching"},
+		link: {label: "See the paper →", to: "/research/let-execution-do-the-teaching"},
 	},
 	{
 		title: "Research and compliance desks",

@@ -2328,3 +2328,11 @@ html.blog-wrapper .pagination-nav__label {
 	border-color: #f0f0f0;
 	color: #131315;
 }
+
+/* /factory: the technical overview. Sharp corners and tabular figures; the sections are in src/components/factory. */
+.factory {
+	font-variant-numeric: tabular-nums;
+}
+.factory .ed-btn {
+	border-radius: 0;
+}

@@ -25,7 +25,7 @@ const footerColumns = [
 		links: [
 			{label: "Data and environments", href: "/#model-labs"},
 			{label: "Enterprise models", href: "/intelligence"},
-			{label: "Factory · Continual learning", href: "/factory"},
+			{label: "Factory · Technical overview", href: "/factory"},
 		],
 	},
 	{
